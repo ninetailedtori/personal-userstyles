@@ -1,0 +1,93 @@
+/* ==UserStyle==
+@name Miniserved Catppuccin
+@namespace github.com/catppuccin/userstyles/styles/miniserved
+@homepageURL https://github.com/catppuccin/userstyles/tree/main/styles/miniserved
+@version 2026.18.01
+@updateURL https://github.com/catppuccin/userstyles/raw/main/styles/arch-linux/miniserved.user.less
+@supportURL https://github.com/catppuccin/userstyles/issues?q=is%3Aopen+is%3Aissue+label%3Aminiserved
+@description Soothing pastel theme for Miniserved
+@author ninetailedtori
+@license MIT
+
+@preprocessor less
+@var select lightFlavor "Light Flavor" ["latte:Latte*", "frappe:Frappé", "macchiato:Macchiato", "mocha:Mocha"]
+@var select darkFlavor "Dark Flavor" ["latte:Latte", "frappe:Frappé", "macchiato:Macchiato", "mocha:Mocha*"]
+@var select accentColor "Accent" ["rosewater:Rosewater", "flamingo:Flamingo", "pink:Pink", "mauve:Mauve*", "red:Red", "maroon:Maroon", "peach:Peach", "yellow:Yellow", "green:Green", "teal:Teal", "blue:Blue", "sapphire:Sapphire", "sky:Sky", "lavender:Lavender", "subtext0:Gray"]
+==/UserStyle== */
+
+@import "https://userstyles.catppuccin.com/lib/lib.less";
+
+@-moz-document url-prefix("http://127.0.0.1:8000") {
+  :root {
+    @media (prefers-color-scheme: light) {
+      #catppuccin(@lightFlavor);
+    }
+
+    @media (prefers-color-scheme: dark) {
+      #catppuccin(@darkFlavor);
+    }
+  }
+
+  #catppuccin(@flavor) {
+    #lib.palette();
+    #lib.defaults();
+    #lib.css-variables();
+
+    body {
+      --background: @base !important;
+      --text_color: @text;
+      --directory_link_color: @blue;
+      --directory_link_color_visited: @lavender;
+      --file_link_color: @accent;
+      --file_link_color_visited: darken(@accent, 5%);
+      --symlink_color: @pink;
+      --table_background: @mantle;
+      --table_text_color: @text;
+      --table_header_background: @mantle;
+      --table_header_text_color: @accent;
+      --table_header_active_color: darken(@accent, 5%);
+      --active_row_color: @surface2;
+      --odd_row_background: @surface0;
+      --even_row_background: @surface1;
+      --root_link_color: @pink;
+      --download_button_background: @accent;
+      --download_button_background_hover: darken(@accent, 5%);
+      --download_button_link_color: @base;
+      --download_button_link_color_hover: darken(@base, 5%);
+      --back_button_background: @surface0;
+      --back_button_background_hover: @surface1;
+      --back_button_link_color: @text;
+      --back_button_link_color_hover: darken(@text, 5%);
+      --date_text_color: @peach;
+      --at_color: @mauve;
+      --switch_theme_background: @accent;
+      --switch_theme_link_color: @base;
+      --switch_theme_active: darken(@accent, 5%);
+      --switch_theme_border: @overlay0;
+      --change_theme_link_color: @base;
+      --change_theme_link_color_hover: darken(@base, 5%);
+      --upload_text_color: @green;
+      --upload_form_border_color: @overlay0;
+      --upload_form_background: @mantle;
+      --upload_button_background: @green;
+      --upload_button_text_color: @base;
+      --rm_button_background: @red;
+      --rm_button_text_color: @base;
+      --drag_background: fade(@base, 8f);
+      --drag_border_color: @overlay0;
+      --drag_text_color: @text;
+      --size_background_color: @mantle;
+      --size_text_color: @text;
+      --error_color: @red;
+      --footer_color: @subtext0;
+      --success_color: @green;
+      --upload_modal_header_background: @mantle;
+      --upload_modal_header_color: @text;
+      --upload_modal_sub_header_background: @mantle;
+      --upload_modal_file_item_background: @surface0;
+      --upload_modal_file_item_color: @text;
+      --upload_modal_file_upload_complete_background: @crust;
+      --progress_bar_background: @mantle;
+    }
+  }
+}

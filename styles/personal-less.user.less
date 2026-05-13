@@ -1,0 +1,71 @@
+/* ==UserStyle==
+@name           Personal LESS Theme
+@namespace      github.com/ninetailedtori/stylus-themes
+@version        1.0.0
+@description    Just a collection of things that make things cuter!
+@author         ninetailedtori
+
+@preprocessor less
+@var select lightFlavor "Light Flavor" ["latte:Latte*", "frappe:Frappé", "macchiato:Macchiato", "mocha:Mocha"]
+@var select darkFlavor "Dark Flavor" ["latte:Latte", "frappe:Frappé", "macchiato:Macchiato", "mocha:Mocha*"]
+@var select accentColor "Accent" ["rosewater:Rosewater", "flamingo:Flamingo", "pink:Pink", "mauve:Mauve*", "red:Red", "maroon:Maroon", "peach:Peach", "yellow:Yellow", "green:Green", "teal:Teal", "blue:Blue", "sapphire:Sapphire", "sky:Sky", "lavender:Lavender", "subtext0:Gray"]
+==/UserStyle== */
+
+@import "https://userstyles.catppuccin.com/lib/lib.less";
+
+:root {
+  @media (prefers-color-scheme: light) {
+    #catppuccin(@lightFlavor);
+  }
+
+  @media (prefers-color-scheme: dark) {
+    #catppuccin(@darkFlavor);
+  }
+}
+
+#catppuccin(@flavor) {
+  #lib.palette();
+  #lib.defaults();
+  #lib.css-variables();
+
+  .vector-dropdown .vector-dropdown-checkbox {
+    + .vector-dropdown-label {
+      color: @subtext1 !important;
+      background-color: @base !important;
+
+      &::after {
+        background-color: @accent !important;
+      }
+
+      .vector-icon {
+        filter: @accent-filter !important;
+      }
+    }
+
+    &:hover + .vector-dropdown-label {
+      background-color: fade(@accent, 30%) !important;
+    }
+
+    &:focus-within + .vector-dropdown-label {
+      outline-width: 2px !important;
+      outline-style: solid !important;
+      outline-color: @accent !important;
+      border: none !important;
+      box-shadow: none !important;
+    }
+
+    &:active + .vector-dropdown-label {
+      color: @base !important;
+      background-color: darken(@accent, 10%) !important;
+
+
+      &::after {
+        background-color: @base !important;
+      }
+
+      .vector-icon {
+        filter: @base-filter !important;
+      }
+    }
+  }
+}

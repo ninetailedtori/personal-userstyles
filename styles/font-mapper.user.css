@@ -1,0 +1,49 @@
+/* ==UserStyle==
+@name           Font Mapper
+@namespace      github.com/openstyles/stylus
+@version        1.0.0
+@description    Config to replace various fonts on websites with these fonts!
+@author         ninetailedtori
+@preprocessor   stylus
+==/UserStyle== */
+/* VARIABLES */
+/* MIXINS */
+/* STYLES */
+* {
+  font-feature-settings: "zero" 1, "cv06" 1, "cv07" 1, "cv14" 1;
+}
+
+:not(h1, h2, h3, h4, h5, code, pre, input, textarea, [class=react-code-text], editor, [class=monaco-editor], [class=cm-editor], tt, [class=js-file-line-container], button, [role=button], .btn, [class*=icon], h1 *, h2 *, h3 *, h4 *, h5 *, code *, pre *, input *, textarea *, [class=react-code-text] *, editor *, [class=monaco-editor] *, [class=cm-editor] *, tt *, [class=js-file-line-container] *, button *, [role=button] *, .btn *, [class*=icon] *) {
+  font-family: "Inria Sans", "JetBrainsMono Nerd Font", "Material Symbols Outlined", "Noto Emoji" !important;
+}
+:not(h1, h2, h3, h4, h5, code, pre, input, textarea, [class=react-code-text], editor, [class=monaco-editor], [class=cm-editor], tt, [class=js-file-line-container], button, [role=button], .btn, [class*=icon], h1 *, h2 *, h3 *, h4 *, h5 *, code *, pre *, input *, textarea *, [class=react-code-text] *, editor *, [class=monaco-editor] *, [class=cm-editor] *, tt *, [class=js-file-line-container] *, button *, [role=button] *, .btn *, [class*=icon] *) * {
+  font-family: "Inria Sans", "JetBrainsMono Nerd Font", "Material Symbols Outlined", "Noto Emoji" !important;
+}
+
+h1, h2, h3, h4, h5 {
+  font-family: "Beuron Condensed", "JetBrainsMono Nerd Font", "Material Symbols Outlined", "Noto Emoji" !important;
+}
+h1 *, h2 *, h3 *, h4 *, h5 * {
+  font-family: "Beuron Condensed", "JetBrainsMono Nerd Font", "Material Symbols Outlined", "Noto Emoji" !important;
+}
+
+code, pre, input, textarea, [class=react-code-text], editor, [class=monaco-editor], [class=cm-editor], tt, [class=js-file-line-container] {
+  font-family: "JetBrainsMono Nerd Font", "Material Symbols Outlined", "Noto Emoji" !important;
+}
+code *, pre *, input *, textarea *, [class=react-code-text] *, editor *, [class=monaco-editor] *, [class=cm-editor] *, tt *, [class=js-file-line-container] * {
+  font-family: "JetBrainsMono Nerd Font", "Material Symbols Outlined", "Noto Emoji" !important;
+}
+code, pre, input, textarea, [class=react-code-text], editor, [class=monaco-editor], [class=cm-editor], tt, [class=js-file-line-container] {
+  font-size: 14px !important;
+  font-weight: 600 !important;
+}
+code *, pre *, input *, textarea *, [class=react-code-text] *, editor *, [class=monaco-editor] *, [class=cm-editor] *, tt *, [class=js-file-line-container] * {
+  font-size: 14px !important;
+  font-weight: 600 !important;
+}
+code b, code strong, code em, code bold, pre b, pre strong, pre em, pre bold, input b, input strong, input em, input bold, textarea b, textarea strong, textarea em, textarea bold, [class=react-code-text] b, [class=react-code-text] strong, [class=react-code-text] em, [class=react-code-text] bold, editor b, editor strong, editor em, editor bold, [class=monaco-editor] b, [class=monaco-editor] strong, [class=monaco-editor] em, [class=monaco-editor] bold, [class=cm-editor] b, [class=cm-editor] strong, [class=cm-editor] em, [class=cm-editor] bold, tt b, tt strong, tt em, tt bold, [class=js-file-line-container] b, [class=js-file-line-container] strong, [class=js-file-line-container] em, [class=js-file-line-container] bold {
+  font-weight: 800 !important;
+}
+code b *, code strong *, code em *, code bold *, pre b *, pre strong *, pre em *, pre bold *, input b *, input strong *, input em *, input bold *, textarea b *, textarea strong *, textarea em *, textarea bold *, [class=react-code-text] b *, [class=react-code-text] strong *, [class=react-code-text] em *, [class=react-code-text] bold *, editor b *, editor strong *, editor em *, editor bold *, [class=monaco-editor] b *, [class=monaco-editor] strong *, [class=monaco-editor] em *, [class=monaco-editor] bold *, [class=cm-editor] b *, [class=cm-editor] strong *, [class=cm-editor] em *, [class=cm-editor] bold *, tt b *, tt strong *, tt em *, tt bold *, [class=js-file-line-container] b *, [class=js-file-line-container] strong *, [class=js-file-line-container] em *, [class=js-file-line-container] bold * {
+  font-weight: 800 !important;
+}

@@ -1,0 +1,110 @@
+/* ==UserStyle==
+@name           Font Mapper
+@namespace      github.com/openstyles/stylus
+@version        1.0.0
+@description    Config to replace various fonts on websites with these fonts!
+@author         ninetailedtori
+@preprocessor   stylus
+==/UserStyle== */
+
+@use "sass:string";
+@use "sass:list";
+
+/* VARIABLES */
+
+$font-sans:
+  "Inria Sans",
+  "JetBrainsMono Nerd Font",
+  "Material Symbols Outlined",
+  "Noto Emoji",;
+$font-heading:
+  "Beuron Condensed",
+  "JetBrainsMono Nerd Font",
+  "Material Symbols Outlined",
+  "Noto Emoji",;
+$font-mono:
+  "JetBrainsMono Nerd Font",
+  "Material Symbols Outlined",
+  "Noto Emoji",;
+
+$feature-settings: "zero" 1, "cv06" 1, "cv07" 1, "cv14" 1;
+
+$headings: "h1", "h2", "h3", "h4", "h5";
+$editors:
+  "code",
+  "pre",
+  "input",
+  "textarea",
+  '[class="react-code-text"]',
+  "editor",
+  '[class="monaco-editor"]',
+  '[class="cm-editor"]',
+  "tt",
+  '[class="js-file-line-container"]',;
+$buttons: "button", '[role="button"]', ".btn";
+$icons: '[class*="icon"]';
+
+$excluded-raw: $headings, $editors, $buttons, $icons;
+
+$excluded: "";
+$within-excluded: "";
+
+@each $list in $excluded-raw {
+  @each $selector in $list {
+    @if $excluded == "" {
+      $excluded: string.unquote($selector);
+      $within-excluded: string.unquote($selector) + " *";
+    } @else {
+      $excluded: $excluded + ", " + string.unquote($selector);
+      $within-excluded: $within-excluded + ", " + string.unquote($selector)
+        + " *";
+    }
+  }
+}
+
+/* MIXINS */
+
+@mixin font-cascade($font-stack) {
+  font-family: $font-stack !important;
+
+  * {
+    font-family: $font-stack !important;
+  }
+}
+
+@mixin code-styling() {
+  @include font-cascade($font-mono);
+  font-size: 14px !important;
+  font-weight: 600 !important;
+
+  * {
+    font-size: 14px !important;
+    font-weight: 600 !important;
+  }
+
+  b, strong, em, bold {
+    font-weight: 800 !important;
+
+    * {
+      font-weight: 800 !important;
+    }
+  }
+}
+
+/* STYLES */
+
+* {
+  font-feature-settings: $feature-settings;
+}
+
+:not(#{$excluded}, #{$within-excluded}) {
+  @include font-cascade($font-sans);
+}
+
+#{$headings} {
+  @include font-cascade($font-heading);
+}
+
+#{$editors} {
+  @include code-styling();
+}
