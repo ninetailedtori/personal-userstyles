@@ -4,28 +4,31 @@
 @version        1.0.0
 @description    Config to replace various fonts on websites with these fonts!
 @author         ninetailedtori
-@preprocessor   stylus
+@preprocessor   default
 ==/UserStyle== */
 
 @use "sass:string";
 @use "sass:list";
 
-/* VARIABLES */
+// VARIABLES
 
 $font-sans:
   "Inria Sans",
   "JetBrainsMono Nerd Font",
   "Material Symbols Outlined",
-  "Noto Emoji",;
+  "Noto Emoji",
+  ui-sans-serif,;
 $font-heading:
   "Beuron Condensed",
   "JetBrainsMono Nerd Font",
   "Material Symbols Outlined",
-  "Noto Emoji",;
+  "Noto Emoji",
+  ui-serif,;
 $font-mono:
   "JetBrainsMono Nerd Font",
   "Material Symbols Outlined",
-  "Noto Emoji",;
+  "Noto Emoji",
+  ui-monospace,;
 
 $feature-settings: "zero" 1, "cv06" 1, "cv07" 1, "cv14" 1;
 
@@ -62,49 +65,34 @@ $within-excluded: "";
   }
 }
 
-/* MIXINS */
-
-@mixin font-cascade($font-stack) {
-  font-family: $font-stack !important;
-
-  * {
-    font-family: $font-stack !important;
-  }
-}
+// MIXINS
 
 @mixin code-styling() {
-  @include font-cascade($font-mono);
+  font-family: $font-mono !important;
   font-size: 14px !important;
   font-weight: 600 !important;
 
-  * {
-    font-size: 14px !important;
-    font-weight: 600 !important;
-  }
-
   b, strong, em, bold {
     font-weight: 800 !important;
-
-    * {
-      font-weight: 800 !important;
-    }
   }
 }
 
-/* STYLES */
+// STYLES
 
-* {
-  font-feature-settings: $feature-settings;
-}
+:root {
+  * {
+    font-feature-settings: $feature-settings;
+  }
 
-:not(#{$excluded}, #{$within-excluded}) {
-  @include font-cascade($font-sans);
-}
+  :not(#{$excluded}, #{$within-excluded}) {
+    font-family: $font-sans;
+  }
 
-#{$headings} {
-  @include font-cascade($font-heading);
-}
+  #{$headings} {
+    font-family: $font-heading;
+  }
 
-#{$editors} {
-  @include code-styling();
+  #{$editors} {
+    @include code-styling();
+  }
 }
