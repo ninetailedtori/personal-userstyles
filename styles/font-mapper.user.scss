@@ -12,43 +12,29 @@
 
 // VARIABLES
 
-$feature-settings: "zero" 1, "cv06" 1, "cv07" 1, "cv14" 1;
+$feature-settings:
+  "zero" 1,
+  "cv06" 1,
+  "cv07" 1,
+  "cv14" 1;
 $font-sans:
-  "Inria Sans",
-  "JetBrainsMono Nerd Font",
-  "Material Symbols Outlined",
-  "Noto Emoji",
-  ui-sans-serif,;
+  "Inria Sans", "JetBrainsMono Nerd Font", "Material Symbols Outlined",
+  "Noto Emoji", ui-sans-serif;
 $font-heading:
-  "Beuron Condensed",
-  "JetBrainsMono Nerd Font",
-  "Material Symbols Outlined",
-  "Noto Emoji",
-  ui-serif,;
+  "Beuron Condensed", "JetBrainsMono Nerd Font", "Material Symbols Outlined",
+  "Noto Emoji", ui-serif;
 $font-mono:
-  "JetBrainsMono Nerd Font",
-  "Material Symbols Outlined",
-  "Noto Emoji",
-  ui-monospace,;
+  "JetBrainsMono Nerd Font", "Material Symbols Outlined", "Noto Emoji",
+  ui-monospace;
 
 $headings: "h1", "h2", "h3", "h4", "h5";
 $editors:
-  "code",
-  "pre",
-  "input[type=text]",
-  "textarea",
-  '[class="react-code-text"]',
-  "editor",
-  '[class="monaco-editor"]',
-  '[class="cm-editor"]',
-  "tt",
-  '[class="js-file-line-container"]',;
+  "code", "pre", "input[type=text]", "textarea", '[class="react-code-text"]',
+  "editor", '[class="monaco-editor"]', '[class="cm-editor"]', "tt",
+  '[class="js-file-line-container"]';
 $images:
-  '[class*="icon"]',
-  '[class*="image"]',
-  '[class*="img"]',
-  '[class*="png"]',
-  '[class*="svg"]',;
+  '[class*="icon"]', '[class*="image"]', '[class*="img"]', '[class*="png"]',
+  '[class*="svg"]';
 
 $excluded-raw: $headings, $editors, $images;
 
@@ -62,8 +48,10 @@ $within-excluded: "";
       $within-excluded: string.unquote($selector) + " *";
     } @else {
       $excluded: $excluded + ", " + string.unquote($selector);
-      $within-excluded: $within-excluded + ", " + string.unquote($selector)
-        + " *";
+      $within-excluded: $within-excluded +
+        ", " +
+        string.unquote($selector) +
+        " *";
     }
   }
 }
@@ -75,7 +63,10 @@ $within-excluded: "";
   font-size: 14px !important;
   font-weight: 600 !important;
 
-  b, strong, em, bold {
+  b,
+  strong,
+  em,
+  bold {
     font-weight: 800 !important;
   }
 }
