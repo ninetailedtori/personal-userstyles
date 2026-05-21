@@ -1,0 +1,458 @@
+/* ==UserStyle==
+@name Duplicacy Catppuccin
+@namespace github.com/catppuccin/userstyles/styles/duplicacy
+@homepageURL https://github.com/catppuccin/userstyles/tree/main/styles/duplicacy
+@version 2025.09.06
+@updateURL https://github.com/catppuccin/userstyles/raw/main/styles/duplicacy/catppuccin.user.less
+@supportURL https://github.com/catppuccin/userstyles/issues?q=is%3Aopen+is%3Aissue+label%3Aduplicacy
+@description Soothing pastel theme for Duplicacy
+@author Catppuccin
+@license MIT
+
+@preprocessor less
+@var select lightFlavor "Light Flavor" ["latte:Latte*", "frappe:Frappé", "macchiato:Macchiato", "mocha:Mocha"]
+@var select darkFlavor "Dark Flavor" ["latte:Latte", "frappe:Frappé", "macchiato:Macchiato", "mocha:Mocha*"]
+@var select accentColor "Accent" ["rosewater:Rosewater", "flamingo:Flamingo", "pink:Pink", "mauve:Mauve*", "red:Red", "maroon:Maroon", "peach:Peach", "yellow:Yellow", "green:Green", "teal:Teal", "blue:Blue", "sapphire:Sapphire", "sky:Sky", "lavender:Lavender", "subtext0:Gray"]
+@var checkbox highlight-redirect "Highlight redirect links" 0
+==/UserStyle== */
+
+@import "https://userstyles.catppuccin.com/lib/lib.less";
+
+@-moz-document url-prefix("http://127.0.0.1:3875") {
+    :root {
+        @media (prefers-color-scheme: light) {
+            #catppuccin(@lightFlavor);
+        }
+
+        @media (prefers-color-scheme: dark) {
+            #catppuccin(@darkFlavor);
+        }
+    }
+
+    #mixins {
+        .text-color-utils(@name, @colour) {
+            .text-@{name},
+            .icon-@{name} {
+                color: @colour;
+            }
+        }
+
+        .btn-color-state(@name, @bg, @alt: @base) {
+            .btn {
+                &:not(:hover, :active, :focus):has(.text-@{name}) {
+                    background-color: transparent;
+                }
+
+                &:is(:hover, :active, :focus):has(.text-@{name}) {
+                    background-color: @bg;
+                }
+
+                &:is(:hover, :active, :focus) .text-@{name} {
+                    color: @alt;
+                }
+            }
+
+            .btn.btn-@{name} {
+                border-color: transparent !important;
+
+                &:not(:hover, :active, :focus) {
+                    color: @alt !important;
+                    background-color: @bg !important;
+                }
+
+                &:hover {
+                    background-color: darken(@bg, 5%) !important;
+                }
+
+                &:is(:active, :focus, .active) {
+                    background-color: darken(@bg, 10%) !important;
+                }
+            }
+        }
+    }
+
+    #catppuccin(@flavor) {
+        #lib.palette();
+        #lib.defaults();
+
+        @shadow: 2px 2px fade(@crust, 30%);
+
+        body,
+        .main-panel {
+            color: @text;
+            background-color: @base;
+        }
+
+        .form-control {
+            color: @text;
+            background-color: @surface1;
+            border-color: @overlay0;
+
+            &[disabled] {
+                color: @surface2;
+                background-color: @mantle;
+                border-color: @surface2;
+            }
+        }
+
+        .row-clickable {
+            &:hover {
+                background-color: @surface1;
+            }
+
+            &:is(:active, :focus) {
+                background-color: @surface2;
+            }
+
+            &.active {
+                color: @surface1;
+                background-color: @accent;
+
+                a {
+                    color: @base;
+
+                    &:hover {
+                        color: @surface0;
+                    }
+
+                    &:is(:active, :focus) {
+                        color: @surface1;
+                    }
+                }
+            }
+        }
+
+        .table tbody tr {
+            > td {
+                border-color: @overlay0;
+            }
+
+            &:hover > td {
+                background-color: @surface1;
+            }
+
+            &:is(:active, :focus) > td {
+                background-color: @surface2;
+            }
+
+            &.active {
+                > td {
+                    color: @base;
+                    background-color: @accent;
+                }
+
+                &:hover > td {
+                    background-color: darken(@accent, 5%);
+                }
+
+                &:is(:active, :focus) > td {
+                    background-color: darken(@accent, 10%);
+                }
+            }
+        }
+
+        :is(.sidebar, .off-canvas-sidebar) {
+            &.sidebar .sidebar-wrapper {
+                box-shadow: @shadow;
+            }
+
+            &[data-active-color="success"] .nav li.active {
+                > a {
+                    color: @green;
+                }
+
+                &:is(:hover, :active, :focus) > a {
+                    color: @base;
+                }
+            }
+
+            &[data-background-color="black"] {
+                .logo {
+                    border-color: @overlay0;
+                }
+
+                &::before,
+                &::after {
+                    background-color: @mantle;
+                }
+            }
+
+            .nav li {
+                &:not(.active) > a {
+                    color: @subtext0;
+                }
+
+                &.active > a {
+                    &::before,
+                    &::after {
+                        border-right-color: @base;
+                    }
+                }
+
+                &:is(:hover, :active, :focus) > a {
+                    color: @base;
+                }
+            }
+        }
+
+        :is(.btn-success, .navbar .navbar-nav > li > a.btn-success):is(
+            :hover,
+            :focus,
+            :active,
+            .active
+        ),
+        .open
+            > :is(
+                .btn-success.dropdown-toggle,
+                .navbar .navbar-nav > li > a.btn-success.dropdown-toggle
+            ) {
+            color: @base;
+            background-color: @green;
+        }
+
+        .navbar .navbar-nav > li > a.btn-success,
+        .btn-success {
+            color: @green;
+            border-color: @green;
+        }
+
+        .navbar .navbar-nav > li > a.btn-danger.btn-fill, .btn-danger.btn-fill {
+            background-color: @red;
+        }
+
+        .navbar .navbar-nav > li > a.btn-danger, .btn-danger {
+            color: @red;
+            border-color: @red;
+        }
+
+        #mixins.text-color-utils(primary, @accent);
+        #mixins.text-color-utils(info, @blue);
+        #mixins.text-color-utils(success, @green);
+        #mixins.text-color-utils(warning, @peach);
+        #mixins.text-color-utils(danger, @red);
+
+        .fa-inverse {
+            color: @base;
+        }
+
+        .btn {
+            border-radius: 4px !important;
+        }
+
+        :is(.btn-fill, .navbar .navbar-nav > li > a.btn):is(
+            :hover,
+            :focus,
+            :active,
+            .active
+        ),
+        .open
+            > :is(
+                .btn.dropdown-toggle,
+                .navbar .navbar-nav > li > a.btn.dropdown-toggle
+            ) {
+            color: @base;
+            background-color: @accent;
+        }
+
+        #mixins.btn-color-state(primary, @accent);
+        #mixins.btn-color-state(info, @blue);
+        #mixins.btn-color-state(success, @green);
+        #mixins.btn-color-state(warning, @peach);
+        #mixins.btn-color-state(danger, @red);
+
+        :is(.btn-primary, .navbar .navbar-nav > li > a.btn-primary):is(
+            .disabled,
+            :disabled,
+            [disabled]
+        ):is(:hover, :focus, .focus, :active, .active),
+        :is(.btn-primary, .navbar .navbar-nav > li > a.btn-primary):is(
+            .disabled,
+            :disabled,
+            [disabled]
+        ),
+        fieldset[disabled]
+            :is(.btn-primary, .navbar .navbar-nav > li > a.btn-primary):is(
+                :hover,
+                :focus,
+                .focus,
+                :active,
+                .active
+            ),
+        fieldset[disabled]
+            :is(.btn-primary, .navbar .navbar-nav > li > a.btn-primary) {
+            color: @surface2;
+            background-color: @mantle;
+            border-color: @surface2;
+        }
+
+        .navbar .navbar-nav > li > a.btn-info.btn-fill,
+        .btn-info.btn-fill {
+            color: @base;
+            background-color: @green;
+            border-color: transparent;
+        }
+
+        :is(
+            .btn-info.btn-fill,
+            .navbar .navbar-nav > li > a.btn-info.btn-fill
+        ):is(:hover, :focus, :active, .active),
+        .open
+            > :is(
+                .btn-info.btn-fill.dropdown-toggle,
+                .navbar .navbar-nav > li > a.btn-info.btn-fill.dropdown-toggle
+            ) {
+            background-color: darken(@green, 10%);
+        }
+
+        .btn,
+        .navbar .navbar-nav > li > a.btn {
+            color: @subtext0;
+            border-color: @overlay0;
+        }
+
+        .tooltip-inner {
+            color: @text;
+            background-color: @surface1;
+        }
+
+        .tooltip.bottom .tooltip-arrow {
+            border-bottom-color: @surface1;
+        }
+
+        .card {
+            color: @text;
+            background-color: @surface0;
+            box-shadow: @shadow;
+
+            &:has(.nav.nav-tabs) {
+                box-shadow: none;
+            }
+
+            .title {
+                color: @accent;
+            }
+
+            .category,
+            label {
+                color: @subtext0;
+            }
+
+            .labels {
+                p {
+                    color: @text;
+                }
+            }
+
+            .stats {
+                color: @subtext0;
+            }
+        }
+
+        .modal-header,
+        .modal-footer {
+            border-color: @overlay0;
+        }
+
+        .modal-content {
+            background-color: @surface0;
+        }
+
+        [style="color: black"] {
+            color: @text !important;
+        }
+
+        .nav > li > a:hover {
+            color: @base;
+            background-color: @accent;
+            border-color: @overlay1;
+            border-bottom-color: transparent;
+        }
+
+        .nav-tabs > li.active > :is(a, a:is(:hover, :focus)) {
+            color: @text;
+            background-color: @mantle;
+            border-color: @overlay1;
+            border-bottom-color: transparent;
+        }
+
+        .tab-content {
+            background-color: @mantle;
+            border-color: @overlay1 !important;
+            border-top-color: transparent !important;
+        }
+
+        .ct-label {
+            color: @subtext0;
+        }
+
+        .ct-grid {
+            stroke: @subtext0;
+        }
+
+        .nav-tabs {
+            border-bottom-color: @overlay1 !important;
+        }
+
+        [style="color:#556b2f;"],
+        [color="#556b2f"] {
+            color: @green !important;
+        }
+
+        [style="color:#8b4513;"],
+        [color="#8b4513"] {
+            color: @peach !important;
+        }
+
+        .main-panel > .footer {
+            border-top-color: @overlay0;
+        }
+
+        .footer .copyright {
+            color: @overlay2;
+        }
+
+        .radio-button {
+            background-color: @surface1;
+            outline: 1px solid @overlay0;
+        }
+
+        .radio-box {
+            &:hover input ~ .radio-button {
+                background-color: @accent;
+            }
+
+            .radio-button:after {
+                background: @base;
+            }
+
+            input:checked ~ .radio-button {
+                background-color: @accent;
+            }
+        }
+
+        a {
+            color: @blue;
+
+            &:hover {
+                color: @sky;
+            }
+
+            &:active,
+            &:focus {
+                color: @sapphire;
+            }
+        }
+
+        hr {
+            border-color: @overlay1;
+        }
+
+        [style*="color:black"] {
+            color: @accent !important;
+        }
+
+        .text-muted {
+            color: @subtext0;
+        }
+    }
+}

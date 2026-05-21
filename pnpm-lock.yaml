@@ -8,8 +8,11 @@ importers:
 
   .:
     devDependencies:
+      prettier:
+        specifier: ^3.8.3
+        version: 3.8.3
       sass:
-        specifier: ^1.69.0
+        specifier: ^1.99.0
         version: 1.99.0
 
 packages:
@@ -128,6 +131,11 @@ packages:
     resolution: {integrity: sha512-QP88BAKvMam/3NxH6vj2o21R6MjxZUAd6nlwAS/pnGvN9IVLocLHxGYIzFhg6fUQ+5th6P4dv4eW9jX3DSIj7A==}
     engines: {node: '>=12'}
 
+  prettier@3.8.3:
+    resolution: {integrity: sha512-7igPTM53cGHMW8xWuVTydi2KO233VFiTNyF5hLJqpilHfmn8C8gPf+PS7dUT64YcXFbiMGZxS9pCSxL/Dxm/Jw==}
+    engines: {node: '>=14'}
+    hasBin: true
+
   readdirp@4.1.2:
     resolution: {integrity: sha512-GDhwkLfywWL2s6vEjyhri+eXmfH6j1L7JE27WhqLeYzoh/A3DBaYGEj2H/HFZCn/kMfim73FXxEJTw06WtxQwg==}
     engines: {node: '>= 14.18.0'}
@@ -226,6 +234,8 @@ snapshots:
 
   picomatch@4.0.4:
     optional: true
+
+  prettier@3.8.3: {}
 
   readdirp@4.1.2: {}
 

@@ -12,6 +12,7 @@
 
 // VARIABLES
 
+$feature-settings: "zero" 1, "cv06" 1, "cv07" 1, "cv14" 1;
 $font-sans:
   "Inria Sans",
   "JetBrainsMono Nerd Font",
@@ -30,13 +31,11 @@ $font-mono:
   "Noto Emoji",
   ui-monospace,;
 
-$feature-settings: "zero" 1, "cv06" 1, "cv07" 1, "cv14" 1;
-
 $headings: "h1", "h2", "h3", "h4", "h5";
 $editors:
   "code",
   "pre",
-  "input",
+  "input[type=text]",
   "textarea",
   '[class="react-code-text"]',
   "editor",
@@ -44,10 +43,14 @@ $editors:
   '[class="cm-editor"]',
   "tt",
   '[class="js-file-line-container"]',;
-$buttons: "button", '[role="button"]', ".btn";
-$icons: '[class*="icon"]';
+$images:
+  '[class*="icon"]',
+  '[class*="image"]',
+  '[class*="img"]',
+  '[class*="png"]',
+  '[class*="svg"]',;
 
-$excluded-raw: $headings, $editors, $buttons, $icons;
+$excluded-raw: $headings, $editors, $images;
 
 $excluded: "";
 $within-excluded: "";
@@ -85,11 +88,11 @@ $within-excluded: "";
   }
 
   :not(#{$excluded}, #{$within-excluded}) {
-    font-family: $font-sans;
+    font-family: $font-sans !important;
   }
 
   #{$headings} {
-    font-family: $font-heading;
+    font-family: $font-heading !important;
   }
 
   #{$editors} {
