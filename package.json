@@ -15,10 +15,29 @@
     "sass": "^1.99.0"
   },
   "prettier": {
+    "arrowParens": "always",
+    "bracketSameLine": false,
+    "bracketSpacing": true,
+    "checkIgnorePragma": true,
+    "embeddedLanguageFormatting": "auto",
+    "endOfLine": "lf",
+    "experimentalOperatorPosition": "start",
+    "experimentalTernaries": true,
+    "objectWrap": "collapse",
+    "htmlWhitespaceSensitivity": "css",
+    "insertPragma": false,
+    "jsxSingleQuote": false,
+    "printWidth": 80,
+    "proseWrap": "always",
+    "quoteProps": "as-needed",
+    "rangeStart": 0,
+    "requirePragma": false,
     "semi": true,
-    "singleQuote": false,
-    "useTabs": false,
+    "singleAttributePerLine": false,
+    "singleQuote": true,
     "tabWidth": 2,
-    "proseWrap": "never"
+    "trailingComma": "es5",
+    "useTabs": false,
+    "vueIndentScriptAndStyle": false
   }
 }
