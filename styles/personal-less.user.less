@@ -37,7 +37,7 @@
   // ║                                 DEFAULTS                                ║
   // ╚═════════════════════════════════════════════════════════════════════════╝
 
-  body {
+  html, body {
     color            : @text;
     background-color : @base;
   }
@@ -46,7 +46,21 @@
   // ║                                  LINKS                                  ║
   // ╚═════════════════════════════════════════════════════════════════════════╝
 
-  a {
+  :not(
+    li.isactive,
+    li.active
+  ) > a:not(
+      .btn,
+      .btn-primary,
+      .accordion-button,
+      .btn-close,
+      .page-link,
+      .form-control,
+      .form-select,
+      .form-check-input,
+      .form-range,
+      .pf-v5-c-nav__link
+    ) {
     color : @blue !important;
 
     &:hover {

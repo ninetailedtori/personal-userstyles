@@ -428,6 +428,22 @@
       background-color : @red;
     }
 
+    .vis-item {
+      color            : @base;
+      background-color : fade(@surface0, 30%);
+      border-color     : @blue;
+
+      &.vis-selected {
+        color            : @base;
+        background-color : fade(@accent, 30%);
+        border-color     : @accent;
+
+        a {
+          text-shadow : @textshad;
+        }
+      }
+    }
+
     :is(.sidebar, .off-canvas-sidebar) {
       &[data-background-color="black"] {
         .logo {
@@ -642,6 +658,46 @@
 
     hr {
       border-color : @overlay1;
+    }
+
+    .timeline-backup-success {
+      background-color : fade(@green, 30%) !important;
+      border-color     : @green !important;
+    }
+
+    .timeline-restore-success {
+      background-color : fade(@teal, 30%) !important;
+      border-color     : @teal !important;
+    }
+
+    .timeline-check-success {
+      background-color : fade(@lavender, 30%) !important;
+      border-color     : @lavender !important;
+    }
+
+    .timeline-copy-success {
+      background-color : fade(@blue, 30%) !important;
+      border-color     : @blue !important;
+    }
+
+    .timeline-prune-success {
+      background-color : fade(@mauve, 30%) !important;
+      border-color     : @mauve !important;
+    }
+
+    .timeline-parallel-error {
+      background-color : fade(@maroon, 30%) !important;
+      border-color     : @maroon !important;
+    }
+
+    .timeline-backup-error, .timeline-restore-error, .timeline-check-error, .timeline-copy-error, .timeline-prune-error {
+      background-color : fade(@red, 30%) !important;
+      border-color     : @red !important;
+    }
+
+    .timeline-backup-warning, .timeline-restore-warning, .timeline-check-warning, .timeline-copy-warning, .timeline-prune-warning {
+      background-color : fade(@peach, 30%) !important;
+      border-color     : @peach !important;
     }
   }
 }
