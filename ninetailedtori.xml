@@ -1,0 +1,2763 @@
+<code_scheme name = "ninetailedtori" version = "173">
+  <option name = "LINE_SEPARATOR" value = "&#10;" />
+  <option name = "RIGHT_MARGIN" value = "80" />
+  <option name = "WRAP_WHEN_TYPING_REACHES_RIGHT_MARGIN" value = "true" />
+  <option name = "SOFT_MARGINS" value = "40,80" />
+  <option name = "DO_NOT_FORMAT">
+    <list>
+      <fileSet type = "globPattern" pattern = "**/*.{yaml,yml,toml}" />
+    </list>
+  </option>
+  <Angular2HtmlCodeStyleSettings>
+    <option name = "INTERPOLATION_WRAP" value = "5" />
+  </Angular2HtmlCodeStyleSettings>
+  <CssCodeStyleSettings>
+    <option name = "HEX_COLOR_LOWER_CASE" value = "true" />
+    <option name = "HEX_COLOR_LONG_FORMAT" value = "true" />
+    <option name = "VALUE_ALIGNMENT" value = "1" />
+    <option name = "KEEP_SINGLE_LINE_BLOCKS" value = "true" />
+    <option name = "ENFORCE_QUOTES_ON_FORMAT" value = "true" />
+  </CssCodeStyleSettings>
+  <HTMLCodeStyleSettings>
+    <option name = "HTML_UNIFORM_INDENT" value = "true" />
+    <option name = "HTML_KEEP_WHITESPACES" value = "true" />
+    <option name = "HTML_ATTRIBUTE_WRAP" value = "4" />
+    <option name = "HTML_KEEP_BLANK_LINES" value = "1" />
+    <option name = "HTML_ALIGN_TEXT" value = "true" />
+    <option name = "HTML_SPACE_AROUND_EQUALITY_IN_ATTRIBUTE" value = "true" />
+    <option name = "HTML_SPACE_AFTER_TAG_NAME" value = "true" />
+    <option name = "HTML_SPACE_INSIDE_EMPTY_TAG" value = "true" />
+    <option name = "HTML_NEWLINE_BEFORE_FIRST_ATTRIBUTE"
+            value = "When multiline" />
+    <option name = "HTML_NEWLINE_AFTER_LAST_ATTRIBUTE"
+            value = "When multiline" />
+  </HTMLCodeStyleSettings>
+  <JSCodeStyleSettings version = "0">
+    <option name = "FORCE_SEMICOLON_STYLE" value = "true" />
+    <option name = "SPACE_BEFORE_GENERATOR_MULT" value = "true" />
+    <option name = "SPACE_AFTER_GENERATOR_MULT" value = "false" />
+    <option name = "ALIGN_OBJECT_PROPERTIES" value = "2" />
+    <option name = "ALIGN_VAR_STATEMENTS" value = "2" />
+    <option name = "SPACE_WITHIN_ARRAY_INITIALIZER_BRACKETS" value = "true" />
+    <option name = "SPACE_BEFORE_FUNCTION_LEFT_PARENTH" value = "false" />
+    <option name = "REFORMAT_C_STYLE_COMMENTS" value = "true" />
+    <option name = "FORCE_QUOTE_STYlE" value = "true" />
+    <option name = "ENFORCE_TRAILING_COMMA" value = "Remove" />
+    <option name = "JSX_ATTRIBUTE_VALUE" value = "Based on type" />
+    <option name = "VAR_DECLARATION_WRAP" value = "5" />
+    <option name = "FUNCTION_PARAMETER_DECORATOR_WRAP" value = "5" />
+    <option name = "CLASS_DECORATOR_WRAP" value = "5" />
+    <option name = "CLASS_FIELD_DECORATOR_WRAP" value = "5" />
+    <option name = "CLASS_METHOD_DECORATOR_WRAP" value = "5" />
+    <option name = "SPACES_WITHIN_OBJECT_LITERAL_BRACES" value = "true" />
+    <option name = "SPACES_WITHIN_IMPORTS" value = "true" />
+    <option name = "USE_CHAINED_CALLS_GROUP_INDENTS" value = "true" />
+    <option name = "SPACES_WITHIN_INTERPOLATION_EXPRESSIONS" value = "true" />
+    <option name = "IMPORT_SORT_MODULE_NAME" value = "true" />
+  </JSCodeStyleSettings>
+  <JSON>
+    <option name = "SPACE_BEFORE_COLON" value = "true" />
+    <option name = "PROPERTY_ALIGNMENT" value = "2" />
+    <option name = "OBJECT_WRAPPING" value = "5" />
+    <option name = "ARRAY_WRAPPING" value = "5" />
+  </JSON>
+  <LessCodeStyleSettings>
+    <option name = "HEX_COLOR_LOWER_CASE" value = "true" />
+    <option name = "HEX_COLOR_LONG_FORMAT" value = "true" />
+    <option name = "VALUE_ALIGNMENT" value = "1" />
+    <option name = "KEEP_SINGLE_LINE_BLOCKS" value = "true" />
+    <option name = "ENFORCE_QUOTES_ON_FORMAT" value = "true" />
+  </LessCodeStyleSettings>
+  <Properties>
+    <option name = "SPACES_AROUND_KEY_VALUE_DELIMITER" value = "true" />
+    <option name = "KEEP_BLANK_LINES" value = "true" />
+  </Properties>
+  <RiderCodeStyleSettings>
+    <option name = "/Default/CodeStyle/CodeFormatting/CppFormatting/ALIGN_MULTILINE_BINARY_EXPRESSIONS_CHAIN/@EntryValue"
+            value = "true"
+            type = "bool" />
+    <option name = "/Default/CodeStyle/CodeFormatting/CppFormatting/ALIGN_MULTILINE_EXPRESSION/@EntryValue"
+            value = "false"
+            type = "bool" />
+    <option name = "/Default/CodeStyle/CodeFormatting/CppFormatting/ALIGN_MULTILINE_FOR_STMT/@EntryValue"
+            value = "true"
+            type = "bool" />
+    <option name = "/Default/CodeStyle/CodeFormatting/CppFormatting/ALIGN_TERNARY/@EntryValue"
+            value = "ALIGN_ALL"
+            type = "string" />
+    <option name = "/Default/CodeStyle/CodeFormatting/CppFormatting/BLANK_LINES_AROUND_CLASS_DEFINITION/@EntryValue"
+            value = "1"
+            type = "int" />
+    <option name = "/Default/CodeStyle/CodeFormatting/CppFormatting/KEEP_BLANK_LINES_IN_DECLARATIONS/@EntryValue"
+            value = "1"
+            type = "long" />
+    <option name = "/Default/CodeStyle/CodeFormatting/CppFormatting/KEEP_BLANK_LINES_IN_CODE/@EntryValue"
+            value = "1"
+            type = "long" />
+    <option name = "/Default/CodeStyle/CodeFormatting/CppFormatting/KEEP_USER_LINEBREAKS/@EntryValue"
+            value = "true"
+            type = "bool" />
+    <option name = "/Default/CodeStyle/CodeFormatting/CppFormatting/INDENT_CASE_FROM_SWITCH/@EntryValue"
+            value = "true"
+            type = "bool" />
+    <option name = "/Default/CodeStyle/CodeFormatting/CppFormatting/INT_ALIGN_EQ/@EntryValue"
+            value = "true"
+            type = "bool" />
+    <option name = "/Default/CodeStyle/CodeFormatting/CppFormatting/SIMPLE_BLOCK_STYLE/@EntryValue"
+            value = "LINE_BREAK"
+            type = "string" />
+    <option name = "/Default/CodeStyle/CodeFormatting/CppFormatting/SPACE_AFTER_COMMA_IN_TEMPLATE_ARGS/@EntryValue"
+            value = "true"
+            type = "bool" />
+    <option name = "/Default/CodeStyle/CodeFormatting/CppFormatting/SPACE_AFTER_COMMA_IN_TEMPLATE_PARAMS/@EntryValue"
+            value = "true"
+            type = "bool" />
+    <option name = "/Default/CodeStyle/CodeFormatting/CppFormatting/SPACE_AFTER_FOR_SEMICOLON/@EntryValue"
+            value = "true"
+            type = "bool" />
+    <option name = "/Default/CodeStyle/CodeFormatting/CppFormatting/SPACE_WITHIN_ARRAY_ACCESS_BRACKETS/@EntryValue"
+            value = "false"
+            type = "bool" />
+    <option name = "/Default/CodeStyle/CodeFormatting/CppFormatting/SPACE_WITHIN_EMPTY_METHOD_PARENTHESES/@EntryValue"
+            value = "false"
+            type = "bool" />
+    <option name = "/Default/CodeStyle/CodeFormatting/CppFormatting/SPECIAL_ELSE_IF_TREATMENT/@EntryValue"
+            value = "true"
+            type = "bool" />
+    <option name = "/Default/CodeStyle/CodeFormatting/CppFormatting/WRAP_AFTER_BINARY_OPSIGN/@EntryValue"
+            value = "true"
+            type = "bool" />
+    <option name = "/Default/CodeStyle/CodeFormatting/CppFormatting/CASE_BLOCK_BRACES/@EntryValue"
+            value = "NEXT_LINE"
+            type = "string" />
+    <option name = "/Default/CodeStyle/CodeFormatting/CppFormatting/BLANK_LINES_AROUND_FUNCTION_DEFINITION/@EntryValue"
+            value = "1"
+            type = "int" />
+    <option name = "/Default/CodeStyle/CodeFormatting/CppFormatting/PLACE_WHILE_ON_NEW_LINE/@EntryValue"
+            value = "false"
+            type = "bool" />
+    <option name = "/Default/CodeStyle/CodeFormatting/CppFormatting/NAMESPACE_INDENTATION/@EntryValue"
+            value = "All"
+            type = "string" />
+    <option name = "/Default/CodeStyle/CodeFormatting/CppFormatting/ALIGN_MULTILINE_ARGUMENT/@EntryValue"
+            value = "true"
+            type = "bool" />
+    <option name = "/Default/CodeStyle/CodeFormatting/CppFormatting/ALIGN_MULTILINE_EXTENDS_LIST/@EntryValue"
+            value = "true"
+            type = "bool" />
+    <option name = "/Default/CodeStyle/CodeFormatting/CppFormatting/ALIGN_MULTILINE_PARAMETER/@EntryValue"
+            value = "true"
+            type = "bool" />
+    <option name = "/Default/CodeStyle/CodeFormatting/CppFormatting/BLANK_LINES_AROUND_DECLARATIONS/@EntryValue"
+            value = "0"
+            type = "int" />
+    <option name = "/Default/CodeStyle/CodeFormatting/CppFormatting/INDENT_CLASS_MEMBERS_FROM_ACCESS_SPECIFIERS/@EntryValue"
+            value = "true"
+            type = "bool" />
+    <option name = "/Default/CodeStyle/CodeFormatting/CppFormatting/LINE_BREAK_AFTER_COLON_IN_MEMBER_INITIALIZER_LISTS/@EntryValue"
+            value = "ON_SINGLE_LINE"
+            type = "string" />
+    <option name = "/Default/CodeStyle/CodeFormatting/CppFormatting/MEMBER_INITIALIZER_LIST_STYLE/@EntryValue"
+            value = "ON_SINGLE_LINE"
+            type = "string" />
+    <option name = "/Default/CodeStyle/CodeFormatting/CppFormatting/SPACE_AFTER_COLON_IN_BITFIELD_DECLARATOR/@EntryValue"
+            value = "true"
+            type = "bool" />
+    <option name = "/Default/CodeStyle/CodeFormatting/CppFormatting/SPACE_BEFORE_EXTENDS_COLON/@EntryValue"
+            value = "true"
+            type = "bool" />
+    <option name = "/Default/CodeStyle/CodeFormatting/CppFormatting/SPACE_AFTER_FOR_COLON/@EntryValue"
+            value = "true"
+            type = "bool" />
+    <option name = "/Default/CodeStyle/CodeFormatting/CppFormatting/SPACE_AFTER_PTR_IN_DATA_MEMBER/@EntryValue"
+            value = "false"
+            type = "bool" />
+    <option name = "/Default/CodeStyle/CodeFormatting/CppFormatting/SPACE_AFTER_PTR_IN_METHOD/@EntryValue"
+            value = "false"
+            type = "bool" />
+    <option name = "/Default/CodeStyle/CodeFormatting/CppFormatting/SPACE_AFTER_REF_IN_DATA_MEMBER/@EntryValue"
+            value = "false"
+            type = "bool" />
+    <option name = "/Default/CodeStyle/CodeFormatting/CppFormatting/SPACE_AFTER_REF_IN_DATA_MEMBERS/@EntryValue"
+            value = "false"
+            type = "bool" />
+    <option name = "/Default/CodeStyle/CodeFormatting/CppFormatting/SPACE_AFTER_REF_IN_METHOD/@EntryValue"
+            value = "false"
+            type = "bool" />
+    <option name = "/Default/CodeStyle/CodeFormatting/CppFormatting/SPACE_BEFORE_PTR_IN_ABSTRACT_DECL/@EntryValue"
+            value = "true"
+            type = "bool" />
+    <option name = "/Default/CodeStyle/CodeFormatting/CppFormatting/SPACE_BEFORE_PTR_IN_DATA_MEMBER/@EntryValue"
+            value = "true"
+            type = "bool" />
+    <option name = "/Default/CodeStyle/CodeFormatting/CppFormatting/SPACE_BEFORE_PTR_IN_DATA_MEMBERS/@EntryValue"
+            value = "true"
+            type = "bool" />
+    <option name = "/Default/CodeStyle/CodeFormatting/CppFormatting/SPACE_BEFORE_PTR_IN_METHOD/@EntryValue"
+            value = "true"
+            type = "bool" />
+    <option name = "/Default/CodeStyle/CodeFormatting/CppFormatting/SPACE_BEFORE_REF_IN_ABSTRACT_DECL/@EntryValue"
+            value = "true"
+            type = "bool" />
+    <option name = "/Default/CodeStyle/CodeFormatting/CppFormatting/SPACE_BEFORE_REF_IN_DATA_MEMBER/@EntryValue"
+            value = "true"
+            type = "bool" />
+    <option name = "/Default/CodeStyle/CodeFormatting/CppFormatting/SPACE_BEFORE_REF_IN_DATA_MEMBERS/@EntryValue"
+            value = "true"
+            type = "bool" />
+    <option name = "/Default/CodeStyle/CodeFormatting/CppFormatting/SPACE_BEFORE_REF_IN_METHOD/@EntryValue"
+            value = "true"
+            type = "bool" />
+    <option name = "/Default/CodeStyle/CodeFormatting/CppFormatting/SPACE_BEFORE_TEMPLATE_PARAMS/@EntryValue"
+            value = "false"
+            type = "bool" />
+    <option name = "/Default/CodeStyle/CodeFormatting/CppFormatting/SPACE_WITHIN_TEMPLATE_PARAMS/@EntryValue"
+            value = "false"
+            type = "bool" />
+    <option name = "/Default/CodeStyle/CodeFormatting/CppFormatting/SPACE_WITHIN_DECLARATION_PARENTHESES/@EntryValue"
+            value = "false"
+            type = "bool" />
+    <option name = "/Default/CodeStyle/CodeFormatting/CppFormatting/WRAP_AFTER_INVOCATION_LPAR/@EntryValue"
+            value = "true"
+            type = "bool" />
+    <option name = "/Default/CodeStyle/CodeFormatting/CppFormatting/WRAP_BEFORE_INVOCATION_RPAR/@EntryValue"
+            value = "true"
+            type = "bool" />
+    <option name = "/Default/CodeStyle/CodeFormatting/CppFormatting/WRAP_AFTER_DECLARATION_LPAR/@EntryValue"
+            value = "true"
+            type = "bool" />
+    <option name = "/Default/CodeStyle/CodeFormatting/CppFormatting/WRAP_BEFORE_DECLARATION_RPAR/@EntryValue"
+            value = "true"
+            type = "bool" />
+    <option name = "/Default/CodeStyle/CodeFormatting/CppFormatting/WRAP_ARGUMENTS_STYLE/@EntryValue"
+            value = "CHOP_IF_LONG"
+            type = "string" />
+    <option name = "/Default/CodeStyle/CodeFormatting/CppFormatting/WRAP_PARAMETERS_STYLE/@EntryValue"
+            value = "CHOP_IF_LONG"
+            type = "string" />
+    <option name = "/Default/CodeStyle/CodeFormatting/CppFormatting/BREAK_TEMPLATE_DECLARATION/@EntryValue"
+            value = "ON_SINGLE_LINE"
+            type = "string" />
+    <option name = "/Default/CodeStyle/CodeFormatting/CppFormatting/FREE_BLOCK_BRACES/@EntryValue"
+            value = "END_OF_LINE"
+            type = "string" />
+    <option name = "/Default/CodeStyle/CodeFormatting/CppFormatting/INITIALIZER_BRACES/@EntryValue"
+            value = "END_OF_LINE_NO_SPACE"
+            type = "string" />
+    <option name = "/Default/CodeStyle/CodeFormatting/CppFormatting/INDENT_STYLE/@EntryValue"
+            value = "Space"
+            type = "string" />
+    <option name = "/Default/CodeStyle/CodeFormatting/CppFormatting/INDENT_SIZE/@EntryValue"
+            value = "4"
+            type = "int" />
+    <option name = "/Default/CodeStyle/CodeFormatting/CppFormatting/CONTINUOUS_LINE_INDENT/@EntryValue"
+            value = "Double"
+            type = "string" />
+    <option name = "/Default/CodeStyle/CodeFormatting/CppFormatting/TAB_WIDTH/@EntryValue"
+            value = "4"
+            type = "int" />
+    <option name = "/Default/CodeStyle/CodeFormatting/CppFormatting/WRAP_LIMIT/@EntryValue"
+            value = "80"
+            type = "long" />
+    <option name = "/Default/CodeStyle/CodeFormatting/CppFormatting/WRAP_CTOR_INITIALIZER_STYLE/@EntryValue"
+            value = "CHOP_IF_LONG"
+            type = "string" />
+    <option name = "/Default/CodeStyle/CodeFormatting/CppFormatting/LINE_BREAK_BEFORE_FUNCTION_TRY_BLOCK/@EntryValue"
+            value = "LINE_BREAK"
+            type = "string" />
+    <option name = "/Default/CodeStyle/CodeFormatting/CppFormatting/SIMPLE_EMBEDDED_STATEMENT_STYLE/@EntryValue"
+            value = "LINE_BREAK"
+            type = "string" />
+    <option name = "/Default/CodeStyle/CodeFormatting/CppFormatting/SIMPLE_CASE_STATEMENT_STYLE/@EntryValue"
+            value = "LINE_BREAK"
+            type = "string" />
+    <option name = "/Default/CodeStyle/CodeFormatting/CppFormatting/FUNCTION_DEFINITION_RETURN_TYPE_STYLE/@EntryValue"
+            value = "ON_SINGLE_LINE"
+            type = "string" />
+    <option name = "/Default/CodeStyle/CodeFormatting/CppFormatting/TOPLEVEL_FUNCTION_DEFINITION_RETURN_TYPE_STYLE/@EntryValue"
+            value = "ON_SINGLE_LINE"
+            type = "string" />
+    <option name = "/Default/CodeStyle/CodeFormatting/CppFormatting/FUNCTION_DECLARATION_RETURN_TYPE_STYLE/@EntryValue"
+            value = "ON_SINGLE_LINE"
+            type = "string" />
+    <option name = "/Default/CodeStyle/CodeFormatting/CppFormatting/TOPLEVEL_FUNCTION_DECLARATION_RETURN_TYPE_STYLE/@EntryValue"
+            value = "ON_SINGLE_LINE"
+            type = "string" />
+    <option name = "/Default/CodeStyle/CodeFormatting/CppFormatting/LINE_BREAK_AFTER_INIT_STATEMENT/@EntryValue"
+            value = "ON_SINGLE_LINE"
+            type = "string" />
+    <option name = "/Default/CodeStyle/CodeFormatting/CppFormatting/LINE_BREAK_BEFORE_REQUIRES_CLAUSE/@EntryValue"
+            value = "ON_SINGLE_LINE"
+            type = "string" />
+    <option name = "/Default/CodeStyle/CodeFormatting/CppFormatting/LINE_BREAK_BEFORE_DEREF_IN_TRAILING_RETURN_TYPES/@EntryValue"
+            value = "ON_SINGLE_LINE"
+            type = "string" />
+    <option name = "/Default/CodeStyle/CodeFormatting/CppFormatting/LINE_BREAK_AFTER_DEREF_IN_TRAILING_RETURN_TYPES/@EntryValue"
+            value = "ON_SINGLE_LINE"
+            type = "string" />
+    <option name = "/Default/CodeStyle/CodeFormatting/CppFormatting/LINE_BREAK_AFTER_COMMA_IN_MEMBER_INITIALIZER_LISTS/@EntryValue"
+            value = "true"
+            type = "bool" />
+    <option name = "/Default/CodeStyle/CodeFormatting/CppFormatting/WRAP_BRACED_INIT_LIST_STYLE/@EntryValue"
+            value = "CHOP_IF_LONG"
+            type = "string" />
+    <option name = "/Default/CodeStyle/CodeFormatting/CppFormatting/WRAP_BASE_CLAUSE_STYLE/@EntryValue"
+            value = "CHOP_IF_LONG"
+            type = "string" />
+    <option name = "/Default/CodeStyle/CodeFormatting/CppFormatting/PLACE_ENUM_ON_SINGLE_LINE/@EntryValue"
+            value = "true"
+            type = "bool" />
+    <option name = "/Default/CodeStyle/CodeFormatting/CppFormatting/KEEP_EXISTING_ENUM_ARRANGEMENT/@EntryValue"
+            value = "false"
+            type = "bool" />
+    <option name = "/Default/CodeStyle/CodeFormatting/CppFormatting/LINKAGE_SPECIFICATION_BRACES/@EntryValue"
+            value = "NEXT_LINE"
+            type = "string" />
+    <option name = "/Default/CodeStyle/CodeFormatting/CppFormatting/EMPTY_BLOCK_STYLE/@EntryValue"
+            value = "TOGETHER_SAME_LINE"
+            type = "string" />
+    <option name = "/Default/CodeStyle/CodeFormatting/CppFormatting/LINKAGE_SPECIFICATION_INDENTATION/@EntryValue"
+            value = "All"
+            type = "string" />
+    <option name = "/Default/CodeStyle/CodeFormatting/CppFormatting/INDENT_PREPROCESSOR_DIRECTIVES/@EntryValue"
+            value = "Normal"
+            type = "string" />
+    <option name = "/Default/CodeStyle/CodeFormatting/CppFormatting/ALIGN_MULTILINE_EXPRESSION_BRACES/@EntryValue"
+            value = "true"
+            type = "bool" />
+    <option name = "/Default/CodeStyle/CodeFormatting/CppFormatting/OUTDENT_COMMAS/@EntryValue"
+            value = "true"
+            type = "bool" />
+    <option name = "/Default/CodeStyle/CodeFormatting/CppFormatting/INT_ALIGN_ENUM_INITIALIZERS/@EntryValue"
+            value = "true"
+            type = "bool" />
+    <option name = "/Default/CodeStyle/CodeFormatting/CppFormatting/INT_ALIGN_DESIGNATED_INITIALIZERS/@EntryValue"
+            value = "true"
+            type = "bool" />
+    <option name = "/Default/CodeStyle/CodeFormatting/CppFormatting/INT_ALIGN_BITFIELD_SIZES/@EntryValue"
+            value = "true"
+            type = "bool" />
+    <option name = "/Default/CodeStyle/CodeFormatting/CppFormatting/INT_ALIGN_COMMENTS/@EntryValue"
+            value = "true"
+            type = "bool" />
+    <option name = "/Default/CodeStyle/CppIncludeDirective/SortIncludeDirectives/@EntryValue"
+            value = "true"
+            type = "bool" />
+    <option name = "/Default/CodeStyle/CodeFormatting/CppCodeStyle/UseAutoCommonCase/@EntryValue"
+            value = "Never"
+            type = "string" />
+    <option name = "/Default/CodeStyle/CodeFormatting/CppCodeStyle/CVQualifiersOrder/@EntryValue"
+            value = "VolatileConst"
+            type = "string" />
+    <option name = "/Default/CodeStyle/CodeFormatting/CppCodeStyle/FunctionDeclarationStyle/@EntryValue"
+            value = "TrailingReturnType"
+            type = "string" />
+    <option name = "/Default/CodeStyle/CodeFormatting/CppCodeStyle/SortDefinitions/@EntryValue"
+            value = "true"
+            type = "bool" />
+    <option name = "/Default/CodeStyle/CodeFormatting/CppCodeStyle/OverridingFunctionStyle/@EntryValue"
+            value = "VirtualAndOverride"
+            type = "string" />
+    <option name = "/Default/CodeStyle/CodeFormatting/CppCodeStyle/OverridingDestructorStyle/@EntryValue"
+            value = "VirtualAndOverride"
+            type = "string" />
+    <option name = "/Default/CodeStyle/CodeFormatting/CppCodeStyle/BracesInIfStatement/@EntryValue"
+            value = "Required"
+            type = "string" />
+    <option name = "/Default/CodeStyle/CodeFormatting/CppCodeStyle/BracesInForStatement/@EntryValue"
+            value = "Required"
+            type = "string" />
+    <option name = "/Default/CodeStyle/CodeFormatting/CppCodeStyle/BracesInWhileStatement/@EntryValue"
+            value = "Required"
+            type = "string" />
+    <option name = "/Default/CodeStyle/CodeFormatting/CppCodeStyle/BracesRedundant/@EntryValue"
+            value = "true"
+            type = "bool" />
+    <option name = "/Default/CodeStyle/EditorConfig/EnableClangFormatSupport/@EntryValue"
+            value = "true"
+            type = "bool" />
+    <option name = "/Default/CodeStyle/CodeFormatting/CppClangFormat/ExecutableToUse/@EntryValue"
+            value = "Custom"
+            type = "string" />
+    <option name = "/Default/CodeStyle/CodeFormatting/CppClangFormat/ExternalClangFormatPath/@EntryValue"
+            value = "/usr/bin/clangd"
+            type = "string" />
+    <option name = "/Default/CodeStyle/Naming/CppNamingOptions/Rules/=1350D079A82E0740947E85445B5AF47C/@EntryIndexedValue"
+            value = "&lt;NamingElement Priority=&quot;6&quot; Title=&quot;Parameters&quot;&gt;&lt;Descriptor Static=&quot;Indeterminate&quot; Constexpr=&quot;Indeterminate&quot; Const=&quot;Indeterminate&quot; Volatile=&quot;Indeterminate&quot; Accessibility=&quot;NOT_APPLICABLE&quot;&gt;&lt;type Name=&quot;function parameter&quot; /&gt;&lt;type Name=&quot;lambda parameter&quot; /&gt;&lt;/Descriptor&gt;&lt;Policy Inspect=&quot;True&quot; WarnAboutPrefixesAndSuffixes=&quot;False&quot; Prefix=&quot;p_&quot; Suffix=&quot;&quot; Style=&quot;aa_bb&quot; /&gt;&lt;/NamingElement&gt;"
+            type = "string" />
+    <option name = "/Default/CodeStyle/Naming/CppNamingOptions/Rules/=18392FF80FA40749AA8CC53981A32AE0/@EntryIndexedValue"
+            value = "&lt;NamingElement Priority=&quot;5&quot; Title=&quot;Template parameters&quot;&gt;&lt;Descriptor Static=&quot;Indeterminate&quot; Constexpr=&quot;Indeterminate&quot; Const=&quot;Indeterminate&quot; Volatile=&quot;Indeterminate&quot; Accessibility=&quot;NOT_APPLICABLE&quot;&gt;&lt;type Name=&quot;non-type template parameter&quot; /&gt;&lt;type Name=&quot;type template parameter&quot; /&gt;&lt;/Descriptor&gt;&lt;Policy Inspect=&quot;True&quot; WarnAboutPrefixesAndSuffixes=&quot;False&quot; Prefix=&quot;p_&quot; Suffix=&quot;&quot; Style=&quot;AaBb&quot; /&gt;&lt;/NamingElement&gt;"
+            type = "string" />
+    <option name = "/Default/CodeStyle/Naming/CppNamingOptions/Rules/=8F69F48E2532F54CBAA0039D4557825E/@EntryIndexedValue"
+            value = "&lt;NamingElement Priority=&quot;10&quot; Title=&quot;Global functions&quot;&gt;&lt;Descriptor Static=&quot;Indeterminate&quot; Constexpr=&quot;Indeterminate&quot; Const=&quot;Indeterminate&quot; Volatile=&quot;Indeterminate&quot; Accessibility=&quot;NOT_APPLICABLE&quot;&gt;&lt;type Name=&quot;global function&quot; /&gt;&lt;/Descriptor&gt;&lt;Policy Inspect=&quot;True&quot; WarnAboutPrefixesAndSuffixes=&quot;False&quot; Prefix=&quot;g_&quot; Suffix=&quot;&quot; Style=&quot;aa_bb&quot; /&gt;&lt;/NamingElement&gt;"
+            type = "string" />
+    <option name = "/Default/CodeStyle/Naming/CppNamingOptions/Rules/=72514D5DF422D442B71A277F97B72887/@EntryIndexedValue"
+            value = "&lt;NamingElement Priority=&quot;8&quot; Title=&quot;Global variables&quot;&gt;&lt;Descriptor Static=&quot;Indeterminate&quot; Constexpr=&quot;Indeterminate&quot; Const=&quot;Indeterminate&quot; Volatile=&quot;Indeterminate&quot; Accessibility=&quot;NOT_APPLICABLE&quot;&gt;&lt;type Name=&quot;global variable&quot; /&gt;&lt;/Descriptor&gt;&lt;Policy Inspect=&quot;True&quot; WarnAboutPrefixesAndSuffixes=&quot;False&quot; Prefix=&quot;g_&quot; Suffix=&quot;&quot; Style=&quot;aa_bb&quot; /&gt;&lt;/NamingElement&gt;"
+            type = "string" />
+    <option name = "/Default/CodeStyle/Naming/CppNamingOptions/Rules/=BF0D1AE66D64FE4FAF613448A12051A0/@EntryIndexedValue"
+            value = "&lt;NamingElement Priority=&quot;17&quot; Title=&quot;Global constants&quot;&gt;&lt;Descriptor Static=&quot;Indeterminate&quot; Constexpr=&quot;Indeterminate&quot; Const=&quot;True&quot; Volatile=&quot;Indeterminate&quot; Accessibility=&quot;NOT_APPLICABLE&quot;&gt;&lt;type Name=&quot;global variable&quot; /&gt;&lt;/Descriptor&gt;&lt;Policy Inspect=&quot;True&quot; WarnAboutPrefixesAndSuffixes=&quot;False&quot; Prefix=&quot;G_&quot; Suffix=&quot;&quot; Style=&quot;AA_BB&quot; /&gt;&lt;/NamingElement&gt;"
+            type = "string" />
+    <option name = "/Default/CodeStyle/Naming/CppNamingOptions/Rules/=2B232F1067F0324F8FF4B9D63ACECDB2/@EntryIndexedValue"
+            value = "&lt;NamingElement Priority=&quot;16&quot; Title=&quot;Other constants&quot;&gt;&lt;Descriptor Static=&quot;True&quot; Constexpr=&quot;Indeterminate&quot; Const=&quot;True&quot; Volatile=&quot;Indeterminate&quot; Accessibility=&quot;NOT_APPLICABLE&quot;&gt;&lt;type Name=&quot;class field&quot; /&gt;&lt;type Name=&quot;local variable&quot; /&gt;&lt;type Name=&quot;struct field&quot; /&gt;&lt;/Descriptor&gt;&lt;Policy Inspect=&quot;True&quot; WarnAboutPrefixesAndSuffixes=&quot;False&quot; Prefix=&quot;&quot; Suffix=&quot;&quot; Style=&quot;AA_BB&quot; /&gt;&lt;/NamingElement&gt;"
+            type = "string" />
+    <option name = "/Default/CodeStyle/Naming/CppNamingOptions/Rules/=B6E900853D6D05429D8C57765B2E546A/@EntryIndexedValue"
+            value = "&lt;NamingElement Priority=&quot;11&quot; Title=&quot;Class and struct methods&quot;&gt;&lt;Descriptor Static=&quot;Indeterminate&quot; Constexpr=&quot;Indeterminate&quot; Const=&quot;Indeterminate&quot; Volatile=&quot;Indeterminate&quot; Accessibility=&quot;NOT_APPLICABLE&quot;&gt;&lt;type Name=&quot;member function&quot; /&gt;&lt;/Descriptor&gt;&lt;Policy Inspect=&quot;True&quot; WarnAboutPrefixesAndSuffixes=&quot;False&quot; Prefix=&quot;m_&quot; Suffix=&quot;&quot; Style=&quot;aa_bb&quot; /&gt;&lt;/NamingElement&gt;"
+            type = "string" />
+    <option name = "/Default/CodeStyle/Naming/CppNamingOptions/Rules/=B82A063F0DDD98498A70D8D7EBB97F8D/@EntryIndexedValue"
+            value = "&lt;NamingElement Priority=&quot;12&quot; Title=&quot;Class and struct fields&quot;&gt;&lt;Descriptor Static=&quot;Indeterminate&quot; Constexpr=&quot;Indeterminate&quot; Const=&quot;Indeterminate&quot; Volatile=&quot;Indeterminate&quot; Accessibility=&quot;NOT_APPLICABLE&quot;&gt;&lt;type Name=&quot;class field&quot; /&gt;&lt;type Name=&quot;struct field&quot; /&gt;&lt;/Descriptor&gt;&lt;Policy Inspect=&quot;True&quot; WarnAboutPrefixesAndSuffixes=&quot;False&quot; Prefix=&quot;f_&quot; Suffix=&quot;_&quot; Style=&quot;aa_bb&quot; /&gt;&lt;/NamingElement&gt;"
+            type = "string" />
+    <option name = "/Default/CodeStyle/Naming/CppNamingOptions/Rules/=BBE8AA08E662BF409B2CB08EC597C493/@EntryIndexedValue"
+            value = "&lt;NamingElement Priority=&quot;13&quot; Title=&quot;Class and struct public fields&quot;&gt;&lt;Descriptor Static=&quot;Indeterminate&quot; Constexpr=&quot;Indeterminate&quot; Const=&quot;Indeterminate&quot; Volatile=&quot;Indeterminate&quot; Accessibility=&quot;PUBLIC&quot;&gt;&lt;type Name=&quot;class field&quot; /&gt;&lt;type Name=&quot;struct field&quot; /&gt;&lt;/Descriptor&gt;&lt;Policy Inspect=&quot;True&quot; WarnAboutPrefixesAndSuffixes=&quot;False&quot; Prefix=&quot;f_&quot; Suffix=&quot;_&quot; Style=&quot;aa_bb&quot; /&gt;&lt;/NamingElement&gt;"
+            type = "string" />
+    <option name = "/Default/CodeStyle/Naming/CppNamingOptions/Rules/=5653BA7B6222F349B94149A2A53C35B8/@EntryIndexedValue"
+            value = "&lt;NamingElement Priority=&quot;14&quot; Title=&quot;Union members&quot;&gt;&lt;Descriptor Static=&quot;Indeterminate&quot; Constexpr=&quot;Indeterminate&quot; Const=&quot;Indeterminate&quot; Volatile=&quot;Indeterminate&quot; Accessibility=&quot;NOT_APPLICABLE&quot;&gt;&lt;type Name=&quot;union member&quot; /&gt;&lt;/Descriptor&gt;&lt;Policy Inspect=&quot;True&quot; WarnAboutPrefixesAndSuffixes=&quot;False&quot; Prefix=&quot;u_&quot; Suffix=&quot;&quot; Style=&quot;aa_bb&quot; /&gt;&lt;/NamingElement&gt;"
+            type = "string" />
+    <option name = "/Default/CodeStyle/Naming/CppNamingOptions/Rules/=4203BE6F332C5149B409B4D5F7197E54/@EntryIndexedValue"
+            value = "&lt;NamingElement Priority=&quot;15&quot; Title=&quot;Enumerators&quot;&gt;&lt;Descriptor Static=&quot;Indeterminate&quot; Constexpr=&quot;Indeterminate&quot; Const=&quot;Indeterminate&quot; Volatile=&quot;Indeterminate&quot; Accessibility=&quot;NOT_APPLICABLE&quot;&gt;&lt;type Name=&quot;scoped enumerator&quot; /&gt;&lt;type Name=&quot;unscoped enumerator&quot; /&gt;&lt;/Descriptor&gt;&lt;Policy Inspect=&quot;True&quot; WarnAboutPrefixesAndSuffixes=&quot;False&quot; Prefix=&quot;&quot; Suffix=&quot;&quot; Style=&quot;AA_BB&quot; /&gt;&lt;/NamingElement&gt;"
+            type = "string" />
+    <option name = "/Default/CodeStyle/Naming/CppNamingOptions/Rules/=A7EBF16DA3BDCB42A0B710704BC8A053/@EntryIndexedValue"
+            value = "&lt;NamingElement Priority=&quot;3&quot; Title=&quot;Enums&quot;&gt;&lt;Descriptor Static=&quot;Indeterminate&quot; Constexpr=&quot;Indeterminate&quot; Const=&quot;Indeterminate&quot; Volatile=&quot;Indeterminate&quot; Accessibility=&quot;NOT_APPLICABLE&quot;&gt;&lt;type Name=&quot;enum&quot; /&gt;&lt;/Descriptor&gt;&lt;Policy Inspect=&quot;True&quot; WarnAboutPrefixesAndSuffixes=&quot;False&quot; Prefix=&quot;e_&quot; Suffix=&quot;&quot; Style=&quot;aa_bb&quot; /&gt;&lt;/NamingElement&gt;"
+            type = "string" />
+    <option name = "/Default/CodeStyle/Naming/CppNamingOptions/Rules/=2229A2BE1AA9214483A51F028530E042/@EntryIndexedValue"
+            value = "&lt;NamingElement Priority=&quot;4&quot; Title=&quot;Unions&quot;&gt;&lt;Descriptor Static=&quot;Indeterminate&quot; Constexpr=&quot;Indeterminate&quot; Const=&quot;Indeterminate&quot; Volatile=&quot;Indeterminate&quot; Accessibility=&quot;NOT_APPLICABLE&quot;&gt;&lt;type Name=&quot;union&quot; /&gt;&lt;/Descriptor&gt;&lt;Policy Inspect=&quot;True&quot; WarnAboutPrefixesAndSuffixes=&quot;False&quot; Prefix=&quot;u_&quot; Suffix=&quot;&quot; Style=&quot;aa_bb&quot; /&gt;&lt;/NamingElement&gt;"
+            type = "string" />
+    <option name = "/Default/CodeStyle/Naming/CppNamingOptions/Rules/=A4FAA2257682A94F8C2C93E123FAFC7A/@EntryIndexedValue"
+            value = "&lt;NamingElement Priority=&quot;19&quot; Title=&quot;Typedefs&quot;&gt;&lt;Descriptor Static=&quot;Indeterminate&quot; Constexpr=&quot;Indeterminate&quot; Const=&quot;Indeterminate&quot; Volatile=&quot;Indeterminate&quot; Accessibility=&quot;NOT_APPLICABLE&quot;&gt;&lt;type Name=&quot;type alias&quot; /&gt;&lt;type Name=&quot;typedef&quot; /&gt;&lt;/Descriptor&gt;&lt;Policy Inspect=&quot;True&quot; WarnAboutPrefixesAndSuffixes=&quot;False&quot; Prefix=&quot;t_&quot; Suffix=&quot;&quot; Style=&quot;aa_bb&quot; /&gt;&lt;/NamingElement&gt;"
+            type = "string" />
+    <option name = "/Default/CodeStyle/CodeFormatting/CppFormatting/SPACE_BEFORE_INITIALIZER_BRACES/@EntryValue"
+            value = "true"
+            type = "bool" />
+    <option name = "/Default/CodeStyle/CodeFormatting/CppFormatting/SPACE_WITHIN_INITIALIZER_BRACES/@EntryValue"
+            value = "true"
+            type = "bool" />
+    <option name = "/Default/CodeStyle/CodeFormatting/CppFormatting/SPACE_WITHIN_EMPTY_INITIALIZER_BRACES/@EntryValue"
+            value = "true"
+            type = "bool" />
+    <option name = "/Default/CodeStyle/CodeFormatting/CppFormatting/BLANK_LINES_AROUND_SINGLE_LINE_FUNCTION_DEFINITION/@EntryValue"
+            value = "1"
+            type = "long" />
+    <option name = "/Default/CodeStyle/CodeFormatting/CppClangFormat/EnableClangFormatSupport/@EntryValue"
+            value = "true"
+            type = "bool" />
+    <option name = "/Default/CodeStyle/CodeFormatting/CppFormatting/WRAP_BEFORE_COMMA_IN_BASE_CLAUSE/@EntryValue"
+            value = "true"
+            type = "bool" />
+  </RiderCodeStyleSettings>
+  <ScssCodeStyleSettings>
+    <option name = "HEX_COLOR_LOWER_CASE" value = "true" />
+    <option name = "HEX_COLOR_LONG_FORMAT" value = "true" />
+    <option name = "VALUE_ALIGNMENT" value = "1" />
+    <option name = "KEEP_SINGLE_LINE_BLOCKS" value = "true" />
+    <option name = "ENFORCE_QUOTES_ON_FORMAT" value = "true" />
+  </ScssCodeStyleSettings>
+  <Shell_Script>
+    <option name = "BINARY_OPS_START_LINE" value = "true" />
+    <option name = "SWITCH_CASES_INDENTED" value = "true" />
+    <option name = "REDIRECT_FOLLOWED_BY_SPACE" value = "true" />
+  </Shell_Script>
+  <SqlCodeStyleSettings version = "7">
+    <option name = "KEYWORD_CASE" value = "2" />
+    <option name = "IDENTIFIER_CASE" value = "1" />
+    <option name = "TYPE_CASE" value = "3" />
+    <option name = "ALIAS_CASE" value = "4" />
+    <option name = "QUOTED_IDENTIFIER_CASE" value = "5" />
+    <option name = "QUOTE_IDENTIFIER" value = "1" />
+    <option name = "QUERY_SECTION_1ST_WORD_ALIGN" value = "2" />
+    <option name = "QUERY_EL_LINE" value = "101" />
+    <option name = "QUERY_EL_COMMA" value = "2" />
+    <option name = "SUBQUERY_OPENING" value = "3" />
+    <option name = "SUBQUERY_CONTENT" value = "4" />
+    <option name = "SUBQUERY_CLOSING" value = "4" />
+    <option name = "SUBQUERY_PAR_SPACE_BEFORE" value = "1" />
+    <option name = "SUBQUERY_PAR_SPACE_INSIDE" value = "true" />
+    <option name = "INSERT_INTO_NL" value = "1" />
+    <option name = "INSERT_OPENING" value = "4" />
+    <option name = "INSERT_CONTENT" value = "4" />
+    <option name = "INSERT_CLOSING" value = "4" />
+    <option name = "INSERT_EL_WRAP" value = "2" />
+    <option name = "INSERT_SPACE_WITHIN_PARENTHESES" value = "true" />
+    <option name = "INSERT_COLLAPSE_MULTI_ROW_VALUES" value = "true" />
+    <option name = "INSERT_MATRIX_ALIGN" value = "true" />
+    <option name = "INSERT_MATRIX_INCLUDING_HEADER" value = "true" />
+    <option name = "WITH_ALIGN_AS" value = "true" />
+    <option name = "SELECT_NEW_LINE_AFTER_ALL_DISTINCT" value = "true" />
+    <option name = "SELECT_USE_AS_WORD" value = "1" />
+    <option name = "SELECT_ASTERISK_REGULAR" value = "true" />
+    <option name = "FROM_WRAP_ON" value = "true" />
+    <option name = "FROM_ALIGN_JOIN_TABLES" value = "true" />
+    <option name = "FROM_ALIGN_ALIASES" value = "true" />
+    <option name = "ORDER_EL_WRAP" value = "2" />
+    <option name = "ORDER_ALIGN_ASC_DESC" value = "true" />
+    <option name = "TABLE_ALTER_ITEM_WRAP" value = "1" />
+    <option name = "POST_OPT_WRAP_1" value = "true" />
+    <option name = "VIEW_WRAP_AS" value = "true" />
+    <option name = "VIEW_INDENT_QUERY" value = "true" />
+    <option name = "ROUTINE_ARG_OPENING" value = "3" />
+    <option name = "ROUTINE_ARG_CONTENT" value = "4" />
+    <option name = "ROUTINE_ARG_CLOSING" value = "4" />
+    <option name = "ROUTINE_ARG_WRAP" value = "2" />
+    <option name = "ROUTINE_ARG_COMMA" value = "2" />
+    <option name = "ROUTINE_ARG_SPACE_WITHIN_PARENTHESES" value = "true" />
+    <option name = "ROUTINE_ARG_ALIGN_TYPES" value = "true" />
+    <option name = "ROUTINE_AS_WRAP" value = "true" />
+    <option name = "ROUTINE_PG_R_QUOTE_WRAP_AFTER" value = "true" />
+    <option name = "SCRIPT_STMT_SEMICOLON_WRAP" value = "2" />
+    <option name = "SCRIPT_STMT_FOLLOWS_BLANK_LINE" value = "2" />
+    <option name = "IMP_COMMON_KEEP_BLANK_LINES_IN_CODE" value = "1" />
+    <option name = "IMP_DECLARE_ALIGN_DEFAULT" value = "true" />
+    <option name = "IMP_IF_THEN_WRAP_THEN" value = "true" />
+    <option name = "IMP_IF_THEN_INDENT_THEN_ELSE" value = "true" />
+    <option name = "IMP_IF_THEN_INDENT_END" value = "true" />
+    <option name = "IMP_LOOP_END_INDENT" value = "true" />
+    <option name = "CORTEGE_SPACE_WITHIN_PARENTHESES" value = "true" />
+    <option name = "EXPR_SPACE_WITHIN_PARENTHESES" value = "true" />
+    <option name = "EXPR_CALL_SPACE_INSIDE_PARENTHESES" value = "true" />
+    <option name = "EXPR_CASE_THEN_WRAP" value = "true" />
+    <option name = "EXPR_CASE_THEN_ALIGN" value = "true" />
+    <option name = "EXPR_CASE_ELSE_ALIGN_THEN" value = "true" />
+    <option name = "EXPR_CASE_END" value = "1" />
+    <option name = "EXPR_CASE_KEEP_NL_AFTER_THEN" value = "true" />
+  </SqlCodeStyleSettings>
+  <TypeScriptCodeStyleSettings version = "0">
+    <option name = "JSDOC_INCLUDE_TYPES" value = "true" />
+    <option name = "FORCE_SEMICOLON_STYLE" value = "true" />
+    <option name = "SPACE_BEFORE_GENERATOR_MULT" value = "true" />
+    <option name = "SPACE_AFTER_GENERATOR_MULT" value = "false" />
+    <option name = "ALIGN_OBJECT_PROPERTIES" value = "2" />
+    <option name = "ALIGN_VAR_STATEMENTS" value = "2" />
+    <option name = "SPACE_WITHIN_ARRAY_INITIALIZER_BRACKETS" value = "true" />
+    <option name = "SPACE_BEFORE_FUNCTION_LEFT_PARENTH" value = "false" />
+    <option name = "REFORMAT_C_STYLE_COMMENTS" value = "true" />
+    <option name = "USE_PUBLIC_MODIFIER" value = "true" />
+    <option name = "PREFER_AS_TYPE_CAST" value = "true" />
+    <option name = "FORCE_QUOTE_STYlE" value = "true" />
+    <option name = "PREFER_EXPLICIT_TYPES_VARS_FIELDS" value = "true" />
+    <option name = "PREFER_EXPLICIT_TYPES_FUNCTION_RETURNS" value = "true" />
+    <option name = "PREFER_EXPLICIT_TYPES_FUNCTION_EXPRESSION_RETURNS"
+            value = "true" />
+    <option name = "ENFORCE_TRAILING_COMMA" value = "Remove" />
+    <option name = "VAR_DECLARATION_WRAP" value = "5" />
+    <option name = "FUNCTION_PARAMETER_DECORATOR_WRAP" value = "5" />
+    <option name = "CLASS_DECORATOR_WRAP" value = "5" />
+    <option name = "CLASS_FIELD_DECORATOR_WRAP" value = "5" />
+    <option name = "CLASS_METHOD_DECORATOR_WRAP" value = "5" />
+    <option name = "SPACES_WITHIN_OBJECT_LITERAL_BRACES" value = "true" />
+    <option name = "SPACES_WITHIN_IMPORTS" value = "true" />
+    <option name = "ALIGN_IMPORTS" value = "true" />
+    <option name = "ALIGN_UNION_TYPES" value = "true" />
+    <option name = "USE_CHAINED_CALLS_GROUP_INDENTS" value = "true" />
+    <option name = "SPACE_WITHIN_TYPE_ASSERTION" value = "true" />
+    <option name = "IMPORT_SORT_MODULE_NAME" value = "true" />
+    <option name = "FUNCTION_EXPRESSION_BRACE_STYLE" value = "5" />
+  </TypeScriptCodeStyleSettings>
+  <VueCodeStyleSettings>
+    <option name = "UNIFORM_INDENT" value = "false" />
+    <option name = "INTERPOLATION_WRAP" value = "5" />
+  </VueCodeStyleSettings>
+  <XML>
+    <option name = "XML_ATTRIBUTE_WRAP" value = "4" />
+    <option name = "XML_KEEP_BLANK_LINES" value = "1" />
+    <option name = "XML_SPACE_AROUND_EQUALITY_IN_ATTRIBUTE" value = "true" />
+    <option name = "XML_SPACE_INSIDE_EMPTY_TAG" value = "true" />
+    <option name = "XML_WHITE_SPACE_AROUND_CDATA" value = "1" />
+  </XML>
+  <clangFormatSettings>
+    <option name = "ENABLED" value = "true" />
+  </clangFormatSettings>
+  <files>
+    <extensions>
+      <pair source = "c" header = "h" fileNamingConvention = "SNAKE_CASE" />
+      <pair source = "cpp" header = "hpp" fileNamingConvention = "SNAKE_CASE" />
+      <pair source = "cu" header = "cuh" fileNamingConvention = "SNAKE_CASE" />
+      <pair source = "ixx" header = "" fileNamingConvention = "NONE" />
+      <pair source = "mxx" header = "" fileNamingConvention = "NONE" />
+      <pair source = "cppm" header = "" fileNamingConvention = "NONE" />
+      <pair source = "ccm" header = "" fileNamingConvention = "NONE" />
+      <pair source = "cxxm" header = "" fileNamingConvention = "NONE" />
+      <pair source = "c++m" header = "" fileNamingConvention = "NONE" />
+    </extensions>
+  </files>
+  <yaml>
+    <option name = "ALIGN_VALUES_PROPERTIES" value = "2" />
+    <option name = "SEQUENCE_ON_NEW_LINE" value = "true" />
+    <option name = "BLOCK_MAPPING_ON_NEW_LINE" value = "true" />
+    <option name = "SPACE_BEFORE_COLON" value = "true" />
+  </yaml>
+  <codeStyleSettings language = "CSS">
+    <option name = "BLOCK_COMMENT_ADD_SPACE" value = "true" />
+    <option name = "KEEP_BLANK_LINES_IN_CODE" value = "1" />
+    <indentOptions>
+      <option name = "INDENT_SIZE" value = "2" />
+      <option name = "CONTINUATION_INDENT_SIZE" value = "2" />
+      <option name = "TAB_SIZE" value = "2" />
+    </indentOptions>
+    <arrangement>
+      <rules>
+        <section>
+          <rule>
+            <match>
+              <NAME>(-[a-z]+-)?font</NAME>
+            </match>
+            <order>BY_NAME</order>
+          </rule>
+          <rule>
+            <match>
+              <NAME>(-[a-z]+-)?font-family</NAME>
+            </match>
+            <order>BY_NAME</order>
+          </rule>
+          <rule>
+            <match>
+              <NAME>(-[a-z]+-)?font-size</NAME>
+            </match>
+            <order>BY_NAME</order>
+          </rule>
+          <rule>
+            <match>
+              <NAME>(-[a-z]+-)?font-weight</NAME>
+            </match>
+            <order>BY_NAME</order>
+          </rule>
+          <rule>
+            <match>
+              <NAME>(-[a-z]+-)?font-style</NAME>
+            </match>
+            <order>BY_NAME</order>
+          </rule>
+          <rule>
+            <match>
+              <NAME>(-[a-z]+-)?font-variant</NAME>
+            </match>
+            <order>BY_NAME</order>
+          </rule>
+          <rule>
+            <match>
+              <NAME>(-[a-z]+-)?font-size-adjust</NAME>
+            </match>
+            <order>BY_NAME</order>
+          </rule>
+          <rule>
+            <match>
+              <NAME>(-[a-z]+-)?font-stretch</NAME>
+            </match>
+            <order>BY_NAME</order>
+          </rule>
+          <rule>
+            <match>
+              <NAME>(-[a-z]+-)?line-height</NAME>
+            </match>
+            <order>BY_NAME</order>
+          </rule>
+          <rule>
+            <match>
+              <NAME>(-[a-z]+-)?position</NAME>
+            </match>
+            <order>BY_NAME</order>
+          </rule>
+          <rule>
+            <match>
+              <NAME>(-[a-z]+-)?z-index</NAME>
+            </match>
+            <order>BY_NAME</order>
+          </rule>
+          <rule>
+            <match>
+              <NAME>(-[a-z]+-)?top</NAME>
+            </match>
+            <order>BY_NAME</order>
+          </rule>
+          <rule>
+            <match>
+              <NAME>(-[a-z]+-)?right</NAME>
+            </match>
+            <order>BY_NAME</order>
+          </rule>
+          <rule>
+            <match>
+              <NAME>(-[a-z]+-)?bottom</NAME>
+            </match>
+            <order>BY_NAME</order>
+          </rule>
+          <rule>
+            <match>
+              <NAME>(-[a-z]+-)?left</NAME>
+            </match>
+            <order>BY_NAME</order>
+          </rule>
+          <rule>
+            <match>
+              <NAME>(-[a-z]+-)?display</NAME>
+            </match>
+            <order>BY_NAME</order>
+          </rule>
+          <rule>
+            <match>
+              <NAME>(-[a-z]+-)?visibility</NAME>
+            </match>
+            <order>BY_NAME</order>
+          </rule>
+          <rule>
+            <match>
+              <NAME>(-[a-z]+-)?float</NAME>
+            </match>
+            <order>BY_NAME</order>
+          </rule>
+          <rule>
+            <match>
+              <NAME>(-[a-z]+-)?clear</NAME>
+            </match>
+            <order>BY_NAME</order>
+          </rule>
+          <rule>
+            <match>
+              <NAME>(-[a-z]+-)?overflow</NAME>
+            </match>
+            <order>BY_NAME</order>
+          </rule>
+          <rule>
+            <match>
+              <NAME>(-[a-z]+-)?overflow-x</NAME>
+            </match>
+            <order>BY_NAME</order>
+          </rule>
+          <rule>
+            <match>
+              <NAME>(-[a-z]+-)?overflow-y</NAME>
+            </match>
+            <order>BY_NAME</order>
+          </rule>
+          <rule>
+            <match>
+              <NAME>(-[a-z]+-)?clip</NAME>
+            </match>
+            <order>BY_NAME</order>
+          </rule>
+          <rule>
+            <match>
+              <NAME>(-[a-z]+-)?zoom</NAME>
+            </match>
+            <order>BY_NAME</order>
+          </rule>
+          <rule>
+            <match>
+              <NAME>(-[a-z]+-)?align-content</NAME>
+            </match>
+            <order>BY_NAME</order>
+          </rule>
+          <rule>
+            <match>
+              <NAME>(-[a-z]+-)?align-items</NAME>
+            </match>
+            <order>BY_NAME</order>
+          </rule>
+          <rule>
+            <match>
+              <NAME>(-[a-z]+-)?align-self</NAME>
+            </match>
+            <order>BY_NAME</order>
+          </rule>
+          <rule>
+            <match>
+              <NAME>(-[a-z]+-)?flex</NAME>
+            </match>
+            <order>BY_NAME</order>
+          </rule>
+          <rule>
+            <match>
+              <NAME>(-[a-z]+-)?flex-flow</NAME>
+            </match>
+            <order>BY_NAME</order>
+          </rule>
+          <rule>
+            <match>
+              <NAME>(-[a-z]+-)?flex-basis</NAME>
+            </match>
+            <order>BY_NAME</order>
+          </rule>
+          <rule>
+            <match>
+              <NAME>(-[a-z]+-)?flex-direction</NAME>
+            </match>
+            <order>BY_NAME</order>
+          </rule>
+          <rule>
+            <match>
+              <NAME>(-[a-z]+-)?flex-grow</NAME>
+            </match>
+            <order>BY_NAME</order>
+          </rule>
+          <rule>
+            <match>
+              <NAME>(-[a-z]+-)?flex-shrink</NAME>
+            </match>
+            <order>BY_NAME</order>
+          </rule>
+          <rule>
+            <match>
+              <NAME>(-[a-z]+-)?flex-wrap</NAME>
+            </match>
+            <order>BY_NAME</order>
+          </rule>
+          <rule>
+            <match>
+              <NAME>(-[a-z]+-)?justify-content</NAME>
+            </match>
+            <order>BY_NAME</order>
+          </rule>
+          <rule>
+            <match>
+              <NAME>(-[a-z]+-)?order</NAME>
+            </match>
+            <order>BY_NAME</order>
+          </rule>
+          <rule>
+            <match>
+              <NAME>(-[a-z]+-)?box-sizing</NAME>
+            </match>
+            <order>BY_NAME</order>
+          </rule>
+          <rule>
+            <match>
+              <NAME>(-[a-z]+-)?width</NAME>
+            </match>
+            <order>BY_NAME</order>
+          </rule>
+          <rule>
+            <match>
+              <NAME>(-[a-z]+-)?min-width</NAME>
+            </match>
+            <order>BY_NAME</order>
+          </rule>
+          <rule>
+            <match>
+              <NAME>(-[a-z]+-)?max-width</NAME>
+            </match>
+            <order>BY_NAME</order>
+          </rule>
+          <rule>
+            <match>
+              <NAME>(-[a-z]+-)?height</NAME>
+            </match>
+            <order>BY_NAME</order>
+          </rule>
+          <rule>
+            <match>
+              <NAME>(-[a-z]+-)?min-height</NAME>
+            </match>
+            <order>BY_NAME</order>
+          </rule>
+          <rule>
+            <match>
+              <NAME>(-[a-z]+-)?max-height</NAME>
+            </match>
+            <order>BY_NAME</order>
+          </rule>
+          <rule>
+            <match>
+              <NAME>(-[a-z]+-)?margin</NAME>
+            </match>
+            <order>BY_NAME</order>
+          </rule>
+          <rule>
+            <match>
+              <NAME>(-[a-z]+-)?margin-top</NAME>
+            </match>
+            <order>BY_NAME</order>
+          </rule>
+          <rule>
+            <match>
+              <NAME>(-[a-z]+-)?margin-right</NAME>
+            </match>
+            <order>BY_NAME</order>
+          </rule>
+          <rule>
+            <match>
+              <NAME>(-[a-z]+-)?margin-bottom</NAME>
+            </match>
+            <order>BY_NAME</order>
+          </rule>
+          <rule>
+            <match>
+              <NAME>(-[a-z]+-)?margin-left</NAME>
+            </match>
+            <order>BY_NAME</order>
+          </rule>
+          <rule>
+            <match>
+              <NAME>(-[a-z]+-)?padding</NAME>
+            </match>
+            <order>BY_NAME</order>
+          </rule>
+          <rule>
+            <match>
+              <NAME>(-[a-z]+-)?padding-top</NAME>
+            </match>
+            <order>BY_NAME</order>
+          </rule>
+          <rule>
+            <match>
+              <NAME>(-[a-z]+-)?padding-right</NAME>
+            </match>
+            <order>BY_NAME</order>
+          </rule>
+          <rule>
+            <match>
+              <NAME>(-[a-z]+-)?padding-bottom</NAME>
+            </match>
+            <order>BY_NAME</order>
+          </rule>
+          <rule>
+            <match>
+              <NAME>(-[a-z]+-)?padding-left</NAME>
+            </match>
+            <order>BY_NAME</order>
+          </rule>
+          <rule>
+            <match>
+              <NAME>(-[a-z]+-)?table-layout</NAME>
+            </match>
+            <order>BY_NAME</order>
+          </rule>
+          <rule>
+            <match>
+              <NAME>(-[a-z]+-)?empty-cells</NAME>
+            </match>
+            <order>BY_NAME</order>
+          </rule>
+          <rule>
+            <match>
+              <NAME>(-[a-z]+-)?caption-side</NAME>
+            </match>
+            <order>BY_NAME</order>
+          </rule>
+          <rule>
+            <match>
+              <NAME>(-[a-z]+-)?border-spacing</NAME>
+            </match>
+            <order>BY_NAME</order>
+          </rule>
+          <rule>
+            <match>
+              <NAME>(-[a-z]+-)?border-collapse</NAME>
+            </match>
+            <order>BY_NAME</order>
+          </rule>
+          <rule>
+            <match>
+              <NAME>(-[a-z]+-)?list-style</NAME>
+            </match>
+            <order>BY_NAME</order>
+          </rule>
+          <rule>
+            <match>
+              <NAME>(-[a-z]+-)?list-style-position</NAME>
+            </match>
+            <order>BY_NAME</order>
+          </rule>
+          <rule>
+            <match>
+              <NAME>(-[a-z]+-)?list-style-type</NAME>
+            </match>
+            <order>BY_NAME</order>
+          </rule>
+          <rule>
+            <match>
+              <NAME>(-[a-z]+-)?list-style-image</NAME>
+            </match>
+            <order>BY_NAME</order>
+          </rule>
+          <rule>
+            <match>
+              <NAME>(-[a-z]+-)?content</NAME>
+            </match>
+            <order>BY_NAME</order>
+          </rule>
+          <rule>
+            <match>
+              <NAME>(-[a-z]+-)?quotes</NAME>
+            </match>
+            <order>BY_NAME</order>
+          </rule>
+          <rule>
+            <match>
+              <NAME>(-[a-z]+-)?counter-reset</NAME>
+            </match>
+            <order>BY_NAME</order>
+          </rule>
+          <rule>
+            <match>
+              <NAME>(-[a-z]+-)?counter-increment</NAME>
+            </match>
+            <order>BY_NAME</order>
+          </rule>
+          <rule>
+            <match>
+              <NAME>(-[a-z]+-)?resize</NAME>
+            </match>
+            <order>BY_NAME</order>
+          </rule>
+          <rule>
+            <match>
+              <NAME>(-[a-z]+-)?cursor</NAME>
+            </match>
+            <order>BY_NAME</order>
+          </rule>
+          <rule>
+            <match>
+              <NAME>(-[a-z]+-)?user-select</NAME>
+            </match>
+            <order>BY_NAME</order>
+          </rule>
+          <rule>
+            <match>
+              <NAME>(-[a-z]+-)?nav-index</NAME>
+            </match>
+            <order>BY_NAME</order>
+          </rule>
+          <rule>
+            <match>
+              <NAME>(-[a-z]+-)?nav-up</NAME>
+            </match>
+            <order>BY_NAME</order>
+          </rule>
+          <rule>
+            <match>
+              <NAME>(-[a-z]+-)?nav-right</NAME>
+            </match>
+            <order>BY_NAME</order>
+          </rule>
+          <rule>
+            <match>
+              <NAME>(-[a-z]+-)?nav-down</NAME>
+            </match>
+            <order>BY_NAME</order>
+          </rule>
+          <rule>
+            <match>
+              <NAME>(-[a-z]+-)?nav-left</NAME>
+            </match>
+            <order>BY_NAME</order>
+          </rule>
+          <rule>
+            <match>
+              <NAME>(-[a-z]+-)?transition</NAME>
+            </match>
+            <order>BY_NAME</order>
+          </rule>
+          <rule>
+            <match>
+              <NAME>(-[a-z]+-)?transition-delay</NAME>
+            </match>
+            <order>BY_NAME</order>
+          </rule>
+          <rule>
+            <match>
+              <NAME>(-[a-z]+-)?transition-timing-function</NAME>
+            </match>
+            <order>BY_NAME</order>
+          </rule>
+          <rule>
+            <match>
+              <NAME>(-[a-z]+-)?transition-duration</NAME>
+            </match>
+            <order>BY_NAME</order>
+          </rule>
+          <rule>
+            <match>
+              <NAME>(-[a-z]+-)?transition-property</NAME>
+            </match>
+            <order>BY_NAME</order>
+          </rule>
+          <rule>
+            <match>
+              <NAME>(-[a-z]+-)?transform</NAME>
+            </match>
+            <order>BY_NAME</order>
+          </rule>
+          <rule>
+            <match>
+              <NAME>(-[a-z]+-)?transform-origin</NAME>
+            </match>
+            <order>BY_NAME</order>
+          </rule>
+          <rule>
+            <match>
+              <NAME>(-[a-z]+-)?animation</NAME>
+            </match>
+            <order>BY_NAME</order>
+          </rule>
+          <rule>
+            <match>
+              <NAME>(-[a-z]+-)?animation-name</NAME>
+            </match>
+            <order>BY_NAME</order>
+          </rule>
+          <rule>
+            <match>
+              <NAME>(-[a-z]+-)?animation-duration</NAME>
+            </match>
+            <order>BY_NAME</order>
+          </rule>
+          <rule>
+            <match>
+              <NAME>(-[a-z]+-)?animation-play-state</NAME>
+            </match>
+            <order>BY_NAME</order>
+          </rule>
+          <rule>
+            <match>
+              <NAME>(-[a-z]+-)?animation-timing-function</NAME>
+            </match>
+            <order>BY_NAME</order>
+          </rule>
+          <rule>
+            <match>
+              <NAME>(-[a-z]+-)?animation-delay</NAME>
+            </match>
+            <order>BY_NAME</order>
+          </rule>
+          <rule>
+            <match>
+              <NAME>(-[a-z]+-)?animation-iteration-count</NAME>
+            </match>
+            <order>BY_NAME</order>
+          </rule>
+          <rule>
+            <match>
+              <NAME>(-[a-z]+-)?animation-direction</NAME>
+            </match>
+            <order>BY_NAME</order>
+          </rule>
+          <rule>
+            <match>
+              <NAME>(-[a-z]+-)?text-align</NAME>
+            </match>
+            <order>BY_NAME</order>
+          </rule>
+          <rule>
+            <match>
+              <NAME>(-[a-z]+-)?text-align-last</NAME>
+            </match>
+            <order>BY_NAME</order>
+          </rule>
+          <rule>
+            <match>
+              <NAME>(-[a-z]+-)?vertical-align</NAME>
+            </match>
+            <order>BY_NAME</order>
+          </rule>
+          <rule>
+            <match>
+              <NAME>(-[a-z]+-)?white-space</NAME>
+            </match>
+            <order>BY_NAME</order>
+          </rule>
+          <rule>
+            <match>
+              <NAME>(-[a-z]+-)?text-decoration</NAME>
+            </match>
+            <order>BY_NAME</order>
+          </rule>
+          <rule>
+            <match>
+              <NAME>(-[a-z]+-)?text-emphasis</NAME>
+            </match>
+            <order>BY_NAME</order>
+          </rule>
+          <rule>
+            <match>
+              <NAME>(-[a-z]+-)?text-emphasis-color</NAME>
+            </match>
+            <order>BY_NAME</order>
+          </rule>
+          <rule>
+            <match>
+              <NAME>(-[a-z]+-)?text-emphasis-style</NAME>
+            </match>
+            <order>BY_NAME</order>
+          </rule>
+          <rule>
+            <match>
+              <NAME>(-[a-z]+-)?text-emphasis-position</NAME>
+            </match>
+            <order>BY_NAME</order>
+          </rule>
+          <rule>
+            <match>
+              <NAME>(-[a-z]+-)?text-indent</NAME>
+            </match>
+            <order>BY_NAME</order>
+          </rule>
+          <rule>
+            <match>
+              <NAME>(-[a-z]+-)?text-justify</NAME>
+            </match>
+            <order>BY_NAME</order>
+          </rule>
+          <rule>
+            <match>
+              <NAME>(-[a-z]+-)?letter-spacing</NAME>
+            </match>
+            <order>BY_NAME</order>
+          </rule>
+          <rule>
+            <match>
+              <NAME>(-[a-z]+-)?word-spacing</NAME>
+            </match>
+            <order>BY_NAME</order>
+          </rule>
+          <rule>
+            <match>
+              <NAME>(-[a-z]+-)?text-outline</NAME>
+            </match>
+            <order>BY_NAME</order>
+          </rule>
+          <rule>
+            <match>
+              <NAME>(-[a-z]+-)?text-transform</NAME>
+            </match>
+            <order>BY_NAME</order>
+          </rule>
+          <rule>
+            <match>
+              <NAME>(-[a-z]+-)?text-wrap</NAME>
+            </match>
+            <order>BY_NAME</order>
+          </rule>
+          <rule>
+            <match>
+              <NAME>(-[a-z]+-)?text-overflow</NAME>
+            </match>
+            <order>BY_NAME</order>
+          </rule>
+          <rule>
+            <match>
+              <NAME>(-[a-z]+-)?text-overflow-ellipsis</NAME>
+            </match>
+            <order>BY_NAME</order>
+          </rule>
+          <rule>
+            <match>
+              <NAME>(-[a-z]+-)?text-overflow-mode</NAME>
+            </match>
+            <order>BY_NAME</order>
+          </rule>
+          <rule>
+            <match>
+              <NAME>(-[a-z]+-)?word-wrap</NAME>
+            </match>
+            <order>BY_NAME</order>
+          </rule>
+          <rule>
+            <match>
+              <NAME>(-[a-z]+-)?word-break</NAME>
+            </match>
+            <order>BY_NAME</order>
+          </rule>
+          <rule>
+            <match>
+              <NAME>(-[a-z]+-)?tab-size</NAME>
+            </match>
+            <order>BY_NAME</order>
+          </rule>
+          <rule>
+            <match>
+              <NAME>(-[a-z]+-)?hyphens</NAME>
+            </match>
+            <order>BY_NAME</order>
+          </rule>
+          <rule>
+            <match>
+              <NAME>(-[a-z]+-)?pointer-events</NAME>
+            </match>
+            <order>BY_NAME</order>
+          </rule>
+          <rule>
+            <match>
+              <NAME>(-[a-z]+-)?opacity</NAME>
+            </match>
+            <order>BY_NAME</order>
+          </rule>
+          <rule>
+            <match>
+              <NAME>(-[a-z]+-)?color</NAME>
+            </match>
+            <order>BY_NAME</order>
+          </rule>
+          <rule>
+            <match>
+              <NAME>(-[a-z]+-)?border</NAME>
+            </match>
+            <order>BY_NAME</order>
+          </rule>
+          <rule>
+            <match>
+              <NAME>(-[a-z]+-)?border-width</NAME>
+            </match>
+            <order>BY_NAME</order>
+          </rule>
+          <rule>
+            <match>
+              <NAME>(-[a-z]+-)?border-style</NAME>
+            </match>
+            <order>BY_NAME</order>
+          </rule>
+          <rule>
+            <match>
+              <NAME>(-[a-z]+-)?border-color</NAME>
+            </match>
+            <order>BY_NAME</order>
+          </rule>
+          <rule>
+            <match>
+              <NAME>(-[a-z]+-)?border-top</NAME>
+            </match>
+            <order>BY_NAME</order>
+          </rule>
+          <rule>
+            <match>
+              <NAME>(-[a-z]+-)?border-top-width</NAME>
+            </match>
+            <order>BY_NAME</order>
+          </rule>
+          <rule>
+            <match>
+              <NAME>(-[a-z]+-)?border-top-style</NAME>
+            </match>
+            <order>BY_NAME</order>
+          </rule>
+          <rule>
+            <match>
+              <NAME>(-[a-z]+-)?border-top-color</NAME>
+            </match>
+            <order>BY_NAME</order>
+          </rule>
+          <rule>
+            <match>
+              <NAME>(-[a-z]+-)?border-right</NAME>
+            </match>
+            <order>BY_NAME</order>
+          </rule>
+          <rule>
+            <match>
+              <NAME>(-[a-z]+-)?border-right-width</NAME>
+            </match>
+            <order>BY_NAME</order>
+          </rule>
+          <rule>
+            <match>
+              <NAME>(-[a-z]+-)?border-right-style</NAME>
+            </match>
+            <order>BY_NAME</order>
+          </rule>
+          <rule>
+            <match>
+              <NAME>(-[a-z]+-)?border-right-color</NAME>
+            </match>
+            <order>BY_NAME</order>
+          </rule>
+          <rule>
+            <match>
+              <NAME>(-[a-z]+-)?border-bottom</NAME>
+            </match>
+            <order>BY_NAME</order>
+          </rule>
+          <rule>
+            <match>
+              <NAME>(-[a-z]+-)?border-bottom-width</NAME>
+            </match>
+            <order>BY_NAME</order>
+          </rule>
+          <rule>
+            <match>
+              <NAME>(-[a-z]+-)?border-bottom-style</NAME>
+            </match>
+            <order>BY_NAME</order>
+          </rule>
+          <rule>
+            <match>
+              <NAME>(-[a-z]+-)?border-bottom-color</NAME>
+            </match>
+            <order>BY_NAME</order>
+          </rule>
+          <rule>
+            <match>
+              <NAME>(-[a-z]+-)?border-left</NAME>
+            </match>
+            <order>BY_NAME</order>
+          </rule>
+          <rule>
+            <match>
+              <NAME>(-[a-z]+-)?border-left-width</NAME>
+            </match>
+            <order>BY_NAME</order>
+          </rule>
+          <rule>
+            <match>
+              <NAME>(-[a-z]+-)?border-left-style</NAME>
+            </match>
+            <order>BY_NAME</order>
+          </rule>
+          <rule>
+            <match>
+              <NAME>(-[a-z]+-)?border-left-color</NAME>
+            </match>
+            <order>BY_NAME</order>
+          </rule>
+          <rule>
+            <match>
+              <NAME>(-[a-z]+-)?border-radius</NAME>
+            </match>
+            <order>BY_NAME</order>
+          </rule>
+          <rule>
+            <match>
+              <NAME>(-[a-z]+-)?border-top-left-radius</NAME>
+            </match>
+            <order>BY_NAME</order>
+          </rule>
+          <rule>
+            <match>
+              <NAME>(-[a-z]+-)?border-top-right-radius</NAME>
+            </match>
+            <order>BY_NAME</order>
+          </rule>
+          <rule>
+            <match>
+              <NAME>(-[a-z]+-)?border-bottom-right-radius</NAME>
+            </match>
+            <order>BY_NAME</order>
+          </rule>
+          <rule>
+            <match>
+              <NAME>(-[a-z]+-)?border-bottom-left-radius</NAME>
+            </match>
+            <order>BY_NAME</order>
+          </rule>
+          <rule>
+            <match>
+              <NAME>(-[a-z]+-)?border-image</NAME>
+            </match>
+            <order>BY_NAME</order>
+          </rule>
+          <rule>
+            <match>
+              <NAME>(-[a-z]+-)?border-image-source</NAME>
+            </match>
+            <order>BY_NAME</order>
+          </rule>
+          <rule>
+            <match>
+              <NAME>(-[a-z]+-)?border-image-slice</NAME>
+            </match>
+            <order>BY_NAME</order>
+          </rule>
+          <rule>
+            <match>
+              <NAME>(-[a-z]+-)?border-image-width</NAME>
+            </match>
+            <order>BY_NAME</order>
+          </rule>
+          <rule>
+            <match>
+              <NAME>(-[a-z]+-)?border-image-outset</NAME>
+            </match>
+            <order>BY_NAME</order>
+          </rule>
+          <rule>
+            <match>
+              <NAME>(-[a-z]+-)?border-image-repeat</NAME>
+            </match>
+            <order>BY_NAME</order>
+          </rule>
+          <rule>
+            <match>
+              <NAME>(-[a-z]+-)?outline</NAME>
+            </match>
+            <order>BY_NAME</order>
+          </rule>
+          <rule>
+            <match>
+              <NAME>(-[a-z]+-)?outline-width</NAME>
+            </match>
+            <order>BY_NAME</order>
+          </rule>
+          <rule>
+            <match>
+              <NAME>(-[a-z]+-)?outline-style</NAME>
+            </match>
+            <order>BY_NAME</order>
+          </rule>
+          <rule>
+            <match>
+              <NAME>(-[a-z]+-)?outline-color</NAME>
+            </match>
+            <order>BY_NAME</order>
+          </rule>
+          <rule>
+            <match>
+              <NAME>(-[a-z]+-)?outline-offset</NAME>
+            </match>
+            <order>BY_NAME</order>
+          </rule>
+          <rule>
+            <match>
+              <NAME>(-[a-z]+-)?background</NAME>
+            </match>
+            <order>BY_NAME</order>
+          </rule>
+          <rule>
+            <match>
+              <NAME>(-[a-z]+-)?background-color</NAME>
+            </match>
+            <order>BY_NAME</order>
+          </rule>
+          <rule>
+            <match>
+              <NAME>(-[a-z]+-)?background-image</NAME>
+            </match>
+            <order>BY_NAME</order>
+          </rule>
+          <rule>
+            <match>
+              <NAME>(-[a-z]+-)?background-repeat</NAME>
+            </match>
+            <order>BY_NAME</order>
+          </rule>
+          <rule>
+            <match>
+              <NAME>(-[a-z]+-)?background-attachment</NAME>
+            </match>
+            <order>BY_NAME</order>
+          </rule>
+          <rule>
+            <match>
+              <NAME>(-[a-z]+-)?background-position</NAME>
+            </match>
+            <order>BY_NAME</order>
+          </rule>
+          <rule>
+            <match>
+              <NAME>(-[a-z]+-)?background-position-x</NAME>
+            </match>
+            <order>BY_NAME</order>
+          </rule>
+          <rule>
+            <match>
+              <NAME>(-[a-z]+-)?background-position-y</NAME>
+            </match>
+            <order>BY_NAME</order>
+          </rule>
+          <rule>
+            <match>
+              <NAME>(-[a-z]+-)?background-clip</NAME>
+            </match>
+            <order>BY_NAME</order>
+          </rule>
+          <rule>
+            <match>
+              <NAME>(-[a-z]+-)?background-origin</NAME>
+            </match>
+            <order>BY_NAME</order>
+          </rule>
+          <rule>
+            <match>
+              <NAME>(-[a-z]+-)?background-size</NAME>
+            </match>
+            <order>BY_NAME</order>
+          </rule>
+          <rule>
+            <match>
+              <NAME>(-[a-z]+-)?box-decoration-break</NAME>
+            </match>
+            <order>BY_NAME</order>
+          </rule>
+          <rule>
+            <match>
+              <NAME>(-[a-z]+-)?box-shadow</NAME>
+            </match>
+            <order>BY_NAME</order>
+          </rule>
+          <rule>
+            <match>
+              <NAME>(-[a-z]+-)?text-shadow</NAME>
+            </match>
+            <order>BY_NAME</order>
+          </rule>
+        </section>
+      </rules>
+    </arrangement>
+  </codeStyleSettings>
+  <codeStyleSettings language = "EditorConfig">
+    <option name = "ALIGN_GROUP_FIELD_DECLARATIONS" value = "true" />
+    <option name = "SPACE_BEFORE_COLON" value = "true" />
+    <option name = "SPACE_AFTER_COLON" value = "true" />
+  </codeStyleSettings>
+  <codeStyleSettings language = "Glsl">
+    <option name = "SPACE_BEFORE_COLON" value = "false" />
+  </codeStyleSettings>
+  <codeStyleSettings language = "HTML">
+    <option name = "LINE_COMMENT_AT_FIRST_COLUMN" value = "false" />
+    <option name = "BLOCK_COMMENT_AT_FIRST_COLUMN" value = "false" />
+    <option name = "BLOCK_COMMENT_ADD_SPACE" value = "true" />
+    <indentOptions>
+      <option name = "INDENT_SIZE" value = "2" />
+      <option name = "CONTINUATION_INDENT_SIZE" value = "2" />
+      <option name = "TAB_SIZE" value = "2" />
+    </indentOptions>
+  </codeStyleSettings>
+  <codeStyleSettings language = "HTTP Request">
+    <option name = "CALL_PARAMETERS_WRAP" value = "5" />
+    <option name = "METHOD_PARAMETERS_WRAP" value = "5" />
+  </codeStyleSettings>
+  <codeStyleSettings language = "JSON">
+    <option name = "SPACE_WITHIN_BRACKETS" value = "true" />
+    <option name = "SPACE_WITHIN_BRACES" value = "true" />
+    <option name = "WRAP_LONG_LINES" value = "true" />
+    <indentOptions>
+      <option name = "CONTINUATION_INDENT_SIZE" value = "4" />
+      <option name = "TAB_SIZE" value = "2" />
+    </indentOptions>
+  </codeStyleSettings>
+  <codeStyleSettings language = "JavaScript">
+    <option name = "BLOCK_COMMENT_AT_FIRST_COLUMN" value = "false" />
+    <option name = "BLOCK_COMMENT_ADD_SPACE" value = "true" />
+    <option name = "KEEP_BLANK_LINES_IN_CODE" value = "1" />
+    <option name = "ELSE_ON_NEW_LINE" value = "true" />
+    <option name = "ALIGN_MULTILINE_TERNARY_OPERATION" value = "true" />
+    <option name = "ALIGN_MULTILINE_EXTENDS_LIST" value = "true" />
+    <option name = "SPACE_WITHIN_PARENTHESES" value = "true" />
+    <option name = "SPACE_WITHIN_METHOD_CALL_PARENTHESES" value = "true" />
+    <option name = "SPACE_WITHIN_METHOD_PARENTHESES" value = "true" />
+    <option name = "SPACE_WITHIN_IF_PARENTHESES" value = "true" />
+    <option name = "SPACE_WITHIN_WHILE_PARENTHESES" value = "true" />
+    <option name = "SPACE_WITHIN_FOR_PARENTHESES" value = "true" />
+    <option name = "SPACE_WITHIN_CATCH_PARENTHESES" value = "true" />
+    <option name = "SPACE_WITHIN_SWITCH_PARENTHESES" value = "true" />
+    <option name = "SPACE_WITHIN_BRACKETS" value = "true" />
+    <option name = "CALL_PARAMETERS_WRAP" value = "5" />
+    <option name = "CALL_PARAMETERS_LPAREN_ON_NEXT_LINE" value = "true" />
+    <option name = "CALL_PARAMETERS_RPAREN_ON_NEXT_LINE" value = "true" />
+    <option name = "METHOD_PARAMETERS_WRAP" value = "5" />
+    <option name = "METHOD_PARAMETERS_LPAREN_ON_NEXT_LINE" value = "true" />
+    <option name = "METHOD_PARAMETERS_RPAREN_ON_NEXT_LINE" value = "true" />
+    <option name = "METHOD_CALL_CHAIN_WRAP" value = "5" />
+    <option name = "PARENTHESES_EXPRESSION_LPAREN_WRAP" value = "true" />
+    <option name = "PARENTHESES_EXPRESSION_RPAREN_WRAP" value = "true" />
+    <option name = "BINARY_OPERATION_WRAP" value = "5" />
+    <option name = "BINARY_OPERATION_SIGN_ON_NEXT_LINE" value = "true" />
+    <option name = "TERNARY_OPERATION_WRAP" value = "5" />
+    <option name = "TERNARY_OPERATION_SIGNS_ON_NEXT_LINE" value = "true" />
+    <option name = "KEEP_SIMPLE_BLOCKS_IN_ONE_LINE" value = "true" />
+    <option name = "KEEP_SIMPLE_METHODS_IN_ONE_LINE" value = "true" />
+    <option name = "FOR_STATEMENT_WRAP" value = "5" />
+    <option name = "FOR_STATEMENT_LPAREN_ON_NEXT_LINE" value = "true" />
+    <option name = "FOR_STATEMENT_RPAREN_ON_NEXT_LINE" value = "true" />
+    <option name = "ARRAY_INITIALIZER_WRAP" value = "5" />
+    <option name = "ARRAY_INITIALIZER_LBRACE_ON_NEXT_LINE" value = "true" />
+    <option name = "ARRAY_INITIALIZER_RBRACE_ON_NEXT_LINE" value = "true" />
+    <option name = "ASSIGNMENT_WRAP" value = "5" />
+    <option name = "PLACE_ASSIGNMENT_SIGN_ON_NEXT_LINE" value = "true" />
+    <option name = "WRAP_COMMENTS" value = "true" />
+    <option name = "IF_BRACE_FORCE" value = "3" />
+    <option name = "DOWHILE_BRACE_FORCE" value = "1" />
+    <option name = "WHILE_BRACE_FORCE" value = "1" />
+    <option name = "FOR_BRACE_FORCE" value = "1" />
+  </codeStyleSettings>
+  <codeStyleSettings language = "LESS">
+    <option name = "LINE_COMMENT_ADD_SPACE" value = "true" />
+    <option name = "BLOCK_COMMENT_ADD_SPACE" value = "true" />
+    <option name = "KEEP_BLANK_LINES_IN_CODE" value = "1" />
+    <indentOptions>
+      <option name = "CONTINUATION_INDENT_SIZE" value = "2" />
+      <option name = "TAB_SIZE" value = "2" />
+    </indentOptions>
+  </codeStyleSettings>
+  <codeStyleSettings language = "Properties">
+    <option name = "ALIGN_GROUP_FIELD_DECLARATIONS" value = "true" />
+  </codeStyleSettings>
+  <codeStyleSettings language = "Rust">
+    <option name = "RIGHT_MARGIN" value = "-1" />
+  </codeStyleSettings>
+  <codeStyleSettings language = "SASS">
+    <option name = "LINE_COMMENT_ADD_SPACE" value = "true" />
+    <option name = "KEEP_BLANK_LINES_IN_CODE" value = "1" />
+    <indentOptions>
+      <option name = "CONTINUATION_INDENT_SIZE" value = "2" />
+      <option name = "TAB_SIZE" value = "2" />
+    </indentOptions>
+  </codeStyleSettings>
+  <codeStyleSettings language = "SCSS">
+    <option name = "LINE_COMMENT_ADD_SPACE" value = "true" />
+    <option name = "BLOCK_COMMENT_ADD_SPACE" value = "true" />
+    <option name = "KEEP_BLANK_LINES_IN_CODE" value = "1" />
+    <indentOptions>
+      <option name = "CONTINUATION_INDENT_SIZE" value = "2" />
+      <option name = "TAB_SIZE" value = "2" />
+    </indentOptions>
+    <arrangement>
+      <rules>
+        <section>
+          <rule>
+            <match>
+              <NAME>(-[a-z]+-)?font</NAME>
+            </match>
+            <order>BY_NAME</order>
+          </rule>
+          <rule>
+            <match>
+              <NAME>(-[a-z]+-)?font-family</NAME>
+            </match>
+            <order>BY_NAME</order>
+          </rule>
+          <rule>
+            <match>
+              <NAME>(-[a-z]+-)?font-size</NAME>
+            </match>
+            <order>BY_NAME</order>
+          </rule>
+          <rule>
+            <match>
+              <NAME>(-[a-z]+-)?font-weight</NAME>
+            </match>
+            <order>BY_NAME</order>
+          </rule>
+          <rule>
+            <match>
+              <NAME>(-[a-z]+-)?font-style</NAME>
+            </match>
+            <order>BY_NAME</order>
+          </rule>
+          <rule>
+            <match>
+              <NAME>(-[a-z]+-)?font-variant</NAME>
+            </match>
+            <order>BY_NAME</order>
+          </rule>
+          <rule>
+            <match>
+              <NAME>(-[a-z]+-)?font-size-adjust</NAME>
+            </match>
+            <order>BY_NAME</order>
+          </rule>
+          <rule>
+            <match>
+              <NAME>(-[a-z]+-)?font-stretch</NAME>
+            </match>
+            <order>BY_NAME</order>
+          </rule>
+          <rule>
+            <match>
+              <NAME>(-[a-z]+-)?line-height</NAME>
+            </match>
+            <order>BY_NAME</order>
+          </rule>
+          <rule>
+            <match>
+              <NAME>(-[a-z]+-)?position</NAME>
+            </match>
+            <order>BY_NAME</order>
+          </rule>
+          <rule>
+            <match>
+              <NAME>(-[a-z]+-)?z-index</NAME>
+            </match>
+            <order>BY_NAME</order>
+          </rule>
+          <rule>
+            <match>
+              <NAME>(-[a-z]+-)?top</NAME>
+            </match>
+            <order>BY_NAME</order>
+          </rule>
+          <rule>
+            <match>
+              <NAME>(-[a-z]+-)?right</NAME>
+            </match>
+            <order>BY_NAME</order>
+          </rule>
+          <rule>
+            <match>
+              <NAME>(-[a-z]+-)?bottom</NAME>
+            </match>
+            <order>BY_NAME</order>
+          </rule>
+          <rule>
+            <match>
+              <NAME>(-[a-z]+-)?left</NAME>
+            </match>
+            <order>BY_NAME</order>
+          </rule>
+          <rule>
+            <match>
+              <NAME>(-[a-z]+-)?display</NAME>
+            </match>
+            <order>BY_NAME</order>
+          </rule>
+          <rule>
+            <match>
+              <NAME>(-[a-z]+-)?visibility</NAME>
+            </match>
+            <order>BY_NAME</order>
+          </rule>
+          <rule>
+            <match>
+              <NAME>(-[a-z]+-)?float</NAME>
+            </match>
+            <order>BY_NAME</order>
+          </rule>
+          <rule>
+            <match>
+              <NAME>(-[a-z]+-)?clear</NAME>
+            </match>
+            <order>BY_NAME</order>
+          </rule>
+          <rule>
+            <match>
+              <NAME>(-[a-z]+-)?overflow</NAME>
+            </match>
+            <order>BY_NAME</order>
+          </rule>
+          <rule>
+            <match>
+              <NAME>(-[a-z]+-)?overflow-x</NAME>
+            </match>
+            <order>BY_NAME</order>
+          </rule>
+          <rule>
+            <match>
+              <NAME>(-[a-z]+-)?overflow-y</NAME>
+            </match>
+            <order>BY_NAME</order>
+          </rule>
+          <rule>
+            <match>
+              <NAME>(-[a-z]+-)?clip</NAME>
+            </match>
+            <order>BY_NAME</order>
+          </rule>
+          <rule>
+            <match>
+              <NAME>(-[a-z]+-)?zoom</NAME>
+            </match>
+            <order>BY_NAME</order>
+          </rule>
+          <rule>
+            <match>
+              <NAME>(-[a-z]+-)?align-content</NAME>
+            </match>
+            <order>BY_NAME</order>
+          </rule>
+          <rule>
+            <match>
+              <NAME>(-[a-z]+-)?align-items</NAME>
+            </match>
+            <order>BY_NAME</order>
+          </rule>
+          <rule>
+            <match>
+              <NAME>(-[a-z]+-)?align-self</NAME>
+            </match>
+            <order>BY_NAME</order>
+          </rule>
+          <rule>
+            <match>
+              <NAME>(-[a-z]+-)?flex</NAME>
+            </match>
+            <order>BY_NAME</order>
+          </rule>
+          <rule>
+            <match>
+              <NAME>(-[a-z]+-)?flex-flow</NAME>
+            </match>
+            <order>BY_NAME</order>
+          </rule>
+          <rule>
+            <match>
+              <NAME>(-[a-z]+-)?flex-basis</NAME>
+            </match>
+            <order>BY_NAME</order>
+          </rule>
+          <rule>
+            <match>
+              <NAME>(-[a-z]+-)?flex-direction</NAME>
+            </match>
+            <order>BY_NAME</order>
+          </rule>
+          <rule>
+            <match>
+              <NAME>(-[a-z]+-)?flex-grow</NAME>
+            </match>
+            <order>BY_NAME</order>
+          </rule>
+          <rule>
+            <match>
+              <NAME>(-[a-z]+-)?flex-shrink</NAME>
+            </match>
+            <order>BY_NAME</order>
+          </rule>
+          <rule>
+            <match>
+              <NAME>(-[a-z]+-)?flex-wrap</NAME>
+            </match>
+            <order>BY_NAME</order>
+          </rule>
+          <rule>
+            <match>
+              <NAME>(-[a-z]+-)?justify-content</NAME>
+            </match>
+            <order>BY_NAME</order>
+          </rule>
+          <rule>
+            <match>
+              <NAME>(-[a-z]+-)?order</NAME>
+            </match>
+            <order>BY_NAME</order>
+          </rule>
+          <rule>
+            <match>
+              <NAME>(-[a-z]+-)?box-sizing</NAME>
+            </match>
+            <order>BY_NAME</order>
+          </rule>
+          <rule>
+            <match>
+              <NAME>(-[a-z]+-)?width</NAME>
+            </match>
+            <order>BY_NAME</order>
+          </rule>
+          <rule>
+            <match>
+              <NAME>(-[a-z]+-)?min-width</NAME>
+            </match>
+            <order>BY_NAME</order>
+          </rule>
+          <rule>
+            <match>
+              <NAME>(-[a-z]+-)?max-width</NAME>
+            </match>
+            <order>BY_NAME</order>
+          </rule>
+          <rule>
+            <match>
+              <NAME>(-[a-z]+-)?height</NAME>
+            </match>
+            <order>BY_NAME</order>
+          </rule>
+          <rule>
+            <match>
+              <NAME>(-[a-z]+-)?min-height</NAME>
+            </match>
+            <order>BY_NAME</order>
+          </rule>
+          <rule>
+            <match>
+              <NAME>(-[a-z]+-)?max-height</NAME>
+            </match>
+            <order>BY_NAME</order>
+          </rule>
+          <rule>
+            <match>
+              <NAME>(-[a-z]+-)?margin</NAME>
+            </match>
+            <order>BY_NAME</order>
+          </rule>
+          <rule>
+            <match>
+              <NAME>(-[a-z]+-)?margin-top</NAME>
+            </match>
+            <order>BY_NAME</order>
+          </rule>
+          <rule>
+            <match>
+              <NAME>(-[a-z]+-)?margin-right</NAME>
+            </match>
+            <order>BY_NAME</order>
+          </rule>
+          <rule>
+            <match>
+              <NAME>(-[a-z]+-)?margin-bottom</NAME>
+            </match>
+            <order>BY_NAME</order>
+          </rule>
+          <rule>
+            <match>
+              <NAME>(-[a-z]+-)?margin-left</NAME>
+            </match>
+            <order>BY_NAME</order>
+          </rule>
+          <rule>
+            <match>
+              <NAME>(-[a-z]+-)?padding</NAME>
+            </match>
+            <order>BY_NAME</order>
+          </rule>
+          <rule>
+            <match>
+              <NAME>(-[a-z]+-)?padding-top</NAME>
+            </match>
+            <order>BY_NAME</order>
+          </rule>
+          <rule>
+            <match>
+              <NAME>(-[a-z]+-)?padding-right</NAME>
+            </match>
+            <order>BY_NAME</order>
+          </rule>
+          <rule>
+            <match>
+              <NAME>(-[a-z]+-)?padding-bottom</NAME>
+            </match>
+            <order>BY_NAME</order>
+          </rule>
+          <rule>
+            <match>
+              <NAME>(-[a-z]+-)?padding-left</NAME>
+            </match>
+            <order>BY_NAME</order>
+          </rule>
+          <rule>
+            <match>
+              <NAME>(-[a-z]+-)?table-layout</NAME>
+            </match>
+            <order>BY_NAME</order>
+          </rule>
+          <rule>
+            <match>
+              <NAME>(-[a-z]+-)?empty-cells</NAME>
+            </match>
+            <order>BY_NAME</order>
+          </rule>
+          <rule>
+            <match>
+              <NAME>(-[a-z]+-)?caption-side</NAME>
+            </match>
+            <order>BY_NAME</order>
+          </rule>
+          <rule>
+            <match>
+              <NAME>(-[a-z]+-)?border-spacing</NAME>
+            </match>
+            <order>BY_NAME</order>
+          </rule>
+          <rule>
+            <match>
+              <NAME>(-[a-z]+-)?border-collapse</NAME>
+            </match>
+            <order>BY_NAME</order>
+          </rule>
+          <rule>
+            <match>
+              <NAME>(-[a-z]+-)?list-style</NAME>
+            </match>
+            <order>BY_NAME</order>
+          </rule>
+          <rule>
+            <match>
+              <NAME>(-[a-z]+-)?list-style-position</NAME>
+            </match>
+            <order>BY_NAME</order>
+          </rule>
+          <rule>
+            <match>
+              <NAME>(-[a-z]+-)?list-style-type</NAME>
+            </match>
+            <order>BY_NAME</order>
+          </rule>
+          <rule>
+            <match>
+              <NAME>(-[a-z]+-)?list-style-image</NAME>
+            </match>
+            <order>BY_NAME</order>
+          </rule>
+          <rule>
+            <match>
+              <NAME>(-[a-z]+-)?content</NAME>
+            </match>
+            <order>BY_NAME</order>
+          </rule>
+          <rule>
+            <match>
+              <NAME>(-[a-z]+-)?quotes</NAME>
+            </match>
+            <order>BY_NAME</order>
+          </rule>
+          <rule>
+            <match>
+              <NAME>(-[a-z]+-)?counter-reset</NAME>
+            </match>
+            <order>BY_NAME</order>
+          </rule>
+          <rule>
+            <match>
+              <NAME>(-[a-z]+-)?counter-increment</NAME>
+            </match>
+            <order>BY_NAME</order>
+          </rule>
+          <rule>
+            <match>
+              <NAME>(-[a-z]+-)?resize</NAME>
+            </match>
+            <order>BY_NAME</order>
+          </rule>
+          <rule>
+            <match>
+              <NAME>(-[a-z]+-)?cursor</NAME>
+            </match>
+            <order>BY_NAME</order>
+          </rule>
+          <rule>
+            <match>
+              <NAME>(-[a-z]+-)?user-select</NAME>
+            </match>
+            <order>BY_NAME</order>
+          </rule>
+          <rule>
+            <match>
+              <NAME>(-[a-z]+-)?nav-index</NAME>
+            </match>
+            <order>BY_NAME</order>
+          </rule>
+          <rule>
+            <match>
+              <NAME>(-[a-z]+-)?nav-up</NAME>
+            </match>
+            <order>BY_NAME</order>
+          </rule>
+          <rule>
+            <match>
+              <NAME>(-[a-z]+-)?nav-right</NAME>
+            </match>
+            <order>BY_NAME</order>
+          </rule>
+          <rule>
+            <match>
+              <NAME>(-[a-z]+-)?nav-down</NAME>
+            </match>
+            <order>BY_NAME</order>
+          </rule>
+          <rule>
+            <match>
+              <NAME>(-[a-z]+-)?nav-left</NAME>
+            </match>
+            <order>BY_NAME</order>
+          </rule>
+          <rule>
+            <match>
+              <NAME>(-[a-z]+-)?transition</NAME>
+            </match>
+            <order>BY_NAME</order>
+          </rule>
+          <rule>
+            <match>
+              <NAME>(-[a-z]+-)?transition-delay</NAME>
+            </match>
+            <order>BY_NAME</order>
+          </rule>
+          <rule>
+            <match>
+              <NAME>(-[a-z]+-)?transition-timing-function</NAME>
+            </match>
+            <order>BY_NAME</order>
+          </rule>
+          <rule>
+            <match>
+              <NAME>(-[a-z]+-)?transition-duration</NAME>
+            </match>
+            <order>BY_NAME</order>
+          </rule>
+          <rule>
+            <match>
+              <NAME>(-[a-z]+-)?transition-property</NAME>
+            </match>
+            <order>BY_NAME</order>
+          </rule>
+          <rule>
+            <match>
+              <NAME>(-[a-z]+-)?transform</NAME>
+            </match>
+            <order>BY_NAME</order>
+          </rule>
+          <rule>
+            <match>
+              <NAME>(-[a-z]+-)?transform-origin</NAME>
+            </match>
+            <order>BY_NAME</order>
+          </rule>
+          <rule>
+            <match>
+              <NAME>(-[a-z]+-)?animation</NAME>
+            </match>
+            <order>BY_NAME</order>
+          </rule>
+          <rule>
+            <match>
+              <NAME>(-[a-z]+-)?animation-name</NAME>
+            </match>
+            <order>BY_NAME</order>
+          </rule>
+          <rule>
+            <match>
+              <NAME>(-[a-z]+-)?animation-duration</NAME>
+            </match>
+            <order>BY_NAME</order>
+          </rule>
+          <rule>
+            <match>
+              <NAME>(-[a-z]+-)?animation-play-state</NAME>
+            </match>
+            <order>BY_NAME</order>
+          </rule>
+          <rule>
+            <match>
+              <NAME>(-[a-z]+-)?animation-timing-function</NAME>
+            </match>
+            <order>BY_NAME</order>
+          </rule>
+          <rule>
+            <match>
+              <NAME>(-[a-z]+-)?animation-delay</NAME>
+            </match>
+            <order>BY_NAME</order>
+          </rule>
+          <rule>
+            <match>
+              <NAME>(-[a-z]+-)?animation-iteration-count</NAME>
+            </match>
+            <order>BY_NAME</order>
+          </rule>
+          <rule>
+            <match>
+              <NAME>(-[a-z]+-)?animation-direction</NAME>
+            </match>
+            <order>BY_NAME</order>
+          </rule>
+          <rule>
+            <match>
+              <NAME>(-[a-z]+-)?text-align</NAME>
+            </match>
+            <order>BY_NAME</order>
+          </rule>
+          <rule>
+            <match>
+              <NAME>(-[a-z]+-)?text-align-last</NAME>
+            </match>
+            <order>BY_NAME</order>
+          </rule>
+          <rule>
+            <match>
+              <NAME>(-[a-z]+-)?vertical-align</NAME>
+            </match>
+            <order>BY_NAME</order>
+          </rule>
+          <rule>
+            <match>
+              <NAME>(-[a-z]+-)?white-space</NAME>
+            </match>
+            <order>BY_NAME</order>
+          </rule>
+          <rule>
+            <match>
+              <NAME>(-[a-z]+-)?text-decoration</NAME>
+            </match>
+            <order>BY_NAME</order>
+          </rule>
+          <rule>
+            <match>
+              <NAME>(-[a-z]+-)?text-emphasis</NAME>
+            </match>
+            <order>BY_NAME</order>
+          </rule>
+          <rule>
+            <match>
+              <NAME>(-[a-z]+-)?text-emphasis-color</NAME>
+            </match>
+            <order>BY_NAME</order>
+          </rule>
+          <rule>
+            <match>
+              <NAME>(-[a-z]+-)?text-emphasis-style</NAME>
+            </match>
+            <order>BY_NAME</order>
+          </rule>
+          <rule>
+            <match>
+              <NAME>(-[a-z]+-)?text-emphasis-position</NAME>
+            </match>
+            <order>BY_NAME</order>
+          </rule>
+          <rule>
+            <match>
+              <NAME>(-[a-z]+-)?text-indent</NAME>
+            </match>
+            <order>BY_NAME</order>
+          </rule>
+          <rule>
+            <match>
+              <NAME>(-[a-z]+-)?text-justify</NAME>
+            </match>
+            <order>BY_NAME</order>
+          </rule>
+          <rule>
+            <match>
+              <NAME>(-[a-z]+-)?letter-spacing</NAME>
+            </match>
+            <order>BY_NAME</order>
+          </rule>
+          <rule>
+            <match>
+              <NAME>(-[a-z]+-)?word-spacing</NAME>
+            </match>
+            <order>BY_NAME</order>
+          </rule>
+          <rule>
+            <match>
+              <NAME>(-[a-z]+-)?text-outline</NAME>
+            </match>
+            <order>BY_NAME</order>
+          </rule>
+          <rule>
+            <match>
+              <NAME>(-[a-z]+-)?text-transform</NAME>
+            </match>
+            <order>BY_NAME</order>
+          </rule>
+          <rule>
+            <match>
+              <NAME>(-[a-z]+-)?text-wrap</NAME>
+            </match>
+            <order>BY_NAME</order>
+          </rule>
+          <rule>
+            <match>
+              <NAME>(-[a-z]+-)?text-overflow</NAME>
+            </match>
+            <order>BY_NAME</order>
+          </rule>
+          <rule>
+            <match>
+              <NAME>(-[a-z]+-)?text-overflow-ellipsis</NAME>
+            </match>
+            <order>BY_NAME</order>
+          </rule>
+          <rule>
+            <match>
+              <NAME>(-[a-z]+-)?text-overflow-mode</NAME>
+            </match>
+            <order>BY_NAME</order>
+          </rule>
+          <rule>
+            <match>
+              <NAME>(-[a-z]+-)?word-wrap</NAME>
+            </match>
+            <order>BY_NAME</order>
+          </rule>
+          <rule>
+            <match>
+              <NAME>(-[a-z]+-)?word-break</NAME>
+            </match>
+            <order>BY_NAME</order>
+          </rule>
+          <rule>
+            <match>
+              <NAME>(-[a-z]+-)?tab-size</NAME>
+            </match>
+            <order>BY_NAME</order>
+          </rule>
+          <rule>
+            <match>
+              <NAME>(-[a-z]+-)?hyphens</NAME>
+            </match>
+            <order>BY_NAME</order>
+          </rule>
+          <rule>
+            <match>
+              <NAME>(-[a-z]+-)?pointer-events</NAME>
+            </match>
+            <order>BY_NAME</order>
+          </rule>
+          <rule>
+            <match>
+              <NAME>(-[a-z]+-)?opacity</NAME>
+            </match>
+            <order>BY_NAME</order>
+          </rule>
+          <rule>
+            <match>
+              <NAME>(-[a-z]+-)?color</NAME>
+            </match>
+            <order>BY_NAME</order>
+          </rule>
+          <rule>
+            <match>
+              <NAME>(-[a-z]+-)?border</NAME>
+            </match>
+            <order>BY_NAME</order>
+          </rule>
+          <rule>
+            <match>
+              <NAME>(-[a-z]+-)?border-width</NAME>
+            </match>
+            <order>BY_NAME</order>
+          </rule>
+          <rule>
+            <match>
+              <NAME>(-[a-z]+-)?border-style</NAME>
+            </match>
+            <order>BY_NAME</order>
+          </rule>
+          <rule>
+            <match>
+              <NAME>(-[a-z]+-)?border-color</NAME>
+            </match>
+            <order>BY_NAME</order>
+          </rule>
+          <rule>
+            <match>
+              <NAME>(-[a-z]+-)?border-top</NAME>
+            </match>
+            <order>BY_NAME</order>
+          </rule>
+          <rule>
+            <match>
+              <NAME>(-[a-z]+-)?border-top-width</NAME>
+            </match>
+            <order>BY_NAME</order>
+          </rule>
+          <rule>
+            <match>
+              <NAME>(-[a-z]+-)?border-top-style</NAME>
+            </match>
+            <order>BY_NAME</order>
+          </rule>
+          <rule>
+            <match>
+              <NAME>(-[a-z]+-)?border-top-color</NAME>
+            </match>
+            <order>BY_NAME</order>
+          </rule>
+          <rule>
+            <match>
+              <NAME>(-[a-z]+-)?border-right</NAME>
+            </match>
+            <order>BY_NAME</order>
+          </rule>
+          <rule>
+            <match>
+              <NAME>(-[a-z]+-)?border-right-width</NAME>
+            </match>
+            <order>BY_NAME</order>
+          </rule>
+          <rule>
+            <match>
+              <NAME>(-[a-z]+-)?border-right-style</NAME>
+            </match>
+            <order>BY_NAME</order>
+          </rule>
+          <rule>
+            <match>
+              <NAME>(-[a-z]+-)?border-right-color</NAME>
+            </match>
+            <order>BY_NAME</order>
+          </rule>
+          <rule>
+            <match>
+              <NAME>(-[a-z]+-)?border-bottom</NAME>
+            </match>
+            <order>BY_NAME</order>
+          </rule>
+          <rule>
+            <match>
+              <NAME>(-[a-z]+-)?border-bottom-width</NAME>
+            </match>
+            <order>BY_NAME</order>
+          </rule>
+          <rule>
+            <match>
+              <NAME>(-[a-z]+-)?border-bottom-style</NAME>
+            </match>
+            <order>BY_NAME</order>
+          </rule>
+          <rule>
+            <match>
+              <NAME>(-[a-z]+-)?border-bottom-color</NAME>
+            </match>
+            <order>BY_NAME</order>
+          </rule>
+          <rule>
+            <match>
+              <NAME>(-[a-z]+-)?border-left</NAME>
+            </match>
+            <order>BY_NAME</order>
+          </rule>
+          <rule>
+            <match>
+              <NAME>(-[a-z]+-)?border-left-width</NAME>
+            </match>
+            <order>BY_NAME</order>
+          </rule>
+          <rule>
+            <match>
+              <NAME>(-[a-z]+-)?border-left-style</NAME>
+            </match>
+            <order>BY_NAME</order>
+          </rule>
+          <rule>
+            <match>
+              <NAME>(-[a-z]+-)?border-left-color</NAME>
+            </match>
+            <order>BY_NAME</order>
+          </rule>
+          <rule>
+            <match>
+              <NAME>(-[a-z]+-)?border-radius</NAME>
+            </match>
+            <order>BY_NAME</order>
+          </rule>
+          <rule>
+            <match>
+              <NAME>(-[a-z]+-)?border-top-left-radius</NAME>
+            </match>
+            <order>BY_NAME</order>
+          </rule>
+          <rule>
+            <match>
+              <NAME>(-[a-z]+-)?border-top-right-radius</NAME>
+            </match>
+            <order>BY_NAME</order>
+          </rule>
+          <rule>
+            <match>
+              <NAME>(-[a-z]+-)?border-bottom-right-radius</NAME>
+            </match>
+            <order>BY_NAME</order>
+          </rule>
+          <rule>
+            <match>
+              <NAME>(-[a-z]+-)?border-bottom-left-radius</NAME>
+            </match>
+            <order>BY_NAME</order>
+          </rule>
+          <rule>
+            <match>
+              <NAME>(-[a-z]+-)?border-image</NAME>
+            </match>
+            <order>BY_NAME</order>
+          </rule>
+          <rule>
+            <match>
+              <NAME>(-[a-z]+-)?border-image-source</NAME>
+            </match>
+            <order>BY_NAME</order>
+          </rule>
+          <rule>
+            <match>
+              <NAME>(-[a-z]+-)?border-image-slice</NAME>
+            </match>
+            <order>BY_NAME</order>
+          </rule>
+          <rule>
+            <match>
+              <NAME>(-[a-z]+-)?border-image-width</NAME>
+            </match>
+            <order>BY_NAME</order>
+          </rule>
+          <rule>
+            <match>
+              <NAME>(-[a-z]+-)?border-image-outset</NAME>
+            </match>
+            <order>BY_NAME</order>
+          </rule>
+          <rule>
+            <match>
+              <NAME>(-[a-z]+-)?border-image-repeat</NAME>
+            </match>
+            <order>BY_NAME</order>
+          </rule>
+          <rule>
+            <match>
+              <NAME>(-[a-z]+-)?outline</NAME>
+            </match>
+            <order>BY_NAME</order>
+          </rule>
+          <rule>
+            <match>
+              <NAME>(-[a-z]+-)?outline-width</NAME>
+            </match>
+            <order>BY_NAME</order>
+          </rule>
+          <rule>
+            <match>
+              <NAME>(-[a-z]+-)?outline-style</NAME>
+            </match>
+            <order>BY_NAME</order>
+          </rule>
+          <rule>
+            <match>
+              <NAME>(-[a-z]+-)?outline-color</NAME>
+            </match>
+            <order>BY_NAME</order>
+          </rule>
+          <rule>
+            <match>
+              <NAME>(-[a-z]+-)?outline-offset</NAME>
+            </match>
+            <order>BY_NAME</order>
+          </rule>
+          <rule>
+            <match>
+              <NAME>(-[a-z]+-)?background</NAME>
+            </match>
+            <order>BY_NAME</order>
+          </rule>
+          <rule>
+            <match>
+              <NAME>(-[a-z]+-)?background-color</NAME>
+            </match>
+            <order>BY_NAME</order>
+          </rule>
+          <rule>
+            <match>
+              <NAME>(-[a-z]+-)?background-image</NAME>
+            </match>
+            <order>BY_NAME</order>
+          </rule>
+          <rule>
+            <match>
+              <NAME>(-[a-z]+-)?background-repeat</NAME>
+            </match>
+            <order>BY_NAME</order>
+          </rule>
+          <rule>
+            <match>
+              <NAME>(-[a-z]+-)?background-attachment</NAME>
+            </match>
+            <order>BY_NAME</order>
+          </rule>
+          <rule>
+            <match>
+              <NAME>(-[a-z]+-)?background-position</NAME>
+            </match>
+            <order>BY_NAME</order>
+          </rule>
+          <rule>
+            <match>
+              <NAME>(-[a-z]+-)?background-position-x</NAME>
+            </match>
+            <order>BY_NAME</order>
+          </rule>
+          <rule>
+            <match>
+              <NAME>(-[a-z]+-)?background-position-y</NAME>
+            </match>
+            <order>BY_NAME</order>
+          </rule>
+          <rule>
+            <match>
+              <NAME>(-[a-z]+-)?background-clip</NAME>
+            </match>
+            <order>BY_NAME</order>
+          </rule>
+          <rule>
+            <match>
+              <NAME>(-[a-z]+-)?background-origin</NAME>
+            </match>
+            <order>BY_NAME</order>
+          </rule>
+          <rule>
+            <match>
+              <NAME>(-[a-z]+-)?background-size</NAME>
+            </match>
+            <order>BY_NAME</order>
+          </rule>
+          <rule>
+            <match>
+              <NAME>(-[a-z]+-)?box-decoration-break</NAME>
+            </match>
+            <order>BY_NAME</order>
+          </rule>
+          <rule>
+            <match>
+              <NAME>(-[a-z]+-)?box-shadow</NAME>
+            </match>
+            <order>BY_NAME</order>
+          </rule>
+          <rule>
+            <match>
+              <NAME>(-[a-z]+-)?text-shadow</NAME>
+            </match>
+            <order>BY_NAME</order>
+          </rule>
+        </section>
+      </rules>
+    </arrangement>
+  </codeStyleSettings>
+  <codeStyleSettings language = "SQL">
+    <option name = "KEEP_FIRST_COLUMN_COMMENT" value = "false" />
+  </codeStyleSettings>
+  <codeStyleSettings language = "TypeScript">
+    <option name = "BLOCK_COMMENT_AT_FIRST_COLUMN" value = "false" />
+    <option name = "BLOCK_COMMENT_ADD_SPACE" value = "true" />
+    <option name = "KEEP_BLANK_LINES_IN_CODE" value = "1" />
+    <option name = "BRACE_STYLE" value = "5" />
+    <option name = "CLASS_BRACE_STYLE" value = "5" />
+    <option name = "METHOD_BRACE_STYLE" value = "5" />
+    <option name = "ALIGN_MULTILINE_PARAMETERS" value = "false" />
+    <option name = "ALIGN_MULTILINE_FOR" value = "false" />
+    <option name = "SPACE_WITHIN_PARENTHESES" value = "true" />
+    <option name = "SPACE_WITHIN_METHOD_CALL_PARENTHESES" value = "true" />
+    <option name = "SPACE_WITHIN_METHOD_PARENTHESES" value = "true" />
+    <option name = "SPACE_WITHIN_IF_PARENTHESES" value = "true" />
+    <option name = "SPACE_WITHIN_WHILE_PARENTHESES" value = "true" />
+    <option name = "SPACE_WITHIN_FOR_PARENTHESES" value = "true" />
+    <option name = "CALL_PARAMETERS_WRAP" value = "5" />
+    <option name = "CALL_PARAMETERS_LPAREN_ON_NEXT_LINE" value = "true" />
+    <option name = "CALL_PARAMETERS_RPAREN_ON_NEXT_LINE" value = "true" />
+    <option name = "METHOD_PARAMETERS_WRAP" value = "5" />
+    <option name = "METHOD_PARAMETERS_LPAREN_ON_NEXT_LINE" value = "true" />
+    <option name = "METHOD_PARAMETERS_RPAREN_ON_NEXT_LINE" value = "true" />
+    <option name = "EXTENDS_LIST_WRAP" value = "5" />
+    <option name = "METHOD_CALL_CHAIN_WRAP" value = "5" />
+    <option name = "PARENTHESES_EXPRESSION_LPAREN_WRAP" value = "true" />
+    <option name = "PARENTHESES_EXPRESSION_RPAREN_WRAP" value = "true" />
+    <option name = "BINARY_OPERATION_WRAP" value = "5" />
+    <option name = "BINARY_OPERATION_SIGN_ON_NEXT_LINE" value = "true" />
+    <option name = "TERNARY_OPERATION_WRAP" value = "5" />
+    <option name = "TERNARY_OPERATION_SIGNS_ON_NEXT_LINE" value = "true" />
+    <option name = "KEEP_SIMPLE_BLOCKS_IN_ONE_LINE" value = "true" />
+    <option name = "KEEP_SIMPLE_METHODS_IN_ONE_LINE" value = "true" />
+    <option name = "FOR_STATEMENT_WRAP" value = "5" />
+    <option name = "FOR_STATEMENT_LPAREN_ON_NEXT_LINE" value = "true" />
+    <option name = "FOR_STATEMENT_RPAREN_ON_NEXT_LINE" value = "true" />
+    <option name = "ARRAY_INITIALIZER_WRAP" value = "5" />
+    <option name = "ARRAY_INITIALIZER_LBRACE_ON_NEXT_LINE" value = "true" />
+    <option name = "ARRAY_INITIALIZER_RBRACE_ON_NEXT_LINE" value = "true" />
+    <option name = "ASSIGNMENT_WRAP" value = "5" />
+    <option name = "PLACE_ASSIGNMENT_SIGN_ON_NEXT_LINE" value = "true" />
+    <option name = "WRAP_COMMENTS" value = "true" />
+    <option name = "IF_BRACE_FORCE" value = "1" />
+    <option name = "DOWHILE_BRACE_FORCE" value = "1" />
+    <option name = "WHILE_BRACE_FORCE" value = "1" />
+    <option name = "FOR_BRACE_FORCE" value = "1" />
+  </codeStyleSettings>
+  <codeStyleSettings language = "Vue">
+    <indentOptions>
+      <option name = "CONTINUATION_INDENT_SIZE" value = "2" />
+    </indentOptions>
+  </codeStyleSettings>
+  <codeStyleSettings language = "XML">
+    <option name = "LINE_COMMENT_AT_FIRST_COLUMN" value = "false" />
+    <option name = "BLOCK_COMMENT_AT_FIRST_COLUMN" value = "false" />
+    <option name = "BLOCK_COMMENT_ADD_SPACE" value = "true" />
+    <indentOptions>
+      <option name = "INDENT_SIZE" value = "2" />
+      <option name = "CONTINUATION_INDENT_SIZE" value = "4" />
+      <option name = "TAB_SIZE" value = "2" />
+    </indentOptions>
+  </codeStyleSettings>
+  <codeStyleSettings language = "yaml">
+    <option name = "LINE_COMMENT_AT_FIRST_COLUMN" value = "false" />
+    <option name = "LINE_COMMENT_ADD_SPACE" value = "true" />
+    <option name = "LINE_COMMENT_ADD_SPACE_ON_REFORMAT" value = "true" />
+  </codeStyleSettings>
+</code_scheme>

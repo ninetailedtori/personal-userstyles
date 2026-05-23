@@ -4,8 +4,7 @@ SPDX-FileCopyrightText: 2026-Present ninetailedtori <ninetailedtori@uwu.gal>
 SPDX-License-Identifier: GPL-3.0-or-later
 -->
 
-a cozy collection of custom styles for the web, made with
-[stylus](https://github.com/openstyles/stylus) ✨
+a cozy collection of custom styles for the web ✨
 
 ---
 
@@ -55,6 +54,14 @@ for your own taste, or use them as inspiration for creating your own styles
 - **combine styles:** many styles work great together
 - **check compatibility:** some styles might need tweaks if website layouts
   update
+
+---
+
+## code style!
+
+if you want to help, you'll need to import code style within IDEA using
+[`ninetailedtori.xml`](./ninetailedtori.xml)! this is my personal code style
+file :3
 
 ---
 
