@@ -13,51 +13,45 @@
 @preprocessor   default
 ==/UserStyle== */
 
-@use 'sass:string';
-@use 'sass:list';
+@use "sass:string";
+@use "sass:list";
 
 // VARIABLES
 
-$feature-settings:
-  'zero' 1,
-  'cv06' 1,
-  'cv07' 1,
-  'cv14' 1;
-$font-sans:
-  'Inria Sans', 'JetBrainsMono Nerd Font', 'Material Symbols Outlined',
-  'Noto Emoji', ui-sans-serif;
-$font-heading:
-  'Beuron Condensed', 'JetBrainsMono Nerd Font', 'Material Symbols Outlined',
-  'Noto Emoji', ui-serif;
-$font-mono:
-  'JetBrainsMono Nerd Font', 'Material Symbols Outlined', 'Noto Emoji',
-  ui-monospace;
+$feature-settings : "zero" 1,
+"cv06" 1,
+"cv07" 1,
+"cv14" 1;
+$font-sans        : "Inria Sans", "JetBrainsMono Nerd Font", "Material Symbols Outlined",
+"Noto Emoji", ui-sans-serif;
+$font-heading     : "Beuron Condensed", "JetBrainsMono Nerd Font", "Material Symbols Outlined",
+"Noto Emoji", ui-serif;
+$font-mono        : "JetBrainsMono Nerd Font", "Material Symbols Outlined", "Noto Emoji",
+ui-monospace;
 
-$headings: 'h1', 'h2', 'h3', 'h4', 'h5';
-$editors:
-  'code', 'pre', 'input[type=text]', 'textarea', '[class*="react-code-text"]',
-  'editor', '[class*="monaco-editor"]', '[class*="cm-editor"]', 'tt',
-  '[class*="js-file-line-container"]';
-$images:
-  '[class*="icon"]', '[class*="image"]', '[class*="img"]', '[class*="png"]',
-  '[class*="svg"]';
+$headings         : "h1", "h2", "h3", "h4", "h5";
+$editors          : "code", "pre", "input[type=text]", "textarea", "[class*=\"react-code-text\"]",
+"editor", "[class*=\"monaco-editor\"]", "[class*=\"cm-editor\"]", "tt",
+"[class*=\"js-file-line-container\"]";
+$images           : "[class*=\"icon\"]", "[class*=\"image\"]", "[class*=\"img\"]", "[class*=\"png\"]",
+"[class*=\"svg\"]";
 
-$excluded-raw: $headings, $editors, $images;
+$excluded-raw     : $headings, $editors, $images;
 
-$excluded: '';
-$within-excluded: '';
+$excluded         : "";
+$within-excluded  : "";
 
 @each $list in $excluded-raw {
   @each $selector in $list {
-    @if $excluded == '' {
-      $excluded: string.unquote($selector);
-      $within-excluded: string.unquote($selector) + ' *';
+    @if $excluded == "" {
+      $excluded        : string.unquote($selector);
+      $within-excluded : string.unquote($selector) + " *";
     } @else {
-      $excluded: $excluded + ', ' + string.unquote($selector);
-      $within-excluded: $within-excluded +
-        ', ' +
+      $excluded        : $excluded + ", " + string.unquote($selector);
+      $within-excluded : $within-excluded +
+        ", " +
         string.unquote($selector) +
-        ' *';
+        " *";
     }
   }
 }
@@ -65,15 +59,15 @@ $within-excluded: '';
 // MIXINS
 
 @mixin code-styling() {
-  font-family: $font-mono !important;
-  font-size: 14px !important;
-  font-weight: 600 !important;
+  font-family : $font-mono !important;
+  font-size   : 14px !important;
+  font-weight : 600 !important;
 
   b,
   strong,
   em,
   bold {
-    font-weight: 800 !important;
+    font-weight : 800 !important;
   }
 }
 
@@ -81,15 +75,15 @@ $within-excluded: '';
 
 :root {
   * {
-    font-feature-settings: $feature-settings;
+    font-feature-settings : $feature-settings;
   }
 
   :not(#{$excluded}, #{$within-excluded}) {
-    font-family: $font-sans !important;
+    font-family : $font-sans !important;
   }
 
   #{$headings} {
-    font-family: $font-heading !important;
+    font-family : $font-heading !important;
   }
 
   #{$editors} {

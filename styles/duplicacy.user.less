@@ -22,16 +22,15 @@
 @var checkbox highlight-redirect "Highlight redirect links" 0
 ==/UserStyle== */
 
-@import 'https://userstyles.catppuccin.com/lib/lib.less';
+@import "https://userstyles.catppuccin.com/lib/lib.less";
 
-@-moz-document url-prefix("http://127.0.0.1:3875")
-{
+@-moz-document url-prefix("http://127.0.0.1:3875") {
   :root {
-    @media (prefers-color-scheme: light) {
+    @media (prefers-color-scheme : light) {
       #catppuccin(@lightFlavor);
     }
 
-    @media (prefers-color-scheme: dark) {
+    @media (prefers-color-scheme : dark) {
       #catppuccin(@darkFlavor);
     }
   }
@@ -40,35 +39,35 @@
     .text-state(@name, @colour) {
       .text-@{name},
       .icon-@{name} {
-        color: @colour;
+        color : @colour;
       }
     }
 
     .btn-text-state(@name, @basebg: @surface1, @hoverbg: darken(@basebg, 5%), @activebg: darken(@basebg, 10%), @basetext: @text, @hovertext: @basetext, @activetext: @basetext) {
       .btn:has(.text-@{name}) {
-        border-color: transparent;
+        border-color : transparent;
 
         &:not(:hover, :active, :focus) {
-          background-color: @basebg;
+          background-color : @basebg;
 
           .text-@{name} {
-            color: @basetext;
+            color : @basetext;
           }
         }
 
         &:hover {
-          background-color: @hoverbg;
+          background-color : @hoverbg;
 
           .text-@{name} {
-            color: @hovertext;
+            color : @hovertext;
           }
         }
 
         &:is(:active, :focus, :focus.active) {
-          background-color: @activebg;
+          background-color : @activebg;
 
           .text-@{name} {
-            color: @activetext;
+            color : @activetext;
           }
         }
       }
@@ -76,48 +75,48 @@
 
     .btn-state(@name, @basebg: @surface1, @hoverbg: darken(@basebg, 5%), @activebg: darken(@basebg, 10%), @basetext: @text, @hovertext: @basetext, @activetext: @basetext) {
       .btn.btn-@{name} {
-        border-color: transparent;
+        border-color : transparent;
 
         &:not(:hover, :active, :focus) {
-          color: @basetext;
-          background-color: @basebg;
+          color            : @basetext;
+          background-color : @basebg;
         }
 
         &:hover {
-          color: @hovertext;
-          background-color: @hoverbg;
+          color            : @hovertext;
+          background-color : @hoverbg;
         }
 
         &:is(:active, :focus, .active) {
-          color: @activetext;
-          background-color: @activebg;
+          color            : @activetext;
+          background-color : @activebg;
         }
       }
     }
 
     .ct-series-state(@key, @value) {
       .ct-series-@{key} {
-        @old: map-get(@value, hex);
-        @new: map-get(@value, color);
+        @old : map-get(@value, hex);
+        @new : map-get(@value, color);
 
         .ct-point,
         .ct-line,
         .ct-bar,
         .ct-slice-donut {
-          stroke: @new;
+          stroke : @new;
         }
 
         .ct-slice-pie,
         .ct-area {
-          fill: @new;
+          fill : @new;
         }
 
         &.fa-circle:is(
-            [style*='color:#@{old};'],
-            [style*='color:#@{old}'],
-            [color*='#@{old}']
+            [style*="color:#@{old};"],
+            [style*="color:#@{old}"],
+            [color*="#@{old}"]
           ) {
-          color: @new !important;
+          color : @new !important;
         }
       }
     }
@@ -127,151 +126,151 @@
     #lib.palette();
     #lib.defaults();
 
-    @shadcol: fade(@crust, 30%);
-    @textshad: 1px 1px 2px @shadcol;
-    @boxshad: 2px 2px @shadcol;
+    @shadcol  : fade(@crust, 30%);
+    @textshad : 1px 1px 2px @shadcol;
+    @boxshad  : 2px 2px @shadcol;
 
     body,
     .main-panel {
-      color: @text;
-      background-color: @base;
+      color            : @text;
+      background-color : @base;
     }
 
     a {
-      color: @blue;
+      color : @blue;
 
       &:hover {
-        color: @sky;
+        color : @sky;
       }
 
       &:active,
       &:focus {
-        color: @sapphire;
+        color : @sapphire;
       }
     }
 
     .radio-box {
       &:hover input ~ .radio-button {
-        background-color: @accent;
+        background-color : @accent;
       }
 
       input:checked ~ .radio-button {
-        background-color: @accent;
+        background-color : @accent;
       }
 
       .radio-button {
-        background-color: @surface1;
-        outline: 1px solid @overlay0;
+        background-color : @surface1;
+        outline          : 1px solid @overlay0;
 
         &::after {
-          background: @base;
+          background : @base;
         }
       }
     }
 
     /* form input */
     .form-control {
-      color: @text;
-      background-color: @surface1;
-      border-color: @overlay0;
-      border-radius: 4px;
+      color            : @text;
+      background-color : @surface1;
+      border-color     : @overlay0;
+      border-radius    : 4px;
 
       &:is(:hover, :active, :focus) {
-        background-color: @surface2;
+        background-color : @surface2;
       }
 
       &[disabled] {
-        color: @surface2;
-        background-color: @mantle;
-        border-color: @surface2;
+        color            : @surface2;
+        background-color : @mantle;
+        border-color     : @surface2;
       }
     }
 
     .input-group {
       .form-control:first-child {
-        border-top-right-radius: 0;
-        border-bottom-right-radius: 0;
+        border-top-right-radius    : 0;
+        border-bottom-right-radius : 0;
       }
 
       &-btn-vertical > .btn {
-        border-top-left-radius: 0;
-        border-bottom-left-radius: 0;
+        border-top-left-radius    : 0;
+        border-bottom-left-radius : 0;
 
         &:first-child {
-          border-bottom-right-radius: 0;
+          border-bottom-right-radius : 0;
         }
 
         &:nth-child(2) {
-          border-top-right-radius: 0;
+          border-top-right-radius : 0;
         }
       }
     }
 
     .row-clickable {
       &:hover {
-        background-color: @surface1;
+        background-color : @surface1;
       }
 
       &:is(:active, :focus) {
-        background-color: @surface2;
+        background-color : @surface2;
       }
 
       &.active {
-        color: @surface1;
-        background-color: @accent;
+        color            : @surface1;
+        background-color : @accent;
 
         a {
-          color: @base;
+          color : @base;
 
           &:hover {
-            color: @surface0;
+            color : @surface0;
           }
 
           &:is(:active, :focus) {
-            color: @surface1;
+            color : @surface1;
           }
         }
       }
     }
 
     .progress {
-      background-color: @mantle;
+      background-color : @mantle;
 
       .progress-bar {
-        background-color: @accent;
+        background-color : @accent;
 
         span {
-          color: @overlay1;
-          text-shadow: @textshad;
+          color       : @overlay1;
+          text-shadow : @textshad;
         }
       }
     }
 
     .table tbody tr {
       > td {
-        border-color: @overlay0;
+        border-color : @overlay0;
       }
 
       &:hover > td {
-        background-color: @surface1;
+        background-color : @surface1;
       }
 
       &:is(:active, :focus) > td {
-        background-color: @surface2;
+        background-color : @surface2;
       }
 
       &.active {
         > td {
-          color: @base;
-          background-color: @accent;
+          color            : @base;
+          background-color : @accent;
         }
 
         &:hover > td {
-          background-color: darken(@accent, 5%);
+          background-color : darken(@accent, 5%);
         }
 
         &:is(:active, :focus) > td {
-          background-color: darken(@accent, 10%);
+          background-color : darken(@accent, 10%);
         }
       }
     }
@@ -283,55 +282,55 @@
     .vis-panel.vis-center,
     .vis-panel.vis-left,
     .vis-panel.vis-right {
-      border-width: 2px;
-      border-color: @overlay0;
+      border-width : 2px;
+      border-color : @overlay0;
     }
 
     .vis-foreground .vis-group,
     .vis-time-axis .vis-grid.vis-minor {
-      border-width: 2px;
-      border-color: @overlay0;
+      border-width : 2px;
+      border-color : @overlay0;
     }
 
     .vis-time-axis .vis-grid.vis-major {
-      border-width: 2px;
-      border-color: @overlay1;
+      border-width : 2px;
+      border-color : @overlay1;
     }
 
     .vis-time-axis .vis-text,
     .vis-labelset .vis-label {
-      color: @text;
+      color : @text;
     }
 
     .vis-current-time {
-      background-color: @red;
+      background-color : @red;
     }
 
     :is(.sidebar, .off-canvas-sidebar) {
-      &[data-background-color='black'] {
+      &[data-background-color="black"] {
         .logo {
-          border-color: @overlay0;
+          border-color : @overlay0;
         }
 
         &::before,
         &::after {
-          background-color: @mantle;
+          background-color : @mantle;
         }
       }
 
       .sidebar-wrapper {
-        box-shadow: @boxshad;
+        box-shadow : @boxshad;
       }
 
       .nav li {
         &:not(.active) {
           > a {
-            color: @subtext0;
+            color : @subtext0;
           }
 
           &:is(:hover, :active, :focus) > a {
-            color: @accent;
-            background-color: @base;
+            color            : @accent;
+            background-color : @base;
           }
         }
 
@@ -339,69 +338,69 @@
           > a {
             &::before,
             &::after {
-              border-right-color: @base;
+              border-right-color : @base;
             }
           }
 
           &:not(:hover, :active, :focus) > a {
-            color: @green;
+            color : @green;
           }
 
           &:is(:hover, :active, :focus) > a {
-            color: @base;
-            background-color: @green;
+            color            : @base;
+            background-color : @green;
           }
         }
       }
     }
 
     .nav-tabs {
-      border-bottom-color: @overlay1;
+      border-bottom-color : @overlay1;
 
       > li {
         &:not(.active) > a {
-          color: @subtext0;
+          color : @subtext0;
 
           &:not(:hover, :active, :focus) {
-            background-color: transparent;
+            background-color : transparent;
           }
 
-          &:is(:hover, :active, :focus, [aria-expanded='true']) {
-            background-color: @surface0;
-            border-color: @overlay1;
-            border-bottom-color: transparent;
+          &:is(:hover, :active, :focus, [aria-expanded="true"]) {
+            background-color    : @surface0;
+            border-color        : @overlay1;
+            border-bottom-color : transparent;
           }
         }
 
         &.active > a {
-          color: @text;
-          background-color: @mantle;
-          border-color: @overlay1;
-          border-bottom-color: transparent;
+          color               : @text;
+          background-color    : @mantle;
+          border-color        : @overlay1;
+          border-bottom-color : transparent;
 
-          &:is(:hover, :active, :focus, [aria-expanded='true']) {
-            color: @text;
-            background-color: @mantle;
-            border-color: @overlay1;
-            border-bottom-color: transparent;
+          &:is(:hover, :active, :focus, [aria-expanded="true"]) {
+            color               : @text;
+            background-color    : @mantle;
+            border-color        : @overlay1;
+            border-bottom-color : transparent;
           }
         }
       }
     }
 
     .tab-content {
-      background-color: @mantle;
-      border-color: @overlay1 !important;
-      border-radius: 4px;
-      border-top-left-radius: 0;
-      border-top-right-radius: 0;
-      border-top-color: transparent !important;
+      background-color        : @mantle;
+      border-color            : @overlay1 !important;
+      border-radius           : 4px;
+      border-top-left-radius  : 0;
+      border-top-right-radius : 0;
+      border-top-color        : transparent !important;
     }
 
     .dropdown-menu {
-      background-color: @surface0;
-      border: 1px solid @overlay1;
-      box-shadow: @boxshad;
+      background-color : @surface0;
+      border           : 1px solid @overlay1;
+      box-shadow       : @boxshad;
     }
 
     #mixins.text-state(muted, @subtext0);
@@ -412,23 +411,23 @@
     #mixins.text-state(danger, @red);
 
     .fa-inverse {
-      color: @base;
+      color : @base;
     }
 
     .btn {
-      border-radius: 4px;
-      border-color: @overlay0;
+      border-radius : 4px;
+      border-color  : @overlay0;
 
       &:not(:hover, :active, :focus) {
-        background-color: transparent;
+        background-color : transparent;
       }
 
       &:hover {
-        background-color: fade(@overlay2, 20%);
+        background-color : fade(@overlay2, 20%);
       }
 
       &:is(:active, :focus, :focus.active) {
-        background-color: fade(@overlay2, 20%);
+        background-color : fade(@overlay2, 20%);
       }
     }
 
@@ -448,182 +447,182 @@
     #mixins.btn-state(@name: danger,  @basebg: @red,      @basetext: @base);
 
     .tooltip-inner {
-      color: @text;
-      background-color: @surface1;
+      color            : @text;
+      background-color : @surface1;
     }
 
     .tooltip.bottom .tooltip-arrow {
-      border-bottom-color: @surface1;
+      border-bottom-color : @surface1;
     }
 
     .card {
-      color: @text;
-      background-color: @surface0;
-      box-shadow: @boxshad;
+      color            : @text;
+      background-color : @surface0;
+      box-shadow       : @boxshad;
 
       &:has(.nav.nav-tabs) {
-        box-shadow: none;
+        box-shadow : none;
       }
 
       .title {
-        color: @accent;
+        color : @accent;
       }
 
       .category,
       label {
-        color: @subtext0;
+        color : @subtext0;
       }
 
       .labels p {
-        color: @text;
+        color : @text;
       }
 
       .stats {
-        color: @subtext0;
+        color : @subtext0;
       }
     }
 
     .modal {
       &-header,
       &-footer {
-        border-color: @overlay0;
+        border-color : @overlay0;
       }
 
       &-content {
-        color: @text;
-        background-color: @surface0;
-        box-shadow: @boxshad;
+        color            : @text;
+        background-color : @surface0;
+        box-shadow       : @boxshad;
       }
     }
 
     @series-palette: {
       a : {
-        old: 556b2f;
-        new: darken(@green, 35%);
-      }
+        old : 556b2f;
+        new : darken(@green, 35%);
+      };
       b : {
-        old: 8b4513;
-        new: darken(@peach, 40%);
-      }
+        old : 8b4513;
+        new : darken(@peach, 40%);
+      };
       c : {
-        old: 228b22;
-        new: darken(@green, 45%);
-      }
+        old : 228b22;
+        new : darken(@green, 45%);
+      };
       d : {
-        old: 483d8b;
-        new: darken(@sapphire, 35%);
-      }
+        old : 483d8b;
+        new : darken(@sapphire, 35%);
+      };
       e : {
-        old: 008080;
-        new: darken(@teal, 40%);
-      }
+        old : 008080;
+        new : darken(@teal, 40%);
+      };
       f : {
-        old: 4682b4;
-        new: darken(@sky, 25%);
-      }
+        old : 4682b4;
+        new : darken(@sky, 25%);
+      };
       g : {
-        old: 9acd32;
-        new: lighten(@green, 15%);
-      }
+        old : 9acd32;
+        new : lighten(@green, 15%);
+      };
       h : {
-        old: 00008b;
-        new: darken(@blue, 50%);
-      }
+        old : 00008b;
+        new : darken(@blue, 50%);
+      };
       i : {
-        old: 8b008b;
-        new: darken(@maroon, 30%);
-      }
+        old : 8b008b;
+        new : darken(@maroon, 30%);
+      };
       j : {
-        old: b03060;
-        new: darken(@maroon, 20%);
-      }
+        old : b03060;
+        new : darken(@maroon, 20%);
+      };
       k : {
-        old: ff4500;
-        new: @peach;
-      }
+        old : ff4500;
+        new : @peach;
+      };
       l : {
-        old: ffa500;
-        new: lighten(@peach, 10%);
-      }
+        old : ffa500;
+        new : lighten(@peach, 10%);
+      };
       m : {
-        old: ffff00;
-        new: @yellow;
-      }
+        old : ffff00;
+        new : @yellow;
+      };
       n : {
-        old: 00ff00;
-        new: lighten(@green, 25%);
-      }
+        old : 00ff00;
+        new : lighten(@green, 25%);
+      };
       o : {
-        old: 00fa9a;
-        new: lighten(@teal, 15%);
-      }
+        old : 00fa9a;
+        new : lighten(@teal, 15%);
+      };
       p : {
-        old: 8a2be2;
-        new: darken(@lavender, 15%);
-      }
+        old : 8a2be2;
+        new : darken(@lavender, 15%);
+      };
       q : {
-        old: dc143c;
-        new: @red;
-      }
+        old : dc143c;
+        new : @red;
+      };
       r : {
-        old: 0000ff;
-        new: lighten(@blue, 5%);
-      }
+        old : 0000ff;
+        new : lighten(@blue, 5%);
+      };
       s : {
-        old: ff00ff;
-        new: lighten(@pink, 10%);
-      }
+        old : ff00ff;
+        new : lighten(@pink, 10%);
+      };
       t : {
-        old: 1e90ff;
-        new: lighten(@blue, 15%);
-      }
+        old : 1e90ff;
+        new : lighten(@blue, 15%);
+      };
       u : {
-        old: dda0dd;
-        new: lighten(@pink, 15%);
-      }
+        old : dda0dd;
+        new : lighten(@pink, 15%);
+      };
       v : {
-        old: add8e6;
-        new: lighten(@sky, 10%);
-      }
+        old : add8e6;
+        new : lighten(@sky, 10%);
+      };
       w : {
-        old: ff1493;
-        new: @pink;
-      }
+        old : ff1493;
+        new : @pink;
+      };
       x : {
-        old: ffa07a;
-        new: lighten(@peach, 20%);
-      }
+        old : ffa07a;
+        new : lighten(@peach, 20%);
+      };
       y : {
-        old: f5deb3;
-        new: lighten(@yellow, 15%);
-      }
+        old : f5deb3;
+        new : lighten(@yellow, 15%);
+      };
       z : {
-        old: 7fffd4;
-        new: lighten(@teal, 20%);
-      }
+        old : 7fffd4;
+        new : lighten(@teal, 20%);
+      };
     };
 
     each(@series-palette, {
       #mixins.ct-series-state(@key, @value);
     })
-      .ct-label {
-      color: @subtext0;
+    .ct-label {
+      color : @subtext0;
     }
 
     .ct-grid {
-      stroke: @subtext0;
+      stroke : @subtext0;
     }
 
     .main-panel > .footer {
-      border-top-color: @overlay0;
+      border-top-color : @overlay0;
     }
 
     .footer .copyright {
-      color: @overlay2;
+      color : @overlay2;
     }
 
     hr {
-      border-color: @overlay1;
+      border-color : @overlay1;
     }
   }
 }

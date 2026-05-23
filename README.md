@@ -27,7 +27,7 @@ grab the extension/source code here: https://github.com/openstyles/stylus
 
 ## how to use
 
-(´∇｀) once stylus is installed:
+\(´∇｀\) once stylus is installed:
 
 1. visit one of the sites covered by these styles
 2. click the stylus icon in your browser toolbar
@@ -35,7 +35,7 @@ grab the extension/source code here: https://github.com/openstyles/stylus
 4. paste the code from any file in this repo into the userstyles editor!
 
 each style file includes a comment at the top explaining what it customizes and
-which site(s) it works with.
+which site\(s\) it works with.
 
 ---
 
@@ -61,7 +61,7 @@ for your own taste, or use them as inspiration for creating your own styles
 ## questions or suggestions?
 
 if you find bugs, have ideas, or want to suggest changes, feel free to reach out
-(´▽`ʃ) this is a personal project, so i update it when inspiration strikes.
+\(´▽`ʃ\) this is a personal project, so i update it when inspiration strikes.
 
 ---
 

@@ -12,123 +12,49 @@
 @preprocessor   default
 ==/UserStyle== */
 :root * {
-  font-feature-settings:
-    'zero' 1,
-    'cv06' 1,
-    'cv07' 1,
-    'cv14' 1;
+  font-feature-settings: "zero" 1, "cv06" 1, "cv07" 1, "cv14" 1;
 }
-:root
-  :not(
-    h1,
-    h2,
-    h3,
-    h4,
-    h5,
-    code,
-    pre,
-    input[type='text'],
-    textarea,
-    [class*='react-code-text'],
-    editor,
-    [class*='monaco-editor'],
-    [class*='cm-editor'],
-    tt,
-    [class*='js-file-line-container'],
-    [class*='icon'],
-    [class*='image'],
-    [class*='img'],
-    [class*='png'],
-    [class*='svg'],
-    h1 *,
-    h2 *,
-    h3 *,
-    h4 *,
-    h5 *,
-    code *,
-    pre *,
-    input[type='text'] *,
-    textarea *,
-    [class*='react-code-text'] *,
-    editor *,
-    [class*='monaco-editor'] *,
-    [class*='cm-editor'] *,
-    tt *,
-    [class*='js-file-line-container'] *,
-    [class*='icon'] *,
-    [class*='image'] *,
-    [class*='img'] *,
-    [class*='png'] *,
-    [class*='svg'] *
-  ) {
-  font-family:
-    'Inria Sans', 'JetBrainsMono Nerd Font', 'Material Symbols Outlined',
-    'Noto Emoji', ui-sans-serif !important;
+:root :not(h1, h2, h3, h4, h5, code, pre, input[type=text], textarea, [class*=react-code-text], editor, [class*=monaco-editor], [class*=cm-editor], tt, [class*=js-file-line-container], [class*=icon], [class*=image], [class*=img], [class*=png], [class*=svg], h1 *, h2 *, h3 *, h4 *, h5 *, code *, pre *, input[type=text] *, textarea *, [class*=react-code-text] *, editor *, [class*=monaco-editor] *, [class*=cm-editor] *, tt *, [class*=js-file-line-container] *, [class*=icon] *, [class*=image] *, [class*=img] *, [class*=png] *, [class*=svg] *) {
+  font-family: "Inria Sans", "JetBrainsMono Nerd Font", "Material Symbols Outlined", "Noto Emoji", ui-sans-serif !important;
 }
-:root h1,
-:root h2,
-:root h3,
-:root h4,
-:root h5 {
-  font-family:
-    'Beuron Condensed', 'JetBrainsMono Nerd Font', 'Material Symbols Outlined',
-    'Noto Emoji', ui-serif !important;
+:root h1, :root h2, :root h3, :root h4, :root h5 {
+  font-family: "Beuron Condensed", "JetBrainsMono Nerd Font", "Material Symbols Outlined", "Noto Emoji", ui-serif !important;
 }
-:root code,
-:root pre,
-:root input[type='text'],
-:root textarea,
-:root [class*='react-code-text'],
-:root editor,
-:root [class*='monaco-editor'],
-:root [class*='cm-editor'],
-:root tt,
-:root [class*='js-file-line-container'] {
-  font-family:
-    'JetBrainsMono Nerd Font', 'Material Symbols Outlined', 'Noto Emoji',
-    ui-monospace !important;
+:root code, :root pre, :root input[type=text], :root textarea, :root [class*=react-code-text], :root editor, :root [class*=monaco-editor], :root [class*=cm-editor], :root tt, :root [class*=js-file-line-container] {
+  font-family: "JetBrainsMono Nerd Font", "Material Symbols Outlined", "Noto Emoji", ui-monospace !important;
   font-size: 14px !important;
   font-weight: 600 !important;
 }
 :root code b,
 :root code strong,
 :root code em,
-:root code bold,
-:root pre b,
+:root code bold, :root pre b,
 :root pre strong,
 :root pre em,
-:root pre bold,
-:root input[type='text'] b,
-:root input[type='text'] strong,
-:root input[type='text'] em,
-:root input[type='text'] bold,
-:root textarea b,
+:root pre bold, :root input[type=text] b,
+:root input[type=text] strong,
+:root input[type=text] em,
+:root input[type=text] bold, :root textarea b,
 :root textarea strong,
 :root textarea em,
-:root textarea bold,
-:root [class*='react-code-text'] b,
-:root [class*='react-code-text'] strong,
-:root [class*='react-code-text'] em,
-:root [class*='react-code-text'] bold,
-:root editor b,
+:root textarea bold, :root [class*=react-code-text] b,
+:root [class*=react-code-text] strong,
+:root [class*=react-code-text] em,
+:root [class*=react-code-text] bold, :root editor b,
 :root editor strong,
 :root editor em,
-:root editor bold,
-:root [class*='monaco-editor'] b,
-:root [class*='monaco-editor'] strong,
-:root [class*='monaco-editor'] em,
-:root [class*='monaco-editor'] bold,
-:root [class*='cm-editor'] b,
-:root [class*='cm-editor'] strong,
-:root [class*='cm-editor'] em,
-:root [class*='cm-editor'] bold,
-:root tt b,
+:root editor bold, :root [class*=monaco-editor] b,
+:root [class*=monaco-editor] strong,
+:root [class*=monaco-editor] em,
+:root [class*=monaco-editor] bold, :root [class*=cm-editor] b,
+:root [class*=cm-editor] strong,
+:root [class*=cm-editor] em,
+:root [class*=cm-editor] bold, :root tt b,
 :root tt strong,
 :root tt em,
-:root tt bold,
-:root [class*='js-file-line-container'] b,
-:root [class*='js-file-line-container'] strong,
-:root [class*='js-file-line-container'] em,
-:root [class*='js-file-line-container'] bold {
+:root tt bold, :root [class*=js-file-line-container] b,
+:root [class*=js-file-line-container] strong,
+:root [class*=js-file-line-container] em,
+:root [class*=js-file-line-container] bold {
   font-weight: 800 !important;
 }
