@@ -67,6 +67,8 @@ if you find bugs, have ideas, or want to suggest changes, feel free to reach out
 
 made with care and lots of coffee~
 
+<!-- prettier-ignore-start -->
+
 ```
      )))
     (((
@@ -76,3 +78,5 @@ made with care and lots of coffee~
 ___________
 `---------'
 ```
+
+<!-- prettier-ignore-end -->

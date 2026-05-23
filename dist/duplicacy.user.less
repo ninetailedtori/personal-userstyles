@@ -1,0 +1,506 @@
+/*
+ * SPDX-FileCopyrightText: 2026-Present ninetailedtori <ninetailedtori@uwu.gal>
+ *
+ * SPDX-License-Identifier: GPL-3.0-or-later
+ */
+
+/* ==UserStyle==
+@name         Duplicacy Catppuccin
+@namespace    github.com/ninetailedtori/personal-userstyles/styles/duplicacy
+@homepageURL  https://github.com/ninetailedtori/personal-userstyles/tree/main/styles/duplicacy.user.less
+@version      2025.09.06
+@updateURL    https://github.com/ninetailedtori/personal-userstyles/raw/main/styles/duplicacy.user.less
+@supportURL   https://github.com/ninetailedtori/personal-userstyles/issues?q=is%3Aopen+is%3Aissue+label%3Aduplicacy
+@description  Soothing pastel theme for Duplicacy
+@author       ninetailedtori
+@license      MIT
+
+@preprocessor less
+@var select   lightFlavor "Light Flavor" ["latte:Latte*", "frappe:Frappé", "macchiato:Macchiato", "mocha:Mocha"]
+@var select   darkFlavor "Dark Flavor" ["latte:Latte", "frappe:Frappé", "macchiato:Macchiato", "mocha:Mocha*"]
+@var select   accentColor "Accent" ["rosewater:Rosewater", "flamingo:Flamingo", "pink:Pink", "mauve:Mauve*", "red:Red", "maroon:Maroon", "peach:Peach", "yellow:Yellow", "green:Green", "teal:Teal", "blue:Blue", "sapphire:Sapphire", "sky:Sky", "lavender:Lavender", "subtext0:Gray"]
+@var checkbox highlight-redirect "Highlight redirect links" 0
+==/UserStyle== */
+
+@import 'https://userstyles.catppuccin.com/lib/lib.less';
+
+@-moz-document url-prefix("http://127.0.0.1:3875")
+{
+  :root {
+    @media (prefers-color-scheme: light) {
+      #catppuccin(@lightFlavor);
+    }
+
+    @media (prefers-color-scheme: dark) {
+      #catppuccin(@darkFlavor);
+    }
+  }
+
+  #mixins {
+    .text-state(@name, @colour) {
+      .text-@{name},
+      .icon-@{name} {
+        color: @colour;
+      }
+    }
+
+    .btn-text-state(@name, @basebg: @surface1, @hoverbg: darken(@basebg, 5%), @activebg: darken(@basebg, 10%), @basetext: @text, @hovertext: @basetext, @activetext: @basetext) {
+      .btn:has(.text-@{name}) {
+        border-color: transparent;
+
+        &:not(:hover, :active, :focus) {
+          background-color: @basebg;
+
+          .text-@{name} {
+            color: @basetext;
+          }
+        }
+
+        &:hover {
+          background-color: @hoverbg;
+
+          .text-@{name} {
+            color: @hovertext;
+          }
+        }
+
+        &:is(:active, :focus, :focus.active) {
+          background-color: @activebg;
+
+          .text-@{name} {
+            color: @activetext;
+          }
+        }
+      }
+    }
+
+    .btn-state(@name, @basebg: @surface1, @hoverbg: darken(@basebg, 5%), @activebg: darken(@basebg, 10%), @basetext: @text, @hovertext: @basetext, @activetext: @basetext) {
+      .btn.btn-@{name} {
+        border-color: transparent;
+
+        &:not(:hover, :active, :focus) {
+          color: @basetext;
+          background-color: @basebg;
+        }
+
+        &:hover {
+          color: @hovertext;
+          background-color: @hoverbg;
+        }
+
+        &:is(:active, :focus, .active) {
+          color: @activetext;
+          background-color: @activebg;
+        }
+      }
+    }
+  }
+
+  #catppuccin(@flavor) {
+    #lib.palette();
+    #lib.defaults();
+
+    @shadcol: fade(@crust, 30%);
+    @textshad: 1px 1px 2px @shadcol;
+    @boxshad: 2px 2px @shadcol;
+
+    body,
+    .main-panel {
+      color: @text;
+      background-color: @base;
+    }
+
+    a {
+      color: @blue;
+
+      &:hover {
+        color: @sky;
+      }
+
+      &:active,
+      &:focus {
+        color: @sapphire;
+      }
+    }
+
+    .radio-box {
+      &:hover input ~ .radio-button {
+        background-color: @accent;
+      }
+
+      input:checked ~ .radio-button {
+        background-color: @accent;
+      }
+
+      .radio-button {
+        background-color: @surface1;
+        outline: 1px solid @overlay0;
+
+        &::after {
+          background: @base;
+        }
+      }
+    }
+
+    /* form input */
+    .form-control {
+      color: @text;
+      background-color: @surface1;
+      border-color: @overlay0;
+      border-radius: 4px;
+
+      &:is(:hover, :active, :focus) {
+        background-color: @surface2;
+      }
+
+      &[disabled] {
+        color: @surface2;
+        background-color: @mantle;
+        border-color: @surface2;
+      }
+    }
+
+    .input-group {
+      .form-control:first-child {
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+      }
+
+      &-btn-vertical > .btn {
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+
+        &:first-child {
+          border-bottom-right-radius: 0;
+        }
+
+        &:nth-child(2) {
+          border-top-right-radius: 0;
+        }
+      }
+    }
+
+    .row-clickable {
+      &:hover {
+        background-color: @surface1;
+      }
+
+      &:is(:active, :focus) {
+        background-color: @surface2;
+      }
+
+      &.active {
+        color: @surface1;
+        background-color: @accent;
+
+        a {
+          color: @base;
+
+          &:hover {
+            color: @surface0;
+          }
+
+          &:is(:active, :focus) {
+            color: @surface1;
+          }
+        }
+      }
+    }
+
+    .progress {
+      background-color: @mantle;
+
+      .progress-bar {
+        background-color: @accent;
+
+        span {
+          color: @overlay1;
+          text-shadow: @textshad;
+        }
+      }
+    }
+
+    .table tbody tr {
+      > td {
+        border-color: @overlay0;
+      }
+
+      &:hover > td {
+        background-color: @surface1;
+      }
+
+      &:is(:active, :focus) > td {
+        background-color: @surface2;
+      }
+
+      &.active {
+        > td {
+          color: @base;
+          background-color: @accent;
+        }
+
+        &:hover > td {
+          background-color: darken(@accent, 5%);
+        }
+
+        &:is(:active, :focus) > td {
+          background-color: darken(@accent, 10%);
+        }
+      }
+    }
+
+    .vis-timeline,
+    .vis-labelset .vis-label,
+    .vis-panel.vis-top,
+    .vis-panel.vis-bottom,
+    .vis-panel.vis-center,
+    .vis-panel.vis-left,
+    .vis-panel.vis-right {
+      border-width: 2px;
+      border-color: @overlay0;
+    }
+
+    .vis-foreground .vis-group,
+    .vis-time-axis .vis-grid.vis-minor {
+      border-width: 2px;
+      border-color: @overlay0;
+    }
+
+    .vis-time-axis .vis-grid.vis-major {
+      border-width: 2px;
+      border-color: @overlay1;
+    }
+
+    .vis-time-axis .vis-text,
+    .vis-labelset .vis-label {
+      color: @text;
+    }
+
+    .vis-current-time {
+      background-color: @red;
+    }
+
+    :is(.sidebar, .off-canvas-sidebar) {
+      &[data-background-color='black'] {
+        .logo {
+          border-color: @overlay0;
+        }
+
+        &::before,
+        &::after {
+          background-color: @mantle;
+        }
+      }
+
+      .sidebar-wrapper {
+        box-shadow: @boxshad;
+      }
+
+      .nav li {
+        &:not(.active) {
+          > a {
+            color: @subtext0;
+          }
+
+          &:is(:hover, :active, :focus) > a {
+            color: @accent;
+            background-color: @base;
+          }
+        }
+
+        &.active {
+          > a {
+            &::before,
+            &::after {
+              border-right-color: @base;
+            }
+          }
+
+          &:not(:hover, :active, :focus) > a {
+            color: @green;
+          }
+
+          &:is(:hover, :active, :focus) > a {
+            color: @base;
+            background-color: @green;
+          }
+        }
+      }
+    }
+
+    .nav-tabs {
+      border-bottom-color: @overlay1;
+
+      > li {
+        &:not(.active) > a {
+          color: @subtext0;
+
+          &:not(:hover, :active, :focus) {
+            background-color: transparent;
+          }
+
+          &:is(:hover, :active, :focus, [aria-expanded='true']) {
+            background-color: @surface0;
+            border-color: @overlay1;
+            border-bottom-color: transparent;
+          }
+        }
+
+        &.active > a {
+          color: @text;
+          background-color: @mantle;
+          border-color: @overlay1;
+          border-bottom-color: transparent;
+
+          &:is(:hover, :active, :focus, [aria-expanded='true']) {
+            color: @text;
+            background-color: @mantle;
+            border-color: @overlay1;
+            border-bottom-color: transparent;
+          }
+        }
+      }
+    }
+
+    .tab-content {
+      background-color: @mantle;
+      border-color: @overlay1 !important;
+      border-radius: 4px;
+      border-top-left-radius: 0;
+      border-top-right-radius: 0;
+      border-top-color: transparent !important;
+    }
+
+    .dropdown-menu {
+      background-color: @surface0;
+      border: 1px solid @overlay1;
+      box-shadow: @boxshad;
+    }
+
+    #mixins.text-state(muted, @subtext0);
+    #mixins.text-state(primary, @accent);
+    #mixins.text-state(info, @blue);
+    #mixins.text-state(success, @green);
+    #mixins.text-state(warning, @peach);
+    #mixins.text-state(danger, @red);
+
+    .fa-inverse {
+      color: @base;
+    }
+
+    .btn {
+      border-radius: 4px;
+      border-color: @overlay0;
+
+      &:not(:hover, :active, :focus) {
+        background-color: transparent;
+      }
+
+      &:hover {
+        background-color: fade(@overlay2, 20%);
+      }
+
+      &:is(:active, :focus, :focus.active) {
+        background-color: fade(@overlay2, 20%);
+      }
+    }
+
+    #mixins.btn-text-state(@name: default, @basebg: @surface1, @hoverbg: @surface2, @activebg: @overlay0);
+    #mixins.btn-text-state(@name: fill,    @basebg: @surface1, @hoverbg: @surface2, @activebg: @overlay0);
+    #mixins.btn-text-state(@name: info,    @basebg: @blue,     @basetext: @base);
+    #mixins.btn-text-state(@name: success, @basebg: @green,    @basetext: @base);
+    #mixins.btn-text-state(@name: warning, @basebg: @peach,    @basetext: @base);
+    #mixins.btn-text-state(@name: danger,  @basebg: @red,      @basetext: @base);
+
+    #mixins.btn-state(@name: default, @basebg: @surface1, @hoverbg: @surface2, @activebg: @overlay0);
+    #mixins.btn-state(@name: fill,    @basebg: @surface1, @hoverbg: @surface2, @activebg: @overlay0);
+    #mixins.btn-state(@name: primary, @basebg: @accent,   @basetext: @base);
+    #mixins.btn-state(@name: info,    @basebg: @blue,     @basetext: @base);
+    #mixins.btn-state(@name: success, @basebg: @green,    @basetext: @base);
+    #mixins.btn-state(@name: warning, @basebg: @peach,    @basetext: @base);
+    #mixins.btn-state(@name: danger,  @basebg: @red,      @basetext: @base);
+
+    .tooltip-inner {
+      color: @text;
+      background-color: @surface1;
+    }
+
+    .tooltip.bottom .tooltip-arrow {
+      border-bottom-color: @surface1;
+    }
+
+    .card {
+      color: @text;
+      background-color: @surface0;
+      box-shadow: @boxshad;
+
+      &:has(.nav.nav-tabs) {
+        box-shadow: none;
+      }
+
+      .title {
+        color: @accent;
+      }
+
+      .category,
+      label {
+        color: @subtext0;
+      }
+
+      .labels p {
+        color: @text;
+      }
+
+      .stats {
+        color: @subtext0;
+      }
+    }
+
+    .modal {
+      &-header,
+      &-footer {
+        border-color: @overlay0;
+      }
+
+      &-content {
+        color: @text;
+        background-color: @surface0;
+        box-shadow: @boxshad;
+      }
+    }
+
+    [style*='color:black'] {
+      color: @text !important;
+    }
+
+    [style*='color:#556b2f;'],
+    [color*='#556b2f'] {
+      color: @green !important;
+    }
+
+    [style*='color:#8b4513;'],
+    [color*='#8b4513'] {
+      color: @peach !important;
+    }
+
+    .ct-label {
+      color: @subtext0;
+    }
+
+    .ct-grid {
+      stroke: @subtext0;
+    }
+
+    .main-panel > .footer {
+      border-top-color: @overlay0;
+    }
+
+    .footer .copyright {
+      color: @overlay2;
+    }
+
+    hr {
+      border-color: @overlay1;
+    }
+  }
+}

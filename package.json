@@ -1,51 +1,52 @@
 {
-    "name": "personal-userstyles",
-    "version": "1.0.0",
-    "description": "a cozy collection of custom styles for the web, made with [stylus](https://github.com/openstyles/stylus) ✨",
-    "author": {
-        "name": "ninetailedtori",
-        "email": "ninetailedtori@uwu.gal",
-        "url": "https://github.com/ninetailedtori"
-    },
-    "repository": "https://github.com/ninetailedtori/personal-userstyles",
-    "homepage": "https://github.com/ninetailedtori/personal-userstyles",
-    "license": "GPL-3.0-or-later",
-    "scripts": {
-        "build": "sass --no-source-map styles:dist",
-        "build:watch": "sass --watch --no-source-map styles:dist",
-        "fmt": "prettier --write .",
-        "fmt:check": "prettier --check .",
-        "serve": "miniserve"
-    },
-    "packageManager": "pnpm@10.33.4+sha512.1c67b3b359b2d408119ba1ed289f34b8fc3c6873412bec6fd264fbdc82489e510fcbecb9ce9d22dae7f3b76269d8441046014bdca53b9979cd7a561ad631b800",
-    "devDependencies": {
-        "prettier": "^3.8.3",
-        "sass": "^1.99.0"
-    },
-    "prettier": {
-        "arrowParens": "always",
-        "bracketSameLine": false,
-        "bracketSpacing": true,
-        "checkIgnorePragma": true,
-        "embeddedLanguageFormatting": "auto",
-        "endOfLine": "lf",
-        "experimentalOperatorPosition": "start",
-        "experimentalTernaries": true,
-        "objectWrap": "collapse",
-        "htmlWhitespaceSensitivity": "css",
-        "insertPragma": false,
-        "jsxSingleQuote": false,
-        "printWidth": 80,
-        "proseWrap": "always",
-        "quoteProps": "as-needed",
-        "rangeStart": 0,
-        "requirePragma": false,
-        "semi": true,
-        "singleAttributePerLine": false,
-        "singleQuote": true,
-        "tabWidth": 2,
-        "trailingComma": "es5",
-        "useTabs": false,
-        "vueIndentScriptAndStyle": false
-    }
+  "name": "personal-userstyles",
+  "version": "1.0.0",
+  "description": "a cozy collection of custom styles for the web, made with [stylus](https://github.com/openstyles/stylus) ✨",
+  "author": {
+    "name": "ninetailedtori",
+    "email": "ninetailedtori@uwu.gal",
+    "url": "https://github.com/ninetailedtori"
+  },
+  "repository": "https://github.com/ninetailedtori/personal-userstyles",
+  "homepage": "https://github.com/ninetailedtori/personal-userstyles",
+  "license": "GPL-3.0-or-later",
+  "scripts": {
+    "prepare": "pnpm run build && pnpm run fmt",
+    "build": "sass --no-source-map styles:dist && cp -t dist/ styles/*.user.less",
+    "build:watch": "sass --watch --no-source-map styles:dist",
+    "fmt": "prettier --write .",
+    "fmt:check": "prettier --check .",
+    "serve": "miniserve"
+  },
+  "packageManager": "pnpm@10.33.4+sha512.1c67b3b359b2d408119ba1ed289f34b8fc3c6873412bec6fd264fbdc82489e510fcbecb9ce9d22dae7f3b76269d8441046014bdca53b9979cd7a561ad631b800",
+  "devDependencies": {
+    "prettier": "^3.8.3",
+    "sass": "^1.99.0"
+  },
+  "prettier": {
+    "arrowParens": "always",
+    "bracketSameLine": false,
+    "bracketSpacing": true,
+    "checkIgnorePragma": true,
+    "embeddedLanguageFormatting": "auto",
+    "endOfLine": "lf",
+    "experimentalOperatorPosition": "start",
+    "experimentalTernaries": true,
+    "objectWrap": "collapse",
+    "htmlWhitespaceSensitivity": "css",
+    "insertPragma": false,
+    "jsxSingleQuote": false,
+    "printWidth": 80,
+    "proseWrap": "always",
+    "quoteProps": "as-needed",
+    "rangeStart": 0,
+    "requirePragma": false,
+    "semi": true,
+    "singleAttributePerLine": false,
+    "singleQuote": true,
+    "tabWidth": 2,
+    "trailingComma": "es5",
+    "useTabs": false,
+    "vueIndentScriptAndStyle": false
+  }
 }
