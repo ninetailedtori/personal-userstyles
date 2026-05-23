@@ -61,12 +61,13 @@ for your own taste, or use them as inspiration for creating your own styles
 ## questions or suggestions?
 
 if you find bugs, have ideas, or want to suggest changes, feel free to reach out
-(´▽\`ʃ) this is a personal project, so i update it when inspiration strikes.
+(´▽`ʃ) this is a personal project, so i update it when inspiration strikes.
 
 ---
 
 made with care and lots of coffee~
 
+```
      )))
     (((
   +-----+
@@ -74,3 +75,4 @@ made with care and lots of coffee~
   `-----'
 ___________
 `---------'
+```
