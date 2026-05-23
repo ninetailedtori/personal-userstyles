@@ -32,11 +32,245 @@
 #catppuccin(@flavor) {
   #lib.palette();
   #lib.defaults();
-  #lib.css-variables();
+
+  // ╔═════════════════════════════════════════════════════════════════════════╗
+  // ║                                 DEFAULTS                                ║
+  // ╚═════════════════════════════════════════════════════════════════════════╝
+
+  body {
+    color            : @text;
+    background-color : @base;
+  }
+
+  // ╔═════════════════════════════════════════════════════════════════════════╗
+  // ║                                  LINKS                                  ║
+  // ╚═════════════════════════════════════════════════════════════════════════╝
+
+  a {
+    color : @blue !important;
+
+    &:hover {
+      color : @sky !important;
+    }
+
+    &:active,
+    &:focus,
+    &:focus-within {
+      color : @sapphire !important;
+    }
+
+    &:visited {
+      color : @lavender !important;
+    }
+
+    &:link {
+      color : @blue !important;
+
+      &:hover {
+        color : @sky !important;
+      }
+
+      &:active,
+      &:focus,
+      &:focus-within {
+        color : @sapphire !important;
+      }
+
+      &:visited {
+        color : @lavender !important;
+      }
+    }
+  }
+
+  // ╔═════════════════════════════════════════════════════════════════════════╗
+  // ║                                  INPUTS                                 ║
+  // ╚═════════════════════════════════════════════════════════════════════════╝
+
+  input,
+  select,
+  select option,
+  textarea {
+    color            : @text !important;
+    background-color : @surface0 !important;
+    border-color     : @overlay0 !important;
+
+    &:enabled {
+      color            : @text !important;
+      background-color : @surface0 !important;
+    }
+
+    &:hover {
+      background-color : @surface1 !important;
+    }
+
+    &:active,
+    &:focus,
+    &:focus-within {
+      background-color : @surface2 !important;
+    }
+
+    &:checked {
+      background-color : @accent !important;
+
+      &::after {
+        color : @base !important;
+      }
+    }
+
+    &:invalid,
+    &:user-invalid {
+      color : @red !important;
+    }
+
+    &:disabled {
+      background-color : @mantle !important;
+      color            : @surface0 !important;
+    }
+
+    &:link,
+    &:link:enabled {
+      color : @blue !important;
+
+      &:hover {
+        color : @sky !important;
+      }
+
+      &:active,
+      &:focus,
+      &:focus-within {
+        color : @sapphire !important;
+      }
+
+      &:visited {
+        color : @lavender !important;
+      }
+    }
+  }
+
+  input[type = "radio"] {
+    background-color : @surface0 !important;
+    accent-color     : @accent !important;
+  }
 
   // ╔═════════════════════════════════════════════════════════════════════════╗
   // ║                                MEDIAWIKI                                ║
   // ╚═════════════════════════════════════════════════════════════════════════╝
+
+  .cdx-button:has(.mw-ui-icon-wikimedia-expand) {
+    color            : @text !important;
+    background-color : transparent !important;
+    border-color     : transparent !important;
+
+    &:enabled {
+      color            : @text !important;
+      background-color : transparent !important;
+      border-color     : transparent !important;
+    }
+
+    &:hover {
+      background-color : @surface1 !important;
+    }
+
+    &:active,
+    &:focus,
+    &:focus-within {
+      background-color : @surface2 !important;
+    }
+
+    &:invalid {
+      color : @maroon !important;
+    }
+  }
+
+  .cdx-button .mw-ui-icon-wikimedia-expand {
+    fill : @accent !important;
+
+    &:enabled {
+      fill : @accent !important;
+    }
+
+    &:hover {
+      fill : darken(@accent, 5%) !important;
+    }
+
+    &:active,
+    &:focus,
+    &:focus-within {
+      fill : darken(@accent, 10%) !important;
+    }
+
+    &:disabled {
+      fill : @mantle !important;
+    }
+  }
+
+  .multiselect {
+    color : @accent !important;
+  }
+
+  .checklist {
+    color            : @text !important;
+    background-color : @surface0 !important;
+    border-color     : @surface1 !important;
+
+    &:active,
+    &:focus,
+    &:focus-within {
+      border-color : @accent !important;
+    }
+
+    legend {
+      color : @text !important;
+    }
+  }
+
+  .rbox {
+    border-color        : @overlay0 !important;
+    border-bottom-width : 2px;
+    border-bottom-style : solid;
+
+    label:last-child {
+      border-bottom-style : none;
+    }
+  }
+
+  .vector-toc :is(.vector-toc-toggle, .vector-pinnable-header-toggle-button) {
+    color            : @subtext1 !important;
+    background-color : @base !important;
+
+    &::after {
+      background-color : @accent !important;
+    }
+
+    .vector-icon {
+      filter : @accent-filter !important;
+    }
+
+    &:hover {
+      background-color : fade(@accent, 30%) !important;
+    }
+
+    &:focus-within {
+      outline-width : 2px !important;
+      outline-style : solid !important;
+      outline-color : @accent !important;
+      border        : none !important;
+      box-shadow    : none !important;
+    }
+
+    &:active {
+      color            : @base !important;
+      background-color : darken(@accent, 10%) !important;
+
+      &::after {
+        background-color : @base !important;
+      }
+
+      .vector-icon {
+        filter : @base-filter !important;
+      }
+    }
+  }
 
   .vector-dropdown .vector-dropdown-checkbox {
     + .vector-dropdown-label {
