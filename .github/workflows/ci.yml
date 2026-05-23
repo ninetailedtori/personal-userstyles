@@ -9,16 +9,14 @@ jobs:
   prepare:
     runs-on: "ubuntu-latest"
     steps:
-      - uses: "actions/checkout@v4"
+      - uses: "actions/checkout@v6"
         with:
           fetch-depth: 0
-      - uses: "pnpm/action-setup@v2"
+      - uses: "pnpm/action-setup@v6"
+      - uses: "actions/setup-node@v6"
         with:
-          version: "10.33.4"
-      - uses: "actions/setup-node@v4"
-        with:
-          node-version: "18"
           cache: "pnpm"
+          cache-dependency-path: "pnpm-lock.yaml"
       - name: "Install dependencies"
         run: "pnpm install"
       - name: "Check for changes"
