@@ -35,7 +35,116 @@
     }
   }
 
-  #mixins {
+  @ct-series-map: {
+    @a: {
+      old : #556b2f;
+      new : @accent;
+    }
+    @b: {
+      old : #8b4513;
+      new : lighten(@red, 3%);
+    }
+    @c: {
+      old : #228b22;
+      new : lighten(@peach, 3%);
+    }
+    @d: {
+      old : #483d8b;
+      new : lighten(@yellow, 3%);
+    }
+    @e: {
+      old : #008080;
+      new : lighten(@green, 3%);
+    }
+    @f: {
+      old : #4682b4;
+      new : lighten(@sapphire, 3%);
+    }
+    @g: {
+      old : #9acd32;
+      new : lighten(@lavender, 3%);
+    }
+    @h: {
+      old : #00008b;
+      new : lighten(@red, 6%);
+    }
+    @i: {
+      old : #8b008b;
+      new : lighten(@peach, 6%);
+    }
+    @j: {
+      old : #b03060;
+      new : lighten(@yellow, 6%);
+    }
+    @k: {
+      old : #ff4500;
+      new : lighten(@green, 6%);
+    }
+    @l: {
+      old : #ffa500;
+      new : lighten(@sapphire, 6%);
+    }
+    @m: {
+      old : #ffff00;
+      new : lighten(@lavender, 6%);
+    }
+    @n: {
+      old : #00ff00;
+      new : lighten(@red, 9%);
+    }
+    @o: {
+      old : #00fa9a;
+      new : lighten(@peach, 9%);
+    }
+    @p: {
+      old : #8a2be2;
+      new : lighten(@yellow, 9%);
+    }
+    @q: {
+      old : #dc143c;
+      new : lighten(@green, 9%);
+    }
+    @r: {
+      old : #0000ff;
+      new : lighten(@sapphire, 9%);
+    }
+    @s: {
+      old : #ff00ff;
+      new : lighten(@lavender, 9%);
+    }
+    @t: {
+      old : #1e90ff;
+      new : lighten(@red, 12%);
+    }
+    @u: {
+      old : #dda0dd;
+      new : lighten(@peach, 12%);
+    }
+    @v: {
+      old : #add8e6;
+      new : lighten(@yellow, 12%);
+    }
+    @w: {
+      old : #ff1493;
+      new : lighten(@green, 12%);
+    }
+    @x: {
+      old : #ffa07a;
+      new : lighten(@sapphire, 12%);
+    }
+    @y: {
+      old : #f5deb3;
+      new : lighten(@lavender, 12%);
+    }
+    @z: {
+      old : #7fffd4;
+      new : lighten(@red, 15%);
+    }
+  }
+
+  @ct-series-keys : a b c d e f g h i j k l m n o p q r s t u v w x y z;
+
+  #mixins() {
     .text-state(@name, @colour) {
       .text-@{name},
       .icon-@{name} {
@@ -43,7 +152,15 @@
       }
     }
 
-    .btn-text-state(@name, @basebg: @surface1, @hoverbg: darken(@basebg, 5%), @activebg: darken(@basebg, 10%), @basetext: @text, @hovertext: @basetext, @activetext: @basetext) {
+    .btn-text-state(
+      @name,
+      @basebg: @surface1,
+      @hoverbg: darken(@basebg, 5%),
+      @activebg: darken(@basebg, 10%),
+      @basetext: @text,
+      @hovertext: @basetext,
+      @activetext: @basetext
+    ) {
       .btn:has(.text-@{name}) {
         border-color : transparent;
 
@@ -73,7 +190,15 @@
       }
     }
 
-    .btn-state(@name, @basebg: @surface1, @hoverbg: darken(@basebg, 5%), @activebg: darken(@basebg, 10%), @basetext: @text, @hovertext: @basetext, @activetext: @basetext) {
+    .btn-state(
+      @name,
+      @basebg: @surface1,
+      @hoverbg: darken(@basebg, 5%),
+      @activebg: darken(@basebg, 10%),
+      @basetext: @text,
+      @hovertext: @basetext,
+      @activetext: @basetext
+    ) {
       .btn.btn-@{name} {
         border-color : transparent;
 
@@ -94,11 +219,11 @@
       }
     }
 
-    .ct-series-state(@key, @value) {
-      .ct-series-@{key} {
-        @old : map-get(@value, hex);
-        @new : map-get(@value, color);
+    .ct-series-state(@key) {
+      @old : @ct-series-map[@@key][old];
+      @new : @ct-series-map[@@key][new];
 
+      .ct-series-@{key} {
         .ct-point,
         .ct-line,
         .ct-bar,
@@ -110,14 +235,11 @@
         .ct-area {
           fill : @new;
         }
+      }
 
-        &.fa-circle:is(
-            [style*="color:#@{old};"],
-            [style*="color:#@{old}"],
-            [color*="#@{old}"]
-          ) {
-          color : @new !important;
-        }
+      .fa-circle[style*="color:@{old}"],
+      font[color*="@{old}"] {
+        color : @new !important;
       }
     }
   }
@@ -389,12 +511,10 @@
     }
 
     .tab-content {
-      background-color        : @mantle;
-      border-color            : @overlay1 !important;
-      border-radius           : 4px;
-      border-top-left-radius  : 0;
-      border-top-right-radius : 0;
-      border-top-color        : transparent !important;
+      background-color : @mantle;
+      border-color     : @overlay1 !important;
+      border-radius    : 0 0 4px 4px;
+      border-top-color : transparent !important;
     }
 
     .dropdown-menu {
@@ -495,116 +615,15 @@
       }
     }
 
-    @series-palette: {
-      a : {
-        old : 556b2f;
-        new : darken(@green, 35%);
-      };
-      b : {
-        old : 8b4513;
-        new : darken(@peach, 40%);
-      };
-      c : {
-        old : 228b22;
-        new : darken(@green, 45%);
-      };
-      d : {
-        old : 483d8b;
-        new : darken(@sapphire, 35%);
-      };
-      e : {
-        old : 008080;
-        new : darken(@teal, 40%);
-      };
-      f : {
-        old : 4682b4;
-        new : darken(@sky, 25%);
-      };
-      g : {
-        old : 9acd32;
-        new : lighten(@green, 15%);
-      };
-      h : {
-        old : 00008b;
-        new : darken(@blue, 50%);
-      };
-      i : {
-        old : 8b008b;
-        new : darken(@maroon, 30%);
-      };
-      j : {
-        old : b03060;
-        new : darken(@maroon, 20%);
-      };
-      k : {
-        old : ff4500;
-        new : @peach;
-      };
-      l : {
-        old : ffa500;
-        new : lighten(@peach, 10%);
-      };
-      m : {
-        old : ffff00;
-        new : @yellow;
-      };
-      n : {
-        old : 00ff00;
-        new : lighten(@green, 25%);
-      };
-      o : {
-        old : 00fa9a;
-        new : lighten(@teal, 15%);
-      };
-      p : {
-        old : 8a2be2;
-        new : darken(@lavender, 15%);
-      };
-      q : {
-        old : dc143c;
-        new : @red;
-      };
-      r : {
-        old : 0000ff;
-        new : lighten(@blue, 5%);
-      };
-      s : {
-        old : ff00ff;
-        new : lighten(@pink, 10%);
-      };
-      t : {
-        old : 1e90ff;
-        new : lighten(@blue, 15%);
-      };
-      u : {
-        old : dda0dd;
-        new : lighten(@pink, 15%);
-      };
-      v : {
-        old : add8e6;
-        new : lighten(@sky, 10%);
-      };
-      w : {
-        old : ff1493;
-        new : @pink;
-      };
-      x : {
-        old : ffa07a;
-        new : lighten(@peach, 20%);
-      };
-      y : {
-        old : f5deb3;
-        new : lighten(@yellow, 15%);
-      };
-      z : {
-        old : 7fffd4;
-        new : lighten(@teal, 20%);
-      };
-    };
+    [color*="black"],
+    [style*="color:black"] {
+      color : @accent !important;
+    }
 
-    each(@series-palette, {
-      #mixins.ct-series-state(@key, @value);
-    })
+    each(@ct-series-keys, {
+      #mixins.ct-series-state(@value);
+    });
+
     .ct-label {
       color : @subtext0;
     }

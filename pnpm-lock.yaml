@@ -12,8 +12,8 @@ importers:
         specifier: "^0.7.0"
         version: "0.7.0"
       sass:
-        specifier: "^1.99.0"
-        version: "1.99.0"
+        specifier: "^1.100.0"
+        version: "1.100.0"
 
 packages:
   '@parcel/watcher-android-arm64@2.5.6':
@@ -93,9 +93,9 @@ packages:
   '@taplo/cli@0.7.0':
     resolution: {integrity: "sha512-Ck3zFhQhIhi02Hl6T4ZmJsXdnJE+wXcJz5f8klxd4keRYgenMnip3JDPMGDRLbnC/2iGd8P0sBIQqI3KxfVjBg=="}
     hasBin: true
-  chokidar@4.0.3:
-    resolution: {integrity: "sha512-Qgzu8kfBvo+cA4962jnP1KkS6Dop5NS6g7R5LFYJr4b8Ub94PPQXUksCw9PvXoeXPRRddRNC5C1JQUR2SMGtnA=="}
-    engines: {node: ">= 14.16.0"}
+  chokidar@5.0.0:
+    resolution: {integrity: "sha512-TQMmc3w+5AxjpL8iIiwebF73dRDF4fBIieAqGn9RGCWaEVwQ6Fb2cGe31Yns0RRIzii5goJ1Y7xbMwo1TxMplw=="}
+    engines: {node: ">= 20.19.0"}
   detect-libc@2.1.2:
     resolution: {integrity: "sha512-Btj2BOOO83o3WyH59e8MgXsxEQVcarkUOpEYrubB0urwnN10yQ364rsiByU11nZlqWYZm05i/of7io4mzihBtQ=="}
     engines: {node: ">=8"}
@@ -112,12 +112,12 @@ packages:
   picomatch@4.0.4:
     resolution: {integrity: "sha512-QP88BAKvMam/3NxH6vj2o21R6MjxZUAd6nlwAS/pnGvN9IVLocLHxGYIzFhg6fUQ+5th6P4dv4eW9jX3DSIj7A=="}
     engines: {node: ">=12"}
-  readdirp@4.1.2:
-    resolution: {integrity: "sha512-GDhwkLfywWL2s6vEjyhri+eXmfH6j1L7JE27WhqLeYzoh/A3DBaYGEj2H/HFZCn/kMfim73FXxEJTw06WtxQwg=="}
-    engines: {node: ">= 14.18.0"}
-  sass@1.99.0:
-    resolution: {integrity: "sha512-kgW13M54DUB7IsIRM5LvJkNlpH+WhMpooUcaWGFARkF1Tc82v9mIWkCbCYf+MBvpIUBSeSOTilpZjEPr2VYE6Q=="}
-    engines: {node: ">=14.0.0"}
+  readdirp@5.0.0:
+    resolution: {integrity: "sha512-9u/XQ1pvrQtYyMpZe7DXKv2p5CNvyVwzUB6uhLAnQwHMSgKMBR62lc7AHljaeteeHXn11XTAaLLUVZYVZyuRBQ=="}
+    engines: {node: ">= 20.19.0"}
+  sass@1.100.0:
+    resolution: {integrity: "sha512-B5j0rYMlinhhOo9tjQebMVVn0TfyXAF+wB3b2ggZUuJ/is/Y+7+JGjirAMxHZ9Z3hIP98NPfamlAkBHa1lAaXQ=="}
+    engines: {node: ">=20.19.0"}
     hasBin: true
   source-map-js@1.2.1:
     resolution: {integrity: "sha512-UXWMKhLOwVKb728IUtQPXxfYU+usdybtUrK/8uGE8CQMvrhOpwvzDBwj0QhSL7MQc7vIsISBG8VQ8+IDQxpfQA=="}
@@ -172,9 +172,9 @@ snapshots:
       '@parcel/watcher-win32-x64': "2.5.6"
     optional: true
   '@taplo/cli@0.7.0': {}
-  chokidar@4.0.3:
+  chokidar@5.0.0:
     dependencies:
-      readdirp: "4.1.2"
+      readdirp: "5.0.0"
   detect-libc@2.1.2:
     optional: true
   immutable@5.1.5: {}
@@ -188,10 +188,10 @@ snapshots:
     optional: true
   picomatch@4.0.4:
     optional: true
-  readdirp@4.1.2: {}
-  sass@1.99.0:
+  readdirp@5.0.0: {}
+  sass@1.100.0:
     dependencies:
-      chokidar: "4.0.3"
+      chokidar: "5.0.0"
       immutable: "5.1.5"
       source-map-js: "1.2.1"
     optionalDependencies:
