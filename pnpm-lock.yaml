@@ -1,7 +1,4 @@
 ---
-# SPDX-FileCopyrightText: 2026-Present ninetailedtori <ninetailedtori@uwu.gal>
-#
-# SPDX-License-Identifier: GPL-3.0-or-later
 lockfileVersion: "9.0"
 
 settings:
@@ -11,6 +8,9 @@ settings:
 importers:
   .:
     devDependencies:
+      '@taplo/cli':
+        specifier: "^0.7.0"
+        version: "0.7.0"
       prettier:
         specifier: "^3.8.3"
         version: "3.8.3"
@@ -93,6 +93,9 @@ packages:
   '@parcel/watcher@2.5.6':
     resolution: {integrity: "sha512-tmmZ3lQxAe/k/+rNnXQRawJ4NjxO2hqiOLTHvWchtGZULp4RyFeh6aU4XdOYBFe2KE1oShQTv4AblOs2iOrNnQ=="}
     engines: {node: ">= 10.0.0"}
+  '@taplo/cli@0.7.0':
+    resolution: {integrity: "sha512-Ck3zFhQhIhi02Hl6T4ZmJsXdnJE+wXcJz5f8klxd4keRYgenMnip3JDPMGDRLbnC/2iGd8P0sBIQqI3KxfVjBg=="}
+    hasBin: true
   chokidar@4.0.3:
     resolution: {integrity: "sha512-Qgzu8kfBvo+cA4962jnP1KkS6Dop5NS6g7R5LFYJr4b8Ub94PPQXUksCw9PvXoeXPRRddRNC5C1JQUR2SMGtnA=="}
     engines: {node: ">= 14.16.0"}
@@ -175,6 +178,7 @@ snapshots:
       '@parcel/watcher-win32-ia32': "2.5.6"
       '@parcel/watcher-win32-x64': "2.5.6"
     optional: true
+  '@taplo/cli@0.7.0': {}
   chokidar@4.0.3:
     dependencies:
       readdirp: "4.1.2"

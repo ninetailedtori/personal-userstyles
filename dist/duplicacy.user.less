@@ -94,6 +94,33 @@
         }
       }
     }
+
+    .ct-series-state(@key, @value) {
+      .ct-series-@{key} {
+        @old: map-get(@value, hex);
+        @new: map-get(@value, color);
+
+        .ct-point,
+        .ct-line,
+        .ct-bar,
+        .ct-slice-donut {
+          stroke: @new;
+        }
+
+        .ct-slice-pie,
+        .ct-area {
+          fill: @new;
+        }
+
+        &.fa-circle:is(
+            [style*='color:#@{old};'],
+            [style*='color:#@{old}'],
+            [color*='#@{old}']
+          ) {
+          color: @new !important;
+        }
+      }
+    }
   }
 
   #catppuccin(@flavor) {
@@ -469,21 +496,117 @@
       }
     }
 
-    [style*='color:black'] {
-      color: @text !important;
-    }
+    @series-palette: {
+      a: {
+        old: 556b2f;
+        new: darken(@green, 35%);
+      };
+      b: {
+        old: 8b4513;
+        new: darken(@peach, 40%);
+      };
+      c: {
+        old: 228b22;
+        new: darken(@green, 45%);
+      };
+      d: {
+        old: 483d8b;
+        new: darken(@sapphire, 35%);
+      };
+      e: {
+        old: 008080;
+        new: darken(@teal, 40%);
+      };
+      f: {
+        old: 4682b4;
+        new: darken(@sky, 25%);
+      };
+      g: {
+        old: 9acd32;
+        new: lighten(@green, 15%);
+      };
+      h: {
+        old: 00008b;
+        new: darken(@blue, 50%);
+      };
+      i: {
+        old: 8b008b;
+        new: darken(@maroon, 30%);
+      };
+      j: {
+        old: b03060;
+        new: darken(@maroon, 20%);
+      };
+      k: {
+        old: ff4500;
+        new: @peach;
+      };
+      l: {
+        old: ffa500;
+        new: lighten(@peach, 10%);
+      };
+      m: {
+        old: ffff00;
+        new: @yellow;
+      };
+      n: {
+        old: 00ff00;
+        new: lighten(@green, 25%);
+      };
+      o: {
+        old: 00fa9a;
+        new: lighten(@teal, 15%);
+      };
+      p: {
+        old: 8a2be2;
+        new: darken(@lavender, 15%);
+      };
+      q: {
+        old: dc143c;
+        new: @red;
+      };
+      r: {
+        old: 0000ff;
+        new: lighten(@blue, 5%);
+      };
+      s: {
+        old: ff00ff;
+        new: lighten(@pink, 10%);
+      };
+      t: {
+        old: 1e90ff;
+        new: lighten(@blue, 15%);
+      };
+      u: {
+        old: dda0dd;
+        new: lighten(@pink, 15%);
+      };
+      v: {
+        old: add8e6;
+        new: lighten(@sky, 10%);
+      };
+      w: {
+        old: ff1493;
+        new: @pink;
+      };
+      x: {
+        old: ffa07a;
+        new: lighten(@peach, 20%);
+      };
+      y: {
+        old: f5deb3;
+        new: lighten(@yellow, 15%);
+      };
+      z: {
+        old: 7fffd4;
+        new: lighten(@teal, 20%);
+      };
+    };
 
-    [style*='color:#556b2f;'],
-    [color*='#556b2f'] {
-      color: @green !important;
-    }
-
-    [style*='color:#8b4513;'],
-    [color*='#8b4513'] {
-      color: @peach !important;
-    }
-
-    .ct-label {
+    each(@series-palette, {
+      #mixins.ct-series-state(@key, @value);
+    })
+      .ct-label {
       color: @subtext0;
     }
 
