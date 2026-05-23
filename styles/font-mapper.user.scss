@@ -1,3 +1,9 @@
+/*
+ * SPDX-FileCopyrightText: 2026-Present ninetailedtori <ninetailedtori@uwu.gal>
+ *
+ * SPDX-License-Identifier: GPL-3.0-or-later
+ */
+
 /* ==UserStyle==
 @name           Font Mapper
 @namespace      github.com/openstyles/stylus
@@ -29,9 +35,9 @@ $font-mono:
 
 $headings: 'h1', 'h2', 'h3', 'h4', 'h5';
 $editors:
-  'code', 'pre', 'input[type=text]', 'textarea', '[class="react-code-text"]',
-  'editor', '[class="monaco-editor"]', '[class="cm-editor"]', 'tt',
-  '[class="js-file-line-container"]';
+  'code', 'pre', 'input[type=text]', 'textarea', '[class*="react-code-text"]',
+  'editor', '[class*="monaco-editor"]', '[class*="cm-editor"]', 'tt',
+  '[class*="js-file-line-container"]';
 $images:
   '[class*="icon"]', '[class*="image"]', '[class*="img"]', '[class*="png"]',
   '[class*="svg"]';

@@ -1,2 +1,15 @@
-node_modules
-dist
+# SPDX-FileCopyrightText: 2026-Present ninetailedtori <ninetailedtori@uwu.gal>
+#
+# SPDX-License-Identifier: GPL-3.0-or-later
+
+### NINETAILEDTORI/PERSONAL-USERSTYLES GITIGNORE
+
+## Ignore node_modules!
+/node_modules/
+
+## This isn't needed because we do want to keep dist around for this!
+# /dist/
+
+## Ignore IDEs
+/.vscode/
+/.idea/
