@@ -61,6 +61,9 @@
 
 @-moz-document domain("overframe.gg") {
   :root .wfic {
-    font: WarframeIcons, "Inria Sans", "JetBrainsMono Nerd Font", "Material Symbols Outlined", "Noto Emoji", ui-sans-serif !important;
+    font-family: "WarframeIcons", "Inria Sans", "JetBrainsMono Nerd Font", "Material Symbols Outlined", "Noto Emoji", ui-sans-serif !important;
+  }
+  :root .bwi {
+    font-family: "bwi-font", "Inria Sans", "JetBrainsMono Nerd Font", "Material Symbols Outlined", "Noto Emoji", ui-sans-serif !important;
   }
 }

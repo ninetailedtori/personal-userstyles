@@ -94,7 +94,11 @@ $within-excluded  : "";
 @-moz-document domain("overframe.gg") {
   :root {
     .wfic {
-      font : WarframeIcons, $font-sans !important;
+      font-family : "WarframeIcons", $font-sans !important;
+    }
+
+    .bwi {
+      font-family : "bwi-font", $font-sans !important;
     }
   }
 }
