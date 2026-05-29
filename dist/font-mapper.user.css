@@ -58,3 +58,9 @@
 :root [class*=js-file-line-container] bold {
   font-weight: 800 !important;
 }
+
+@-moz-document domain("overframe.gg") {
+  :root .wfic {
+    font: WarframeIcons, "Inria Sans", "JetBrainsMono Nerd Font", "Material Symbols Outlined", "Noto Emoji", ui-sans-serif !important;
+  }
+}

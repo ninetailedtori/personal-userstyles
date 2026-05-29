@@ -90,3 +90,11 @@ $within-excluded  : "";
     @include code-styling();
   }
 }
+
+@-moz-document domain("overframe.gg") {
+  :root {
+    .wfic {
+      font : WarframeIcons, $font-sans !important;
+    }
+  }
+}
