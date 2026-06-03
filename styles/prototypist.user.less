@@ -1,0 +1,484 @@
+/*
+ * SPDX-FileCopyrightText: 2026-Present ninetailedtori <ninetailedtori@uwu.gal>
+ *
+ * SPDX-License-Identifier: GPL-3.0-or-later
+ */
+
+/* ==UserStyle==
+@name ProtoTypist Catppuccin
+@namespace github.com/catppuccin/userstyles/styles/prototypist
+@homepageURL https://github.com/catppuccin/userstyles/tree/main/styles/prototypist
+@version 2025.09.06
+@updateURL https://github.com/catppuccin/userstyles/raw/main/styles/prototypist/catppuccin.user.less
+@supportURL https://github.com/catppuccin/userstyles/issues?q=is%3Aopen+is%3Aissue+label%3Aprototypist
+@description Soothing pastel theme for ProtoTypist
+@author Catppuccin
+@license MIT
+
+@preprocessor less
+@var select lightFlavor "Light Flavor" ["latte:Latte*", "frappe:Frappé", "macchiato:Macchiato", "mocha:Mocha"]
+@var select darkFlavor "Dark Flavor" ["latte:Latte", "frappe:Frappé", "macchiato:Macchiato", "mocha:Mocha*"]
+@var select accentColor "Accent" ["rosewater:Rosewater", "flamingo:Flamingo", "pink:Pink", "mauve:Mauve*", "red:Red", "maroon:Maroon", "peach:Peach", "yellow:Yellow", "green:Green", "teal:Teal", "blue:Blue", "sapphire:Sapphire", "sky:Sky", "lavender:Lavender", "subtext0:Gray"]
+@var checkbox highlight-redirect "Highlight redirect links" 0
+==/UserStyle== */
+
+@import "https://userstyles.catppuccin.com/lib/lib.less";
+
+@-moz-document domain("prototypist.net") {
+  :root {
+    color-scheme : dark;
+
+    @media (prefers-color-scheme : light) {
+      #catppuccin(@lightFlavor);
+    }
+
+    @media (prefers-color-scheme : dark) {
+      #catppuccin(@darkFlavor);
+    }
+  }
+
+  #mixins {
+    .btn-state(
+      @name,
+      @basebg     : @surface1,
+      @hoverbg    : darken(@basebg, 5%),
+      @activebg   : darken(@basebg, 10%),
+      @basetext   : @text,
+      @hovertext  : @basetext,
+      @activetext : @basetext
+    ) {
+      .button--@{name} {
+
+        &:not(:hover, :active, :focus) {
+          color            : @basetext;
+          background-color : @basebg;
+        }
+
+        &:hover {
+          color            : @hovertext;
+          background-color : @hoverbg;
+        }
+
+        &:is(:active, :focus, .active) {
+          color            : @activetext;
+          background-color : @activebg;
+        }
+      }
+    }
+  }
+
+  #catppuccin(@flavor) {
+    #lib.palette();
+    #lib.defaults();
+
+    // BASIC
+    --accent                       : #lib.rgbify(@accent) [];
+    --text-primary                 : #lib.rgbify(@text) [];
+    --background-primary           : #lib.rgbify(@base) [];
+    --dialog-background            : #lib.rgbify(@surface0) [];
+    --border-color                 : #lib.rgbify(@overlay0) [];
+
+    .text-custom {
+      color : @text;
+    }
+
+    .text-subdued {
+      color : @subtext0;
+    }
+
+    // DROPDOWNS
+    .popover-listbox__option {
+      &:hover {
+        background-color : fade(@overlay2, 15%);
+      }
+
+      &:is([aria-selected = "true"], :active, :focus) {
+        background-color : fade(@overlay2, 30%);
+      }
+
+      &.is-disabled {
+        color : @overlay2;
+      }
+    }
+
+    .select {
+      background-color : @surface0;
+
+      &:hover {
+        background-color : @surface1;
+      }
+
+      &[aria-expanded = "true"] {
+        background-color : @surface2;
+      }
+    }
+
+    // BUTTONS
+    --button-background-primary    : #lib.rgbify(@accent) [];
+    --button-text-primary          : #lib.rgbify(@base) [];
+    --button-background-secondary  : #lib.rgbify(@surface0) [];
+    --button-text-secondary        : #lib.rgbify(@text) [];
+    --button-background-subdued    : #lib.rgbify(@mantle) [];
+    --button-text-subdued          : #lib.rgbify(@overlay2) [];
+
+    #mixins.btn-state(
+      @name    : primary,
+      @basebg   : @accent,
+      @basetext : @base
+    );
+    #mixins.btn-state(
+      @name     : secondary,
+      @basebg   : @surface0,
+      @hoverbg  : @surface1,
+      @activebg : @surface2
+    );
+    #mixins.btn-state(
+      @name     : subdued,
+      @basebg   : @mantle,
+      @basetext : @overlay2
+    );
+
+    :is(.button, .btn) {
+      color       : @text;
+      text-shadow : 1px 1px 2px @base;
+    }
+
+    .pswp__button {
+      path[fill="#fff"] {
+        fill : @surface0 !important;
+      }
+
+      path[stroke="#252627"] {
+        stroke : @text !important;
+      }
+    }
+
+    button.chat-toggle.chat-toggle--text-button {
+      background-color : @accent !important;
+
+      path {
+        fill : @base !important;
+      }
+
+      .chat-title {
+        color : @base !important;
+      }
+    }
+
+    .bg-custom {
+      background-color : @mantle;
+    }
+
+    // STATUS
+    --success-background           : #lib.rgbify(@green) [] / 30%;
+    --success-text                 : #lib.rgbify(@green) [];
+    --warning-background           : #lib.rgbify(@peach) [] / 30%;
+    --warning-text                 : #lib.rgbify(@peach) [];
+    --error-background             : #lib.rgbify(@red) [] / 30%;
+    --error-text                   : #lib.rgbify(@red) [];
+
+    // PRODUCT
+    --on-sale-text                 : #lib.rgbify(@green) [];
+    --on-sale-badge-background     : #lib.rgbify(@green) [];
+    --on-sale-badge-text           : #lib.rgbify(@base) [];
+    --sold-out-badge-background    : #lib.rgbify(@red) [];
+    --sold-out-badge-text          : #lib.rgbify(@base) [];
+    --primary-badge-background     : #lib.rgbify(@accent) [];
+    --primary-badge-text           : #lib.rgbify(@base) [];
+    --star-color                   : #lib.rgbify(@accent) [];
+    --product-card-background      : #lib.rgbify(@green) [];
+    --product-card-text            : #lib.rgbify(@base) [];
+
+    .announcement-bar.bg-custom.text-custom {
+      background-color : @red !important;
+
+      p,
+      span {
+        color : @base;
+      }
+    }
+
+    // HEADER
+    --header-background            : #lib.rgbify(@mantle) [];
+    --header-text                  : #lib.rgbify(@text) [];
+
+    .header__wrapper {
+      background-color : rgba(var(--header-background));
+
+      .dropdown-menu {
+        background-color : @surface0;
+      }
+    }
+
+    img[src="//prototypist.net/cdn/shop/files/protoTypist_Logo_Package_Logo_With_Subtext-Green_be7b58c5-e3c2-4a11-a8e1-d72e6aff5cd7.png?v=1630542842&width=1031"] {
+      filter : @accent-filter;
+    }
+
+    // FOOTER
+    --footer-background            : #lib.rgbify(@mantle) [];
+    --footer-text                  : #lib.rgbify(@subtext1) [];
+
+    [stroke = "#ffffff"] {
+      stroke : @base !important;
+    }
+
+    [fill = "#ffffff"] {
+      fill : @base !important;
+    }
+
+    // PICTO ICONS
+    .icon-picto-chat {
+      path {
+        stroke : @base !important;
+
+        &:not([fill]) {
+          fill : @mauve !important;
+        }
+
+        &[fill] {
+          fill         : @rosewater !important;
+          fill-opacity : 1 !important;
+        }
+      }
+    }
+
+    .icon-picto-leaf {
+      color : @green !important;
+    }
+
+    // JDGM REVIEWS
+    --jdgm-primary-color           : @accent;
+    --jdgm-secondary-color         : darken(@accent, 5%);
+    --jdgm-star-color              : @accent;
+    --jdgm-write-review-text-color : @text;
+    --jdgm-write-review-bg-color   : @accent;
+    --jdgm-paginate-color          : @accent;
+    --jdgm-border-radius           : 4px;
+    --jdgm-reviewer-name-color     : @accent;
+
+    .jm-text {
+      color : @text;
+    }
+
+    .jdgm-star {
+      &.jdgm--off {
+        color : @overlay0;
+      }
+
+      &.jdgm--on {
+        color : @accent;
+      }
+    }
+
+    .jdgm-histogram__bar {
+      background-color : @surface0;
+    }
+
+    .jdgm-histogram__bar-content {
+      background-color : @accent;
+    }
+
+    .jdgm-histogram__frequency {
+      color : @subtext0;
+    }
+
+    .jdgm-histogram__row:hover, .jdgm-histogram__row--selected {
+      opacity : unset;
+
+      .jdgm-star {
+        &.jdgm--off {
+          color : @overlay1;
+        }
+
+        &.jdgm--on {
+          color : darken(@accent, 5%);
+        }
+      }
+
+      .jdgm-histogram__bar {
+        background-color : @surface1;
+      }
+
+      .jdgm-histogram__bar-content {
+        background-color : darken(@accent, 5%);
+      }
+
+      .jdgm-histogram__frequency {
+        color : @subtext1;
+      }
+    }
+
+    .jdgm-subtab__name.jdgm--active {
+      color : @base;
+    }
+
+    .jdgm-revs-tab-btn.btn {
+      color            : @base !important;
+      background-color : @blue !important;
+
+      &:hover {
+        background-color : darken(@blue, 5%) !important;
+        opacity          : unset !important;
+      }
+
+      &:active, &:focus {
+        background-color : darken(@blue, 10%) !important;
+        opacity          : unset !important;
+      }
+    }
+
+    .jdgm-rev__timestamp, .jdgm-rev__location {
+      color : @subtext0;
+    }
+
+    .jdgm-rev__icon {
+      background-color : transparent;
+    }
+
+    .jdgm-rev[data-verified-buyer="true"] .jdgm-rev__icon.jdgm-rev__icon::after,
+    .jdgm-rev__buyer-badge.jdgm-rev__buyer-badge {
+      color            : @base;
+      background-color : @green;
+    }
+
+    a:is(.tap-area, [class*="jdgm"]) {
+      color   : @blue;
+      opacity : unset !important;
+
+      &:hover {
+        color : @sky;
+      }
+
+      &:active, &:focus {
+        color : @sapphire;
+      }
+
+      &:visited {
+        color : @lavender;
+      }
+
+      &.jdgm-curt {
+        color : @text;
+      }
+    }
+
+    .jdgm-verified-link-wrapper path {
+      fill : @green;
+    }
+
+    .jdgm-write-rev-link, .jm-button--primary {
+      color            : @base !important;
+      background-color : @accent !important;
+      border-color     : transparent !important;
+
+      &:hover {
+        background-color : darken(@accent, 5%) !important;
+        opacity          : unset !important;
+      }
+
+      &:active, &:focus {
+        background-color : darken(@accent, 10%) !important;
+        opacity          : unset !important;
+      }
+    }
+
+    .jdgm-revs-tab__title {
+      color : @accent;
+    }
+
+    .jdgm-revs-tab__header {
+      background-color : @mantle;
+    }
+
+    .jdgm-revs-tab__main {
+      color            : @text;
+      background-color : @base;
+    }
+
+    // SHOPIFY BUTTONS
+    button.gravity-button {
+      background-color : @mauve;
+
+      .button-content {
+        color : @base;
+      }
+
+      &:hover {
+        background-color : darken(@mauve, 5%);
+      }
+
+      &:active,
+      &:focus {
+        background-color : darken(@mauve, 10%);
+      }
+    }
+
+    .bg-purple-primary {
+      background-color : @mauve !important;
+    }
+
+    *, ::before, ::after {
+      border-color : @overlay1;
+    }
+
+    hr {
+      background-color : @overlay0;
+    }
+
+    // STOCK CHARTS
+    [class*="ai-variant-stock-"] {
+      background-color : @base;
+    }
+
+    [class*="ai-variant-stock__title-"] {
+      color : @text;
+    }
+
+    [class*="ai-variant-stock__item-"] {
+      background-color : @mantle;
+    }
+
+    [class*="ai-variant-stock__variant-name-"] {
+      color : @subtext0;
+    }
+
+    [class*="ai-variant-stock__badge-"][class*="--in-stock"] {
+      background-color : @green;
+      color            : @base;
+    }
+
+    [class*="ai-variant-stock__badge-"][class*="--low-stock"] {
+      background-color : @peach;
+      color            : @base;
+    }
+
+    [class*="ai-variant-stock__badge-"][class*="--out-of-stock"] {
+      background-color : @red;
+      color            : @base;
+    }
+
+    [class*="ai-variant-stock__empty-"] {
+      color : @overlay2;
+    }
+
+    [class*="ai-product-description-"] {
+      background-color : @base;
+    }
+
+    [class*="ai-product-description__content-"] {
+      color : @text;
+    }
+
+    [class*="ai-custom-css-editor-"] {
+      color            : @base;
+      background-color : @teal;
+    }
+
+    // SHADOW
+    @shadow-col                    : rgb(var(@crust) / 30%);
+    --shadow-sm                    : 0 2px 8px @shadow-col;
+    --shadow                       : 0 5px 15px @shadow-col;
+    --shadow-md                    : 0 5px 30px @shadow-col;
+    --shadow-block                 : 0px 18px 50px @shadow-col;
+  }
+}

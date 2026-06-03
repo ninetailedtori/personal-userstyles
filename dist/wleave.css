@@ -1,0 +1,157 @@
+/*
+ * SPDX-FileCopyrightText: 2026-Present ninetailedtori <ninetailedtori@uwu.gal>
+ *
+ * SPDX-License-Identifier: GPL-3.0-or-later
+ */
+/**
+ * See https://gnome.pages.gitlab.gnome.org/libadwaita/doc/main/css-variables.html for more CSS variables.
+ * Or use your own colours. Both work, but using your own colours may break the automatic light/dark theme function.
+ */
+* {
+  font-family: "JetBrainsMono Nerd Font", "Material Symbols Outlined", "Noto Emoji", ui-monospace;
+  font-size: 14px;
+  font-weight: 600;
+  box-shadow: none;
+  font-feature-settings: "zero" 1, "cv06" 1, "cv07" 1, "cv14" 1;
+}
+
+label {
+  /* fallback colour */
+  color: #a5adcb;
+}
+label a {
+  color: #8aadf4;
+}
+label a:visited {
+  color: #b7bdf8;
+}
+label a:hover {
+  color: #91d7e3;
+}
+label a:active, label a:focus {
+  color: #7dc4e4;
+}
+
+/* theme the window itself */
+window {
+  color: #cad3f5;
+  background-color: rgba(24, 25, 38, 0.9);
+  backdrop-filter: blur(6px);
+}
+
+/* each power option panel is a button */
+button {
+  margin: 10px 0 10px 0;
+  padding: 10px;
+  animation: gradient_f 20s ease-in infinite;
+  color: #a5adcb;
+  border: 0 none;
+  border-radius: 8px;
+  outline-style: none;
+  background-color: rgba(36, 39, 58, 0.95);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 20%;
+  box-shadow: none;
+  text-shadow: none;
+}
+button:hover, button:focus {
+  padding: 20px;
+  transition: all 0.3s cubic-bezier(0.55, 0, 0.28, 1.682);
+  animation: gradient_f 20s ease-in infinite;
+  color: #cad3f5;
+  border-radius: 10px;
+  background-color: rgba(30, 32, 48, 0.95);
+  background-size: 40%;
+}
+button:active {
+  margin: 20px 10px 20px 0;
+  color: #24273a;
+  background-color: #f4dbd6;
+  background-size: 30%;
+}
+button {
+  /* e.g. "Shutdown" */
+}
+button label.action-name {
+  color: #cad3f5;
+}
+button {
+  /* e.g. "[s]" */
+}
+button label.keybind {
+  color: #a5adcb;
+}
+button {
+  /* inherit colour from button, if special it'll override. */
+}
+button:hover label, button:focus label {
+  font-weight: 800;
+  color: inherit;
+}
+button {
+  /* use the inverted text colour, otherwise this is invisible :3 */
+}
+button:active label {
+  color: #24273a;
+}
+button#lock {
+  --btn-color: #8aadf4;
+  color: var(--btn-color);
+  background-image: url("/medialine/source/external/catppuccin-styles/wlogout/icons/wlogout/macchiato/blue/lock.svg");
+}
+button#lock:active {
+  color: #24273a;
+  background-image: url("/medialine/source/external/catppuccin-styles/wlogout/icons/wlogout/macchiato/base/lock.svg");
+  background-color: var(--btn-color);
+}
+button#logout {
+  --btn-color: #a6da95;
+  color: var(--btn-color);
+  background-image: url("/medialine/source/external/catppuccin-styles/wlogout/icons/wlogout/macchiato/green/logout.svg");
+}
+button#logout:active {
+  color: #24273a;
+  background-image: url("/medialine/source/external/catppuccin-styles/wlogout/icons/wlogout/macchiato/base/logout.svg");
+  background-color: var(--btn-color);
+}
+button#suspend {
+  --btn-color: #eed49f;
+  color: var(--btn-color);
+  background-image: url("/medialine/source/external/catppuccin-styles/wlogout/icons/wlogout/macchiato/yellow/suspend.svg");
+}
+button#suspend:active {
+  color: #24273a;
+  background-image: url("/medialine/source/external/catppuccin-styles/wlogout/icons/wlogout/macchiato/base/suspend.svg");
+  background-color: var(--btn-color);
+}
+button#hibernate {
+  --btn-color: #eed49f;
+  color: var(--btn-color);
+  background-image: url("/medialine/source/external/catppuccin-styles/wlogout/icons/wlogout/macchiato/yellow/hibernate.svg");
+}
+button#hibernate:active {
+  color: #24273a;
+  background-image: url("/medialine/source/external/catppuccin-styles/wlogout/icons/wlogout/macchiato/base/hibernate.svg");
+  background-color: var(--btn-color);
+}
+button#reboot {
+  --btn-color: #f5a97f;
+  color: var(--btn-color);
+  background-image: url("/medialine/source/external/catppuccin-styles/wlogout/icons/wlogout/macchiato/peach/reboot.svg");
+}
+button#reboot:active {
+  color: #24273a;
+  background-image: url("/medialine/source/external/catppuccin-styles/wlogout/icons/wlogout/macchiato/base/reboot.svg");
+  background-color: var(--btn-color);
+}
+button#shutdown {
+  --btn-color: #ed8796;
+  color: var(--btn-color);
+  background-image: url("/medialine/source/external/catppuccin-styles/wlogout/icons/wlogout/macchiato/red/shutdown.svg");
+}
+button#shutdown:active {
+  color: #24273a;
+  background-image: url("/medialine/source/external/catppuccin-styles/wlogout/icons/wlogout/macchiato/base/shutdown.svg");
+  background-color: var(--btn-color);
+}

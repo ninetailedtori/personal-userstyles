@@ -12,8 +12,8 @@
   "license"         : "GPL-3.0-or-later",
   "scripts"         : {
     "prepare"         : "pnpm run build && pnpm run fmt",
-    "build"           : "sass --no-source-map styles:dist && cp -t dist/ styles/*.user.less",
-    "build:watch"     : "sass --watch --no-source-map styles:dist",
+    "build"           : "sass         --no-source-map --load-path=node_modules styles:dist && cp -t dist/ styles/*.user.less",
+    "build:watch"     : "sass --watch --no-source-map --load-path=node_modules styles:dist",
     "fmt"             : "pnpm run fmt:other",
     "fmt:other"       : "taplo format && yamlfix .",
     "fmt:check"       : "pnpm run fmt:check:other",
@@ -22,7 +22,8 @@
   },
   "packageManager"  : "pnpm@10.33.4+sha512.1c67b3b359b2d408119ba1ed289f34b8fc3c6873412bec6fd264fbdc82489e510fcbecb9ce9d22dae7f3b76269d8441046014bdca53b9979cd7a561ad631b800",
   "devDependencies" : {
-    "@taplo/cli" : "^0.7.0",
-    "sass"       : "^1.100.0"
+    "@catppuccin/palette" : "^1.8.0",
+    "@taplo/cli"          : "^0.7.0",
+    "sass"                : "<2.0.0"
   }
 }

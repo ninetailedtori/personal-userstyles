@@ -34,7 +34,7 @@ $editors          : "code", "pre", "input[type=text]", "textarea", "[class*=\"re
 "editor", "[class*=\"monaco-editor\"]", "[class*=\"cm-editor\"]", "tt",
 "[class*=\"js-file-line-container\"]";
 $images           : "[class*=\"icon\"]", "[class*=\"image\"]", "[class*=\"img\"]", "[class*=\"png\"]",
-"[class*=\"svg\"]";
+"[class*=\"svg\"]", "[class*=\"symbol\"]";
 
 $excluded-raw     : $headings, $editors, $images;
 

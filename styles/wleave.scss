@@ -1,0 +1,166 @@
+/*
+ * SPDX-FileCopyrightText: 2026-Present ninetailedtori <ninetailedtori@uwu.gal>
+ *
+ * SPDX-License-Identifier: GPL-3.0-or-later
+ */
+
+/// HELPERS
+
+@use "sass:color";
+@use "sass:map";
+@use "@catppuccin/palette/scss/macchiato" as *;
+
+$accent                  : $rosewater;
+
+// colour vars
+$colour-text-primary     : $text;
+$colour-text-secondary   : $subtext0;
+$colour-text-active      : (
+  "var": $base,
+  "name": "base",
+);
+$colour-window-bg        : rgba($crust, 90%);
+$colour-button-bg        : rgba($base, 95%);
+$colour-button-bg-hover  : rgba($mantle, 95%);
+$colour-button-bg-active : $accent;
+
+// link colours
+$colour-link             : $blue;
+$colour-link-visited     : $lavender;
+$colour-link-hover       : $sky;
+$colour-link-active      : $sapphire;
+
+// specific button colours
+$button-colors           : (
+  "lock": ("var": $blue, "name": "blue"),
+  "logout": ("var": $green, "name": "green"),
+  "suspend": ("var": $yellow, "name": "yellow"),
+  "hibernate": ("var": $yellow, "name": "yellow"),
+  "reboot": ("var": $peach, "name": "peach"),
+  "shutdown": ("var": $red, "name": "red"),
+);
+
+/// MIXINS
+
+@mixin link-colors {
+  color : $colour-link;
+
+  &:visited {
+    color : $colour-link-visited;
+  }
+
+  &:hover {
+    color : $colour-link-hover;
+  }
+
+  &:active,
+  &:focus {
+    color : $colour-link-active;
+  }
+}
+
+/// THEME BODY
+
+/**
+ * See https://gnome.pages.gitlab.gnome.org/libadwaita/doc/main/css-variables.html for more CSS variables.
+ * Or use your own colours. Both work, but using your own colours may break the automatic light/dark theme function.
+ */
+
+* {
+  font-family           : "JetBrainsMono Nerd Font", "Material Symbols Outlined", "Noto Emoji",
+  ui-monospace;
+  font-size             : 14px;
+  font-weight           : 600;
+  box-shadow            : none;
+  font-feature-settings : "zero" 1,
+  "cv06" 1,
+  "cv07" 1,
+  "cv14" 1;
+}
+
+label {
+  /* fallback colour */
+  color : $colour-text-secondary;
+
+  a {
+    @include link-colors;
+  }
+}
+
+/* theme the window itself */
+window {
+  color            : $colour-text-primary;
+  background-color : $colour-window-bg;
+  backdrop-filter  : blur(6px);
+}
+
+/* each power option panel is a button */
+button {
+  margin              : 10px 0 10px 0;
+  padding             : 10px;
+  animation           : gradient_f 20s ease-in infinite;
+  color               : $colour-text-secondary;
+  border              : 0 none;
+  border-radius       : 8px;
+  outline-style       : none;
+  background-color    : $colour-button-bg;
+  background-repeat   : no-repeat;
+  background-position : center;
+  background-size     : 20%;
+  box-shadow          : none;
+  text-shadow         : none;
+
+  &:hover,
+  &:focus {
+    padding          : 20px;
+    transition       : all 0.3s cubic-bezier(.55, 0.0, .28, 1.682);
+    animation        : gradient_f 20s ease-in infinite;
+    color            : $colour-text-primary;
+    border-radius    : 10px;
+    background-color : $colour-button-bg-hover;
+    background-size  : 40%;
+  }
+
+  &:active {
+    margin           : 20px 10px 20px 0;
+    color            : #{map.get($colour-text-active, "var")};
+    background-color : $colour-button-bg-active;
+    background-size  : 30%;
+  }
+
+  /* e.g. "Shutdown" */
+  label.action-name {
+    color : $colour-text-primary;
+  }
+
+  /* e.g. "[s]" */
+  label.keybind {
+    color : $colour-text-secondary;
+  }
+
+  /* inherit colour from button, if special it'll override. */
+  &:hover label,
+  &:focus label {
+    font-weight : 800;
+    color       : inherit;
+  }
+
+  /* use the inverted text colour, otherwise this is invisible :3 */
+  &:active label {
+    color : #{map.get($colour-text-active, "var")};
+  }
+
+  @each $id, $config in $button-colors {
+    &##{$id} {
+      --btn-color      : #{map.get($config, "var")};
+      color            : var(--btn-color);
+      background-image : url("/medialine/source/external/catppuccin-styles/wlogout/icons/wlogout/macchiato/#{map.get($config, "name")}/#{$id}.svg");
+
+      &:active {
+        color            : #{map.get($colour-text-active, "var")};
+        background-image : url("/medialine/source/external/catppuccin-styles/wlogout/icons/wlogout/macchiato/#{map.get($colour-text-active, "name")}/#{$id}.svg");
+        background-color : var(--btn-color);
+      }
+    }
+  }
+}

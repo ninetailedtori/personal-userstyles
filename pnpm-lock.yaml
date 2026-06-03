@@ -8,6 +8,9 @@ settings:
 importers:
   .:
     devDependencies:
+      '@catppuccin/palette':
+        specifier: "^1.8.0"
+        version: "1.8.0"
       '@taplo/cli':
         specifier: "^0.7.0"
         version: "0.7.0"
@@ -16,6 +19,8 @@ importers:
         version: "1.100.0"
 
 packages:
+  '@catppuccin/palette@1.8.0':
+    resolution: {integrity: "sha512-qXhwKiLzQomUygUJYB36YAFgs+dET5bIocfkiaFIatQF5Pwc7L112TlF9P8J5Oqs3x3XTjYSucG0ncHXSCuk7Q=="}
   '@parcel/watcher-android-arm64@2.5.6':
     resolution: {integrity: "sha512-YQxSS34tPF/6ZG7r/Ih9xy+kP/WwediEUsqmtf0cuCV5TPPKw/PQHRhueUo6JdeFJaqV3pyjm0GdYjZotbRt/A=="}
     engines: {node: ">= 10.0.0"}
@@ -99,8 +104,8 @@ packages:
   detect-libc@2.1.2:
     resolution: {integrity: "sha512-Btj2BOOO83o3WyH59e8MgXsxEQVcarkUOpEYrubB0urwnN10yQ364rsiByU11nZlqWYZm05i/of7io4mzihBtQ=="}
     engines: {node: ">=8"}
-  immutable@5.1.5:
-    resolution: {integrity: "sha512-t7xcm2siw+hlUM68I+UEOK+z84RzmN59as9DZ7P1l0994DKUWV7UXBMQZVxaoMSRQ+PBZbHCOoBt7a2wxOMt+A=="}
+  immutable@5.1.6:
+    resolution: {integrity: "sha512-q1swsS8K7L8usSHuOqF2TAoCCkonYz0SG38wLAggaa4Wml70zixIvt2ql4coQ2C2B3hTjltJry4r6bULwgAXLQ=="}
   is-extglob@2.1.1:
     resolution: {integrity: "sha512-SbKbANkN603Vi4jEZv49LeVJMn4yGwsbzZworEoyEiutsN3nJYdbO36zfhGJ6QEDpOZIFkDtnq5JRxmvl3jsoQ=="}
     engines: {node: ">=0.10.0"}
@@ -124,6 +129,7 @@ packages:
     engines: {node: ">=0.10.0"}
 
 snapshots:
+  '@catppuccin/palette@1.8.0': {}
   '@parcel/watcher-android-arm64@2.5.6':
     optional: true
   '@parcel/watcher-darwin-arm64@2.5.6':
@@ -177,7 +183,7 @@ snapshots:
       readdirp: "5.0.0"
   detect-libc@2.1.2:
     optional: true
-  immutable@5.1.5: {}
+  immutable@5.1.6: {}
   is-extglob@2.1.1:
     optional: true
   is-glob@4.0.3:
@@ -192,7 +198,7 @@ snapshots:
   sass@1.100.0:
     dependencies:
       chokidar: "5.0.0"
-      immutable: "5.1.5"
+      immutable: "5.1.6"
       source-map-js: "1.2.1"
     optionalDependencies:
       '@parcel/watcher': "2.5.6"

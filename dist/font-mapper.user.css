@@ -14,7 +14,7 @@
 :root * {
   font-feature-settings: "zero" 1, "cv06" 1, "cv07" 1, "cv14" 1;
 }
-:root :not(h1, h2, h3, h4, h5, code, pre, input[type=text], textarea, [class*=react-code-text], editor, [class*=monaco-editor], [class*=cm-editor], tt, [class*=js-file-line-container], [class*=icon], [class*=image], [class*=img], [class*=png], [class*=svg], h1 *, h2 *, h3 *, h4 *, h5 *, code *, pre *, input[type=text] *, textarea *, [class*=react-code-text] *, editor *, [class*=monaco-editor] *, [class*=cm-editor] *, tt *, [class*=js-file-line-container] *, [class*=icon] *, [class*=image] *, [class*=img] *, [class*=png] *, [class*=svg] *) {
+:root :not(h1, h2, h3, h4, h5, code, pre, input[type=text], textarea, [class*=react-code-text], editor, [class*=monaco-editor], [class*=cm-editor], tt, [class*=js-file-line-container], [class*=icon], [class*=image], [class*=img], [class*=png], [class*=svg], [class*=symbol], h1 *, h2 *, h3 *, h4 *, h5 *, code *, pre *, input[type=text] *, textarea *, [class*=react-code-text] *, editor *, [class*=monaco-editor] *, [class*=cm-editor] *, tt *, [class*=js-file-line-container] *, [class*=icon] *, [class*=image] *, [class*=img] *, [class*=png] *, [class*=svg] *, [class*=symbol] *) {
   font-family: "Inria Sans", "JetBrainsMono Nerd Font", "Material Symbols Outlined", "Noto Emoji", ui-sans-serif !important;
 }
 :root h1, :root h2, :root h3, :root h4, :root h5 {
