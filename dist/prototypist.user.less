@@ -26,8 +26,6 @@
 
 @-moz-document domain("prototypist.net") {
   :root {
-    color-scheme : dark;
-
     @media (prefers-color-scheme : light) {
       #catppuccin(@lightFlavor);
     }
@@ -48,7 +46,6 @@
       @activetext : @basetext
     ) {
       .button--@{name} {
-
         &:not(:hover, :active, :focus) {
           color            : @basetext;
           background-color : @basebg;
@@ -77,6 +74,14 @@
     --background-primary           : #lib.rgbify(@base) [];
     --dialog-background            : #lib.rgbify(@surface0) [];
     --border-color                 : #lib.rgbify(@overlay0) [];
+
+    // SHADOW
+    @shadow-col                    : fade(@crust, 30%);
+    @text-shadow                   : 2px 2px 2px @shadow-col;
+    --shadow-sm                    : 0 2px 8px @shadow-col;
+    --shadow                       : 0 5px 15px @shadow-col;
+    --shadow-md                    : 0 5px 30px @shadow-col;
+    --shadow-block                 : 0px 18px 50px @shadow-col;
 
     .text-custom {
       color : @text;
@@ -140,7 +145,19 @@
 
     :is(.button, .btn) {
       color       : @text;
-      text-shadow : 1px 1px 2px @base;
+      text-shadow : 1px 1px 2px @shadow-col;
+
+      &:not(:hover, :active, :focus) {
+        background-color : fade(@surface0, 30%);
+      }
+
+      &:hover {
+        background-color : fade(@surface1, 30%);
+      }
+
+      &:is(:active, :focus, .active) {
+        background-color : fade(@surface2, 30%);
+      }
     }
 
     .pswp__button {
@@ -167,6 +184,16 @@
 
     .bg-custom {
       background-color : @mantle;
+    }
+
+    // SLIDESHOW
+    .slideshow__controls .numbered-dots > * {
+      color : @subtext0;
+    }
+
+    slideshow-carousel .prose {
+      color       : @accent;
+      text-shadow : @text-shadow;
     }
 
     // STATUS
@@ -203,15 +230,38 @@
     --header-text                  : #lib.rgbify(@text) [];
 
     .header__wrapper {
+      color            : @text;
       background-color : rgba(var(--header-background));
 
       .dropdown-menu {
         background-color : @surface0;
       }
-    }
 
-    img[src="//prototypist.net/cdn/shop/files/protoTypist_Logo_Package_Logo_With_Subtext-Green_be7b58c5-e3c2-4a11-a8e1-d72e6aff5cd7.png?v=1630542842&width=1031"] {
-      filter : @accent-filter;
+      img.header__logo-image {
+        filter : @accent-filter;
+      }
+
+      nav.header__link-list {
+        ul li {
+          &:hover, &:active, &:focus {
+            color : @accent;
+
+            .link-faded-reverse {
+              opacity : 1;
+            }
+          }
+        }
+      }
+
+      ul.header__icon-list {
+        li a, shopify-account .tap-area {
+          color : @text;
+
+          &:hover, &:active, &:focus {
+            color : @accent;
+          }
+        }
+      }
     }
 
     // FOOTER
@@ -473,12 +523,5 @@
       color            : @base;
       background-color : @teal;
     }
-
-    // SHADOW
-    @shadow-col                    : rgb(var(@crust) / 30%);
-    --shadow-sm                    : 0 2px 8px @shadow-col;
-    --shadow                       : 0 5px 15px @shadow-col;
-    --shadow-md                    : 0 5px 30px @shadow-col;
-    --shadow-block                 : 0px 18px 50px @shadow-col;
   }
 }

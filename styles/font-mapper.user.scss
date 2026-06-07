@@ -73,6 +73,12 @@ $within-excluded  : "";
 @preprocessor   default
 ==/UserStyle== */
 
+/*
+ * NOTE:
+ * You may have to enter into the "Personal included sites" textbox the
+ * following within the backticks: `*` which will apply this to all sites!
+ */
+
 :root {
   * {
     font-feature-settings : $feature-settings;

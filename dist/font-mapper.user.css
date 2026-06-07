@@ -11,6 +11,11 @@
 @author         ninetailedtori
 @preprocessor   default
 ==/UserStyle== */
+/*
+ * NOTE:
+ * You may have to enter into the "Personal included sites" textbox the
+ * following within the backticks: `*` which will apply this to all sites!
+ */
 :root * {
   font-feature-settings: "zero" 1, "cv06" 1, "cv07" 1, "cv14" 1;
 }
