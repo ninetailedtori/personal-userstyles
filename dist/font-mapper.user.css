@@ -14,7 +14,7 @@
 :root * {
   font-feature-settings: "zero" 1, "cv06" 1, "cv07" 1, "cv14" 1;
 }
-:root :not(h1, h2, h3, h4, h5, code, pre, input[type=text], textarea, [class*=react-code-text], editor, [class*=monaco-editor], [class*=cm-editor], tt, [class*=js-file-line-container], [class*=icon], [class*=image], [class*=img], [class*=png], [class*=svg], [class*=symbol], h1 *, h2 *, h3 *, h4 *, h5 *, code *, pre *, input[type=text] *, textarea *, [class*=react-code-text] *, editor *, [class*=monaco-editor] *, [class*=cm-editor] *, tt *, [class*=js-file-line-container] *, [class*=icon] *, [class*=image] *, [class*=img] *, [class*=png] *, [class*=svg] *, [class*=symbol] *) {
+:root :not(h1, h2, h3, h4, h5, code, pre, input[type=text], textarea, [class*=react-code-text], editor, [class*=monaco-editor], [class*=cm-editor], tt, [class*=js-file-line-container], [class*=icon], [class*=image], [class*=img], [class*=png], [class*=svg], [class*=symbol], [class*=wfic], [class*=bwi], h1 *, h2 *, h3 *, h4 *, h5 *, code *, pre *, input[type=text] *, textarea *, [class*=react-code-text] *, editor *, [class*=monaco-editor] *, [class*=cm-editor] *, tt *, [class*=js-file-line-container] *, [class*=icon] *, [class*=image] *, [class*=img] *, [class*=png] *, [class*=svg] *, [class*=symbol] *, [class*=wfic] *, [class*=bwi] *) {
   font-family: "Inria Sans", "JetBrainsMono Nerd Font", "Material Symbols Outlined", "Noto Emoji", ui-sans-serif !important;
 }
 :root h1, :root h2, :root h3, :root h4, :root h5 {
@@ -57,13 +57,4 @@
 :root [class*=js-file-line-container] em,
 :root [class*=js-file-line-container] bold {
   font-weight: 800 !important;
-}
-
-@-moz-document domain("overframe.gg") {
-  :root .wfic {
-    font-family: "WarframeIcons", "Inria Sans", "JetBrainsMono Nerd Font", "Material Symbols Outlined", "Noto Emoji", ui-sans-serif !important;
-  }
-  :root .bwi {
-    font-family: "bwi-font", "Inria Sans", "JetBrainsMono Nerd Font", "Material Symbols Outlined", "Noto Emoji", ui-sans-serif !important;
-  }
 }

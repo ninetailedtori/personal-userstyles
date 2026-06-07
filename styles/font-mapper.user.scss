@@ -4,19 +4,10 @@
  * SPDX-License-Identifier: GPL-3.0-or-later
  */
 
-/* ==UserStyle==
-@name           Font Mapper
-@namespace      github.com/openstyles/stylus
-@version        1.0.0
-@description    Quick userstyle to replace various fonts on websites with my selection of fonts!
-@author         ninetailedtori
-@preprocessor   default
-==/UserStyle== */
-
 @use "sass:string";
 @use "sass:list";
 
-// VARIABLES
+/// VARIABLES
 
 $feature-settings : "zero" 1,
 "cv06" 1,
@@ -34,7 +25,7 @@ $editors          : "code", "pre", "input[type=text]", "textarea", "[class*=\"re
 "editor", "[class*=\"monaco-editor\"]", "[class*=\"cm-editor\"]", "tt",
 "[class*=\"js-file-line-container\"]";
 $images           : "[class*=\"icon\"]", "[class*=\"image\"]", "[class*=\"img\"]", "[class*=\"png\"]",
-"[class*=\"svg\"]", "[class*=\"symbol\"]";
+"[class*=\"svg\"]", "[class*=\"symbol\"]", "[class*=\"wfic\"]", "[class*=\"bwi\"]";
 
 $excluded-raw     : $headings, $editors, $images;
 
@@ -56,7 +47,7 @@ $within-excluded  : "";
   }
 }
 
-// MIXINS
+/// MIXINS
 
 @mixin code-styling() {
   font-family : $font-mono !important;
@@ -71,7 +62,16 @@ $within-excluded  : "";
   }
 }
 
-// STYLES
+/// THEME BODY
+
+/* ==UserStyle==
+@name           Font Mapper
+@namespace      github.com/openstyles/stylus
+@version        1.0.0
+@description    Quick userstyle to replace various fonts on websites with my selection of fonts!
+@author         ninetailedtori
+@preprocessor   default
+==/UserStyle== */
 
 :root {
   * {
@@ -88,17 +88,5 @@ $within-excluded  : "";
 
   #{$editors} {
     @include code-styling();
-  }
-}
-
-@-moz-document domain("overframe.gg") {
-  :root {
-    .wfic {
-      font-family : "WarframeIcons", $font-sans !important;
-    }
-
-    .bwi {
-      font-family : "bwi-font", $font-sans !important;
-    }
   }
 }

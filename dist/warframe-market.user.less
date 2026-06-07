@@ -1,0 +1,1035 @@
+/* ==UserStyle==
+@name warframe.market Catppuccin
+@namespace github.com/catppuccin/userstyles/styles/warframe-market
+@homepageURL https://github.com/catppuccin/userstyles/tree/main/styles/warframe-market
+@version 2025.09.06
+@updateURL https://github.com/catppuccin/userstyles/raw/main/styles/warframe-market
+/catppuccin.user.less
+@supportURL https://github.com/catppuccin/userstyles/issues?q=is%3Aopen+is%3Aissue+label%3Awarframe-market
+@description Soothing pastel theme for warframe.market
+@author Catppuccin
+@license MIT
+
+@preprocessor less
+@var select lightFlavor "Light Flavor" ["latte:Latte*", "frappe:Frappé", "macchiato:Macchiato", "mocha:Mocha"]
+@var select darkFlavor "Dark Flavor" ["latte:Latte", "frappe:Frappé", "macchiato:Macchiato", "mocha:Mocha*"]
+@var select accentColor "Accent" ["rosewater:Rosewater", "flamingo:Flamingo", "pink:Pink", "mauve:Mauve*", "red:Red", "maroon:Maroon", "peach:Peach", "yellow:Yellow", "green:Green", "teal:Teal", "blue:Blue", "sapphire:Sapphire", "sky:Sky", "lavender:Lavender", "subtext0:Gray"]
+@var checkbox highlight-redirect "Highlight redirect links" 0
+==/UserStyle== */
+
+@import "https://userstyles.catppuccin.com/lib/lib.less";
+
+@-moz-document domain("warframe.market") {
+  :root body section#warframe_react section {
+    &.theme--light {
+      #catppuccin(@lightFlavor);
+    }
+
+    &.theme--dark {
+      #catppuccin(@darkFlavor);
+    }
+  }
+
+  #mixins {
+    .base-input() {
+      color            : @text;
+      background-color : @surface0;
+      border-color     : @overlay0;
+
+      &[readonly] {
+        color            : @pink;
+        background-color : @mantle;
+
+        &:active, &:focus, &:focus-within {
+          border-color : @accent;
+          box-shadow   : @shadow;
+        }
+
+        &.active {
+          color            : @pink;
+          background-color : @accent;
+        }
+      }
+
+      &:disabled {
+        color            : @overlay0;
+        background-color : @mantle;
+
+        &:hover {
+          background-color : @surface1;
+        }
+
+        &:active, &:focus, &:focus-within {
+          background-color : @surface2;
+          border-color     : @accent;
+          box-shadow       : @shadow;
+        }
+      }
+
+      &:not([readonly], :disabled) {
+        &:hover {
+          background-color : @surface1;
+        }
+
+        &:active, &:focus, &:focus-within {
+          background-color : @surface2;
+          border-color     : @accent;
+          box-shadow       : @shadow;
+        }
+
+        &.active {
+          color            : @base;
+          background-color : @accent;
+        }
+      }
+    }
+
+    .link-colour(@colour, @important: false) when (@important = true) {
+      color : @colour !important;
+
+      span {
+        color : @colour !important;
+      }
+    }
+
+    .link-colour(@colour, @important: false) when (@important = false) {
+      color : @colour;
+
+      span {
+        color : @colour;
+      }
+    }
+
+    .icon-colour(@colour, @important : false) when (@important = true) {
+      color : @colour !important;
+
+      .wfm-icon {
+        color : @colour !important;
+      }
+    }
+
+    .icon-colour(@colour, @important : false) when (@important = false) {
+      color : @colour;
+
+      .wfm-icon {
+        color : @colour;
+      }
+    }
+
+    .notebox-colour(@colour, @important: false, @border: false) when (@important = true) {
+      #mixins.link-colour(@colour, true);
+      background-color : fade(@colour, 30%) !important;
+
+      .attribute-name {
+        color : @colour !important;
+      }
+
+      & when (@border = true) {
+        border-color : @colour !important;
+      }
+    }
+
+    .notebox-colour(@colour, @important: false, @border: false) when (@important = false) {
+      #mixins.link-colour(@colour);
+      background-color : fade(@colour, 30%);
+
+      .attribute-name {
+        color : @colour;
+      }
+
+      & when (@border = true) {
+        border-color : @colour;
+      }
+    }
+
+    .btn-state(@colour, @important: false) when (@important = true) {
+      #mixins.link-colour(@base, true);
+      background-color : @colour !important;
+      border-color     : transparent !important;
+
+      &:hover {
+        background-color : darken(@colour, 5%) !important;
+      }
+
+      &:active, &:focus, &:focus-within {
+        background-color : darken(@colour, 10%) !important;
+        box-shadow       : @shadow !important;
+      }
+
+      // always required
+      &.active {
+        #mixins.notebox-colour(@colour, true, true);
+      }
+    }
+
+    .btn-state(@colour, @important: false) when (@important = true) {
+      #mixins.link-colour(@base);
+      background-color : @colour;
+      border-color     : transparent !important; // always required
+
+      &:hover {
+        background-color : darken(@colour, 5%);
+      }
+
+      &:active, &:focus, &:focus-within {
+        background-color : darken(@colour, 10%);
+        box-shadow       : @shadow;
+      }
+
+      // always required
+      &.active {
+        #mixins.notebox-colour(@colour, true, true);
+      }
+    }
+  }
+
+  #catppuccin(@flavor) {
+    #lib.palette();
+    #lib.defaults();
+
+    @shadow : 2px 2px 2px fade(@crust, 30%);
+
+    [class*="disclaimer"] {
+      color            : @base;
+      background-color : @peach;
+    }
+
+    a.link {
+      #mixins.link-colour(@blue);
+
+      &:hover {
+        #mixins.link-colour(@sky);
+      }
+
+      &:active, &:focus, &:focus-within {
+        #mixins.link-colour(@sapphire);
+      }
+
+      &:visited {
+        #mixins.link-colour(@lavender);
+      }
+    }
+
+    .subscription__status > div {
+      &.active {
+        color : @green;
+      }
+
+      &.inactive {
+        color : @red;
+      }
+    }
+
+    [class*="category"],
+    ul:not(
+      .verification__tutorial,
+      .faq__body,
+      .faq__body *,
+      .tos__body,
+      .tos__body *,
+      .privacy__content,
+      .privacy__content *
+    ) > li {
+      &:hover {
+        background-color : fade(@overlay2, 15%);
+      }
+
+      &:active, &:focus, &:focus-within {
+        background-color : fade(@overlay2, 30%);
+      }
+
+      &.active {
+        color            : @base !important;
+        background-color : @accent !important;
+
+        a {
+          #mixins.link-colour(@base, true);
+        }
+
+        [class*="combobox-title"] {
+          #mixins.icon-colour(@base);
+        }
+
+        [class*="user-and-status"], [class*="user-status"] {
+          color            : @base;
+          background-color : unset;
+
+          * {
+            color : @base;
+          }
+        }
+
+        &:hover {
+          background-color : darken(@accent, 5%) !important;
+        }
+
+        &:active, &:focus, &:focus-within {
+          background-color : darken(@accent, 10%) !important;
+        }
+      }
+    }
+
+    [class*="combobox"].active a.active {
+      background-color : @accent;
+    }
+
+    .verification__tutorial {
+      li {
+        > * {
+          color : @text;
+        }
+
+        &:nth-child(2n) > div {
+          background-color : @mantle;
+        }
+      }
+    }
+
+    [class*="content__header"]:has([class*="tabs"]) {
+      background-color : @mantle;
+    }
+
+    [class*="tabs"] li .active {
+      #mixins.link-colour(@accent);
+      background-color : fade(@accent, 30%);
+      border-color     : @accent;
+    }
+
+    [class*="toggle_switch"] {
+      &,
+      label {
+        color : @text;
+      }
+
+      input {
+        &:checked + label {
+          [class*="bg"] {
+            background-color : fade(@accent, 20%);
+            box-shadow       : inset 0 0 0 1px fade(@accent, 35%),
+            inset 0 0 12px 1px fade(@accent, 25%);
+          }
+
+          [class*="lever"] {
+            [class*="tip"] {
+              background-color : fade(@accent, 30%);
+              box-shadow       : 0 0 5px 0 fade(@accent, 30%),
+              inset 0 0 0 2px @accent;
+            }
+          }
+        }
+
+        &:focus-visible + label {
+          [class*="bg"] {
+            background-color : @surface2;
+          }
+        }
+
+        &:checked:focus-visible + label {
+          [class*="bg"] {
+            background-color : fade(@accent, 60%);
+          }
+        }
+
+        &:hover + label {
+          [class*="bg"] {
+            background-color : fade(@accent, 40%);
+            box-shadow       : inset 0 0 0 1px fade(@accent, 60%), inset 0 0 12px 1px fade(@accent, 50%);
+          }
+
+          [class*="lever"] {
+            [class*="tip"] {
+              background-color : fade(@accent, 60%);
+              box-shadow       : 0 0 5px 0 fade(@accent, 60), inset 0 0 0 2px @accent;
+            }
+          }
+        }
+      }
+
+      label {
+        [class*="bg"] {
+          background-color : @surface1;
+          border           : 2px solid @overlay1;
+          box-shadow       : none;
+        }
+
+        [class*="lever"] {
+          [class*="outliner"] {
+            background-color : fade(@accent, 30%);
+          }
+
+          [class*="tip"] {
+            background-color : @surface1;
+            border           : 2px solid @overlay1;
+            box-shadow       : none;
+          }
+        }
+      }
+
+      &[class*="disabled"] {
+        [class*="bg"] {
+          background-color : @mantle;
+          border           : 2px solid @surface0;
+          box-shadow       : none;
+        }
+
+        [class*="lever"] {
+          [class*="outliner"] {
+            background-color : transparent;
+          }
+
+          [class*="tip"] {
+            background-color : @mantle;
+            border           : 2px solid @surface0;
+            box-shadow       : none;
+          }
+        }
+      }
+    }
+
+    [class*="filters"] {
+      background-color : @surface0;
+
+      [class*="switch"] {
+        color : @text;
+      }
+
+      [class*="info"] {
+        color : @subtext0;
+      }
+    }
+
+    .footnote {
+      color : @subtext0;
+    }
+
+    select, textarea, input[value="support@warframe.market"] {
+      #mixins.base-input();
+    }
+
+    [class*="textarea-char-counter"],
+    [class*="textarea-md-supported"] {
+      color            : @subtext0;
+      background-color : @mantle;
+      border-radius    : 5.6px;
+    }
+
+    [class*="sidePanel"] {
+      border-color : transparent;
+    }
+
+    .btn {
+      #mixins.base-input();
+
+      &:is([class*="red"], [class*="removalButton"]),
+      &:has(svg[class*="icon-sign-out"]) {
+        #mixins.btn-state(@red, true);
+      }
+    }
+
+    [class*="btn__primary"] {
+      #mixins.btn-state(@accent, true);
+
+      &.wts {
+        #mixins.btn-state(@pink, true);
+      }
+
+      &.wtb {
+        #mixins.btn-state(@green, true);
+      }
+
+      &[class*="activePurple"] {
+        #mixins.btn-state(@mauve, true);
+      }
+    }
+
+    [class*="search-field"] {
+      box-shadow : @shadow;
+    }
+
+    [class*="seeker"] {
+      background-color : @surface0;
+      border-color     : @overlay0;
+
+      &[class*="focused"] {
+        border-color : @accent !important;
+        box-shadow   : 0 0 0 0.15rem fade(@accent, 30%) !important;
+      }
+
+      &[class*="error"] {
+        border-color : @red !important;
+        box-shadow   : 0 0 0 0.15rem fade(@red, 30%) !important;
+      }
+
+      &:has([class*="input"]:hover) {
+        background-color : @surface1;
+      }
+
+      &:has([class*="input"]:active),
+      &:has([class*="input"]:focus),
+      &:has([class*="input"]:focus-within) {
+        background-color : @surface2;
+      }
+    }
+
+    [class*="input"] {
+      background-color : transparent;
+
+      [class*="real-input"] input {
+        color : @text;
+      }
+    }
+
+    [class*="dropdown"] {
+      background-color : @base;
+
+      ul {
+        background-color : @surface0;
+
+        li {
+          color : @text;
+
+          &:hover {
+            background-color : fade(@overlay0, 15%);
+          }
+
+          &:active, &:focus, &:focus-within {
+            background-color : fade(@overlay0, 30%);
+          }
+        }
+      }
+    }
+
+    .attribute-seeker__dropdown li.selectable b,
+    [class*="dropdown"] li[class*="entry"] [class*="fallback-name"] b,
+    [class*="dropdown"] li[class*="entry"] b {
+      color : @green;
+    }
+
+    [class*="sort-button"] {
+      background-color : @base;
+      border-color     : @overlay1;
+    }
+
+    [class*="category"] {
+      &:hover {
+        background-color : fade(@overlay2, 15%);
+      }
+
+      &:active, &:focus, &:focus-within {
+        background-color : fade(@overlay2, 30%);
+      }
+    }
+
+    .widget-order__button {
+      .big-red__button {
+        color            : @base !important;
+        background-color : @red;
+      }
+
+      .big-red__text {
+        color : @red;
+      }
+
+      &:hover, &:active, &:focus, &:focus-within {
+        .big-red__button {
+          background-color : @maroon;
+        }
+
+        .big-red__text {
+          color : @maroon;
+        }
+      }
+    }
+
+    [class*="item-image"] {
+      border-color : @accent;
+      box-shadow   : 0 7px 15px -3px fade(@accent, 30%);
+
+      &[class*="dark"] {
+        background-color : @crust;
+      }
+    }
+
+    .preview__separator {
+      background-color : @overlay0;
+    }
+
+    [class*="order-own-wrapper"] > [class*="order-own"]:not([class*="odd"]) {
+      background-color : @surface0;
+    }
+
+    [class*="sorting"],
+    [class*="widget-modal__header"],
+    [class*="widget-modal__actions"],
+    [class*="widget-modal"],
+    [class*="widget-modal__preview"] {
+      background-color : @mantle;
+      border-color     : @overlay0;
+    }
+
+    [class*="widget-modal__body"] {
+      background-color : @base;
+    }
+
+    [class*="menu"] {
+      color            : @accent;
+      background-color : @mantle;
+
+      [class*="platformsTitle"] .icon-crossplay {
+        color : inherit !important;
+      }
+
+      a {
+        #mixins.link-colour(@accent, true);
+      }
+
+      [class*="platformsTitle"],
+      [class*="category"],
+      [class*="combobox-title"] {
+        color            : @accent;
+        background-color : transparent;
+
+        &:hover {
+          background-color : fade(@overlay2, 15%);
+        }
+
+        &:active, &:focus, &:focus-within {
+          background-color : fade(@overlay2, 30%);
+        }
+      }
+
+      [class*="combobox"] ul {
+        background-color : @surface0;
+        border-color     : @overlay0;
+
+        [class*="category"] {
+          background-color : transparent;
+
+          &:hover {
+            background-color : fade(@overlay2, 15%);
+          }
+
+          &:active, &:focus, &:focus-within {
+            background-color : fade(@overlay2, 30%);
+          }
+        }
+      }
+
+      [class*="combobox-text-entry"],
+      [class*="statusKeeper"] {
+        color            : @text;
+        background-color : @base;
+      }
+
+      [class*="logotype"] {
+        border-color : @accent;
+
+        img {
+          filter : @accent-filter;
+        }
+      }
+    }
+
+    [class*="identitySection"] [class*="avatar"] [class*="user-status"][class*="status"] {
+      background-color : @surface0;
+    }
+
+    [class*="upload"] [class*="button"]:not([class*="error"]),
+    [class*="upload"] [class*="state"]:not([class*="error"]) {
+      color        : @overlay1;
+      border-color : @overlay1;
+
+      &:hover, &:active, &:focus {
+        color        : @accent;
+        border-color : @accent !important;
+      }
+    }
+
+    .privacy table {
+      background-color : @mantle;
+      border-color     : @overlay1;
+
+      td, th {
+        border-color : @overlay1;
+      }
+    }
+
+    .privacy__content,
+    .faq__body,
+    .tos__body,
+    .settings__page .settings__content {
+      background-color : @base;
+    }
+
+    .tos b {
+      color : @teal;
+    }
+
+    [class*="content"] {
+      color : @text;
+
+      h1 {
+        color : @red;
+      }
+
+      h2 {
+        color : @peach;
+      }
+
+      h3 {
+        color : @yellow;
+      }
+
+      h4 {
+        color : @green;
+      }
+
+      h5 {
+        color : @sapphire;
+      }
+
+      h6 {
+        color : @lavender;
+      }
+    }
+
+    [class*="priceFilter"] {
+      background-color : @surface0;
+    }
+
+    [class*="filters"] h4 {
+      color : @text;
+    }
+
+    [class*="alert"][class*="warning"] {
+      #mixins.notebox-colour(@peach, true);
+    }
+
+    [class*="content__header--transparent"] {
+      background-color : fade(@mantle, 30%);
+    }
+
+    .messenger__block .messenger__chat_list,
+    .chat__empty,
+    [class*="ignore__no-data"] {
+      background-color : @mantle;
+    }
+
+    [class*="content__header--second"],
+    [class*="content__body"], [class*="content_body"] {
+      background-color : @base;
+    }
+
+    [class*="content_body"] [class*="links"] {
+      background-color : @mantle;
+    }
+
+    h5 {
+      color : @subtext0;
+    }
+
+    [class*="order-unit"][class*="odd"] {
+      background-color : @mantle;
+    }
+
+    [class*="order-unit__user-info"] {
+      border-color : @overlay0;
+    }
+
+    [class*="order-type-marker"] {
+      &[class*="sell"] {
+        #mixins.notebox-colour(@pink);
+      }
+
+      &[class*="buy"] {
+        #mixins.notebox-colour(@green);
+      }
+    }
+
+    [class*="price"] {
+      &[class*="sell"] {
+        color : @pink;
+      }
+
+      &[class*="buy"] {
+        color : @green;
+      }
+    }
+
+    [class*="online-switch"] > li.active {
+      &[class*="online"]:not([class*="online-switch"]) {
+        border-color : @green;
+      }
+
+      &[class*="ingame"] {
+        border-color : @mauve;
+      }
+
+      &[class*="offline"],
+      &[class*="offline-underline"] {
+        border-color : @overlay2;
+      }
+
+      &[class*="connecting"],
+      &[class*="invisible"] {
+        border-color : @subtext0;
+      }
+    }
+
+    [class*="online"]:not([class*="online-switch"]) {
+      color : @green;
+    }
+
+    [class*="ingame"] {
+      color : @mauve;
+    }
+
+    [class*="offline"],
+    [class*="offline-underline"] {
+      color : @overlay2;
+    }
+
+    [class*="connecting"],
+    [class*="invisible"] {
+      color : @subtext0;
+    }
+
+    :is([class*="updatedAt"], [class*="createdAt"]):not(:has([class*="sort-button"])) {
+      color            : @subtext0;
+      background-color : @crust;
+    }
+
+    [class*="ad__line"] {
+      background-color : @crust;
+    }
+
+    footer {
+      background-color : @mantle;
+
+      * {
+        background-color : unset;
+      }
+
+      h3 {
+        color : @subtext1;
+      }
+
+      .footer__body {
+        background-color : @mantle;
+
+        :is(.footer__language, .footer__theme) select {
+          #mixins.btn-state(@accent, true);
+        }
+
+        .footer__disclaimer {
+          background-color : unset;
+
+          p {
+            color : @subtext0;
+          }
+        }
+
+        .footer__onlinecnt {
+          border-color : @overlay0;
+
+          p {
+            color : @accent;
+          }
+        }
+      }
+    }
+
+    [class*="auctions__tips"] {
+      [class*="straight"] {
+        background-color : @overlay2;
+      }
+
+      [class*="participant"] {
+        background-color : @green;
+      }
+
+      [class*="owner"] {
+        background-color : @mauve;
+      }
+    }
+
+    .auction-entry {
+      background-color : fade(@mantle, 60%);
+
+      &.straight {
+        border-color : @overlay2;
+      }
+
+      &.participant {
+        border-color : @green;
+      }
+
+      &.owner {
+        border-color : @mauve;
+      }
+
+      &.odd {
+        background-color : fade(@crust, 60%);
+      }
+
+      &.invisible-auction {
+        border-color : @red;
+      }
+    }
+
+    .auction-entry__header, .b-outline, .auction-entry__body {
+      border-color : fade(@accent, 60%) !important;
+    }
+
+    .review__block {
+      p {
+        background-color : transparent !important;
+      }
+
+      &.positive {
+        background-color : fade(@green, 30%);
+        border-color     : @green;
+      }
+
+      &.negative {
+        background-color : fade(@red, 30%);
+        border-color     : @red;
+      }
+    }
+
+    .review__positive {
+      color : @green;
+    }
+
+    .review__negative {
+      color : @red;
+    }
+
+    .attribute-name {
+      color : @subtext0;
+    }
+
+    .ephemera {
+      color : @green !important;
+    }
+
+    .auction-entry__positive-attributes li {
+      #mixins.notebox-colour(@green, true, true);
+    }
+
+    .auction-entry__negative-attributes li {
+      #mixins.notebox-colour(@red, true, true);
+    }
+
+    .row[class*="ducats"] {
+      background-color : @surface0;
+
+      &[class*="odd"] {
+        background-color : @base;
+      }
+    }
+
+    [class*="ducats__per-platinum"] {
+      color : @peach;
+    }
+
+    [class*="ducats__position"] {
+      color : @yellow;
+
+      .wfm-icon {
+        filter : @peach-filter;
+      }
+    }
+
+    [class*="ducats__position--positive"] {
+      color : @green;
+
+      .wfm-icon {
+        filter : @green-filter;
+      }
+    }
+
+    [class*="ducats__position--negative"] {
+      color : @red;
+
+      .wfm-icon {
+        filter : @red-filter;
+      }
+    }
+
+    :not([class*="sorting"]) > [class*="price"] {
+      #mixins.icon-colour(@accent);
+    }
+
+    :not([class*="sorting"]) > :is([class*="item-icon"] img, img[class*="ducats__thumb"]) {
+      background-color : @surface1;
+      border-color     : @overlay0;
+    }
+
+    :not([class*="sorting"]) > :is([class*="quantity"], [class*="mod-rank"]) {
+      #mixins.icon-colour(@subtext0);
+    }
+
+    .achievement__block {
+      border-color : @overlay0;
+    }
+
+    .statistics__header {
+      background-color : @mantle;
+      box-shadow       : @shadow;
+    }
+
+    .statistics__numbers {
+      background-color : @surface0;
+      box-shadow       : @shadow;
+    }
+
+    [class*="order-closed"]:nth-child(2n+1) {
+      background-color : @surface0;
+    }
+
+    .statistics__numbers .number {
+      color : @accent;
+    }
+
+    [class*="order-unit__vaulted"] {
+      color : @peach;
+    }
+
+    [class*="input-group-block"] {
+      color        : @text;
+      border-color : @overlay0;
+    }
+
+    [class*="form-control"] {
+      border-color : @overlay0;
+
+      &:active, &:focus, &:focus-within {
+        border-color : @accent !important;
+        box-shadow   : 0 0 0 0.15rem fade(@accent, 30%);
+      }
+    }
+
+    [class*="form-input"] input {
+      color : @text;
+    }
+
+    [class*="form-group"] label:not(.btn) {
+      color : @subtext0;
+    }
+
+    [class*="input-group"][class*="success"] {
+      [class*="input-group-block"] {
+        #mixins.notebox-colour(@green, true, true);
+      }
+
+      [class*="form-control"] {
+        border-color : @green;
+      }
+    }
+
+    [class*="alert"][class*="success"] {
+      #mixins.notebox-colour(@green, true, true);
+    }
+  }
+}

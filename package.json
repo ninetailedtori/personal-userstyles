@@ -11,7 +11,7 @@
   "homepage"        : "https://github.com/ninetailedtori/personal-userstyles",
   "license"         : "GPL-3.0-or-later",
   "scripts"         : {
-    "prepare"         : "pnpm run build && pnpm run fmt",
+    "prepare"         : "pnpm run fmt && pnpm run build",
     "build"           : "sass         --no-source-map --load-path=node_modules styles:dist && cp -t dist/ styles/*.user.less",
     "build:watch"     : "sass --watch --no-source-map --load-path=node_modules styles:dist",
     "fmt"             : "pnpm run fmt:other",
