@@ -22,7 +22,7 @@ ui-monospace;
 
 $headings         : "h1", "h2", "h3", "h4", "h5";
 $editors          : "code", "pre", "input[type=text]", "textarea", "[class*=\"react-code-text\"]",
-"editor", "[class*=\"monaco-editor\"]", "[class*=\"cm-editor\"]", "tt",
+"editor", "[class*=\"monaco-editor\"]", "[class*=\"cm-editor\"]", "tt", "[class*=\"cmd\"]",
 "[class*=\"js-file-line-container\"]";
 $images           : "[class*=\"icon\"]", "[class*=\"image\"]", "[class*=\"img\"]", "[class*=\"png\"]",
 "[class*=\"svg\"]", "[class*=\"symbol\"]", "[class*=\"wfic\"]", "[class*=\"bwi\"]";
