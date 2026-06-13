@@ -187,9 +187,11 @@
     #lib.palette();
     #lib.defaults();
 
-    @shadow : 2px 2px 2px fade(@crust, 30%);
+    @shadow-col    : fade(@crust, 30%);
+    @shadow        : 2px 2px 2px @shadow-col;
+    @accent-shadow : 0 0 0 0.15rem fade(@accent, 30%);
 
-    [class*="disclaimer"] {
+    [class*="disclaimer--"] {
       color            : @base;
       background-color : @peach;
     }
@@ -220,7 +222,7 @@
       }
     }
 
-    [class*="category"],
+    [class*="category--"],
     ul:not(
       .verification__tutorial,
       .faq__body,
@@ -246,11 +248,11 @@
           #mixins.link-colour(@base, true);
         }
 
-        [class*="combobox-title"] {
+        [class*="combobox-title--"] {
           #mixins.icon-colour(@base);
         }
 
-        [class*="user-and-status"], [class*="user-status"] {
+        [class*="user-and-status--"], [class*="user-status--"] {
           color            : @base;
           background-color : unset;
 
@@ -269,7 +271,7 @@
       }
     }
 
-    [class*="combobox"].active a.active {
+    [class*="combobox--"].active a.active {
       background-color : @accent;
     }
 
@@ -285,17 +287,17 @@
       }
     }
 
-    [class*="content__header"]:has([class*="tabs"]) {
+    [class*="content__header--"]:has([class*="tabs--"]) {
       background-color : @mantle;
     }
 
-    [class*="tabs"] li .active {
+    [class*="tabs--"] li .active {
       #mixins.link-colour(@accent);
       background-color : fade(@accent, 30%);
       border-color     : @accent;
     }
 
-    [class*="toggle_switch"] {
+    [class*="toggle_switch--"] {
       &,
       label {
         color : @text;
@@ -303,14 +305,14 @@
 
       input {
         &:checked + label {
-          [class*="bg"] {
+          [class*="bg--"] {
             background-color : fade(@accent, 20%);
             box-shadow       : inset 0 0 0 1px fade(@accent, 35%),
             inset 0 0 12px 1px fade(@accent, 25%);
           }
 
-          [class*="lever"] {
-            [class*="tip"] {
+          [class*="lever--"] {
+            [class*="tip--"] {
               background-color : fade(@accent, 30%);
               box-shadow       : 0 0 5px 0 fade(@accent, 30%),
               inset 0 0 0 2px @accent;
@@ -319,25 +321,25 @@
         }
 
         &:focus-visible + label {
-          [class*="bg"] {
+          [class*="bg--"] {
             background-color : @surface2;
           }
         }
 
         &:checked:focus-visible + label {
-          [class*="bg"] {
+          [class*="bg--"] {
             background-color : fade(@accent, 60%);
           }
         }
 
         &:hover + label {
-          [class*="bg"] {
+          [class*="bg--"] {
             background-color : fade(@accent, 40%);
             box-shadow       : inset 0 0 0 1px fade(@accent, 60%), inset 0 0 12px 1px fade(@accent, 50%);
           }
 
-          [class*="lever"] {
-            [class*="tip"] {
+          [class*="lever--"] {
+            [class*="tip--"] {
               background-color : fade(@accent, 60%);
               box-shadow       : 0 0 5px 0 fade(@accent, 60), inset 0 0 0 2px @accent;
             }
@@ -346,18 +348,18 @@
       }
 
       label {
-        [class*="bg"] {
+        [class*="bg--"] {
           background-color : @surface1;
           border           : 2px solid @overlay1;
           box-shadow       : none;
         }
 
-        [class*="lever"] {
-          [class*="outliner"] {
+        [class*="lever--"] {
+          [class*="outliner--"] {
             background-color : fade(@accent, 30%);
           }
 
-          [class*="tip"] {
+          [class*="tip--"] {
             background-color : @surface1;
             border           : 2px solid @overlay1;
             box-shadow       : none;
@@ -365,19 +367,19 @@
         }
       }
 
-      &[class*="disabled"] {
-        [class*="bg"] {
+      &[class*="disabled--"] {
+        [class*="bg--"] {
           background-color : @mantle;
           border           : 2px solid @surface0;
           box-shadow       : none;
         }
 
-        [class*="lever"] {
-          [class*="outliner"] {
+        [class*="lever--"] {
+          [class*="outliner--"] {
             background-color : transparent;
           }
 
-          [class*="tip"] {
+          [class*="tip--"] {
             background-color : @mantle;
             border           : 2px solid @surface0;
             box-shadow       : none;
@@ -386,14 +388,14 @@
       }
     }
 
-    [class*="filters"] {
+    [class*="filters--"] {
       background-color : @surface0;
 
-      [class*="switch"] {
+      [class*="switch--"] {
         color : @text;
       }
 
-      [class*="info"] {
+      [class*="info--"] {
         color : @subtext0;
       }
     }
@@ -406,27 +408,40 @@
       #mixins.base-input();
     }
 
-    [class*="textarea-char-counter"],
-    [class*="textarea-md-supported"] {
+    [class*="textarea-char-counter--"],
+    [class*="textarea-md-supported--"] {
       color            : @subtext0;
       background-color : @mantle;
       border-radius    : 5.6px;
     }
 
-    [class*="sidePanel"] {
+    [class*="sidePanel--"] {
       border-color : transparent;
     }
 
-    .btn {
-      #mixins.base-input();
-
-      &:is([class*="red"], [class*="removalButton"]),
+    a {
+      &:is(
+        [class*="red--"],
+        [class*="removalButton--"]
+      ),
       &:has(svg[class*="icon-sign-out"]) {
         #mixins.btn-state(@red, true);
       }
     }
 
-    [class*="btn__primary"] {
+    .btn {
+      #mixins.base-input();
+
+      &:is(
+        [class*="red--"],
+        [class*="removalButton--"]
+      ),
+      &:has(svg[class*="icon-sign-out"]) {
+        #mixins.btn-state(@red, true);
+      }
+    }
+
+    [class*="btn__primary--"] {
       #mixins.btn-state(@accent, true);
 
       &.wts {
@@ -437,49 +452,49 @@
         #mixins.btn-state(@green, true);
       }
 
-      &[class*="activePurple"] {
+      &[class*="activePurple--"] {
         #mixins.btn-state(@mauve, true);
       }
     }
 
-    [class*="search-field"] {
+    [class*="search-field--"] {
       box-shadow : @shadow;
     }
 
-    [class*="seeker"] {
+    [class*="seeker--"] {
       background-color : @surface0;
       border-color     : @overlay0;
 
-      &[class*="focused"] {
+      &[class*="focused--"] {
         border-color : @accent !important;
         box-shadow   : 0 0 0 0.15rem fade(@accent, 30%) !important;
       }
 
-      &[class*="error"] {
+      &[class*="error--"] {
         border-color : @red !important;
         box-shadow   : 0 0 0 0.15rem fade(@red, 30%) !important;
       }
 
-      &:has([class*="input"]:hover) {
+      &:has([class*="input--"]:hover) {
         background-color : @surface1;
       }
 
-      &:has([class*="input"]:active),
-      &:has([class*="input"]:focus),
-      &:has([class*="input"]:focus-within) {
+      &:has([class*="input--"]:active),
+      &:has([class*="input--"]:focus),
+      &:has([class*="input--"]:focus-within) {
         background-color : @surface2;
       }
     }
 
-    [class*="input"] {
+    [class*="input--"] {
       background-color : transparent;
 
-      [class*="real-input"] input {
+      [class*="real-input--"] input {
         color : @text;
       }
     }
 
-    [class*="dropdown"] {
+    [class*="dropdown--"] {
       background-color : @base;
 
       ul {
@@ -500,17 +515,17 @@
     }
 
     .attribute-seeker__dropdown li.selectable b,
-    [class*="dropdown"] li[class*="entry"] [class*="fallback-name"] b,
-    [class*="dropdown"] li[class*="entry"] b {
+    [class*="dropdown--"] li[class*="entry--"] [class*="fallback-name--"] b,
+    [class*="dropdown--"] li[class*="entry--"] b {
       color : @green;
     }
 
-    [class*="sort-button"] {
+    [class*="sort-button--"] {
       background-color : @base;
       border-color     : @overlay1;
     }
 
-    [class*="category"] {
+    [class*="category--"] {
       &:hover {
         background-color : fade(@overlay2, 15%);
       }
@@ -541,11 +556,11 @@
       }
     }
 
-    [class*="item-image"] {
+    [class*="item-image--"] {
       border-color : @accent;
       box-shadow   : 0 7px 15px -3px fade(@accent, 30%);
 
-      &[class*="dark"] {
+      &[class*="dark--"] {
         background-color : @crust;
       }
     }
@@ -554,28 +569,97 @@
       background-color : @overlay0;
     }
 
-    [class*="order-own-wrapper"] > [class*="order-own"]:not([class*="odd"]) {
+    [class*="countdown--"] {
+      // ACTIVE
+      &::before {
+        border-color : @accent;
+      }
+
+      // BASE RING
+      &, &::after {
+        border-color : @surface0;
+      }
+    }
+
+    [class*="order-row--"] {
+      background-color : transparent;
+
+      &[class*="odd--"] {
+        background-color : @mantle;
+      }
+    }
+
+    [class*="order-own-wrapper--"] > [class*="order-own--"]:not([class*="odd--"]) {
       background-color : @surface0;
     }
 
-    [class*="sorting"],
-    [class*="widget-modal__header"],
-    [class*="widget-modal__actions"],
-    [class*="widget-modal"],
-    [class*="widget-modal__preview"] {
+    [class*="sorting--"],
+    [class*="widget-modal__header--"],
+    [class*="widget-modal__actions--"],
+    [class*="widget-modal--"],
+    [class*="widget-modal__preview--"] {
       background-color : @mantle;
       border-color     : @overlay0;
     }
 
-    [class*="widget-modal__body"] {
+    [class*="widget-modal__body--"] {
       background-color : @base;
     }
 
-    [class*="menu"] {
+    .slideout-menu {
+      background-color : @mantle;
+      box-shadow       : @shadow-col -9px 0px 32px -10px inset;
+    }
+
+    .slideout-menu__content {
+      h2 {
+        color : @text;
+      }
+
+      ul.nav li > a.active {
+        color            : @accent !important;
+        background-color : fade(@accent, 30%) !important;
+        border-color     : @accent !important;
+      }
+    }
+
+    [class*="profile-widget--"][class*="dark--"] {
+      background-color : fade(@overlay2, 10%);
+
+      [class*="profile-info--"] {
+        color : @subtext0;
+      }
+    }
+
+    [class*="menu--"] {
       color            : @accent;
       background-color : @mantle;
 
-      [class*="platformsTitle"] .icon-crossplay {
+      [class*="hamburger-button--"] {
+        background-color : @mantle;
+
+        [class*="button-header--"] {
+          color : @accent;
+        }
+
+        .wfm-icon.icon-bars {
+          fill : @accent;
+        }
+
+        &:hover {
+          .wfm-icon.icon-bars {
+            fill : darken(@accent, 5%);
+          }
+        }
+
+        &:active, &:focus {
+          .wfm-icon.icon-bars {
+            fill : darken(@accent, 10%);
+          }
+        }
+      }
+
+      [class*="platformsTitle--"] .icon-crossplay {
         color : inherit !important;
       }
 
@@ -583,9 +667,9 @@
         #mixins.link-colour(@accent, true);
       }
 
-      [class*="platformsTitle"],
-      [class*="category"],
-      [class*="combobox-title"] {
+      [class*="platformsTitle--"],
+      [class*="category--"],
+      [class*="combobox-title--"] {
         color            : @accent;
         background-color : transparent;
 
@@ -598,11 +682,11 @@
         }
       }
 
-      [class*="combobox"] ul {
+      [class*="combobox--"] ul {
         background-color : @surface0;
         border-color     : @overlay0;
 
-        [class*="category"] {
+        [class*="category--"] {
           background-color : transparent;
 
           &:hover {
@@ -615,13 +699,7 @@
         }
       }
 
-      [class*="combobox-text-entry"],
-      [class*="statusKeeper"] {
-        color            : @text;
-        background-color : @base;
-      }
-
-      [class*="logotype"] {
+      [class*="logotype--"] {
         border-color : @accent;
 
         img {
@@ -630,12 +708,22 @@
       }
     }
 
-    [class*="identitySection"] [class*="avatar"] [class*="user-status"][class*="status"] {
+    [class*="combobox-text-entry--"],
+    [class*="statusKeeper--"] {
+      color            : @text;
+      background-color : @base;
+
+      #status-range {
+        background-color : @surface0 !important;
+      }
+    }
+
+    [class*="identitySection--"] [class*="avatar--"] [class*="user-status--"][class*="status--"] {
       background-color : @surface0;
     }
 
-    [class*="upload"] [class*="button"]:not([class*="error"]),
-    [class*="upload"] [class*="state"]:not([class*="error"]) {
+    [class*="upload--"] [class*="button--"]:not([class*="error--"]),
+    [class*="upload--"] [class*="state--"]:not([class*="error--"]) {
       color        : @overlay1;
       border-color : @overlay1;
 
@@ -665,7 +753,7 @@
       color : @teal;
     }
 
-    [class*="content"] {
+    [class*="content--"] {
       color : @text;
 
       h1 {
@@ -693,34 +781,58 @@
       }
     }
 
-    [class*="priceFilter"] {
+    [class*="priceFilter--"] {
       background-color : @surface0;
     }
 
-    [class*="filters"] h4 {
+    [class*="filters--"] h4 {
       color : @text;
     }
 
-    [class*="alert"][class*="warning"] {
-      #mixins.notebox-colour(@peach, true);
-    }
-
-    [class*="content__header--transparent"] {
+    [class*="content__header--transparent--"] {
       background-color : fade(@mantle, 30%);
+
+      // [class*="tooltip__trigger--"], is inherited from the below, the
+      // tooltip container.
+      .link,
+      .tooltip {
+        color : @blue;
+
+        &:hover {
+          color : @sky;
+        }
+
+        &:active, &:focus {
+          color : @sapphire;
+        }
+      }
+
+      [class*="tooltip__arrow--"], [class*="tooltip__bottom--"] {
+        border-bottom-color : @overlay0;
+      }
+
+      [class*="tooltip__bubble--"] > div {
+        background-color : @surface0;
+        border-color     : @overlay0;
+
+        [class*="description--"] {
+          color : @subtext0;
+        }
+      }
     }
 
     .messenger__block .messenger__chat_list,
     .chat__empty,
-    [class*="ignore__no-data"] {
+    [class*="ignore__no-data--"] {
       background-color : @mantle;
     }
 
-    [class*="content__header--second"],
-    [class*="content__body"], [class*="content_body"] {
+    [class*="content__header--second--"],
+    [class*="content__body--"], [class*="content_body--"] {
       background-color : @base;
     }
 
-    [class*="content_body"] [class*="links"] {
+    [class*="content_body--"] [class*="links--"] {
       background-color : @mantle;
     }
 
@@ -728,78 +840,93 @@
       color : @subtext0;
     }
 
-    [class*="order-unit"][class*="odd"] {
+    [class*="order-unit--"][class*="odd--"] {
       background-color : @mantle;
     }
 
-    [class*="order-unit__user-info"] {
+    [class*="order-unit__user-info--"] {
       border-color : @overlay0;
     }
 
-    [class*="order-type-marker"] {
-      &[class*="sell"] {
+    [class*="order-type-marker--"] {
+      &[class*="sell--"] {
         #mixins.notebox-colour(@pink);
       }
 
-      &[class*="buy"] {
+      &[class*="buy--"] {
         #mixins.notebox-colour(@green);
       }
     }
 
-    [class*="price"] {
-      &[class*="sell"] {
+    [class*="orders-empty--"] {
+      background-color : transparent;
+    }
+
+    [class*="price--"] {
+      &[class*="sell--"] {
         color : @pink;
       }
 
-      &[class*="buy"] {
+      &[class*="buy--"] {
         color : @green;
       }
     }
 
-    [class*="online-switch"] > li.active {
-      &[class*="online"]:not([class*="online-switch"]) {
-        border-color : @green;
+    [class*="online-switch--"] {
+      background-color : @surface0;
+
+      > li.active {
+        &[class*="online--"] {
+          border-color : @green;
+        }
+
+        &[class*="ingame--"] {
+          border-color : @mauve;
+        }
+
+        &[class*="offline--"],
+        &[class*="offline-underline--"] {
+          border-color : @overlay2;
+        }
+
+        &[class*="connecting--"],
+        &[class*="invisible--"] {
+          border-color : @subtext0;
+        }
       }
-
-      &[class*="ingame"] {
-        border-color : @mauve;
-      }
-
-      &[class*="offline"],
-      &[class*="offline-underline"] {
-        border-color : @overlay2;
-      }
-
-      &[class*="connecting"],
-      &[class*="invisible"] {
-        border-color : @subtext0;
-      }
     }
 
-    [class*="online"]:not([class*="online-switch"]) {
-      color : @green;
+    [class*="online--"] {
+      color                 : @green;
+      text-decoration-color : @green;
     }
 
-    [class*="ingame"] {
-      color : @mauve;
+    [class*="ingame--"] {
+      color                 : @mauve;
+      text-decoration-color : @mauve;
     }
 
-    [class*="offline"],
-    [class*="offline-underline"] {
-      color : @overlay2;
+    [class*="offline--"],
+    [class*="offline-underline--"] {
+      color                 : @overlay2;
+      text-decoration-color : @overlay2;
     }
 
-    [class*="connecting"],
-    [class*="invisible"] {
-      color : @subtext0;
+    [class*="connecting--"],
+    [class*="invisible--"] {
+      color                 : @subtext0;
+      text-decoration-color : @subtext0;
     }
 
-    :is([class*="updatedAt"], [class*="createdAt"]):not(:has([class*="sort-button"])) {
+    :is(
+      [class*="updatedAt--"],
+      [class*="createdAt--"]
+    ):not(:has([class*="sort-button--"])) {
       color            : @subtext0;
       background-color : @crust;
     }
 
-    [class*="ad__line"] {
+    [class*="ad__line--"] {
       background-color : @crust;
     }
 
@@ -839,16 +966,16 @@
       }
     }
 
-    [class*="auctions__tips"] {
-      [class*="straight"] {
+    [class*="auctions__tips--"] {
+      [class*="straight--"] {
         background-color : @overlay2;
       }
 
-      [class*="participant"] {
+      [class*="participant--"] {
         background-color : @green;
       }
 
-      [class*="owner"] {
+      [class*="owner--"] {
         background-color : @mauve;
       }
     }
@@ -877,7 +1004,9 @@
       }
     }
 
-    .auction-entry__header, .b-outline, .auction-entry__body {
+    .auction-entry__header,
+    .b-outline,
+    .auction-entry__body {
       border-color : fade(@accent, 60%) !important;
     }
 
@@ -894,6 +1023,28 @@
       &.negative {
         background-color : fade(@red, 30%);
         border-color     : @red;
+      }
+    }
+
+    [class*="user-status--"] {
+      [class*="last-seen--"] {
+        color            : @subtext0;
+        background-color : @surface0;
+        border-color     : @overlay0;
+      }
+    }
+
+    .user__reputation {
+      &.user__reputation--good {
+        color : @green;
+      }
+
+      &.user__reputation--neutral {
+        color : @subtext0;
+      }
+
+      &.user__reputation--bad {
+        color : @red;
       }
     }
 
@@ -921,19 +1072,19 @@
       #mixins.notebox-colour(@red, true, true);
     }
 
-    .row[class*="ducats"] {
+    .row[class*="ducats--"] {
       background-color : @surface0;
 
-      &[class*="odd"] {
+      &[class*="odd--"] {
         background-color : @base;
       }
     }
 
-    [class*="ducats__per-platinum"] {
+    [class*="ducats__per-platinum--"] {
       color : @peach;
     }
 
-    [class*="ducats__position"] {
+    [class*="ducats__position--"] {
       color : @yellow;
 
       .wfm-icon {
@@ -941,7 +1092,7 @@
       }
     }
 
-    [class*="ducats__position--positive"] {
+    [class*="ducats__position--positive--"] {
       color : @green;
 
       .wfm-icon {
@@ -949,7 +1100,7 @@
       }
     }
 
-    [class*="ducats__position--negative"] {
+    [class*="ducats__position--negative--"] {
       color : @red;
 
       .wfm-icon {
@@ -957,16 +1108,20 @@
       }
     }
 
-    :not([class*="sorting"]) > [class*="price"] {
+    :not([class*="sorting--"]) > [class*="price--"] {
       #mixins.icon-colour(@accent);
     }
 
-    :not([class*="sorting"]) > :is([class*="item-icon"] img, img[class*="ducats__thumb"]) {
+    :not([class*="sorting--"]) > :is([class*="item-icon--"] img,
+    img[class*="ducats__thumb--"]) {
       background-color : @surface1;
       border-color     : @overlay0;
     }
 
-    :not([class*="sorting"]) > :is([class*="quantity"], [class*="mod-rank"]) {
+    :not([class*="sorting--"]) > :is(
+      [class*="quantity--"],
+      [class*="mod-rank--"]
+    ) {
       #mixins.icon-colour(@subtext0);
     }
 
@@ -974,9 +1129,45 @@
       border-color : @overlay0;
     }
 
+    [class*="stats-empty--"] {
+      color            : @subtext0;
+      background-color : transparent;
+    }
+
+    [class*="group-header--"],
+    .item-statistics__header,
     .statistics__header {
       background-color : @mantle;
       box-shadow       : @shadow;
+    }
+
+    [class*="item__name-highlight--"] {
+      color : @accent;
+    }
+
+    [class*="source--"] {
+      background-color : @surface0;
+    }
+
+    [class*="event-mark--"],
+    [class*="relic-vaulted--"] {
+      #mixins.notebox-colour(@yellow, true);
+    }
+
+    [class*="source-info--"] {
+      color : @subtext0;
+    }
+
+    [class*="chance--"] {
+      color : @text;
+    }
+
+    [class*="chance-silver--"] {
+      color : @blue;
+    }
+
+    [class*="chance-gold--"] {
+      color : @yellow;
     }
 
     .statistics__numbers {
@@ -984,7 +1175,262 @@
       box-shadow       : @shadow;
     }
 
-    [class*="order-closed"]:nth-child(2n+1) {
+    .group__core {
+      text {
+        fill : @text;
+      }
+    }
+
+    .group__legend {
+      > rect {
+        fill   : @surface0;
+        stroke : @overlay0;
+      }
+
+      .legend__sma {
+        fill : @mauve;
+      }
+
+      .legend__median {
+        fill : @blue;
+      }
+
+      .legend__avg {
+        fill : @peach;
+      }
+
+      .legend__date {
+        fill : @subtext0;
+      }
+    }
+
+    .y-grid-price,
+    .y-grid-volume {
+      line {
+        stroke : @subtext0;
+      }
+
+      path {
+        stroke : @subtext0;
+      }
+    }
+
+    .x-axis,
+    .y-axis-price,
+    .y-axis-volume {
+      line {
+        stroke : @subtext0;
+      }
+
+      path {
+        stroke : @subtext0;
+      }
+    }
+
+    .wfm-icon {
+      &.icon-candlePrice {
+        filter : @green-filter;
+      }
+
+      &.icon-simpleAvgPrice {
+        filter : @mauve-filter;
+      }
+
+      &.icon-medianPrice {
+        filter : @blue-filter;
+      }
+
+      &.icon-averagePrice {
+        filter : @peach-filter;
+      }
+
+      &.icon-dochPrice {
+        filter : @overlay2-filter;
+      }
+    }
+
+    .chart__donchian {
+      fill           : @overlay2;
+      fill-opacity   : 0.30;
+      stroke         : @subtext1;
+      stroke-opacity : unset;
+    }
+
+    .chart__sma-price {
+      stroke : @mauve;
+    }
+
+    .chart__median-price {
+      stroke : @blue;
+    }
+
+    .chart__avgprice {
+      stroke : @peach;
+    }
+
+    .chart__candle {
+      .candle--green {
+        fill   : @green;
+        stroke : @green;
+      }
+
+      .candle--green.active {
+        fill   : darken(@green, 5%);
+        stroke : darken(@green, 5%);
+      }
+
+      .stem--green {
+        stroke : @green;
+      }
+
+      .stem--green.active {
+        stroke : darken(@green, 5%);
+      }
+
+      .candle--red {
+        fill   : @red;
+        stroke : @red;
+      }
+
+      .candle--red.active {
+        fill   : darken(@red, 5%);
+        stroke : darken(@red, 5%);
+      }
+
+      .stem--red {
+        stroke : @red;
+      }
+
+      .stem--red.active {
+        stroke : darken(@red, 5%);
+      }
+    }
+
+    .chart__volumes {
+      rect {
+        fill         : @accent;
+        fill-opacity : 0.20;
+      }
+
+      rect.active {
+        fill-opacity : 0.40;
+      }
+    }
+
+    .pointer__line {
+      stroke         : @accent;
+      stroke-opacity : 0.30;
+    }
+
+    .pointer__circle-sma {
+      fill         : @mauve;
+      fill-opacity : 0.30;
+      stroke       : @mauve;
+    }
+
+    .pointer__circle-median {
+      fill         : @blue;
+      fill-opacity : 0.30;
+      stroke       : @blue;
+    }
+
+    .pointer__circle-avg {
+      fill         : @peach;
+      fill-opacity : 0.30;
+      stroke       : @peach;
+    }
+
+    .group__controls {
+      > rect {
+        stroke         : @overlay0;
+        stroke-opacity : unset;
+        fill           : @surface0;
+      }
+
+      text {
+        fill : @accent;
+      }
+    }
+
+    [class*="group__controls--"] {
+      background-color : @mantle;
+
+      [class*="control--"] {
+        span {
+          color : @accent;
+        }
+
+        label {
+          .check {
+            border-color : @accent;
+
+            > div {
+              background : @accent;
+            }
+          }
+        }
+
+        &:focus {
+          border-color : darken(@accent, 10%);
+          box-shadow   : @accent-shadow;
+        }
+
+        &:hover {
+          span {
+            color : darken(@accent, 5%);
+          }
+
+          label {
+            .check {
+              border-color : darken(@accent, 5%);
+
+              > div {
+                background : darken(@accent, 5%);
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .switch__donch {
+      rect {
+        stroke         : @subtext1;
+        stroke-opacity : unset;
+        fill           : @overlay2;
+        fill-opacity   : 0.30;
+      }
+    }
+
+    .switch__candle {
+      line {
+        stroke : green;
+      }
+
+      .candle {
+        fill : green;
+      }
+    }
+
+    .switch__sma {
+      line {
+        stroke : @green;
+      }
+    }
+
+    .switch__median {
+      line {
+        stroke : @blue;
+      }
+    }
+
+    .switch__avg {
+      line {
+        stroke : @red;
+      }
+    }
+
+    [class*="order-closed--"]:nth-child(2n+1) {
       background-color : @surface0;
     }
 
@@ -992,44 +1438,64 @@
       color : @accent;
     }
 
-    [class*="order-unit__vaulted"] {
+    [class*="order-unit__vaulted--"] {
       color : @peach;
     }
 
-    [class*="input-group-block"] {
+    [class*="input-group-block--"] {
       color        : @text;
       border-color : @overlay0;
     }
 
-    [class*="form-control"] {
+    [class*="form-control--"] {
       border-color : @overlay0;
 
       &:active, &:focus, &:focus-within {
         border-color : @accent !important;
-        box-shadow   : 0 0 0 0.15rem fade(@accent, 30%);
+        box-shadow   : @accent-shadow;
       }
     }
 
-    [class*="form-input"] input {
+    [class*="form-input--"] input {
       color : @text;
+
+      &[value="support@warframe.market"] {
+        border-radius : 0.4rem;
+      }
     }
 
-    [class*="form-group"] label:not(.btn) {
+    #faq-support {
+      margin-bottom : 1rem;
+    }
+
+    [class*="form-group--"] label:not(.btn) {
       color : @subtext0;
     }
 
-    [class*="input-group"][class*="success"] {
-      [class*="input-group-block"] {
+    [class*="form-success--"] {
+      #mixins.notebox-colour(@green, true, true);
+    }
+
+    [class*="input-group--"][class*="success--"] {
+      [class*="input-group-block--"] {
         #mixins.notebox-colour(@green, true, true);
       }
 
-      [class*="form-control"] {
+      [class*="form-control--"] {
         border-color : @green;
       }
     }
 
-    [class*="alert"][class*="success"] {
+    [class*="alert--"][class*="success--"] {
       #mixins.notebox-colour(@green, true, true);
+    }
+
+    [class*="alert--"][class*="warning--"] {
+      #mixins.notebox-colour(@peach, true, true);
+    }
+
+    [class*="alert--"][class*="error--"] {
+      #mixins.notebox-colour(@red, true, true);
     }
   }
 }
