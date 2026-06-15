@@ -7,14 +7,15 @@
 /* ==UserStyle==
 @name         Personal LESS Theme
 @namespace    github.com/ninetailedtori/personal-userstyles
-@version      1.0.0
+@version      1.0.1
 @description  Just a collection of things that make things cuter!
 @author       ninetailedtori
 
 @preprocessor less
-@var select   lightFlavor "Light Flavor"  ["latte:Latte*", "frappe:Frappé", "macchiato:Macchiato", "mocha:Mocha"]
-@var select   darkFlavor  "Dark Flavor"   ["latte:Latte", "frappe:Frappé", "macchiato:Macchiato", "mocha:Mocha*"]
-@var select   accentColor "Accent"        ["rosewater:Rosewater", "flamingo:Flamingo", "pink:Pink", "mauve:Mauve*", "red:Red", "maroon:Maroon", "peach:Peach", "yellow:Yellow", "green:Green", "teal:Teal", "blue:Blue", "sapphire:Sapphire", "sky:Sky", "lavender:Lavender", "subtext0:Gray"]
+@var select   lightFlavor "Light Flavor"        ["latte:Latte*", "frappe:Frappé", "macchiato:Macchiato", "mocha:Mocha"]
+@var select   darkFlavor  "Dark Flavor"         ["latte:Latte", "frappe:Frappé", "macchiato:Macchiato", "mocha:Mocha*"]
+@var select   accentColor "Accent"              ["rosewater:Rosewater", "flamingo:Flamingo", "pink:Pink", "mauve:Mauve*", "red:Red", "maroon:Maroon", "peach:Peach", "yellow:Yellow", "green:Green", "teal:Teal", "blue:Blue", "sapphire:Sapphire", "sky:Sky", "lavender:Lavender", "subtext0:Gray"]
+@var checkbox changeLinks "Change link colours" 0
 ==/UserStyle== */
 
 @import "https://userstyles.catppuccin.com/lib/lib.less";
@@ -50,48 +51,46 @@
     li.isactive,
     li.active
   ) > a:not(
-      .btn,
-      .btn-primary,
-      .accordion-button,
-      .btn-close,
+      [class*="button" i],
+      [class*="btn" i],
       .page-link,
       .form-control,
       .form-select,
       .form-check-input,
       .form-range,
       .pf-v5-c-nav__link
-    ) {
-    color : @blue !important;
+    ) when (@changeLinks) {
+    color : @blue;
 
     &:hover {
-      color : @sky !important;
+      color : @sky;
     }
 
     &:active,
     &:focus,
     &:focus-within {
-      color : @sapphire !important;
+      color : @sapphire;
     }
 
     &:visited {
-      color : @lavender !important;
+      color : @lavender;
     }
 
     &:link {
-      color : @blue !important;
+      color : @blue;
 
       &:hover {
-        color : @sky !important;
+        color : @sky;
       }
 
       &:active,
       &:focus,
       &:focus-within {
-        color : @sapphire !important;
+        color : @sapphire;
       }
 
       &:visited {
-        color : @lavender !important;
+        color : @lavender;
       }
     }
   }
@@ -133,12 +132,14 @@
 
     &:invalid,
     &:user-invalid {
-      color : @red !important;
+      color            : @red !important;
+      background-color : fade(@red, 30%) !important;
+      border-color     : @red !important;
     }
 
     &:disabled {
-      background-color : @mantle !important;
       color            : @surface0 !important;
+      background-color : @mantle !important;
     }
 
     &:link,
