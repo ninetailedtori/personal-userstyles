@@ -269,6 +269,18 @@
           background-color : darken(@accent, 10%) !important;
         }
       }
+
+      [class*="counter--"] {
+        color            : @red !important;
+        background-color : @surface0 !important;
+        box-shadow       : @shadow !important;
+      }
+
+      &.active [class*="counter--"] {
+        color            : @base !important;
+        background-color : @red !important;
+        box-shadow       : @accent-shadow !important;
+      }
     }
 
     [class*="combobox--"].active a.active {
