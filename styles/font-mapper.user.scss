@@ -13,11 +13,11 @@ $feature-settings : "zero" 1,
 "cv06" 1,
 "cv07" 1,
 "cv14" 1;
-$font-sans        : "Inria Sans", "JetBrainsMono Nerd Font", "Material Symbols Outlined",
+$font-sans        : "Inria Sans", "JetBrains Mono", "Material Symbols Outlined",
 "Noto Emoji", ui-sans-serif;
-$font-heading     : "Beuron Condensed", "JetBrainsMono Nerd Font", "Material Symbols Outlined",
+$font-heading     : "Beuron Condensed", "JetBrains Mono", "Material Symbols Outlined",
 "Noto Emoji", ui-serif;
-$font-mono        : "JetBrainsMono Nerd Font", "Material Symbols Outlined", "Noto Emoji",
+$font-mono        : "JetBrains Mono", "Material Symbols Outlined", "Noto Emoji",
 ui-monospace;
 
 $headings         : "h1", "h2", "h3", "h4", "h5";
@@ -25,7 +25,7 @@ $editors          : "code", "pre", "input[type=text]", "textarea", "[class*=\"re
 "editor", "[class*=\"monaco-editor\"]", "[class*=\"cm-editor\"]", "tt", "[class*=\"cmd\"]",
 "[class*=\"js-file-line-container\"]";
 $images           : "[class*=\"icon\"]", "[class*=\"image\"]", "[class*=\"img\"]", "[class*=\"png\"]",
-"[class*=\"svg\"]", "[class*=\"symbol\"]", "[class*=\"wfic\"]", "[class*=\"bwi\"]";
+"[class*=\"svg\"]", "[class*=\"symbol\"]", "[class*=\"wfic\"]", "[class*=\"bwi\"]", ".ff0", ".ff6";
 
 $excluded-raw     : $headings, $editors, $images;
 

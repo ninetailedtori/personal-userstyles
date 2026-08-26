@@ -1,29 +1,28 @@
 {
-  "name"            : "personal-userstyles",
-  "version"         : "1.0.0",
-  "description"     : "a cozy collection of custom styles for the web, made with [stylus](https://github.com/openstyles/stylus) ✨",
-  "author"          : {
-    "name"  : "ninetailedtori",
-    "email" : "ninetailedtori@uwu.gal",
-    "url"   : "https://github.com/ninetailedtori"
+  "name": "personal-userstyles",
+  "version": "1.0.0",
+  "description": "a cozy collection of custom styles for the web, made with [stylus](https://github.com/openstyles/stylus) ✨",
+  "author": {
+    "name": "ninetailedtori",
+    "email": "ninetailedtori@uwu.gal",
+    "url": "https://github.com/ninetailedtori"
   },
-  "repository"      : "https://github.com/ninetailedtori/personal-userstyles",
-  "homepage"        : "https://github.com/ninetailedtori/personal-userstyles",
-  "license"         : "GPL-3.0-or-later",
-  "scripts"         : {
-    "prepare"         : "pnpm run fmt && pnpm run build",
-    "build"           : "sass         --no-source-map --load-path=node_modules styles:dist && cp -t dist/ styles/*.user.less",
-    "build:watch"     : "sass --watch --no-source-map --load-path=node_modules styles:dist",
-    "fmt"             : "pnpm run fmt:other",
-    "fmt:other"       : "taplo format && yamlfix .",
-    "fmt:check"       : "pnpm run fmt:check:other",
-    "fmt:check:other" : "taplo format --check && yamlfix --check .",
-    "serve"           : "miniserve"
+  "repository": "https://github.com/ninetailedtori/personal-userstyles",
+  "homepage": "https://github.com/ninetailedtori/personal-userstyles",
+  "license": "GPL-3.0-or-later",
+  "scripts": {
+    "prepare": "pnpm run fmt && pnpm run build",
+    "build": "sass         --no-source-map --load-path=node_modules styles:dist && cp -t dist/ styles/*.user.less",
+    "build:watch": "sass --watch --no-source-map --load-path=node_modules styles:dist",
+    "fmt": "pnpm run fmt:other",
+    "fmt:other": "taplo format && yamlfix .",
+    "fmt:check": "pnpm run fmt:check:other",
+    "fmt:check:other": "taplo format --check && yamlfix --check ."
   },
-  "packageManager"  : "pnpm@10.33.4+sha512.1c67b3b359b2d408119ba1ed289f34b8fc3c6873412bec6fd264fbdc82489e510fcbecb9ce9d22dae7f3b76269d8441046014bdca53b9979cd7a561ad631b800",
-  "devDependencies" : {
-    "@catppuccin/palette" : "^1.8.0",
-    "@taplo/cli"          : "^0.7.0",
-    "sass"                : "<2.0.0"
+  "packageManager": "pnpm",
+  "devDependencies": {
+    "@catppuccin/palette": "^1.8.0",
+    "@taplo/cli": "^0.7.0",
+    "sass": "^1.103.1"
   }
 }
