@@ -1513,5 +1513,13 @@
     [class*="alert--"][class*="error--"] {
       #mixins.notebox-colour(@red, true, true);
     }
+
+    [class*="listing_confirmation--"] {
+      background : linear-gradient(90deg, transparent 0%, fade(@accent, 30%) 50%, @accent 100%);
+
+      .ml-auto.mr-2 {
+        color : @base !important;
+      }
+    }
   }
 }
