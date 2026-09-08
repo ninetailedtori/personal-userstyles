@@ -1,20 +1,15 @@
 /* ==UserStyle==
-@name warframe.market Catppuccin
-@namespace github.com/catppuccin/userstyles/styles/warframe-market
-@homepageURL https://github.com/catppuccin/userstyles/tree/main/styles/warframe-market
-@version 2025.09.06
-@updateURL https://github.com/catppuccin/userstyles/raw/main/styles/warframe-market
-/catppuccin.user.less
-@supportURL https://github.com/catppuccin/userstyles/issues?q=is%3Aopen+is%3Aissue+label%3Awarframe-market
-@description Soothing pastel theme for warframe.market
-@author Catppuccin
-@license MIT
-
+@name         warframe.market Catppuccin
+@namespace    github.com/ninetailedtori/personal-userstyles/styles/warframe-market
+@description  Soothing pastel theme for warframe.market
+@author       ninetailedtori
+@license      MIT
+@version      1.0.0
 @preprocessor less
-@var select lightFlavor "Light Flavor" ["latte:Latte*", "frappe:Frappé", "macchiato:Macchiato", "mocha:Mocha"]
-@var select darkFlavor "Dark Flavor" ["latte:Latte", "frappe:Frappé", "macchiato:Macchiato", "mocha:Mocha*"]
-@var select accentColor "Accent" ["rosewater:Rosewater", "flamingo:Flamingo", "pink:Pink", "mauve:Mauve*", "red:Red", "maroon:Maroon", "peach:Peach", "yellow:Yellow", "green:Green", "teal:Teal", "blue:Blue", "sapphire:Sapphire", "sky:Sky", "lavender:Lavender", "subtext0:Gray"]
-@var checkbox highlight-redirect "Highlight redirect links" 0
+
+@var select   lightFlavor         "Light Flavor"              ["latte:Latte*", "frappe:Frappé", "macchiato:Macchiato", "mocha:Mocha"]
+@var select   darkFlavor          "Dark Flavor"               ["latte:Latte", "frappe:Frappé", "macchiato:Macchiato*", "mocha:Mocha"]
+@var select   accentColor         "Accent"                    ["rosewater:Rosewater*", "flamingo:Flamingo", "pink:Pink", "mauve:Mauve", "red:Red", "maroon:Maroon", "peach:Peach", "yellow:Yellow", "green:Green", "teal:Teal", "blue:Blue", "sapphire:Sapphire", "sky:Sky", "lavender:Lavender", "subtext0:Gray"]
 ==/UserStyle== */
 
 @import "https://userstyles.catppuccin.com/lib/lib.less";
@@ -32,128 +27,136 @@
 
   #mixins {
     .base-input() {
-      color            : @text;
-      background-color : @surface0;
-      border-color     : @overlay0;
+      color: @text;
+      background-color: @surface0;
+      border-color: @overlay0;
 
       &[readonly] {
-        color            : @pink;
-        background-color : @mantle;
+        color: @pink;
+        background-color: @mantle;
 
-        &:active, &:focus, &:focus-within {
-          border-color : @accent;
-          box-shadow   : @shadow;
+        &:active,
+        &:focus,
+        &:focus-within {
+          border-color: @accent;
+          box-shadow: @shadow;
         }
 
         &.active {
-          color            : @pink;
-          background-color : @accent;
+          color: @pink;
+          background-color: @accent;
         }
       }
 
       &:disabled {
-        color            : @overlay0;
-        background-color : @mantle;
+        color: @overlay0;
+        background-color: @mantle;
 
         &:hover {
-          background-color : @surface1;
+          background-color: @surface1;
         }
 
-        &:active, &:focus, &:focus-within {
-          background-color : @surface2;
-          border-color     : @accent;
-          box-shadow       : @shadow;
+        &:active,
+        &:focus,
+        &:focus-within {
+          background-color: @surface2;
+          border-color: @accent;
+          box-shadow: @shadow;
         }
       }
 
       &:not([readonly], :disabled) {
         &:hover {
-          background-color : @surface1;
+          background-color: @surface1;
         }
 
-        &:active, &:focus, &:focus-within {
-          background-color : @surface2;
-          border-color     : @accent;
-          box-shadow       : @shadow;
+        &:active,
+        &:focus,
+        &:focus-within {
+          background-color: @surface2;
+          border-color: @accent;
+          box-shadow: @shadow;
         }
 
         &.active {
-          color            : @base;
-          background-color : @accent;
+          color: @base;
+          background-color: @accent;
         }
       }
     }
 
     .link-colour(@colour, @important: false) when (@important = true) {
-      color : @colour !important;
+      color: @colour !important;
 
       span {
-        color : @colour !important;
+        color: @colour !important;
       }
     }
 
     .link-colour(@colour, @important: false) when (@important = false) {
-      color : @colour;
+      color: @colour;
 
       span {
-        color : @colour;
+        color: @colour;
       }
     }
 
     .icon-colour(@colour, @important : false) when (@important = true) {
-      color : @colour !important;
+      color: @colour !important;
 
       .wfm-icon {
-        color : @colour !important;
+        color: @colour !important;
       }
     }
 
     .icon-colour(@colour, @important : false) when (@important = false) {
-      color : @colour;
+      color: @colour;
 
       .wfm-icon {
-        color : @colour;
+        color: @colour;
       }
     }
 
     .notebox-colour(@colour, @important: false, @border: false) when (@important = true) {
       #mixins.link-colour(@colour, true);
-      background-color : fade(@colour, 30%) !important;
+      background-color: fade(@colour, 30%) !important;
 
       .attribute-name {
-        color : @colour !important;
+        color: @colour !important;
       }
 
       & when (@border = true) {
-        border-color : @colour !important;
+        border-color: @colour !important;
       }
     }
 
     .notebox-colour(@colour, @important: false, @border: false) when (@important = false) {
       #mixins.link-colour(@colour);
-      background-color : fade(@colour, 30%);
+      background-color: fade(@colour, 30%);
 
       .attribute-name {
-        color : @colour;
+        color: @colour;
       }
 
       & when (@border = true) {
-        border-color : @colour;
+        border-color: @colour;
       }
     }
 
     .btn-state(@colour, @important: false) when (@important = true) {
       #mixins.link-colour(@base, true);
-      background-color : @colour !important;
-      border-color     : transparent !important;
+      background-color: @colour !important;
+      border-color: transparent !important;
 
       &:hover {
-        background-color : darken(@colour, 5%) !important;
+        background-color: darken(@colour, 5%) !important;
       }
 
-      &:active, &:focus, &:focus-within {
-        background-color : darken(@colour, 10%) !important;
-        box-shadow       : @shadow !important;
+      &:active,
+      &:focus,
+      &:focus-within {
+        background-color: darken(@colour, 10%) !important;
+        box-shadow: @shadow !important;
       }
 
       // always required
@@ -164,16 +167,18 @@
 
     .btn-state(@colour, @important: false) when (@important = true) {
       #mixins.link-colour(@base);
-      background-color : @colour;
-      border-color     : transparent !important; // always required
+      background-color: @colour;
+      border-color: transparent !important; // always required
 
       &:hover {
-        background-color : darken(@colour, 5%);
+        background-color: darken(@colour, 5%);
       }
 
-      &:active, &:focus, &:focus-within {
-        background-color : darken(@colour, 10%);
-        box-shadow       : @shadow;
+      &:active,
+      &:focus,
+      &:focus-within {
+        background-color: darken(@colour, 10%);
+        box-shadow: @shadow;
       }
 
       // always required
@@ -187,13 +192,13 @@
     #lib.palette();
     #lib.defaults();
 
-    @shadow-col    : fade(@crust, 30%);
-    @shadow        : 2px 2px 2px @shadow-col;
-    @accent-shadow : 0 0 0 0.15rem fade(@accent, 30%);
+    @shadow-col: fade(@crust, 30%);
+    @shadow: 2px 2px 2px @shadow-col;
+    @accent-shadow: 0 0 0 0.15rem fade(@accent, 30%);
 
     [class*="disclaimer--"] {
-      color            : @base;
-      background-color : @peach;
+      color: @base;
+      background-color: @peach;
     }
 
     a.link {
@@ -203,7 +208,9 @@
         #mixins.link-colour(@sky);
       }
 
-      &:active, &:focus, &:focus-within {
+      &:active,
+      &:focus,
+      &:focus-within {
         #mixins.link-colour(@sapphire);
       }
 
@@ -214,35 +221,38 @@
 
     .subscription__status > div {
       &.active {
-        color : @green;
+        color: @green;
       }
 
       &.inactive {
-        color : @red;
+        color: @red;
       }
     }
 
     [class*="category--"],
     ul:not(
-      .verification__tutorial,
-      .faq__body,
-      .faq__body *,
-      .tos__body,
-      .tos__body *,
-      .privacy__content,
-      .privacy__content *
-    ) > li {
+        .verification__tutorial,
+        .faq__body,
+        .faq__body *,
+        .tos__body,
+        .tos__body *,
+        .privacy__content,
+        .privacy__content *
+      )
+      > li {
       &:hover {
-        background-color : fade(@overlay2, 15%);
+        background-color: fade(@overlay2, 15%);
       }
 
-      &:active, &:focus, &:focus-within {
-        background-color : fade(@overlay2, 30%);
+      &:active,
+      &:focus,
+      &:focus-within {
+        background-color: fade(@overlay2, 30%);
       }
 
       &.active {
-        color            : @base !important;
-        background-color : @accent !important;
+        color: @base !important;
+        background-color: @accent !important;
 
         a {
           #mixins.link-colour(@base, true);
@@ -252,108 +262,117 @@
           #mixins.icon-colour(@base);
         }
 
-        [class*="user-and-status--"], [class*="user-status--"] {
-          color            : @base;
-          background-color : unset;
+        [class*="user-and-status--"],
+        [class*="user-status--"] {
+          color: @base;
+          background-color: unset;
 
           * {
-            color : @base;
+            color: @base;
           }
         }
 
         &:hover {
-          background-color : darken(@accent, 5%) !important;
+          background-color: darken(@accent, 5%) !important;
         }
 
-        &:active, &:focus, &:focus-within {
-          background-color : darken(@accent, 10%) !important;
+        &:active,
+        &:focus,
+        &:focus-within {
+          background-color: darken(@accent, 10%) !important;
         }
       }
 
       [class*="counter--"] {
-        color            : @red !important;
-        background-color : @surface0 !important;
-        box-shadow       : @shadow !important;
+        color: @red !important;
+        background-color: @surface0 !important;
+        box-shadow: @shadow !important;
       }
 
       &.active [class*="counter--"] {
-        color            : @base !important;
-        background-color : @red !important;
-        box-shadow       : @accent-shadow !important;
+        color: @base !important;
+        background-color: @red !important;
+        box-shadow: @accent-shadow !important;
       }
     }
 
     [class*="combobox--"].active a.active {
-      background-color : @accent;
+      background-color: @accent;
     }
 
     .verification__tutorial {
       li {
         > * {
-          color : @text;
+          color: @text;
         }
 
         &:nth-child(2n) > div {
-          background-color : @mantle;
+          background-color: @mantle;
         }
       }
     }
 
     [class*="content__header--"]:has([class*="tabs--"]) {
-      background-color : @mantle;
+      background-color: @mantle;
     }
 
     [class*="tabs--"] li .active {
       #mixins.link-colour(@accent);
-      background-color : fade(@accent, 30%);
-      border-color     : @accent;
+      background-color: fade(@accent, 30%);
+      border-color: @accent;
     }
 
     [class*="toggle_switch--"] {
       &,
       label {
-        color : @text;
+        color: @text;
       }
 
       input {
         &:checked + label {
           [class*="bg--"] {
-            background-color : fade(@accent, 20%);
-            box-shadow       : inset 0 0 0 1px fade(@accent, 35%),
-            inset 0 0 12px 1px fade(@accent, 25%);
+            background-color: fade(@accent, 20%);
+            box-shadow:
+              inset 0 0 0 1px fade(@accent, 35%),
+              inset 0 0 12px 1px fade(@accent, 25%);
           }
 
           [class*="lever--"] {
             [class*="tip--"] {
-              background-color : fade(@accent, 30%);
-              box-shadow       : 0 0 5px 0 fade(@accent, 30%),
-              inset 0 0 0 2px @accent;
+              background-color: fade(@accent, 30%);
+              box-shadow:
+                0 0 5px 0 fade(@accent, 30%),
+                inset 0 0 0 2px @accent;
             }
           }
         }
 
         &:focus-visible + label {
           [class*="bg--"] {
-            background-color : @surface2;
+            background-color: @surface2;
           }
         }
 
         &:checked:focus-visible + label {
           [class*="bg--"] {
-            background-color : fade(@accent, 60%);
+            background-color: fade(@accent, 60%);
           }
         }
 
         &:hover + label {
           [class*="bg--"] {
-            background-color : fade(@accent, 40%);
-            box-shadow       : inset 0 0 0 1px fade(@accent, 60%), inset 0 0 12px 1px fade(@accent, 50%);
+            background-color: fade(@accent, 40%);
+            box-shadow:
+              inset 0 0 0 1px fade(@accent, 60%),
+              inset 0 0 12px 1px fade(@accent, 50%);
           }
 
           [class*="lever--"] {
             [class*="tip--"] {
-              background-color : fade(@accent, 60%);
-              box-shadow       : 0 0 5px 0 fade(@accent, 60), inset 0 0 0 2px @accent;
+              background-color: fade(@accent, 60%);
+              box-shadow:
+                0 0 5px 0 fade(@accent, 60),
+                inset 0 0 0 2px @accent;
             }
           }
         }
@@ -361,81 +380,80 @@
 
       label {
         [class*="bg--"] {
-          background-color : @surface1;
-          border           : 2px solid @overlay1;
-          box-shadow       : none;
+          background-color: @surface1;
+          border: 2px solid @overlay1;
+          box-shadow: none;
         }
 
         [class*="lever--"] {
           [class*="outliner--"] {
-            background-color : fade(@accent, 30%);
+            background-color: fade(@accent, 30%);
           }
 
           [class*="tip--"] {
-            background-color : @surface1;
-            border           : 2px solid @overlay1;
-            box-shadow       : none;
+            background-color: @surface1;
+            border: 2px solid @overlay1;
+            box-shadow: none;
           }
         }
       }
 
       &[class*="disabled--"] {
         [class*="bg--"] {
-          background-color : @mantle;
-          border           : 2px solid @surface0;
-          box-shadow       : none;
+          background-color: @mantle;
+          border: 2px solid @surface0;
+          box-shadow: none;
         }
 
         [class*="lever--"] {
           [class*="outliner--"] {
-            background-color : transparent;
+            background-color: transparent;
           }
 
           [class*="tip--"] {
-            background-color : @mantle;
-            border           : 2px solid @surface0;
-            box-shadow       : none;
+            background-color: @mantle;
+            border: 2px solid @surface0;
+            box-shadow: none;
           }
         }
       }
     }
 
     [class*="filters--"] {
-      background-color : @surface0;
+      background-color: @surface0;
 
       [class*="switch--"] {
-        color : @text;
+        color: @text;
       }
 
       [class*="info--"] {
-        color : @subtext0;
+        color: @subtext0;
       }
     }
 
     .footnote {
-      color : @subtext0;
+      color: @subtext0;
     }
 
-    select, textarea, input[value="support@warframe.market"] {
+    select,
+    textarea,
+    input[value="support@warframe.market"] {
       #mixins.base-input();
     }
 
     [class*="textarea-char-counter--"],
     [class*="textarea-md-supported--"] {
-      color            : @subtext0;
-      background-color : @mantle;
-      border-radius    : 5.6px;
+      color: @subtext0;
+      background-color: @mantle;
+      border-radius: 5.6px;
     }
 
     [class*="sidePanel--"] {
-      border-color : transparent;
+      border-color: transparent;
     }
 
     a {
-      &:is(
-        [class*="red--"],
-        [class*="removalButton--"]
-      ),
+      &:is([class*="red--"], [class*="removalButton--"]),
       &:has(svg[class*="icon-sign-out"]) {
         #mixins.btn-state(@red, true);
       }
@@ -444,10 +462,7 @@
     .btn {
       #mixins.base-input();
 
-      &:is(
-        [class*="red--"],
-        [class*="removalButton--"]
-      ),
+      &:is([class*="red--"], [class*="removalButton--"]),
       &:has(svg[class*="icon-sign-out"]) {
         #mixins.btn-state(@red, true);
       }
@@ -470,57 +485,59 @@
     }
 
     [class*="search-field--"] {
-      box-shadow : @shadow;
+      box-shadow: @shadow;
     }
 
     [class*="seeker--"] {
-      background-color : @surface0;
-      border-color     : @overlay0;
+      background-color: @surface0;
+      border-color: @overlay0;
 
       &[class*="focused--"] {
-        border-color : @accent !important;
-        box-shadow   : 0 0 0 0.15rem fade(@accent, 30%) !important;
+        border-color: @accent !important;
+        box-shadow: 0 0 0 0.15rem fade(@accent, 30%) !important;
       }
 
       &[class*="error--"] {
-        border-color : @red !important;
-        box-shadow   : 0 0 0 0.15rem fade(@red, 30%) !important;
+        border-color: @red !important;
+        box-shadow: 0 0 0 0.15rem fade(@red, 30%) !important;
       }
 
       &:has([class*="input--"]:hover) {
-        background-color : @surface1;
+        background-color: @surface1;
       }
 
       &:has([class*="input--"]:active),
       &:has([class*="input--"]:focus),
       &:has([class*="input--"]:focus-within) {
-        background-color : @surface2;
+        background-color: @surface2;
       }
     }
 
     [class*="input--"] {
-      background-color : transparent;
+      background-color: transparent;
 
       [class*="real-input--"] input {
-        color : @text;
+        color: @text;
       }
     }
 
     [class*="dropdown--"] {
-      background-color : @base;
+      background-color: @base;
 
       ul {
-        background-color : @surface0;
+        background-color: @surface0;
 
         li {
-          color : @text;
+          color: @text;
 
           &:hover {
-            background-color : fade(@overlay0, 15%);
+            background-color: fade(@overlay0, 15%);
           }
 
-          &:active, &:focus, &:focus-within {
-            background-color : fade(@overlay0, 30%);
+          &:active,
+          &:focus,
+          &:focus-within {
+            background-color: fade(@overlay0, 30%);
           }
         }
       }
@@ -529,80 +546,87 @@
     .attribute-seeker__dropdown li.selectable b,
     [class*="dropdown--"] li[class*="entry--"] [class*="fallback-name--"] b,
     [class*="dropdown--"] li[class*="entry--"] b {
-      color : @green;
+      color: @green;
     }
 
     [class*="sort-button--"] {
-      background-color : @base;
-      border-color     : @overlay1;
+      background-color: @base;
+      border-color: @overlay1;
     }
 
     [class*="category--"] {
       &:hover {
-        background-color : fade(@overlay2, 15%);
+        background-color: fade(@overlay2, 15%);
       }
 
-      &:active, &:focus, &:focus-within {
-        background-color : fade(@overlay2, 30%);
+      &:active,
+      &:focus,
+      &:focus-within {
+        background-color: fade(@overlay2, 30%);
       }
     }
 
     .widget-order__button {
       .big-red__button {
-        color            : @base !important;
-        background-color : @red;
+        color: @base !important;
+        background-color: @red;
       }
 
       .big-red__text {
-        color : @red;
+        color: @red;
       }
 
-      &:hover, &:active, &:focus, &:focus-within {
+      &:hover,
+      &:active,
+      &:focus,
+      &:focus-within {
         .big-red__button {
-          background-color : @maroon;
+          background-color: @maroon;
         }
 
         .big-red__text {
-          color : @maroon;
+          color: @maroon;
         }
       }
     }
 
     [class*="item-image--"] {
-      border-color : @accent;
-      box-shadow   : 0 7px 15px -3px fade(@accent, 30%);
+      border-color: @accent;
+      box-shadow: 0 7px 15px -3px fade(@accent, 30%);
 
       &[class*="dark--"] {
-        background-color : @crust;
+        background-color: @crust;
       }
     }
 
     .preview__separator {
-      background-color : @overlay0;
+      background-color: @overlay0;
     }
 
     [class*="countdown--"] {
       // ACTIVE
       &::before {
-        border-color : @accent;
+        border-color: @accent;
       }
 
       // BASE RING
-      &, &::after {
-        border-color : @surface0;
+      &,
+      &::after {
+        border-color: @surface0;
       }
     }
 
     [class*="order-row--"] {
-      background-color : transparent;
+      background-color: transparent;
 
       &[class*="odd--"] {
-        background-color : @mantle;
+        background-color: @mantle;
       }
     }
 
-    [class*="order-own-wrapper--"] > [class*="order-own--"]:not([class*="odd--"]) {
-      background-color : @surface0;
+    [class*="order-own-wrapper--"]
+      > [class*="order-own--"]:not([class*="odd--"]) {
+      background-color: @surface0;
     }
 
     [class*="sorting--"],
@@ -610,69 +634,70 @@
     [class*="widget-modal__actions--"],
     [class*="widget-modal--"],
     [class*="widget-modal__preview--"] {
-      background-color : @mantle;
-      border-color     : @overlay0;
+      background-color: @mantle;
+      border-color: @overlay0;
     }
 
     [class*="widget-modal__body--"] {
-      background-color : @base;
+      background-color: @base;
     }
 
     .slideout-menu {
-      background-color : @mantle;
-      box-shadow       : @shadow-col -9px 0px 32px -10px inset;
+      background-color: @mantle;
+      box-shadow: @shadow-col -9px 0px 32px -10px inset;
     }
 
     .slideout-menu__content {
       h2 {
-        color : @text;
+        color: @text;
       }
 
       ul.nav li > a.active {
-        color            : @accent !important;
-        background-color : fade(@accent, 30%) !important;
-        border-color     : @accent !important;
+        color: @accent !important;
+        background-color: fade(@accent, 30%) !important;
+        border-color: @accent !important;
       }
     }
 
     [class*="profile-widget--"][class*="dark--"] {
-      background-color : fade(@overlay2, 10%);
+      background-color: fade(@overlay2, 10%);
 
       [class*="profile-info--"] {
-        color : @subtext0;
+        color: @subtext0;
       }
     }
 
     [class*="menu--"] {
-      color            : @accent;
-      background-color : @mantle;
+      color: @accent;
+      background-color: @mantle;
 
       [class*="hamburger-button--"] {
-        background-color : @mantle;
+        background-color: @mantle;
 
         [class*="button-header--"] {
-          color : @accent;
+          color: @accent;
         }
 
         .wfm-icon.icon-bars {
-          fill : @accent;
+          fill: @accent;
         }
 
         &:hover {
           .wfm-icon.icon-bars {
-            fill : darken(@accent, 5%);
+            fill: darken(@accent, 5%);
           }
         }
 
-        &:active, &:focus {
+        &:active,
+        &:focus {
           .wfm-icon.icon-bars {
-            fill : darken(@accent, 10%);
+            fill: darken(@accent, 10%);
           }
         }
       }
 
       [class*="platformsTitle--"] .icon-crossplay {
-        color : inherit !important;
+        color: inherit !important;
       }
 
       a {
@@ -682,75 +707,84 @@
       [class*="platformsTitle--"],
       [class*="category--"],
       [class*="combobox-title--"] {
-        color            : @accent;
-        background-color : transparent;
+        color: @accent;
+        background-color: transparent;
 
         &:hover {
-          background-color : fade(@overlay2, 15%);
+          background-color: fade(@overlay2, 15%);
         }
 
-        &:active, &:focus, &:focus-within {
-          background-color : fade(@overlay2, 30%);
+        &:active,
+        &:focus,
+        &:focus-within {
+          background-color: fade(@overlay2, 30%);
         }
       }
 
       [class*="combobox--"] ul {
-        background-color : @surface0;
-        border-color     : @overlay0;
+        background-color: @surface0;
+        border-color: @overlay0;
 
         [class*="category--"] {
-          background-color : transparent;
+          background-color: transparent;
 
           &:hover {
-            background-color : fade(@overlay2, 15%);
+            background-color: fade(@overlay2, 15%);
           }
 
-          &:active, &:focus, &:focus-within {
-            background-color : fade(@overlay2, 30%);
+          &:active,
+          &:focus,
+          &:focus-within {
+            background-color: fade(@overlay2, 30%);
           }
         }
       }
 
       [class*="logotype--"] {
-        border-color : @accent;
+        border-color: @accent;
 
         img {
-          filter : @accent-filter;
+          filter: @accent-filter;
         }
       }
     }
 
     [class*="combobox-text-entry--"],
     [class*="statusKeeper--"] {
-      color            : @text;
-      background-color : @base;
+      color: @text;
+      background-color: @base;
 
       #status-range {
-        background-color : @surface0 !important;
+        background-color: @surface0 !important;
       }
     }
 
-    [class*="identitySection--"] [class*="avatar--"] [class*="user-status--"][class*="status--"] {
-      background-color : @surface0;
+    [class*="identitySection--"]
+      [class*="avatar--"]
+      [class*="user-status--"][class*="status--"] {
+      background-color: @surface0;
     }
 
     [class*="upload--"] [class*="button--"]:not([class*="error--"]),
     [class*="upload--"] [class*="state--"]:not([class*="error--"]) {
-      color        : @overlay1;
-      border-color : @overlay1;
+      color: @overlay1;
+      border-color: @overlay1;
 
-      &:hover, &:active, &:focus {
-        color        : @accent;
-        border-color : @accent !important;
+      &:hover,
+      &:active,
+      &:focus {
+        color: @accent;
+        border-color: @accent !important;
       }
     }
 
     .privacy table {
-      background-color : @mantle;
-      border-color     : @overlay1;
+      background-color: @mantle;
+      border-color: @overlay1;
 
-      td, th {
-        border-color : @overlay1;
+      td,
+      th {
+        border-color: @overlay1;
       }
     }
 
@@ -758,77 +792,79 @@
     .faq__body,
     .tos__body,
     .settings__page .settings__content {
-      background-color : @base;
+      background-color: @base;
     }
 
     .tos b {
-      color : @teal;
+      color: @teal;
     }
 
     [class*="content--"] {
-      color : @text;
+      color: @text;
 
       h1 {
-        color : @red;
+        color: @red;
       }
 
       h2 {
-        color : @peach;
+        color: @peach;
       }
 
       h3 {
-        color : @yellow;
+        color: @yellow;
       }
 
       h4 {
-        color : @green;
+        color: @green;
       }
 
       h5 {
-        color : @sapphire;
+        color: @sapphire;
       }
 
       h6 {
-        color : @lavender;
+        color: @lavender;
       }
     }
 
     [class*="priceFilter--"] {
-      background-color : @surface0;
+      background-color: @surface0;
     }
 
     [class*="filters--"] h4 {
-      color : @text;
+      color: @text;
     }
 
     [class*="content__header--transparent--"] {
-      background-color : fade(@mantle, 30%);
+      background-color: fade(@mantle, 30%);
 
       // [class*="tooltip__trigger--"], is inherited from the below, the
       // tooltip container.
       .link,
       .tooltip {
-        color : @blue;
+        color: @blue;
 
         &:hover {
-          color : @sky;
+          color: @sky;
         }
 
-        &:active, &:focus {
-          color : @sapphire;
+        &:active,
+        &:focus {
+          color: @sapphire;
         }
       }
 
-      [class*="tooltip__arrow--"], [class*="tooltip__bottom--"] {
-        border-bottom-color : @overlay0;
+      [class*="tooltip__arrow--"],
+      [class*="tooltip__bottom--"] {
+        border-bottom-color: @overlay0;
       }
 
       [class*="tooltip__bubble--"] > div {
-        background-color : @surface0;
-        border-color     : @overlay0;
+        background-color: @surface0;
+        border-color: @overlay0;
 
         [class*="description--"] {
-          color : @subtext0;
+          color: @subtext0;
         }
       }
     }
@@ -836,28 +872,29 @@
     .messenger__block .messenger__chat_list,
     .chat__empty,
     [class*="ignore__no-data--"] {
-      background-color : @mantle;
+      background-color: @mantle;
     }
 
     [class*="content__header--second--"],
-    [class*="content__body--"], [class*="content_body--"] {
-      background-color : @base;
+    [class*="content__body--"],
+    [class*="content_body--"] {
+      background-color: @base;
     }
 
     [class*="content_body--"] [class*="links--"] {
-      background-color : @mantle;
+      background-color: @mantle;
     }
 
     h5 {
-      color : @subtext0;
+      color: @subtext0;
     }
 
     [class*="order-unit--"][class*="odd--"] {
-      background-color : @mantle;
+      background-color: @mantle;
     }
 
     [class*="order-unit__user-info--"] {
-      border-color : @overlay0;
+      border-color: @overlay0;
     }
 
     [class*="order-type-marker--"] {
@@ -871,108 +908,107 @@
     }
 
     [class*="orders-empty--"] {
-      background-color : transparent;
+      background-color: transparent;
     }
 
     [class*="price--"] {
       &[class*="sell--"] {
-        color : @pink;
+        color: @pink;
       }
 
       &[class*="buy--"] {
-        color : @green;
+        color: @green;
       }
     }
 
     [class*="online-switch--"] {
-      background-color : @surface0;
+      background-color: @surface0;
 
       > li.active {
         &[class*="online--"] {
-          border-color : @green;
+          border-color: @green;
         }
 
         &[class*="ingame--"] {
-          border-color : @mauve;
+          border-color: @mauve;
         }
 
         &[class*="offline--"],
         &[class*="offline-underline--"] {
-          border-color : @overlay2;
+          border-color: @overlay2;
         }
 
         &[class*="connecting--"],
         &[class*="invisible--"] {
-          border-color : @subtext0;
+          border-color: @subtext0;
         }
       }
     }
 
     [class*="online--"] {
-      color                 : @green;
-      text-decoration-color : @green;
+      color: @green;
+      text-decoration-color: @green;
     }
 
     [class*="ingame--"] {
-      color                 : @mauve;
-      text-decoration-color : @mauve;
+      color: @mauve;
+      text-decoration-color: @mauve;
     }
 
     [class*="offline--"],
     [class*="offline-underline--"] {
-      color                 : @overlay2;
-      text-decoration-color : @overlay2;
+      color: @overlay2;
+      text-decoration-color: @overlay2;
     }
 
     [class*="connecting--"],
     [class*="invisible--"] {
-      color                 : @subtext0;
-      text-decoration-color : @subtext0;
+      color: @subtext0;
+      text-decoration-color: @subtext0;
     }
 
-    :is(
-      [class*="updatedAt--"],
-      [class*="createdAt--"]
-    ):not(:has([class*="sort-button--"])) {
-      color            : @subtext0;
-      background-color : @crust;
+    :is([class*="updatedAt--"], [class*="createdAt--"]):not(
+      :has([class*="sort-button--"])
+    ) {
+      color: @subtext0;
+      background-color: @crust;
     }
 
     [class*="ad__line--"] {
-      background-color : @crust;
+      background-color: @crust;
     }
 
     footer {
-      background-color : @mantle;
+      background-color: @mantle;
 
       * {
-        background-color : unset;
+        background-color: unset;
       }
 
       h3 {
-        color : @subtext1;
+        color: @subtext1;
       }
 
       .footer__body {
-        background-color : @mantle;
+        background-color: @mantle;
 
         :is(.footer__language, .footer__theme) select {
           #mixins.btn-state(@accent, true);
         }
 
         .footer__disclaimer {
-          background-color : unset;
+          background-color: unset;
 
           p {
-            color : @subtext0;
+            color: @subtext0;
           }
         }
 
         .footer__onlinecnt {
-          border-color : @overlay0;
+          border-color: @overlay0;
 
           p {
-            color : @accent;
+            color: @accent;
           }
         }
       }
@@ -980,100 +1016,100 @@
 
     [class*="auctions__tips--"] {
       [class*="straight--"] {
-        background-color : @overlay2;
+        background-color: @overlay2;
       }
 
       [class*="participant--"] {
-        background-color : @green;
+        background-color: @green;
       }
 
       [class*="owner--"] {
-        background-color : @mauve;
+        background-color: @mauve;
       }
     }
 
     .auction-entry {
-      background-color : fade(@mantle, 60%);
+      background-color: fade(@mantle, 60%);
 
       &.straight {
-        border-color : @overlay2;
+        border-color: @overlay2;
       }
 
       &.participant {
-        border-color : @green;
+        border-color: @green;
       }
 
       &.owner {
-        border-color : @mauve;
+        border-color: @mauve;
       }
 
       &.odd {
-        background-color : fade(@crust, 60%);
+        background-color: fade(@crust, 60%);
       }
 
       &.invisible-auction {
-        border-color : @red;
+        border-color: @red;
       }
     }
 
     .auction-entry__header,
     .b-outline,
     .auction-entry__body {
-      border-color : fade(@accent, 60%) !important;
+      border-color: fade(@accent, 60%) !important;
     }
 
     .review__block {
       p {
-        background-color : transparent !important;
+        background-color: transparent !important;
       }
 
       &.positive {
-        background-color : fade(@green, 30%);
-        border-color     : @green;
+        background-color: fade(@green, 30%);
+        border-color: @green;
       }
 
       &.negative {
-        background-color : fade(@red, 30%);
-        border-color     : @red;
+        background-color: fade(@red, 30%);
+        border-color: @red;
       }
     }
 
     [class*="user-status--"] {
       [class*="last-seen--"] {
-        color            : @subtext0;
-        background-color : @surface0;
-        border-color     : @overlay0;
+        color: @subtext0;
+        background-color: @surface0;
+        border-color: @overlay0;
       }
     }
 
     .user__reputation {
       &.user__reputation--good {
-        color : @green;
+        color: @green;
       }
 
       &.user__reputation--neutral {
-        color : @subtext0;
+        color: @subtext0;
       }
 
       &.user__reputation--bad {
-        color : @red;
+        color: @red;
       }
     }
 
     .review__positive {
-      color : @green;
+      color: @green;
     }
 
     .review__negative {
-      color : @red;
+      color: @red;
     }
 
     .attribute-name {
-      color : @subtext0;
+      color: @subtext0;
     }
 
     .ephemera {
-      color : @green !important;
+      color: @green !important;
     }
 
     .auction-entry__positive-attributes li {
@@ -1085,38 +1121,38 @@
     }
 
     .row[class*="ducats--"] {
-      background-color : @surface0;
+      background-color: @surface0;
 
       &[class*="odd--"] {
-        background-color : @base;
+        background-color: @base;
       }
     }
 
     [class*="ducats__per-platinum--"] {
-      color : @peach;
+      color: @peach;
     }
 
     [class*="ducats__position--"] {
-      color : @yellow;
+      color: @yellow;
 
       .wfm-icon {
-        filter : @peach-filter;
+        filter: @peach-filter;
       }
     }
 
     [class*="ducats__position--positive--"] {
-      color : @green;
+      color: @green;
 
       .wfm-icon {
-        filter : @green-filter;
+        filter: @green-filter;
       }
     }
 
     [class*="ducats__position--negative--"] {
-      color : @red;
+      color: @red;
 
       .wfm-icon {
-        filter : @red-filter;
+        filter: @red-filter;
       }
     }
 
@@ -1124,41 +1160,39 @@
       #mixins.icon-colour(@accent);
     }
 
-    :not([class*="sorting--"]) > :is([class*="item-icon--"] img,
-    img[class*="ducats__thumb--"]) {
-      background-color : @surface1;
-      border-color     : @overlay0;
+    :not([class*="sorting--"])
+      > :is([class*="item-icon--"] img, img[class*="ducats__thumb--"]) {
+      background-color: @surface1;
+      border-color: @overlay0;
     }
 
-    :not([class*="sorting--"]) > :is(
-      [class*="quantity--"],
-      [class*="mod-rank--"]
-    ) {
+    :not([class*="sorting--"])
+      > :is([class*="quantity--"], [class*="mod-rank--"]) {
       #mixins.icon-colour(@subtext0);
     }
 
     .achievement__block {
-      border-color : @overlay0;
+      border-color: @overlay0;
     }
 
     [class*="stats-empty--"] {
-      color            : @subtext0;
-      background-color : transparent;
+      color: @subtext0;
+      background-color: transparent;
     }
 
     [class*="group-header--"],
     .item-statistics__header,
     .statistics__header {
-      background-color : @mantle;
-      box-shadow       : @shadow;
+      background-color: @mantle;
+      box-shadow: @shadow;
     }
 
     [class*="item__name-highlight--"] {
-      color : @accent;
+      color: @accent;
     }
 
     [class*="source--"] {
-      background-color : @surface0;
+      background-color: @surface0;
     }
 
     [class*="event-mark--"],
@@ -1167,63 +1201,63 @@
     }
 
     [class*="source-info--"] {
-      color : @subtext0;
+      color: @subtext0;
     }
 
     [class*="chance--"] {
-      color : @text;
+      color: @text;
     }
 
     [class*="chance-silver--"] {
-      color : @blue;
+      color: @blue;
     }
 
     [class*="chance-gold--"] {
-      color : @yellow;
+      color: @yellow;
     }
 
     .statistics__numbers {
-      background-color : @surface0;
-      box-shadow       : @shadow;
+      background-color: @surface0;
+      box-shadow: @shadow;
     }
 
     .group__core {
       text {
-        fill : @text;
+        fill: @text;
       }
     }
 
     .group__legend {
       > rect {
-        fill   : @surface0;
-        stroke : @overlay0;
+        fill: @surface0;
+        stroke: @overlay0;
       }
 
       .legend__sma {
-        fill : @mauve;
+        fill: @mauve;
       }
 
       .legend__median {
-        fill : @blue;
+        fill: @blue;
       }
 
       .legend__avg {
-        fill : @peach;
+        fill: @peach;
       }
 
       .legend__date {
-        fill : @subtext0;
+        fill: @subtext0;
       }
     }
 
     .y-grid-price,
     .y-grid-volume {
       line {
-        stroke : @subtext0;
+        stroke: @subtext0;
       }
 
       path {
-        stroke : @subtext0;
+        stroke: @subtext0;
       }
     }
 
@@ -1231,173 +1265,173 @@
     .y-axis-price,
     .y-axis-volume {
       line {
-        stroke : @subtext0;
+        stroke: @subtext0;
       }
 
       path {
-        stroke : @subtext0;
+        stroke: @subtext0;
       }
     }
 
     .wfm-icon {
       &.icon-candlePrice {
-        filter : @green-filter;
+        filter: @green-filter;
       }
 
       &.icon-simpleAvgPrice {
-        filter : @mauve-filter;
+        filter: @mauve-filter;
       }
 
       &.icon-medianPrice {
-        filter : @blue-filter;
+        filter: @blue-filter;
       }
 
       &.icon-averagePrice {
-        filter : @peach-filter;
+        filter: @peach-filter;
       }
 
       &.icon-dochPrice {
-        filter : @overlay2-filter;
+        filter: @overlay2-filter;
       }
     }
 
     .chart__donchian {
-      fill           : @overlay2;
-      fill-opacity   : 0.30;
-      stroke         : @subtext1;
-      stroke-opacity : unset;
+      fill: @overlay2;
+      fill-opacity: 0.3;
+      stroke: @subtext1;
+      stroke-opacity: unset;
     }
 
     .chart__sma-price {
-      stroke : @mauve;
+      stroke: @mauve;
     }
 
     .chart__median-price {
-      stroke : @blue;
+      stroke: @blue;
     }
 
     .chart__avgprice {
-      stroke : @peach;
+      stroke: @peach;
     }
 
     .chart__candle {
       .candle--green {
-        fill   : @green;
-        stroke : @green;
+        fill: @green;
+        stroke: @green;
       }
 
       .candle--green.active {
-        fill   : darken(@green, 5%);
-        stroke : darken(@green, 5%);
+        fill: darken(@green, 5%);
+        stroke: darken(@green, 5%);
       }
 
       .stem--green {
-        stroke : @green;
+        stroke: @green;
       }
 
       .stem--green.active {
-        stroke : darken(@green, 5%);
+        stroke: darken(@green, 5%);
       }
 
       .candle--red {
-        fill   : @red;
-        stroke : @red;
+        fill: @red;
+        stroke: @red;
       }
 
       .candle--red.active {
-        fill   : darken(@red, 5%);
-        stroke : darken(@red, 5%);
+        fill: darken(@red, 5%);
+        stroke: darken(@red, 5%);
       }
 
       .stem--red {
-        stroke : @red;
+        stroke: @red;
       }
 
       .stem--red.active {
-        stroke : darken(@red, 5%);
+        stroke: darken(@red, 5%);
       }
     }
 
     .chart__volumes {
       rect {
-        fill         : @accent;
-        fill-opacity : 0.20;
+        fill: @accent;
+        fill-opacity: 0.2;
       }
 
       rect.active {
-        fill-opacity : 0.40;
+        fill-opacity: 0.4;
       }
     }
 
     .pointer__line {
-      stroke         : @accent;
-      stroke-opacity : 0.30;
+      stroke: @accent;
+      stroke-opacity: 0.3;
     }
 
     .pointer__circle-sma {
-      fill         : @mauve;
-      fill-opacity : 0.30;
-      stroke       : @mauve;
+      fill: @mauve;
+      fill-opacity: 0.3;
+      stroke: @mauve;
     }
 
     .pointer__circle-median {
-      fill         : @blue;
-      fill-opacity : 0.30;
-      stroke       : @blue;
+      fill: @blue;
+      fill-opacity: 0.3;
+      stroke: @blue;
     }
 
     .pointer__circle-avg {
-      fill         : @peach;
-      fill-opacity : 0.30;
-      stroke       : @peach;
+      fill: @peach;
+      fill-opacity: 0.3;
+      stroke: @peach;
     }
 
     .group__controls {
       > rect {
-        stroke         : @overlay0;
-        stroke-opacity : unset;
-        fill           : @surface0;
+        stroke: @overlay0;
+        stroke-opacity: unset;
+        fill: @surface0;
       }
 
       text {
-        fill : @accent;
+        fill: @accent;
       }
     }
 
     [class*="group__controls--"] {
-      background-color : @mantle;
+      background-color: @mantle;
 
       [class*="control--"] {
         span {
-          color : @accent;
+          color: @accent;
         }
 
         label {
           .check {
-            border-color : @accent;
+            border-color: @accent;
 
             > div {
-              background : @accent;
+              background: @accent;
             }
           }
         }
 
         &:focus {
-          border-color : darken(@accent, 10%);
-          box-shadow   : @accent-shadow;
+          border-color: darken(@accent, 10%);
+          box-shadow: @accent-shadow;
         }
 
         &:hover {
           span {
-            color : darken(@accent, 5%);
+            color: darken(@accent, 5%);
           }
 
           label {
             .check {
-              border-color : darken(@accent, 5%);
+              border-color: darken(@accent, 5%);
 
               > div {
-                background : darken(@accent, 5%);
+                background: darken(@accent, 5%);
               }
             }
           }
@@ -1407,85 +1441,87 @@
 
     .switch__donch {
       rect {
-        stroke         : @subtext1;
-        stroke-opacity : unset;
-        fill           : @overlay2;
-        fill-opacity   : 0.30;
+        stroke: @subtext1;
+        stroke-opacity: unset;
+        fill: @overlay2;
+        fill-opacity: 0.3;
       }
     }
 
     .switch__candle {
       line {
-        stroke : green;
+        stroke: green;
       }
 
       .candle {
-        fill : green;
+        fill: green;
       }
     }
 
     .switch__sma {
       line {
-        stroke : @green;
+        stroke: @green;
       }
     }
 
     .switch__median {
       line {
-        stroke : @blue;
+        stroke: @blue;
       }
     }
 
     .switch__avg {
       line {
-        stroke : @red;
+        stroke: @red;
       }
     }
 
-    [class*="order-closed--"]:nth-child(2n+1) {
-      background-color : @surface0;
+    [class*="order-closed--"]:nth-child(2n + 1) {
+      background-color: @surface0;
     }
 
     .statistics__numbers .number {
-      color : @accent;
+      color: @accent;
     }
 
     [class*="order-unit__vaulted--"] {
-      color : @peach;
+      color: @peach;
     }
 
     [class*="input-group-block--"] {
-      color        : @text;
-      border-color : @overlay0;
+      color: @text;
+      border-color: @overlay0;
     }
 
     [class*="form-control--"] {
-      border-color : @overlay0;
+      border-color: @overlay0;
 
-      &:active, &:focus, &:focus-within {
-        border-color : @accent !important;
-        box-shadow   : @accent-shadow;
+      &:active,
+      &:focus,
+      &:focus-within {
+        border-color: @accent !important;
+        box-shadow: @accent-shadow;
       }
     }
 
     [class*="form-input--"] input {
-      color : @text;
+      color: @text;
 
       &[value="support@warframe.market"] {
-        border-radius : 0.4rem;
+        border-radius: 0.4rem;
       }
     }
 
     #faq-support {
-      margin-bottom : 1rem;
+      margin-bottom: 1rem;
     }
 
     [class*="content__body--"][class*="highlight--"] .container {
-      background-color : transparent;
+      background-color: transparent;
     }
 
     [class*="form-group--"] label:not(.btn) {
-      color : @subtext0;
+      color: @subtext0;
     }
 
     [class*="form-success--"] {
@@ -1498,7 +1534,7 @@
       }
 
       [class*="form-control--"] {
-        border-color : @green;
+        border-color: @green;
       }
     }
 
@@ -1515,10 +1551,15 @@
     }
 
     [class*="listing_confirmation--"] {
-      background : linear-gradient(90deg, transparent 0%, fade(@accent, 30%) 50%, @accent 100%);
+      background: linear-gradient(
+        90deg,
+        transparent 0%,
+        fade(@accent, 30%) 50%,
+        @accent 100%
+      );
 
       .ml-auto.mr-2 {
-        color : @base !important;
+        color: @base !important;
       }
     }
   }

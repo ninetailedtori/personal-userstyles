@@ -1,28 +1,29 @@
 {
   "name": "personal-userstyles",
   "version": "1.0.0",
-  "description": "a cozy collection of custom styles for the web, made with [stylus](https://github.com/openstyles/stylus) ✨",
+  "description": "a cozy collection of custom styles for the web, made with [stylus](https://github.com/openstyles/stylus) :3",
+  "homepage": "https://github.com/ninetailedtori/personal-userstyles",
+  "license": "GPL-3.0-or-later",
   "author": {
     "name": "ninetailedtori",
     "email": "ninetailedtori@uwu.gal",
     "url": "https://github.com/ninetailedtori"
   },
   "repository": "https://github.com/ninetailedtori/personal-userstyles",
-  "homepage": "https://github.com/ninetailedtori/personal-userstyles",
-  "license": "GPL-3.0-or-later",
   "scripts": {
-    "prepare": "pnpm run fmt && pnpm run build",
-    "build": "sass         --no-source-map --load-path=node_modules styles:dist && cp -t dist/ styles/*.user.less",
-    "build:watch": "sass --watch --no-source-map --load-path=node_modules styles:dist",
-    "fmt": "pnpm run fmt:other",
-    "fmt:other": "taplo format && yamlfix .",
-    "fmt:check": "pnpm run fmt:check:other",
-    "fmt:check:other": "taplo format --check && yamlfix --check ."
+    "prepare": "pnpm run ci",
+    "build": "sass --load-path=node_modules --no-source-map --style=expanded --error-css -- styles/:dist/ && pnpm run build:other",
+    "build:watch": "sass --watch --load-path=node_modules --no-source-map --style=expanded --error-css -- styles/:dist/",
+    "build:other": "find styles/ -maxdepth 1 -type f -name '*.user.less' -print0 | xargs -0 cp -P -t dist/",
+    "ci": "pnpm run clean && pnpm run build && pnpm run fmt",
+    "clean": "find dist/ -mindepth 1 -delete",
+    "fmt": "pnpm run fmt:css && pnpm run fmt:other",
+    "fmt:css": "oxfmt --write",
+    "fmt:other": "tombi format && yamlfix ."
   },
-  "packageManager": "pnpm",
   "devDependencies": {
     "@catppuccin/palette": "^1.8.0",
-    "@taplo/cli": "^0.7.0",
-    "sass": "^1.103.1"
+    "oxfmt": "^0.67.0",
+    "sass": "^1.104.0"
   }
 }

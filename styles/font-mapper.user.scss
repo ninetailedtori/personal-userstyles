@@ -9,39 +9,43 @@
 
 /// VARIABLES
 
-$feature-settings : "zero" 1,
-"cv06" 1,
-"cv07" 1,
-"cv14" 1;
-$font-sans        : "Inria Sans", "JetBrains Mono", "Material Symbols Outlined",
-"Noto Emoji", ui-sans-serif;
-$font-heading     : "Beuron Condensed", "JetBrains Mono", "Material Symbols Outlined",
-"Noto Emoji", ui-serif;
-$font-mono        : "JetBrains Mono", "Material Symbols Outlined", "Noto Emoji",
-ui-monospace;
+$feature-settings:
+  "zero" 1,
+  "cv06" 1,
+  "cv07" 1,
+  "cv14" 1;
+$font-sans:
+  "Inria Sans", "JetBrains Mono", "Material Symbols Outlined", "Noto Emoji",
+  ui-sans-serif;
+$font-heading:
+  "Beuron Condensed", "JetBrains Mono", "Material Symbols Outlined",
+  "Noto Emoji", ui-serif;
+$font-mono:
+  "JetBrains Mono", "Material Symbols Outlined", "Noto Emoji", ui-monospace;
 
-$headings         : "h1", "h2", "h3", "h4", "h5";
-$editors          : "code", "pre", "input[type=text]", "textarea", "[class*=\"react-code-text\"]",
-"editor", "[class*=\"monaco-editor\"]", "[class*=\"cm-editor\"]", "tt", "[class*=\"cmd\"]",
-"[class*=\"js-file-line-container\"]";
-$images           : "[class*=\"icon\"]", "[class*=\"image\"]", "[class*=\"img\"]", "[class*=\"png\"]",
-"[class*=\"svg\"]", "[class*=\"symbol\"]", "[class*=\"wfic\"]", "[class*=\"bwi\"]", ".ff0", ".ff6";
+$headings: "h1", "h2", "h3", "h4", "h5";
+$editors:
+  "code", "pre", "input[type=text]", "textarea", '[class*="react-code-text"]',
+  "editor", '[class*="monaco-editor"]', '[class*="cm-editor"]', "tt",
+  '[class*="cmd"]', '[class*="js-file-line-container"]';
+$images:
+  '[class*="icon"]', '[class*="image"]', '[class*="img"]', '[class*="png"]',
+  '[class*="svg"]', '[class*="symbol"]', '[class*="wfic"]', '[class*="bwi"]',
+  ".ff0", ".ff6";
 
-$excluded-raw     : $headings, $editors, $images;
+$excluded-raw: $headings, $editors, $images;
 
-$excluded         : "";
-$within-excluded  : "";
+$excluded: "";
+$within-excluded: "";
 
 @each $list in $excluded-raw {
   @each $selector in $list {
     @if $excluded == "" {
-      $excluded        : string.unquote($selector);
-      $within-excluded : string.unquote($selector) + " *";
+      $excluded: string.unquote($selector);
+      $within-excluded: string.unquote($selector) + " *";
     } @else {
-      $excluded        : $excluded + ", " + string.unquote($selector);
-      $within-excluded : $within-excluded +
-        ", " +
-        string.unquote($selector) +
+      $excluded: $excluded + ", " + string.unquote($selector);
+      $within-excluded: $within-excluded + ", " + string.unquote($selector) +
         " *";
     }
   }
@@ -50,49 +54,63 @@ $within-excluded  : "";
 /// MIXINS
 
 @mixin code-styling() {
-  font-family : $font-mono !important;
-  font-size   : 14px !important;
-  font-weight : 600 !important;
+  font-family: $font-mono !important;
+  font-size: 14px !important;
+  font-weight: 600 !important;
 
   b,
   strong,
   em,
   bold {
-    font-weight : 800 !important;
+    font-weight: 800 !important;
   }
 }
 
 /// THEME BODY
 
 /* ==UserStyle==
-@name           Font Mapper
-@namespace      github.com/openstyles/stylus
-@version        1.0.0
-@description    Quick userstyle to replace various fonts on websites with my selection of fonts!
-@author         ninetailedtori
-@preprocessor   default
+@name         Font Mapper
+@namespace    github.com/ninetailedtori/personal-userstyles/styles/font-mapper
+@description  Quick userstyle to replace various fonts on websites with my selection of fonts!
+@author       ninetailedtori
+@license      MIT
+@version      1.0.0
+@preprocessor default
 ==/UserStyle== */
 
 /*
  * NOTE:
- * You may have to enter into the "Personal included sites" textbox the
- * following within the backticks: `*` which will apply this to all sites!
+ * enter the following into the style's settings at their respective textboxes
+ * (don't include the `- ` at the starting!):
+ *
+ *   "Personal included sites":
+ *     - *
+ *   "Personal excluded sites":
+ *     - *://fonts.google.com/*
+ *     - *://osume.com/*
  */
 
 :root {
   * {
-    font-feature-settings : $feature-settings;
+    /* Font features to define, see: https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/font-feature-settings. */
+    font-feature-settings: $feature-settings;
   }
 
   :not(#{$excluded}, #{$within-excluded}) {
-    font-family : $font-sans !important;
+    /* Basic text, excluding icons/images, headings and  code editors. */
+
+    font-family: $font-sans !important;
   }
 
   #{$headings} {
-    font-family : $font-heading !important;
+    /* Heading text */
+
+    font-family: $font-heading !important;
   }
 
   #{$editors} {
+    /* Code editor text */
+
     @include code-styling();
   }
 }

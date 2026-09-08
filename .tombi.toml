@@ -1,0 +1,100 @@
+toml-version = "v1.0.0"
+
+[files]
+  include = [ "**/*.toml" ]
+  exclude = [
+    ".bzr/**",
+    ".direnv/**",
+    ".eggs/**",
+    ".git/**",
+    ".git-rewrite/**",
+    ".hg/**",
+    ".ipynb_checkpoints/**",
+    ".mypy_cache/**",
+    ".nox/**",
+    ".pants.d/**",
+    ".pyenv/**",
+    ".pytest_cache/**",
+    ".pytype/**",
+    ".ruff_cache/**",
+    ".svn/**",
+    ".tox/**",
+    ".venv/**",
+    ".vscode/**",
+    "__pypackages__/**",
+    "_build/**",
+    "buck-out/**",
+    "build/**",
+    "dist/**",
+    "node_modules/**",
+    "site-packages/**",
+    "venv/**",
+  ]
+
+[format]
+  [format.rules]
+    array-bracket-space-width         = 1
+    array-comma-space-width           = 1
+    date-time-delimiter               = "T"
+    indent-style                      = "space"
+    indent-sub-tables                 = true
+    indent-table-key-value-pairs      = true
+    indent-width                      = 2
+    inline-table-brace-space-width    = 1
+    inline-table-comma-space-width    = 1
+    key-value-equals-sign-alignment   = true
+    key-value-equals-sign-space-width = 1
+    line-ending                       = "lf"
+    line-width                        = 80
+    string-quote-style                = "double"
+    trailing-comment-alignment        = true
+    trailing-comment-space-width      = 2
+
+[lint]
+  [lint.rules]
+    dotted-keys-out-of-order = "warn"
+    key-empty                = "warn"
+    tables-out-of-order      = "warn"
+
+[lsp]
+  [lsp.code-action]
+    enabled = true
+
+  [lsp.completion]
+    enabled = true
+
+  [lsp.diagnostic]
+    enabled = true
+
+  [lsp.document-link]
+    enabled = true
+
+  [lsp.formatting]
+    enabled = true
+
+  [lsp.goto-declaration]
+    enabled = true
+
+  [lsp.goto-definition]
+    enabled = true
+
+  [lsp.goto-type-definition]
+    enabled = true
+
+  [lsp.hover]
+    enabled = true
+
+  [lsp.workspace-diagnostic]
+    enabled = true
+
+[schema]
+  enabled = true
+  strict  = true
+
+[[schemas]]
+  path    = "tombi://www.schemastore.org/pyproject.json"
+  include = [ "pyproject.toml" ]
+
+[[schemas]]
+  path    = "tombi://www.schemastore.org/tombi.json"
+  include = [ "tombi.toml" ]

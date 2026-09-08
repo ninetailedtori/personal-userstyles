@@ -6,12 +6,13 @@
 
 /* ==UserStyle==
 @name         Personal LESS Theme
-@namespace    github.com/ninetailedtori/personal-userstyles
-@version      1.0.1
+@namespace    github.com/ninetailedtori/personal-userstyles/styles/personal-less
 @description  Just a collection of things that make things cuter!
 @author       ninetailedtori
-
+@license      MIT
+@version      1.0.0
 @preprocessor less
+
 @var select   lightFlavor     "Light Flavor"                ["latte:Latte*", "frappe:Frappé", "macchiato:Macchiato", "mocha:Mocha"]
 @var select   darkFlavor      "Dark Flavor"                 ["latte:Latte", "frappe:Frappé", "macchiato:Macchiato", "mocha:Mocha*"]
 @var select   accentColor     "Accent"                      ["rosewater:Rosewater", "flamingo:Flamingo", "pink:Pink", "mauve:Mauve*", "red:Red", "maroon:Maroon", "peach:Peach", "yellow:Yellow", "green:Green", "teal:Teal", "blue:Blue", "sapphire:Sapphire", "sky:Sky", "lavender:Lavender", "subtext0:Gray"]
@@ -25,11 +26,11 @@
 
 @-moz-document regexp(".*") {
   :root {
-    @media (prefers-color-scheme : light) {
+    @media (prefers-color-scheme: light) {
       #catppuccin(@lightFlavor);
     }
 
-    @media (prefers-color-scheme : dark) {
+    @media (prefers-color-scheme: dark) {
       #catppuccin(@darkFlavor);
     }
   }
@@ -37,7 +38,7 @@
   #mixins {
     .shiki-color(@hex, @color-var) {
       &[style*="--shiki-dark: @{hex}" i] {
-        color : @color-var !important;
+        color: @color-var !important;
       }
     }
   }
@@ -51,8 +52,8 @@
     // ╚═══════════════════════════════════════════════════════════════════════╝
 
     :is(html, body) when (@changeDefaults) {
-      color            : @text;
-      background-color : @base;
+      color: @text;
+      background-color: @base;
     }
 
     // ╔═══════════════════════════════════════════════════════════════════════╗
@@ -87,37 +88,37 @@
       .form-range,
       .pf-v5-c-nav__link
     ) when (@changeLinks) {
-      color : @blue;
+      color: @blue;
 
       &:hover {
-        color : @sky;
+        color: @sky;
       }
 
       &:active,
       &:focus,
       &:focus-within {
-        color : @sapphire;
+        color: @sapphire;
       }
 
       &:visited {
-        color : @lavender;
+        color: @lavender;
       }
 
       &:link {
-        color : @blue;
+        color: @blue;
 
         &:hover {
-          color : @sky;
+          color: @sky;
         }
 
         &:active,
         &:focus,
         &:focus-within {
-          color : @sapphire;
+          color: @sapphire;
         }
 
         &:visited {
-          color : @lavender;
+          color: @lavender;
         }
       }
     }
@@ -132,68 +133,68 @@
     select option,
     textarea
   ) when (@changeInputs) {
-      color            : @text !important;
-      background-color : @surface0 !important;
-      border-color     : @overlay0 !important;
+      color: @text !important;
+      background-color: @surface0 !important;
+      border-color: @overlay0 !important;
 
       &:enabled {
-        color            : @text !important;
-        background-color : @surface0 !important;
+        color: @text !important;
+        background-color: @surface0 !important;
       }
 
       &:hover {
-        background-color : @surface1 !important;
+        background-color: @surface1 !important;
       }
 
       &:active,
       &:focus,
       &:focus-within {
-        background-color : @surface2 !important;
+        background-color: @surface2 !important;
       }
 
       &:checked {
-        background-color : @accent !important;
+        background-color: @accent !important;
 
         &::after {
-          color : @base !important;
+          color: @base !important;
         }
       }
 
       &:invalid,
       &:user-invalid {
-        color            : @red !important;
-        background-color : fade(@red, 30%) !important;
-        border-color     : @red !important;
+        color: @red !important;
+        background-color: fade(@red, 30%) !important;
+        border-color: @red !important;
       }
 
       &:disabled {
-        color            : @surface0 !important;
-        background-color : @mantle !important;
+        color: @surface0 !important;
+        background-color: @mantle !important;
       }
 
       &:link,
       &:link:enabled {
-        color : @blue !important;
+        color: @blue !important;
 
         &:hover {
-          color : @sky !important;
+          color: @sky !important;
         }
 
         &:active,
         &:focus,
         &:focus-within {
-          color : @sapphire !important;
+          color: @sapphire !important;
         }
 
         &:visited {
-          color : @lavender !important;
+          color: @lavender !important;
         }
       }
     }
 
     input[type = "radio"] when (@changeInputs) {
-      background-color : @surface0 !important;
-      accent-color     : @accent !important;
+      background-color: @surface0 !important;
+      accent-color: @accent !important;
     }
 
     // ╔═══════════════════════════════════════════════════════════════════════╗
@@ -201,153 +202,153 @@
     // ╚═══════════════════════════════════════════════════════════════════════╝
 
     .cdx-button:has(.mw-ui-icon-wikimedia-expand) when (@changeMW) {
-      color            : @text !important;
-      background-color : transparent !important;
-      border-color     : transparent !important;
+      color: @text !important;
+      background-color: transparent !important;
+      border-color: transparent !important;
 
       &:enabled {
-        color            : @text !important;
-        background-color : transparent !important;
-        border-color     : transparent !important;
+        color: @text !important;
+        background-color: transparent !important;
+        border-color: transparent !important;
       }
 
       &:hover {
-        background-color : @surface1 !important;
+        background-color: @surface1 !important;
       }
 
       &:active,
       &:focus,
       &:focus-within {
-        background-color : @surface2 !important;
+        background-color: @surface2 !important;
       }
 
       &:invalid {
-        color : @maroon !important;
+        color: @maroon !important;
       }
     }
 
     .cdx-button .mw-ui-icon-wikimedia-expand when (@changeMW) {
-      fill : @accent !important;
+      fill: @accent !important;
 
       &:enabled {
-        fill : @accent !important;
+        fill: @accent !important;
       }
 
       &:hover {
-        fill : darken(@accent, 5%) !important;
+        fill: darken(@accent, 5%) !important;
       }
 
       &:active,
       &:focus,
       &:focus-within {
-        fill : darken(@accent, 10%) !important;
+        fill: darken(@accent, 10%) !important;
       }
 
       &:disabled {
-        fill : @mantle !important;
+        fill: @mantle !important;
       }
     }
 
     .multiselect when (@changeMW) {
-      color : @accent !important;
+      color: @accent !important;
     }
 
     .checklist when (@changeMW) {
-      color            : @text !important;
-      background-color : @surface0 !important;
-      border-color     : @surface1 !important;
+      color: @text !important;
+      background-color: @surface0 !important;
+      border-color: @surface1 !important;
 
       &:active,
       &:focus,
       &:focus-within {
-        border-color : @accent !important;
+        border-color: @accent !important;
       }
 
       legend {
-        color : @text !important;
+        color: @text !important;
       }
     }
 
     .rbox when (@changeMW) {
-      border-color        : @overlay0 !important;
-      border-bottom-width : 2px;
-      border-bottom-style : solid;
+      border-color: @overlay0 !important;
+      border-bottom-width: 2px;
+      border-bottom-style: solid;
 
       label:last-child {
-        border-bottom-style : none;
+        border-bottom-style: none;
       }
     }
 
     .vector-toc :is(.vector-toc-toggle, .vector-pinnable-header-toggle-button) when (@changeMW) {
-      color            : @subtext1 !important;
-      background-color : @base !important;
+      color: @subtext1 !important;
+      background-color: @base !important;
 
       &::after {
-        background-color : @accent !important;
+        background-color: @accent !important;
       }
 
       .vector-icon {
-        filter : @accent-filter !important;
+        filter: @accent-filter !important;
       }
 
       &:hover {
-        background-color : fade(@accent, 30%) !important;
+        background-color: fade(@accent, 30%) !important;
       }
 
       &:focus-within {
-        outline    : @accent solid 2px !important;
-        border     : none !important;
-        box-shadow : none !important;
+        outline: @accent solid 2px !important;
+        border: none !important;
+        box-shadow: none !important;
       }
 
       &:active {
-        color            : @base !important;
-        background-color : darken(@accent, 10%) !important;
+        color: @base !important;
+        background-color: darken(@accent, 10%) !important;
 
         &::after {
-          background-color : @base !important;
+          background-color: @base !important;
         }
 
         .vector-icon {
-          filter : @base-filter !important;
+          filter: @base-filter !important;
         }
       }
     }
 
     .vector-dropdown .vector-dropdown-checkbox when (@changeMW) {
       + .vector-dropdown-label {
-        color            : @subtext1 !important;
-        background-color : @base !important;
+        color: @subtext1 !important;
+        background-color: @base !important;
 
         &::after {
-          background-color : @accent !important;
+          background-color: @accent !important;
         }
 
         .vector-icon {
-          filter : @accent-filter !important;
+          filter: @accent-filter !important;
         }
       }
 
       &:hover + .vector-dropdown-label {
-        background-color : fade(@accent, 30%) !important;
+        background-color: fade(@accent, 30%) !important;
       }
 
       &:focus-within + .vector-dropdown-label {
-        outline    : @accent solid 2px !important;
-        border     : none !important;
-        box-shadow : none !important;
+        outline: @accent solid 2px !important;
+        border: none !important;
+        box-shadow: none !important;
       }
 
       &:active + .vector-dropdown-label {
-        color            : @base !important;
-        background-color : darken(@accent, 10%) !important;
+        color: @base !important;
+        background-color: darken(@accent, 10%) !important;
 
         &::after {
-          background-color : @base !important;
+          background-color: @base !important;
         }
 
         .vector-icon {
-          filter : @base-filter !important;
+          filter: @base-filter !important;
         }
       }
     }
