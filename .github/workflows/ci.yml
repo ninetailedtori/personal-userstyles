@@ -42,6 +42,6 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add -A ':!.github/**'
-          git commit -m "chore: changelog and formatting [skip ci]" || true
+          git diff --cached --quiet || git commit -m "chore: changelog and formatting [skip ci]"
       - run: |-
           git push -f origin main
