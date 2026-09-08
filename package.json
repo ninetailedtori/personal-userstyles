@@ -11,7 +11,6 @@
   },
   "repository": "https://github.com/ninetailedtori/personal-userstyles",
   "scripts": {
-    "prepare": "pnpm run ci",
     "build": "sass --load-path=node_modules --no-source-map --style=expanded --error-css -- styles/:dist/ && pnpm run build:other",
     "build:watch": "sass --watch --load-path=node_modules --no-source-map --style=expanded --error-css -- styles/:dist/",
     "build:other": "find styles/ -maxdepth 1 -type f -name '*.user.less' -print0 | xargs -0 cp -P -t dist/",
@@ -24,6 +23,7 @@
   "devDependencies": {
     "@catppuccin/palette": "^1.8.0",
     "oxfmt": "^0.67.0",
-    "sass": "^1.104.0"
+    "sass": "^1.104.0",
+    "tombi": "^1.5.2"
   }
 }
