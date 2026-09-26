@@ -31,7 +31,7 @@ $editors:
 $images:
   '[class*="icon"]', '[class*="image"]', '[class*="img"]', '[class*="png"]',
   '[class*="svg"]', '[class*="symbol"]', '[class*="wfic"]', '[class*="bwi"]',
-  ".ff0", ".ff6";
+  ".ff0", ".ff6", ".fa";
 
 $excluded-raw: $headings, $editors, $images;
 
@@ -112,5 +112,9 @@ $within-excluded: "";
     /* Code editor text */
 
     @include code-styling();
+  }
+
+  .fa {
+    font-family: "FontAwesome", ui-sans-serif;
   }
 }

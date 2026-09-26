@@ -59,6 +59,7 @@
     [class*="bwi"],
     .ff0,
     .ff6,
+    .fa,
     h1 *,
     h2 *,
     h3 *,
@@ -84,7 +85,8 @@
     [class*="wfic"] *,
     [class*="bwi"] *,
     .ff0 *,
-    .ff6 *
+    .ff6 *,
+    .fa *
   ) {
   /* Basic text, excluding icons/images, headings and  code editors. */
   font-family:
@@ -163,4 +165,7 @@
 :root [class*="js-file-line-container"] em,
 :root [class*="js-file-line-container"] bold {
   font-weight: 800 !important;
+}
+:root .fa {
+  font-family: "FontAwesome", ui-sans-serif;
 }
