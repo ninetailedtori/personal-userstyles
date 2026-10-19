@@ -1,0 +1,70 @@
+/*
+ * SPDX-FileCopyrightText: 2026-Present ninetailedtori <ninetailedtori@uwu.gal>
+ *
+ * SPDX-License-Identifier: GPL-3.0-or-later
+ */
+
+/* ==UserStyle==
+@name         CoolerControl Catppuccin
+@namespace    github.com/ninetailedtori/personal-userstyles/styles/coolercontrol
+@description  Soothing pastel theme for CoolerControl
+@author       ninetailedtori
+@license      MIT
+@version      1.0.0
+@preprocessor less
+
+@var select   lightFlavor         "Light Flavor"              ["latte:Latte*", "frappe:Frappé", "macchiato:Macchiato", "mocha:Mocha"]
+@var select   darkFlavor          "Dark Flavor"               ["latte:Latte", "frappe:Frappé", "macchiato:Macchiato*", "mocha:Mocha"]
+@var select   accentColor         "Accent"                    ["rosewater:Rosewater*", "flamingo:Flamingo", "pink:Pink", "mauve:Mauve", "red:Red", "maroon:Maroon", "peach:Peach", "yellow:Yellow", "green:Green", "teal:Teal", "blue:Blue", "sapphire:Sapphire", "sky:Sky", "lavender:Lavender", "subtext0:Gray"]
+@var select   accentColor2        "Secondary Accent"          ["rosewater:Rosewater*", "flamingo:Flamingo", "pink:Pink", "mauve:Mauve", "red:Red", "maroon:Maroon", "peach:Peach", "yellow:Yellow", "green:Green", "teal:Teal", "blue:Blue", "sapphire:Sapphire", "sky:Sky", "lavender:Lavender", "subtext0:Gray"]
+==/UserStyle== */
+@import "https://userstyles.catppuccin.com/lib/std/v1.less";
+
+@-moz-document url-prefix("http://localhost:11987/") {
+  :root {
+    @media (prefers-color-scheme: light) {
+      #catppuccin(@lightFlavor);
+    }
+
+    @media (prefers-color-scheme: dark) {
+      #catppuccin(@darkFlavor);
+    }
+  }
+
+  #rgbify(@color) {
+    @rgb: red(@color) green(@color) blue(@color);
+  }
+
+  #catppuccin(@flavor) {
+    #lib.palette();
+    #lib.defaults();
+
+    @accent2: @catppuccin[@@flavor][@@accentColor2];
+
+    --colors-accent: #rgbify(@accent)[] !important;
+    --colors-accent-gradient-to: #rgbify(@accent2)[] !important;
+
+    --colors-bg-one: #rgbify(@base)[] !important;
+    --colors-bg-two: #rgbify(@mantle)[] !important;
+    --colors-border-one: #rgbify(@overlay0)[] !important;
+    --colors-surface-hover: #rgbify(@surface1)[] !important;
+
+    --colors-text-color: #rgbify(@text)[] !important;
+    --colors-text-color-secondary: #rgbify(@subtext0)[] !important;
+
+    --colors-accent-fg: #rgbify(@base)[] !important;
+    --colors-error-fg: #rgbify(@base)[] !important;
+
+    --colors-success: #rgbify(@green)[] !important;
+    --colors-error: #rgbify(@red)[] !important;
+    --colors-warning: #rgbify(@peach)[] !important;
+    --colors-info: #rgbify(@teal)[] !important;
+
+    --colors-red: #rgbify(@red)[] !important;
+    --colors-yellow: #rgbify(@yellow)[] !important;
+    --colors-green: #rgbify(@green)[] !important;
+    --colors-blue: #rgbify(@blue)[] !important;
+    --colors-pink: #rgbify(@pink)[] !important;
+    --colors-white: #rgbify(@base)[] !important;
+  }
+}

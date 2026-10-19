@@ -49,6 +49,7 @@
     tt,
     [class*="cmd"],
     [class*="js-file-line-container"],
+    .font-mono,
     [class*="icon"],
     [class*="image"],
     [class*="img"],
@@ -77,6 +78,7 @@
     tt *,
     [class*="cmd"] *,
     [class*="js-file-line-container"] *,
+    .font-mono *,
     [class*="icon"] *,
     [class*="image"] *,
     [class*="img"] *,
@@ -115,7 +117,8 @@
 :root [class*="cm-editor"],
 :root tt,
 :root [class*="cmd"],
-:root [class*="js-file-line-container"] {
+:root [class*="js-file-line-container"],
+:root .font-mono {
   /* Code editor text */
   font-family:
     "JetBrains Mono", "Material Symbols Outlined", "Noto Emoji", ui-monospace !important;
@@ -165,6 +168,10 @@
 :root [class*="js-file-line-container"] b,
 :root [class*="js-file-line-container"] strong,
 :root [class*="js-file-line-container"] em,
-:root [class*="js-file-line-container"] bold {
+:root [class*="js-file-line-container"] bold,
+:root .font-mono b,
+:root .font-mono strong,
+:root .font-mono em,
+:root .font-mono bold {
   font-weight: 800 !important;
 }
